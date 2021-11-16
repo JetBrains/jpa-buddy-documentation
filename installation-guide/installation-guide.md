@@ -23,7 +23,7 @@ JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ I
 
 You can install JPA Buddy for running IntelliJ IDEA. Open Preferences -> Plugins and search for JPA Buddy, then simply push the install button, and there you go! 
 
-![picig1](pics/pic_ig_1.jpeg)
+![jpa_buddy_install](img/jpa_buddy_install.jpeg)
 
 # Dependencies 
 
@@ -69,17 +69,16 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyw
   </tr>
 </tbody>
 </table>
-
 *After adding one of the dependencies to the project, do not forget to click on the "Load Maven Changes" button in the upper right corner.* 
 
-![picig2](pics/pic_ig_2.jpeg)
+![load_maven_changes](img/load_maven_changes.jpeg)
 
 # Verifying Installation 
 
 To make sure that the plugin is installed correctly, follow these steps: 
 
-- Open Plugin Settings IntelliJ IDEA window: clicks File -> Settings -> Plugins -> Installed. Make sure that JPA Buddy there is in this section and enabled. ![picig3](pics/pic_ig_3.jpeg)
-- Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above. ![picig4](pics/pic_ig_4.jpeg)
+- Open Plugin Settings IntelliJ IDEA window: clicks File -> Settings -> Plugins -> Installed. Make sure that JPA Buddy there is in this section and enabled. ![settings_plugin_installed](img/settings_plugin_installed.jpeg)
+- Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above. ![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
 
 # Installing a Specific Version of JPA Buddy 
 
@@ -87,14 +86,14 @@ Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For examp
 
 - Open JPA Buddy JetBrains Marketplace [page.](https://plugins.jetbrains.com/plugin/15075-jpa-buddy) 
 - Open Versions tab. 
-- Find a version of JPA Buddy which satisfies the version of your IntelliJ IDEA and click on it. ![picig5](pics/pic_ig_5.jpeg)
-- In the opened window, click on the “Download” button. ![picig6](pics/pic_ig_6.jpeg)
+- Find a version of JPA Buddy which satisfies the version of your IntelliJ IDEA and click on it. ![marketplace](img/marketplace.jpeg)
+- In the opened window, click on the “Download” button. ![marketplace_description](img/marketplace_description.jpeg)
 
 - Save .zip file to your PC. 
 - Now you have two options: 
-  - Open File -> Settings -> Plugins page click on the settings icon next to the “installed” tab and choose “install plugin from disc”. Find the downloaded .zip file, select it, and click “ok”. ![picig7](pics/pic_ig_7.jpeg)
+  - Open File -> Settings -> Plugins page click on the settings icon next to the “installed” tab and choose “install plugin from disc”. Find the downloaded .zip file, select it, and click “ok”. ![install_from_disk](img/install_from_disk.jpeg)
   - Simply drag and drop the .zip file to any IntelliJ IDEA window.
-- To apply changes, click on the “Restart IDE” button ![picig8](pics/pic_ig_8.jpeg)
+- To apply changes, click on the “Restart IDE” button ![restart_ide](img/restart_ide.jpeg)
 
 # Something went wrong? Contact us! 
 
