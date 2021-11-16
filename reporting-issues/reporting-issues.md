@@ -22,9 +22,9 @@ Unfortunately, there is no escape from bugs and errors. Sometimes they can happe
 
 To speed up the process of solving the problem that has arisen, we need to know: 
 
-- Plugin version. File -> Settings -> Plugins. For example, in the picture below, the installed JPA Buddy version is 5.4-212 ![picig1](pics/pic_ri_1.jpeg)
-- IntelliJ IDEA version. Help -> About -> Copy. ![picig2](pics/pic_ri_2.jpeg)
-- If something goes entirely in an unpredictable way and the error reporting mechanism with stake trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS). ![picig3](pics/pic_ri_3.jpeg)
+- Plugin version. File -> Settings -> Plugins. For example, in the picture below, the installed JPA Buddy version is 5.4-212 ![settings_plugins_installed](img/settings_plugins_installed.jpeg)
+- IntelliJ IDEA version. Help -> About -> Copy. ![about_intellij_idea](img/about_intellij_idea.jpeg)
+- If something goes entirely in an unpredictable way and the error reporting mechanism with stake trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS). ![help_show_log](img/help_show_log.jpeg)
 - The order of actions that must be done to reproduce the problem. 
 
 # Issue Tracker 
