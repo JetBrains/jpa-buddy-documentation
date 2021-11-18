@@ -203,13 +203,15 @@ For example, here are some options JPA Palette offers for Liquibase changelogs:
 
 JPA Buddy understands your data model and prefills the changesets as much as possible. And with the help of JPA Inspector you can explore the attributes of each changelog element: 
 
-[video]
+![liquibase_changelog_preview](img/liquibase_changelog_preview.jpeg)
 
 JPA Buddy also makes writing code by hand easier by providing code completion based on the JPA data model:
 
-[[video](https://haulmonts.sharepoint.com/sites/JPABuddy-Documentation/Shared%20Documents/Documentation/Content/Database%20Versioning/Liquibase/Videos/Code%20completion.mp4)]
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=zZhOW5hvlK8"><img src="https://img.youtube.com/vi/zZhOW5hvlK8/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 
-Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
+## Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
 
 The JPA Structure panel also offers a way to run Liquibase updates and preview SQL. To run an update, click the “Liquibase Update” button:
 
