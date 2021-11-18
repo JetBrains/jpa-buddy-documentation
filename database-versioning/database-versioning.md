@@ -9,6 +9,10 @@ Working with relational databases it is important to keep them synchronized with
 
 **JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation. 
 
+# Database Connection
+
+The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate [documentation](../database-connections/database-connections.md). Check it out to learn more. 
+
 # Library Support 
 
 JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: [**Flyway**](https://flywaydb.org/) and [**Liquibase**](https://www.liquibase.org/). However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project. 

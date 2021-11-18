@@ -5,19 +5,18 @@ JPA Buddy is a plugin for IntelliJ IDEA that makes working with JPA and related 
 JPA Buddy makes the development process easier by: 
 
 - introducing rich code generation capabilities 
+  - [Data model](../entity-designer/entity-designer.md)
 
-- Data model 
-
-- Spring Data interfaces 
-- DB migrations (Liquibase, Flyway) 
-- Reverse engineering 
+  - [Spring Data](../spring-data/spring-data.md) interfaces 
+  - [DB migrations](../database-versioning/database-versioning.md) (Liquibase, Flyway) 
+  - [Reverse engineering](../reverse-engineering/reverse-engineering.md)
 
 - integrating smart inspections 
 - providing better navigation via a data-centric view of the project 
 
 - offering comprehensive coding assistance capabilities 
 
-Installation and Project Setup 
+# Installation and Project Setup 
 
 JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ IDEA Ultimate Edition. It is available on the [JetBrains marketplace](https://plugins.jetbrains.com/plugin/15075-jpa-buddy), where it can be downloaded and installed. 
 
@@ -97,4 +96,5 @@ Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For examp
 
 # Something went wrong? Contact us! 
 
-Bugs and errors are unavoidable in any software, development tools are no exception. JPA Buddy team is always ready to help you cope with any difficulties that arise. Check out Reporting Issues section where you can find Contact Us information and tips for Error Reporting. 
+Bugs and errors are unavoidable in any software, development tools are no exception. JPA Buddy team is always ready to help you cope with any difficulties that arise. Check out [Reporting Issues](../reporting-issues/reporting-issues.md) section where you can find [Contact Us](../reporting-issues/reporting-issues.md#contact-us) information and tips for [Error Reporting](../reporting-issues/reporting-issues.md#error-reporting). 
+

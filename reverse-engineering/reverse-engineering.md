@@ -6,7 +6,7 @@ JPA Buddy allows you to granularly pick tables and fields from your database and
   <a href="https://www.youtube.com/watch?v=az9ghvGczys"><img src="https://img.youtube.com/vi/az9ghvGczys/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-The first thing you need to do to use the reverse engineering feature is to create a DB connection. The correct way to do it and possible issues are described in the separate documentation. Check it out to learn more. 
+The first thing you need to do to use the reverse engineering features is to create a DB connection. The correct way to do it and possible issues are described in the separate [documentation](../database-connections/database-connections.md). Check it out to learn more. 
 
 In the IntelliJ IDEA Community Edition, you can generate entities from DB via JPA Structure: 
 
@@ -46,7 +46,7 @@ For those attributes that match String or Integer type, you can change the mappi
 
 ### Dealing With Unknown Types 
 
-For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the settings. 
+For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings). 
 
 At the same time, some of the unsupported SQL types can be mapped via the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types) library. And if you have it in your project, JPA Buddy finds suitable types and automatically suggests them during reverse engineering: 
 
