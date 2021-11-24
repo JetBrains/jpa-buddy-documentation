@@ -1,4 +1,4 @@
-# Database Connections
+## Database Connections
 
 JPA Structure panel is responsible for everything related to DB configurations. To create a new DB connection, click on the “Plus” button and choose “DB Connection”. To use [Reverse Engineering](../reverse-engineering/reverse-engineering.md) and [Database Versioning](../database-versioning/database-versioning.md) features, the first thing you will need to do is create a database connection.
 
@@ -23,13 +23,13 @@ For the IntelliJ IDEA Community edition, JPA Buddy offers a similar mechanism.
 
 ![ij_community_db_connection](img/ij_community_db_connection.jpeg)
 
-# Non-Default Schema Connection
+## Non-Default Schema Connection
 
 Some of the RDBMSs that JPA Buddy supports provide the possibility to create non-default schemas, but not all of them work well with JDBC. That’s why you can face with some known issues during diff generations, or reverse engineering. For now, these issues can only be solved with some workaround. Below are examples of connecting to non-default schemas for all databases supported by JPA Buddy.
 
 *NOTE: We show two screenshots for all the examples below: the first from the IntelliJ IDEA Community Edition, the second from the IntelliJ IDEA Ultimate Edition.*
 
-## PostgreSQL
+### PostgreSQL
 
 The default PostgreSQL schema is “public”. For other schemes you need to specify desired schema name in the Connection params field via “currentSchema” parameter:
 
@@ -39,7 +39,7 @@ The default PostgreSQL schema is “public”. For other schemes you need to spe
 
 *NOTE: For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the required schema without any actions from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.*
 
-## Microsoft SQL Server
+### Microsoft SQL Server
 
 The default Microsoft SQL Server schema is “dbo”. To connect to the non-default scheme in Microsoft SQL Server, you should follow the steps described below: 
 
@@ -55,7 +55,7 @@ create login JohnDoe with password='saPassword1'
 create user JohnDoe for login JohnDoe with default_schema = my_schema 
 ```
 
-3. Give him owner rights:
+3. Give it owner rights:
 
 ```sql
 exec sp_addrolemember 'db_owner', 'JohnDoe' 
@@ -75,7 +75,7 @@ And for [JTDC](http://jtds.sourceforge.net/faq.html) like this:
 
 ![ij_ultimate_mssql_jtdc](img/ij_ultimate_mssql_jtdc.jpeg)
 
-## Oracle
+### Oracle
 
 In Oracle, schema, user and database are the same thing. Hence To connect to the non-default scheme you need to specify schema name in the user field.
 
@@ -93,7 +93,7 @@ And for the connection via service name like this:
 
 *NOTE: Reverse engineering does not work for system tables located in the "SYS” schema.*
 
-## MySQL & MariaDB
+### MySQL & MariaDB
 
 To connect to the non-default scheme you need to specify schema name in the Database URL field:
 

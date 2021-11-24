@@ -1,8 +1,8 @@
-# Introduction 
+## Introduction 
 
 [Spring Data JPA](https://spring.io/projects/spring-data-jpa) is part of the larger Spring Data family that makes it easy to implement JPA-based repositories quickly. JPA Buddy provides a clear UI for generating repositories, projections, queries, etc., for both Java and Kotlin entities. To enable those features, your project should contain dependencies mentioned in the [Installation Guide](../installation-guide/installation-guide.md). 
 
-# Repository Creation 
+## Repository Creation 
 
 JPA Buddy provides various ways to create repositories to make working with JPA-related objects more convenient for most users. All possible ways to generate repositories in the project are shown in the following video: 
 
@@ -28,19 +28,19 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 
 ![new_jpa_repository](img/new_jpa_repository.jpeg)
 
-# JPA Structure Repositories 
+## JPA Structure Repositories 
 
 For the most efficient navigation in the project, JPA Buddy groups all repositories for each entity. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.  
 
 ![jpa_structure_repository](img/jpa_structure_repository.jpeg)
 
-# Queries/Methods Generation 
+## Queries/Methods Generation 
 
 Spring Data provides the possibility to define a query with the @Query annotation. To write them accurately and in less time, use JPA Palette. Choose one of the following types of queries and configure them with the convenient UI. 
 
 ![jpa_palette_query](img/jpa_palette_query.jpeg)
 
-## Example 
+### Example 
 
 *NOTE: All that will be considered in the example below can be generated not only as a query but also as a method. The difference is that you can configure the method prefix in the Advance panel, and you can’t specify the name for it, because it will be generated automatically with accordance to* [*Naming Conventions for Query.*](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation) 
 
@@ -68,7 +68,7 @@ CompletableFuture<List<Owner>> findOwner(
   Pageable pageable); 
 ```
 
-## Entity Intention 
+### Entity Intention 
 
 JPA Buddy also provides intention on the entity attributes leading directly to the query/method creation window. Place the cursor on the desired attribute, press Alt+Enter (or Opt+Enter on Mac), and click on the Create Spring Data repository method. In the opened window, choose the required type of query/method. 
 
@@ -76,15 +76,15 @@ JPA Buddy also provides intention on the entity attributes leading directly to t
   <a href="https://youtu.be/mevqm5DzGRs"><img src="https://img.youtube.com/vi/mevqm5DzGRs/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-# JPA Inspector 
+## JPA Inspector 
 
 Since JPA Inspector is a context-dependent panel intended to modify already existing code, let’s consider the scope related to methods and queries. Once you place a cursor on the method or query you can configure the result, signature, query options, and string. 
 
 ![jpa_inspector](img/jpa_inspector.jpeg)
 
-# Query Refactoring 
+## Query Refactoring 
 
-## Async 
+### Async 
 
 Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add @Async annotation, but also to change the return type to one of the following: 
 
@@ -106,7 +106,7 @@ To make query async, place the cursor on the query you want to change and choose
 
 ![async](img/async.jpeg)
 
-## Projection Creation
+### Projection Creation
 
 Sometimes you only need a subset of columns from a table. In such cases, Spring Data JPA projections come in handy, letting you return only required fields from queries. 
 
@@ -147,7 +147,7 @@ public interface PetInfo {
 } 
 ```
 
-## Dynamic Projection 
+### Dynamic Projection 
 
 In Spring Data JPA, projections can also be specified during runtime by using generic repository methods. Add a type class parameter to your repository method to use the same query with different projections. This enables you to define the preferred returned type in your business code. 
 
@@ -155,7 +155,7 @@ To make query generic, place the cursor on the query you want to change and chec
 
 ![dynamic_projection](img/dynamic_projection.jpeg)
 
-## Query Extracting 
+### Query Extracting 
 
 Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures you would prefer to transform into neat @Query-annotated methods. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector. 
 
@@ -163,7 +163,7 @@ Derived query methods are a handy way to define queries. But over time, they may
   <a href="https://youtu.be/lYZielYtVXI"><img src="https://img.youtube.com/vi/lYZielYtVXI/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-## Query Autocompletion 
+### Query Autocompletion 
 
 For the IntelliJ IDEA Community edition, JPA Buddy provides query autocompletion, as it is in the IntelliJ IDEA Ultimate Edition. Place the cursor on the query and click on the “Query edit...” in the JPA Inspector. 
 

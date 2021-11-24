@@ -1,6 +1,6 @@
 
 
-# Database Versioning User Guide 
+## Database Versioning User Guide 
 
 Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge: 
 
@@ -9,11 +9,11 @@ Working with relational databases it is important to keep them synchronized with
 
 **JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation. 
 
-# Database Connection
+## Database Connection
 
 The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate [documentation](../database-connections/database-connections.md). Check it out to learn more. 
 
-# Library Support 
+## Library Support 
 
 JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: [**Flyway**](https://flywaydb.org/) and [**Liquibase**](https://www.liquibase.org/). However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project. 
 
@@ -40,7 +40,7 @@ Or:
 
 JPA Buddy scans the project dependencies and enables the corresponding features. 
 
-# General Differential Scripts Generation Flow 
+## General Differential Scripts Generation Flow 
 
 The general path of the diff scripts generation for both of frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts". 
 
@@ -69,9 +69,9 @@ Click OK to proceed further. JPA Buddy will analyze the difference between Sourc
   <a href="https://www.youtube.com/watch?v=xxzfgSvRsMk"><img src="https://img.youtube.com/vi/xxzfgSvRsMk/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-## Differential Migration Scripts Generation Options 
+### Differential Migration Scripts Generation Options 
 
-## Using a Database
+#### Using a Database
 
 Comparing a database with another database/snapshot makes sense if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities: 
 
@@ -80,7 +80,7 @@ Comparing a database with another database/snapshot makes sense if you have a so
 - applying changes in JPA entities over the database schema manually. 
   This approach may appear to be too laborious, especially for early development stages when the data model is being changed frequently. 
 
-## Using a Data Model
+#### Using a Data Model
 
 Following JPA principles, an application represents the data model (entities, associations, indexes, etc.) via the declared JPA entities. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema in the first place. This is why comparing your data model with a database/snapshot is the preferable option for generating differential changelogs. 
 
@@ -102,7 +102,7 @@ To configure a new persistence unit, click on the plus button in JPA Structure p
   <a href="https://www.youtube.com/watch?v=uaNFvkNLT9M"><img src="https://img.youtube.com/vi/uaNFvkNLT9M/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-## Using a Data Model Snapshot
+#### Using a Data Model Snapshot
 
 JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or hard to obtain a database for a certain state of the model, for example, when merging changes into some older version of the application. It may be simply impossible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, so no database will be required for differential migration scripts generation. 
 
@@ -123,7 +123,7 @@ Depending on the setup, there might be no DB that is always in sync with the mai
 
 In four simple steps you get a migration script that describes the changes between the current branch and the target branch.
 
-## Preview Window
+### Preview Window
 
 Click OK to proceed to the preview window of the migration script. The preview window for Liquibase looks like this (Flyway preview window is slightly different):
 
@@ -141,9 +141,9 @@ The danger levels can be customized in the plugin preferences in JPA Buddy -> Da
 
 ![You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the “Ignored” section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
 
-# Liquibase Support
+## Liquibase Support
 
-## Preview Window
+### Preview Window
 
 ![changelog_preview](img/changelog_preview.jpeg)
 
@@ -173,7 +173,7 @@ The following actions are provided:
 
 - *Show Other Actions* — select all changes based on the danger level, expand/collapse all changes
 
-## Primary and Secondary Changelogs
+### Primary and Secondary Changelogs
 
 JPA Buddy lets you put the changes into two types of changelogs: Primary and Secondary. One use case for this is separating safe changes that can be run automatically and changes that require your attention and need to be run manually.
 
@@ -181,7 +181,7 @@ The changes can be separated automatically by their type (in Settings -> Diff Ch
 
 By default, Primary and Secondary changelogs are generated in separate directories, which can be customized in the plugin settings. Read more in the Settings -> Database Versioning -> Liquibase section.
 
-## Creating and Modifying Changelogs
+### Creating and Modifying Changelogs
 
 JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds three panels to the IntelliJ IDEA UI: JPA Palette, JPA Inspector and JPA Structure.
 
@@ -211,7 +211,7 @@ JPA Buddy also makes writing code by hand easier by providing code completion ba
   <a href="https://www.youtube.com/watch?v=zZhOW5hvlK8"><img src="https://img.youtube.com/vi/zZhOW5hvlK8/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-## Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
+### Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
 
 The JPA Structure panel also offers a way to run Liquibase updates and preview SQL. To run an update, click the “Liquibase Update” button:
 
@@ -230,7 +230,7 @@ Clicking “Update” runs the Liquibase update command with the configured opti
 
 ![sql_preview](img/sql_preview.jpeg)
 
-## Liquibase Settings
+### Liquibase Settings
 
 Whenever an empty or differential Liquibase changelog is created, JPA Buddy generates the file name based on the templates specified in the plugin settings:
 
@@ -251,9 +251,9 @@ The following variables and macros are available in the templates:
   - `semVer.getPreRelease()`: SNAPSHOT
   - `semVer.getMeta()`: meta
 
-# Flyway Support
+## Flyway Support
 
-## Preview window Actions
+### Preview window Actions
 
 ![flyway_preview](img/flyway_preview.jpeg)
 
@@ -283,13 +283,13 @@ Above the list of changes, there is a button panel with the following actions:
 
 To combine several changes into one migration file or to ignore them, drag them around.
 
-## Flyway Callbacks
+### Flyway Callbacks
 
 While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate [all events](https://flywaydb.org/documentation/concepts/callbacks) that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure panel and choose the corresponding item.
 
 ![jpa_structure_java_callback](img/jpa_structure_java_callback.jpeg)
 
-## SQL Callbacks
+#### SQL Callbacks
 
 JPA Buddy provides Flyway SQL Callback window, with the following fields:
 
@@ -303,7 +303,7 @@ JPA Buddy provides Flyway SQL Callback window, with the following fields:
 
 - Optionally the callbacks may also include a description. The value in the “Description” filed will be appended along with the separator to the callback name. 
 
-## Java Callbacks
+#### Java Callbacks
 
 If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callbacks. JPA Buddy provides Flyway Java Callback window, with the following fields:
 
@@ -345,7 +345,7 @@ If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callback
 }
 ```
 
-## Flyway Settings
+### Flyway Settings
 
 Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway [naming pattern](https://flywaydb.org/documentation/concepts/migrations#naming). In plugin settings you can configure following values for name generation:
 
@@ -371,7 +371,7 @@ The following variables and macros are available in the templates:
   - `semVer.getPreRelease()`: SNAPSHOT
   - `semVer.getMeta()`: meta
 
-# SQL Visual Designer
+## SQL Visual Designer
 
 In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette. For each statement, there is a corresponding window that allows you to configure the statement:
 
@@ -379,7 +379,7 @@ In some cases, it’s useful to have SQL scripts for the JPA data model, especia
   <a href="https://www.youtube.com/watch?v=61_tr0QovfU"><img src="https://img.youtube.com/vi/61_tr0QovfU/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-# Show DDL... Action 
+## Show DDL... Action 
 
 To generate create script for existing entities you can use Show DDL action.
 
@@ -389,7 +389,7 @@ All you need to generate the script is to choose the required table and DB type.
 
 ![choose_table](img/choose_table.jpeg)
 
-# Custom Type Mappings
+## Custom Type Mappings
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them.
 
@@ -421,7 +421,7 @@ Therefore, there is no need to create separate changelogs for different DBMSs.
 
 As for generating Flyway migrations, choose the needed DB connection in the corresponding field. JPA Buddy will generate the script according to the mappings that you defined for the selected DB.
 
-## Convertors
+### Convertors
 
 In order to simplify type mapping, JPA Buddy introduces DB-agnostic SQL types, that are transformed into the DB-specific type. For example, “varchar" is transformed into “varchar2” for Oracle DB and left as “varchar" for PostgreSQL.
 
@@ -568,7 +568,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 </tbody>
 </table>
 
-# Naming Strategy and Max Identifier Settings
+## Naming Strategy and Max Identifier Settings
 
 Since JPA Buddy supports six databases at once, this is important to have the ability to configure naming strategies and max identifier length.
 
@@ -584,3 +584,7 @@ To learn more about naming strategies, you can check out our [article](https://w
 RDBMSs have their own limitations. For example, table names for [OracleDatabase](https://twitter.com/OracleDatabase) earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
 
 ![max_db_identifier](img/max_db_identifier.jpeg)
+
+## Sharing Settings via Version Control 
+
+JPA Buddy settings define conventions that are supposed to be shared among the team members: file naming rules, how to mark or separate change types, which data types to use for DBMSs etc. To make sharing easier, all the plugin settings are stored in the ‘.jpb’ folder in the root of the project. This folder is supposed to be pushed to the version control, which automatically keeps the settings in sync across the development team. 

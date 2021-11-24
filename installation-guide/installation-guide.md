@@ -1,4 +1,4 @@
-# What is JPA Buddy? 
+## What is JPA Buddy? 
 
 JPA Buddy is a plugin for IntelliJ IDEA that makes working with JPA and related technologies easier. It provides development tools for Hibernate, EclipseLink, Spring Data JPA, Liquibase, Flyway, SQL, and similar things. 
 
@@ -16,7 +16,7 @@ JPA Buddy makes the development process easier by:
 
 - offering comprehensive coding assistance capabilities 
 
-# Installation and Project Setup 
+## Installation and Project Setup 
 
 JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ IDEA Ultimate Edition. It is available on the [JetBrains marketplace](https://plugins.jetbrains.com/plugin/15075-jpa-buddy), where it can be downloaded and installed. 
 
@@ -24,7 +24,7 @@ You can install JPA Buddy for running IntelliJ IDEA. Open Preferences -> Plugins
 
 ![jpa_buddy_install](img/jpa_buddy_install.jpeg)
 
-# Dependencies 
+## Dependencies 
 
 Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyway, JPA Buddy scans the project dependencies and enables the corresponding features. 
 
@@ -72,14 +72,14 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyw
 
 ![load_maven_changes](img/load_maven_changes.jpeg)
 
-# Verifying Installation 
+## Verifying Installation 
 
 To make sure that the plugin is installed correctly, follow these steps: 
 
 - Open Plugin Settings IntelliJ IDEA window: clicks File -> Settings -> Plugins -> Installed. Make sure that JPA Buddy there is in this section and enabled. ![settings_plugin_installed](img/settings_plugin_installed.jpeg)
 - Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above. ![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
 
-# Installing a Specific Version of JPA Buddy 
+## Installing a Specific Version of JPA Buddy 
 
 Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For example, JPA Buddy 4.3 works correctly with IntelliJ IDEA from 2021.1 to 2021.1.3. But if you have to install JPA Buddy on the other version of IntelliJ IDEA, you can do the following: 
 
@@ -94,7 +94,7 @@ Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For examp
   - Simply drag and drop the .zip file to any IntelliJ IDEA window.
 - To apply changes, click on the “Restart IDE” button ![restart_ide](img/restart_ide.jpeg)
 
-# Something went wrong? Contact us! 
+## Something went wrong? Contact us! 
 
 Bugs and errors are unavoidable in any software, development tools are no exception. JPA Buddy team is always ready to help you cope with any difficulties that arise. Check out [Reporting Issues](../reporting-issues/reporting-issues.md) section where you can find [Contact Us](../reporting-issues/reporting-issues.md#contact-us) information and tips for [Error Reporting](../reporting-issues/reporting-issues.md#error-reporting). 
 

@@ -1,10 +1,10 @@
-# Introduction
+## Introduction
 
 Once you [install JPA Buddy](../installation-guide/installation-guide.md), you will find three additional tool windows: JPA Structure, JPA Palette and JPA Inspector. 
 
 ![jpa_buddy_panels](img/jpa_buddy_panels.jpeg) 
 
-# Entity Creation
+## Entity Creation
 
 To create a new Entity, right-click on the desired folder and select New -> JPA -> Entity. In the opened window, you can:
 
@@ -25,7 +25,7 @@ To create a new Entity, right-click on the desired folder and select New -> JPA 
   </a>
 </div>
 
-## Languages Support
+### Languages Support
 
 JPA Buddy supports both [Java](https://www.java.com/) and [Kotlin](https://kotlinlang.org/). When JPA Buddy detects the [Kotlin dependency](https://kotlinlang.org/docs/maven.html) in your project, an additional option appears in the “New Entity” window, letting you pick the language:
 
@@ -35,7 +35,7 @@ Also, in the Settings -> JPA Buddy -> Entity Declaration, you can choose which l
 
 ![settings_scaffolding_language](img/settings_scaffolding_language.jpeg)
 
-## Id and Generation Strategy
+### Id and Generation Strategy
 
 After the entity is created, the first attribute that you need to add is the id attribute. Hover over the class name and click on the “Add Id attribute” button to generate it. In the opened window, you can choose one of the following generation strategies:
 
@@ -56,7 +56,7 @@ For AUTO and IDENTITY strategies, you can define type, name, column name, and ma
 private Long id;
 ```
 
-# JPA Structure
+## JPA Structure
 
 JPA Structure panel is always available on the bottom-left side. It provides a comprehensive data-centric view on the project. You can use it for many different purposes:
 
@@ -67,11 +67,11 @@ JPA Structure panel is always available on the bottom-left side. It provides a c
 
 ![jpa_structure](img/jpa_structure.jpeg)
 
-# JPA Palette and Inspector
+## JPA Palette and Inspector
 
 Once the JPA entity is created, two panels appear at the right side of the window: JPA Palette and JPA Inspector. The content of these panels is context-depended. The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc. 
 
-## JPA Palette
+### JPA Palette
 
 JPA Palette provides a corresponding generation window for everything listed below. There is a difference between them according to the context, but they all have a similar design.
 
@@ -107,7 +107,7 @@ As you can see in the video, via JPA Palette, you can only generate attributes f
 
 - Utilities (Equals/HashCode/ToString) - [video]. JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/) and [Vlad Mihalcea.](https://vladmihalcea.com/the-best-way-to-implement-equals-hashcode-and-tostring-with-jpa-and-hibernate/)
 
-### High-Performance Tips
+#### High-Performance Tips
 
  Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency. In the picture below you can view which mappings are efficient and which are not. You can learn more about it in the [article by Vlad Mihalcea](https://vladmihalcea.com/14-high-performance-java-persistence-tips/).
 
@@ -121,7 +121,7 @@ Also, JPA Buddy provides short explanation in “Learn more” button, why the c
 
 ![learn_more](img/learn_more.jpeg)
 
-## JPA Inspector 
+### JPA Inspector 
 
 JPA Inspector allows you to configure classes and fields in it. Click on any element that you need to configure, and change the required properties:
 
@@ -130,7 +130,7 @@ JPA Inspector allows you to configure classes and fields in it. Click on any ele
   </a>
 </div>
 
-## Hibernate Validations
+### Hibernate Validations
 
 For projects with Hibernate Validations, a section appears with validations that you can apply for the selected attribute:
 
@@ -139,9 +139,9 @@ For projects with Hibernate Validations, a section appears with validations that
   </a>
 </div>
 
-# Lombok
+## Lombok
 
-## Inspections
+### Inspections
 
 [Lombok](https://projectlombok.org/) is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
 
@@ -165,19 +165,19 @@ For projects with Hibernate Validations, a section appears with validations that
 
 Check out our [article](https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go-wrong/) to learn more about why it is so important to follow the rules above.
 
-## Annotations
+### Annotations
 
 For the projects with Lombok in JPA Inspector appears section with possible annotations that you can add to the entity.
 
 ![jpa_inspector_lombok_annotations](img/jpa_inspector_lombok_annotations.jpeg)
 
-## Settings
+### Settings
 
 JPA Buddy provides the possibility to generate new entities and attributes with Lombok annotations. To configure whether attributes you want to add at once with new entities and attributes, choose required at the bottom of the Entity Declaration window.
 
 ![lombok_settings](img/lombok_settings.jpeg)
 
-# Hibernate Types & JPA Converters
+## Hibernate Types & JPA Converters
 
 JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector: 
 
@@ -223,15 +223,15 @@ public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Bool
 }
 ```
 
-# Inspections
+## Inspections
 
 JPA Buddy provides a lot of inspections that help during coding. By default, all inspections are enabled in all scopes and have warning severity. You can see full list of provided inspections and configure them in Settings -> Editor -> Inspections -> JPA Buddy.
 
 ![inspections](img/inspections.jpeg)
 
-# Settings
+## Settings
 
-## Naming Templates
+### Naming Templates
 
 Java code style may change from project to project. Also, working with external databases you have to follow naming conventions for tables, columns, etc., when mapping them to JPA entities. JPA Buddy offers you flexible configurations of naming templates, which are automatically applied to new entities and attributes.
 
@@ -239,7 +239,6 @@ Java code style may change from project to project. Also, working with external 
   <a href="https://www.youtube.com/watch?v=npHuDl8pdmM"><img src="https://img.youtube.com/vi/npHuDl8pdmM/0.jpg" alt="IMAGE ALT TEXT">
   </a>
 </div>
-
 *NOTE: The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in* [*our article*](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/)*. JPA Buddy allows you to choose naming strategies for scripts generation in the [settings](../database-versioning/database-versioning.md#naming-strategy-and-max-identifier-settings).*
 
 *By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation provides the same table structure as Hibernate 4: all dots are replaced by underscores and camel casing is replaced by underscores as well. Additionally, by default, all table names are generated in lower case. For example, for both of the entity declarations below, the actual name of the DB table will be pet_type.*
@@ -261,7 +260,7 @@ public class PetType {
 }
 ```
 
-## Constants Generation
+### Constants Generation
 
 One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in [Thorben Janssen](https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/) article. 
 

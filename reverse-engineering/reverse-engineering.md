@@ -1,4 +1,4 @@
-# Basics
+## Basics
 
 JPA Buddy allows you to granularly pick tables and fields from your database and get them as JPA entities: 
 
@@ -20,13 +20,13 @@ The “New Entity” window allows you to select the table, set class name, defi
 
 ![new_entity_window](img/new_entity_window.jpeg)
 
-# Migrating Attributes 
+## Migrating Attributes 
 
 After entity configuration, it's time to configure the attributes. Here you can choose which attributes you want to add and change all their params, except "Column Name". Mapping type and attribute/converter/hibernate types are represented as drop-down lists.  
 
 ![reverse_engineering_columns_unsupported_sql_type](img/reverse_engineering_columns_unsupported_sql_type.jpeg)
 
-## Migrating Associations 
+### Migrating Associations 
 
 For the entity that have associations, JPA Buddy will create corresponding entities as well. The only thing left to do is to reverse engineering columns via JPA Palette. 
 
@@ -36,15 +36,15 @@ For the entity that have associations, JPA Buddy will create corresponding entit
   <a href="https://www.youtube.com/watch?rHwSM08jUuA"><img src="https://img.youtube.com/vi/rHwSM08jUuA/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-## Types 
+### Types 
 
-### Creating Enums 
+#### Creating Enums 
 
 For those attributes that match String or Integer type, you can change the mapping type from Basic to Enum, and JPA Buddy will create the corresponding Enum class in the project, which will need to be filled in with values manually. 
 
 ![columns_mapping_type](img/columns_mapping_type.jpeg)
 
-### Dealing With Unknown Types 
+#### Dealing With Unknown Types 
 
 For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings). 
 
@@ -54,7 +54,7 @@ At the same time, some of the unsupported SQL types can be mapped via the [Hiber
   <a href="https://www.youtube.com/watch?uBjxdAmVDuI"><img src="https://img.youtube.com/vi/uBjxdAmVDuI/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
-## Adding Attributes to Existing Entities 
+### Adding Attributes to Existing Entities 
 
 During development, new columns can be added directly to the database table. JPA Buddy determines which columns already have the appropriate attributes and which do not. To add attributes to the existing entity, choose Columns action in the Reverse Engineering section in JPA Palette.  
 
@@ -64,7 +64,7 @@ After that, the Reverse Engineering Columns window will appear with only those a
 
 ![reverse_engineering_columns](img/reverse_engineering_columns.jpeg)
 
-# Type Mappings 
+## Type Mappings 
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them. 
 
@@ -74,7 +74,7 @@ JPA Buddy lets you specify type mappings for each DBMS. It is also possible to s
 
 ![preferences_reverse_engineering](img/preferences_reverse_engineering.jpeg)
 
-# Working With Remote DB 
+## Working With Remote DB 
 
 The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2). 
 
