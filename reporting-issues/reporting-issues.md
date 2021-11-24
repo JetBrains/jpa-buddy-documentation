@@ -12,9 +12,8 @@ JPA Buddy keeps evolving, and we need to hear the users. If you have any suggest
 
 Unfortunately, there is no escape from bugs and errors. Sometimes they can happen through our fault, and sometimes not. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us, now it’s as simple as clicking a button: 
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=OkFBn4s-218"><img src="https://img.youtube.com/vi/OkFBn4s-218/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OkFBn4s-218" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 *It is important to mention that we don’t gather any sensitive information about your project, such as database credentials, schema, and so on...* 
 

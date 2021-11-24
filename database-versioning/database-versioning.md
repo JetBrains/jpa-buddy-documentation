@@ -65,9 +65,8 @@ The target can be set to:
 
 Click OK to proceed further. JPA Buddy will analyze the difference between Source and Target and show the Preview dialog to enable fine tuning for the resulting migration script. Click Save to add the new script to the project or to append an existing one. 
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=xxzfgSvRsMk"><img src="https://img.youtube.com/vi/xxzfgSvRsMk/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xxzfgSvRsMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### Differential Migration Scripts Generation Options 
 
@@ -98,9 +97,8 @@ To configure a new persistence unit, click on the plus button in JPA Structure p
 
 - You can manually select entities from the project 
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=uaNFvkNLT9M"><img src="https://img.youtube.com/vi/uaNFvkNLT9M/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uaNFvkNLT9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 #### Using a Data Model Snapshot
 
@@ -207,9 +205,8 @@ JPA Buddy understands your data model and prefills the changesets as much as pos
 
 JPA Buddy also makes writing code by hand easier by providing code completion based on the JPA data model:
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=zZhOW5hvlK8"><img src="https://img.youtube.com/vi/zZhOW5hvlK8/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zZhOW5hvlK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
 
@@ -375,9 +372,8 @@ The following variables and macros are available in the templates:
 
 In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette. For each statement, there is a corresponding window that allows you to configure the statement:
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=61_tr0QovfU"><img src="https://img.youtube.com/vi/61_tr0QovfU/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Show DDL... Action 
 
