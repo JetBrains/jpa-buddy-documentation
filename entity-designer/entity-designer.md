@@ -9,15 +9,12 @@ Once you [install JPA Buddy](../installation-guide/installation-guide.md), you w
 To create a new Entity, right-click on the desired folder and select New -> JPA -> Entity. In the opened window, you can:
 
 - Set class name
-
 - Define one of the following entity types:
-
-- - Entity
+  - Entity
   - Embeddable
   - Mapped Superclass
 
 - Select parent entity
-
 - Configure source root and package
 
 <div align="center">
