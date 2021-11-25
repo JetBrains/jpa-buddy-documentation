@@ -102,13 +102,13 @@ As you can see in the video, via JPA Palette, you can only generate attributes f
 
 - Utilities (Equals/HashCode/ToString) - [video]. JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/) and [Vlad Mihalcea.](https://vladmihalcea.com/the-best-way-to-implement-equals-hashcode-and-tostring-with-jpa-and-hibernate/)
 
-#### High-Performance Tips
+#### Associations Performance Tips
 
- Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency. In the picture below you can view which mappings are efficient and which are not. You can learn more about it in the [article by Vlad Mihalcea](https://vladmihalcea.com/14-high-performance-java-persistence-tips/).
+ Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency. In the picture below you can view which mappings are efficient and which are not. You can learn more about it in the article by Vlad Mihalcea.
 
 ![high_performance_tips](img/high_performance_tips.jpeg)
 
-During associations creation, JPA Buddy checks if you attempt to generate not inefficient mapping and suggests possible optimizations as a drop-down list.
+During associations creation, JPA Buddy checks if you attempt to generate inefficient mapping and suggests possible optimizations as a drop-down list.
 
 ![suggested_optimizations](img/suggested_optimizations.jpeg)
 
