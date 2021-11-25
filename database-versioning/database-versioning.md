@@ -160,19 +160,14 @@ On the left of the window, there is a preview of the actual changesets to be gen
 The following actions are provided:
 
 - *Add Changelog* — create a secondary changelog
-
 - *Add Change Set* — create a new changeset in the selected changelog
-
 - *Remove from Changelog* with options:
-
-- - *Remove from Changelog* — simply remove the changes from the current changelog
+  - *Remove from Changelog* — simply remove the changes from the current changelog
   - *Remove and Ignore* — remove the changes and add them to “Ignored”, so they are excluded from future changesets too
   - *Restore from Ignored* — move the changes from “Ignored” to the changelog
 
 - *Set Context* (for changesets)
-
 - *Set Labels* (for changesets)
-
 - *Show Other Actions* — select all changes based on the danger level, expand/collapse all changes
 
 ### Primary and Secondary Changelogs
@@ -242,17 +237,15 @@ Whenever an empty or differential Liquibase changelog is created, JPA Buddy gene
 The following variables and macros are available in the templates:
 
 - `#date([format])` – the current system date in the specified [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
-
 - `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
-
 - `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
-
-- - `semVer.getRawVersion(): 1.2.3-SNAPSHOT
+  - `semVer.getRawVersion(): 1.2.3-SNAPSHOT
   - `semVer.getMajor()`: 1
   - `semVer.getMinor()`: 2
   - `semVer.getPatch()`: 3
   - `semVer.getPreRelease()`: SNAPSHOT
   - `semVer.getMeta()`: meta
+
 
 ## Flyway Support
 
@@ -269,20 +262,16 @@ On the left of the window, there is a preview of the actual changes to be genera
 Above the list of changes, there is a button panel with the following actions: 
 
 - Add Versioned Migration— create a secondary versioned migration. 
-
 - Remove from Versioned Migration with options: 
-
-- - Remove from Versioned Migration — to remove the changes from the current migration. 
+  - Remove from Versioned Migration — to remove the changes from the current migration. 
   - Remove and Ignore — to remove the changes and add them to the "Ignored" section, so they are excluded from future migrations too.
 
 - Restore from Ignored — move the changes from "Ignored" to the migration.
-
 - Move to Another Versioned Migration — by default, a single migration script is created on each diff generation with all the changes. This action lets you move a change to another migration file.
-
 - Show Other Actions — This button will help you to conveniently interact with a large number of changes in the migration files: 
-
-- - "Select all ..."
+  - "Select all ..."
   - "Expand/collapse all"
+
 
 To combine several changes into one migration file or to ignore them, drag them around.
 
@@ -362,17 +351,15 @@ Whenever an empty or differential Flyway migration is created, JPA Buddy generat
 The following variables and macros are available in the templates:
 
 - `#date([format])` – the current system date in the specified [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
-
 - `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
-
 - `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
-
-- - `semVer.getRawVersion(): 1.2.3-SNAPSHOT
+  - `semVer.getRawVersion(): 1.2.3-SNAPSHOT
   - `semVer.getMajor()`: 1
   - `semVer.getMinor()`: 2
   - `semVer.getPatch()`: 3
   - `semVer.getPreRelease()`: SNAPSHOT
   - `semVer.getMeta()`: meta
+
 
 ## SQL Visual Designer
 
