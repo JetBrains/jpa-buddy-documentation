@@ -97,21 +97,25 @@ JPA Palette provides a corresponding generation window for everything listed bel
 
 As you can see in the video, via JPA Palette, you can only generate attributes for the entity. But JPA Buddy provides more features for this. You can learn more in [Reverse Engineering](../reverse-engineering/reverse-engineering.md) documentation.
 
-- Utilities (Equals/HashCode/ToString) - [video]. JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/) and [Vlad Mihalcea.](https://vladmihalcea.com/the-best-way-to-implement-equals-hashcode-and-tostring-with-jpa-and-hibernate/)
+- Utilities (Equals/HashCode/ToString) - JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/).
+
+  <div align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jTdMIOfyx2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
 #### Associations Performance Tips
 
- Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency. In the picture below you can view which mappings are efficient and which are not. You can learn more about it in the article by Vlad Mihalcea.
+Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency. 
 
-![high_performance_tips](img/high_performance_tips.jpeg)
+During associations creation, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
 
-During associations creation, JPA Buddy checks if you attempt to generate inefficient mapping and suggests possible optimizations as a drop-down list.
+![learn_more](img/learn_more.jpeg)
+
+Also, there is a drop-down list with possible optimizations that you can apply in one click:
 
 ![suggested_optimizations](img/suggested_optimizations.jpeg)
 
-Also, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
 
-![learn_more](img/learn_more.jpeg)
 
 ### JPA Inspector 
 
