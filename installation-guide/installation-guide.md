@@ -79,8 +79,13 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyw
 
 To make sure that the plugin is installed correctly, follow these steps: 
 
-- Open Plugin Settings IntelliJ IDEA window: clicks File -> Settings -> Plugins -> Installed. Make sure that JPA Buddy there is in this section and enabled. ![settings_plugin_installed](img/settings_plugin_installed.jpeg)
-- Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above. ![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
+- Open Plugin Settings IntelliJ IDEA window: clicks File -> Settings -> Plugins -> Installed. Make sure that JPA Buddy there is in this section and enabled.
+
+![settings_plugin_installed](img/settings_plugin_installed.jpeg)
+
+- Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above. 
+
+![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
 
 ## Installing a Specific Version of JPA Buddy 
 
@@ -88,14 +93,24 @@ Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For examp
 
 - Open JPA Buddy JetBrains Marketplace [page.](https://plugins.jetbrains.com/plugin/15075-jpa-buddy) 
 - Open Versions tab. 
-- Find a version of JPA Buddy which satisfies the version of your IntelliJ IDEA and click on it. ![marketplace](img/marketplace.jpeg)
-- In the opened window, click on the “Download” button. ![marketplace_description](img/marketplace_description.jpeg)
+- Find a version of JPA Buddy which satisfies the version of your IntelliJ IDEA and click on it. 
+
+![marketplace](img/marketplace.jpeg)
+
+- In the opened window, click on the “Download” button. 
+
+![marketplace_description](img/marketplace_description.jpeg)
 
 - Save .zip file to your PC. 
 - Now you have two options: 
-  - Open File -> Settings -> Plugins page click on the settings icon next to the “installed” tab and choose “install plugin from disc”. Find the downloaded .zip file, select it, and click “ok”. ![install_from_disk](img/install_from_disk.jpeg)
+  - Open File -> Settings -> Plugins page click on the settings icon next to the “installed” tab and choose “install plugin from disc”. Find the downloaded .zip file, select it, and click “ok”. 
+  
+  ![install_from_disk](img/install_from_disk.jpeg)
+
   - Simply drag and drop the .zip file to any IntelliJ IDEA window.
-- To apply changes, click on the “Restart IDE” button ![restart_ide](img/restart_ide.jpeg)
+- To apply changes, click on the “Restart IDE” button 
+
+![restart_ide](img/restart_ide.jpeg)
 
 ## Something went wrong? Contact us! 
 
