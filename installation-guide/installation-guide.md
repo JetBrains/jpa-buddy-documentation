@@ -28,6 +28,7 @@ You can install JPA Buddy for running IntelliJ IDEA. Open Preferences -> Plugins
 
 Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyway, JPA Buddy scans the project dependencies and enables the corresponding features. 
 
+<div class="table">
 <table class="tg">
 <thead>
   <tr>
@@ -68,6 +69,8 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyw
   </tr>
 </tbody>
 </table>
+</div>
+
 *After adding one of the dependencies to the project, do not forget to click on the "Load Maven Changes" button in the upper right corner.* 
 
 ![load_maven_changes](img/load_maven_changes.jpeg)

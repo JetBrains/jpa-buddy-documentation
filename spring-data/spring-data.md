@@ -6,7 +6,7 @@
 
 JPA Buddy provides various ways to create repositories to make working with JPA-related objects more convenient for most users. All possible ways to generate repositories in the project are shown in the following video: 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8pHsZ_HvbXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -72,7 +72,7 @@ CompletableFuture<List<Owner>> findOwner(
 
 JPA Buddy also provides intention on the entity attributes leading directly to the query/method creation window. Place the cursor on the desired attribute, press Alt+Enter (or Opt+Enter on Mac), and click on the Create Spring Data repository method. In the opened window, choose the required type of query/method. 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mevqm5DzGRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -110,9 +110,10 @@ To make query async, place the cursor on the query you want to change and choose
 
 Sometimes you only need a subset of columns from a table. In such cases, Spring Data JPA projections come in handy, letting you return only required fields from queries. 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xevxVvu_Hbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</
+</div>
+
 In the “New Spring Projection” window, you can define source root and package, choose entity class, set a name for projection class, and select the fields that you want to include in it: 
 
 ![new_spring_projection](img/new_spring_projection.jpeg)
@@ -157,7 +158,7 @@ To make query generic, place the cursor on the query you want to change and chec
 
 Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures you would prefer to transform into neat @Query-annotated methods. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector. 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lYZielYtVXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -165,6 +166,6 @@ Derived query methods are a handy way to define queries. But over time, they may
 
 For the IntelliJ IDEA Community edition, JPA Buddy provides query autocompletion, as it is in the IntelliJ IDEA Ultimate Edition. Place the cursor on the query and click on the “Query edit...” in the JPA Inspector. 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IQDgQ5_l764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

@@ -2,7 +2,7 @@
 
 JPA Buddy allows you to granularly pick tables and fields from your database and get them as JPA entities: 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/az9ghvGczys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -32,7 +32,7 @@ For the entity that have associations, JPA Buddy will create corresponding entit
 
 *NOTE: There is no way to determine how exactly to relate one entity to another: OneToOne or ManyToOne. By default, JPA Buddy sets ManyToOne.* 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rHwSM08jUuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -50,7 +50,7 @@ For some SQL types, there is no exact match to Java classes. In this case, JPA B
 
 At the same time, some of the unsupported SQL types can be mapped via the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types) library. And if you have it in your project, JPA Buddy finds suitable types and automatically suggests them during reverse engineering: 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

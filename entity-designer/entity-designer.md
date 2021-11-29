@@ -17,7 +17,7 @@ To create a new Entity, right-click on the desired folder and select New -> JPA 
 - Select parent entity
 - Configure source root and package
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KAIZ1oBjdug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -73,25 +73,25 @@ JPA Palette provides a corresponding generation window for everything listed bel
 
 - Attributes
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8A_ftrU_yYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 - Lifecycle Callbacks
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d77p30UXBzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 - Indexes
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9YVtxVeN9Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 - Reverse Engineering
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/az9ghvGczys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -99,9 +99,9 @@ As you can see in the video, via JPA Palette, you can only generate attributes f
 
 - Utilities (Equals/HashCode/ToString) - JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/).
 
-  <div align="center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jTdMIOfyx2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+<div class="youtube" align="center"> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jTdMIOfyx2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 #### Associations Performance Tips
 
@@ -121,7 +121,7 @@ Also, there is a drop-down list with possible optimizations that you can apply i
 
 JPA Inspector allows you to configure classes and fields in it. Click on any element that you need to configure, and change the required properties:
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -129,7 +129,7 @@ JPA Inspector allows you to configure classes and fields in it. Click on any ele
 
 For projects with Hibernate Validations, a section appears with validations that you can apply for the selected attribute:
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yIOcQ_bGxBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -141,13 +141,13 @@ For projects with Hibernate Validations, a section appears with validations that
 
 - Avoid using @EqualsAndHashCode and @Data with JPA entities. Entities are immutable by their nature, so implementing equals() and hashCode() for them is not a trivial task. The implementations provided by Lombok are not well suited for JPA entities and may cause issues with collections and accidental loading of lazy attributes.
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6qZXvz-Fs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 - Always exclude lazy attributes when using @ToString - by default, @ToString includes all the object fields. Such an approach can have an unwanted side-effect for JPA entities: accidentally loading lazy attributes. This can easily harm the application performance or lead to a LazyInitializationException if it happens outside a transaction.
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fUtRJBKskig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -173,7 +173,7 @@ JPA Buddy provides the possibility to generate new entities and attributes with 
 
 JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector: 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -226,7 +226,7 @@ JPA Buddy provides a lot of inspections that help during coding. By default, all
 
 Java code style may change from project to project. Also, working with external databases you have to follow naming conventions for tables, columns, etc., when mapping them to JPA entities. JPA Buddy offers you flexible configurations of naming templates, which are automatically applied to new entities and attributes.
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/npHuDl8pdmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -255,7 +255,7 @@ public class PetType {
 
 One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in [Thorben Janssen](https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/) article. 
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xc-ayDDdjss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

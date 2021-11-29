@@ -65,7 +65,7 @@ The target can be set to:
 
 Click OK to proceed further. JPA Buddy will analyze the difference between Source and Target and show the Preview dialog to enable fine tuning for the resulting migration script. Click Save to add the new script to the project or to append an existing one. 
 
-<div align="center">
+<div class="youtube" align="center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/xxzfgSvRsMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -99,7 +99,7 @@ To configure a new persistence unit, click on the plus button in JPA Structure p
 
 - You can manually select entities from the project 
 
-<div align="center">
+<div class="youtube" align="center">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/uaNFvkNLT9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -204,7 +204,7 @@ JPA Buddy understands your data model and prefills the changesets as much as pos
 
 JPA Buddy also makes writing code by hand easier by providing code completion based on the JPA data model:
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zZhOW5hvlK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -365,7 +365,7 @@ The following variables and macros are available in the templates:
 
 In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette. For each statement, there is a corresponding window that allows you to configure the statement:
 
-<div align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -418,15 +418,7 @@ In order to simplify type mapping, JPA Buddy introduces DB-agnostic SQL types, t
 
 Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCHAR” or “character varying”), which in most cases are interchangeable. Unknown types are used as is without any transformations. Check out the full list of aliases in the table:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
+<div class="table">
 <table class="tg">
 <thead>
   <tr>
@@ -558,6 +550,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
   </tr>
 </tbody>
 </table>
+</div>
 
 ## Naming Strategy and Max Identifier Settings
 
