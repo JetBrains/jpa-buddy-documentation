@@ -1,6 +1,6 @@
 ## Introduction
 
-Once you [install JPA Buddy](../installation-guide/installation-guide.md), you will find three additional tool windows: JPA Structure, JPA Palette and JPA Inspector. 
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find three additional tool windows: JPA Structure, JPA Palette and JPA Inspector. 
 
 ![jpa_buddy_panels](img/jpa_buddy_panels.jpeg) 
 
@@ -95,7 +95,7 @@ JPA Palette provides a corresponding generation window for everything listed bel
 <iframe width="560" height="315" src="https://www.youtube.com/embed/az9ghvGczys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-As you can see in the video, via JPA Palette, you can only generate attributes for the entity. But JPA Buddy provides more features for this. You can learn more in [Reverse Engineering](../reverse-engineering/reverse-engineering.md) documentation.
+As you can see in the video, via JPA Palette, you can only generate attributes for the entity. But JPA Buddy provides more features for this. You can learn more in [Reverse Engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/) documentation.
 
 - Utilities (Equals/HashCode/ToString) - JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/).
 
@@ -230,7 +230,7 @@ Java code style may change from project to project. Also, working with external 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/npHuDl8pdmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-*NOTE: The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in* [*our article*](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/)*. JPA Buddy allows you to choose naming strategies for scripts generation in the [settings](../database-versioning/database-versioning.md#naming-strategy-and-max-identifier-settings).*
+*NOTE: The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in* [*our article*](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/)*. JPA Buddy allows you to choose naming strategies for scripts generation in the [settings](https://www.jpa-buddy.com/documentation/database-versioning/#naming-strategy-and-max-identifier-settings).*
 
 *By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation provides the same table structure as Hibernate 4: all dots are replaced by underscores and camel casing is replaced by underscores as well. Additionally, by default, all table names are generated in lower case. For example, for both of the entity declarations below, the actual name of the DB table will be pet_type.*
 

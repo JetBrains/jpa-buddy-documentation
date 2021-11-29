@@ -5,11 +5,11 @@ JPA Buddy is a plugin for IntelliJ IDEA that makes working with JPA and related 
 JPA Buddy makes the development process easier by: 
 
 - introducing rich code generation capabilities 
-  - [Data model](../entity-designer/entity-designer.md)
+  - [Data model](https://www.jpa-buddy.com/documentation/entity-designer/)
 
-  - [Spring Data](../spring-data/spring-data.md) interfaces 
-  - [DB migrations](../database-versioning/database-versioning.md) (Liquibase, Flyway) 
-  - [Reverse engineering](../reverse-engineering/reverse-engineering.md)
+  - [Spring Data](https://www.jpa-buddy.com/documentation/spring-data/) interfaces 
+  - [DB migrations](https://www.jpa-buddy.com/documentation/database-versioning/) (Liquibase, Flyway) 
+  - [Reverse engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/)
 
 - integrating smart inspections 
 - providing better navigation via a data-centric view of the project 
@@ -99,5 +99,5 @@ Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For examp
 
 ## Something went wrong? Contact us! 
 
-Bugs and errors are unavoidable in any software, development tools are no exception. JPA Buddy team is always ready to help you cope with any difficulties that arise. Check out [Reporting Issues](../reporting-issues/reporting-issues.md) section where you can find [Contact Us](../reporting-issues/reporting-issues.md#contact-us) information and tips for [Error Reporting](../reporting-issues/reporting-issues.md#error-reporting). 
+Bugs and errors are unavoidable in any software, development tools are no exception. JPA Buddy team is always ready to help you cope with any difficulties that arise. Check out [Reporting Issues](https://www.jpa-buddy.com/documentation/reporting-issues/) section where you can find [Contact Us](https://www.jpa-buddy.com/documentation/reporting-issues/#contact-us) information and tips for [Error Reporting](https://www.jpa-buddy.com/documentation/reporting-issues/#error-reporting). 
 
