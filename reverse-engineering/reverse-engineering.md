@@ -30,7 +30,9 @@ After entity configuration, it's time to configure the attributes. Here you can 
 
 For the entity that have associations, JPA Buddy will create corresponding entities as well. The only thing left to do is to reverse engineering columns via JPA Palette. 
 
-*NOTE: There is no way to determine how exactly to relate one entity to another: OneToOne or ManyToOne. By default, JPA Buddy sets ManyToOne.* 
+<div class="note">
+There is no way to determine how exactly to relate one entity to another: OneToOne or ManyToOne. By default, JPA Buddy sets ManyToOne.
+</div>
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rHwSM08jUuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

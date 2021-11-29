@@ -42,7 +42,9 @@ Spring Data provides the possibility to define a query with the @Query annotatio
 
 ### Example 
 
-*NOTE: All that will be considered in the example below can be generated not only as a query but also as a method. The difference is that you can configure the method prefix in the Advance panel, and you can’t specify the name for it, because it will be generated automatically with accordance to* [*Naming Conventions for Query.*](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation) 
+<div class="note">
+All that will be considered in the example below can be generated not only as a query but also as a method. The difference is that you can configure the method prefix in the Advance panel, and you can’t specify the name for it, because it will be generated automatically with accordance to [Naming Conventions for Query.](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
+</div>
 
 Let's take a look at the example with Find Collection query creation. 
 

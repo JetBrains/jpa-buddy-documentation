@@ -27,7 +27,9 @@ For the IntelliJ IDEA Community edition, JPA Buddy offers a similar mechanism.
 
 Some of the RDBMSs that JPA Buddy supports provide the possibility to create non-default schemas, but not all of them work well with JDBC. That’s why you can face with some known issues during diff generations, or reverse engineering. For now, these issues can only be solved with some workaround. Below are examples of connecting to non-default schemas for all databases supported by JPA Buddy.
 
-*NOTE: We show two screenshots for all the examples below: the first from the IntelliJ IDEA Community Edition, the second from the IntelliJ IDEA Ultimate Edition.*
+<div class="note">
+We show two screenshots for all the examples below: the first from the IntelliJ IDEA Community Edition, the second from the IntelliJ IDEA Ultimate Edition.
+</div>
 
 ### PostgreSQL
 
@@ -37,7 +39,9 @@ The default PostgreSQL schema is “public”. For other schemes you need to spe
 
 ![ij_ultimate_postgres](img/ij_ultimate_postgres.jpeg)
 
-*NOTE: For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the required schema without any actions from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.*
+<div class="note">
+For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the required schema without any actions from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.
+</div>
 
 ### Microsoft SQL Server
 
@@ -91,7 +95,9 @@ And for the connection via service name like this:
 
 ![ij_ultimate_oracle_service](img/ij_ultimate_oracle_service.jpeg)
 
-*NOTE: Reverse engineering does not work for system tables located in the "SYS” schema.*
+<div class="note">
+Reverse engineering does not work for system tables located in the "SYS” schema.
+</div>
 
 ### MySQL & MariaDB
 

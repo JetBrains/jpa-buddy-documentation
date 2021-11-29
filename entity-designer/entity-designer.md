@@ -230,7 +230,9 @@ Java code style may change from project to project. Also, working with external 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/npHuDl8pdmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-*NOTE: The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in* [*our article*](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/)*. JPA Buddy allows you to choose naming strategies for scripts generation in the [settings](https://www.jpa-buddy.com/documentation/database-versioning/#naming-strategy-and-max-identifier-settings).*
+<div class="note">
+The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in* [*our article*](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/)*. JPA Buddy allows you to choose naming strategies for scripts generation in the [settings](https://www.jpa-buddy.com/documentation/database-versioning/#naming-strategy-and-max-identifier-settings).
+</div>
 
 *By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation provides the same table structure as Hibernate 4: all dots are replaced by underscores and camel casing is replaced by underscores as well. Additionally, by default, all table names are generated in lower case. For example, for both of the entity declarations below, the actual name of the DB table will be pet_type.*
 
