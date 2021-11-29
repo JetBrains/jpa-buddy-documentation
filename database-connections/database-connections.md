@@ -69,7 +69,7 @@ For JDBC the connection setup will look like this:
 
 ![ij_ultimate_mssql_jdbc](img/ij_ultimate_mssql_jdbc.jpeg)
 
-And for [JTDC](http://jtds.sourceforge.net/faq.html) like this:
+And for [JTDS](http://jtds.sourceforge.net/faq.html) like this:
 
 ![ij_community_mssql_jtdc](img/ij_community_mssql_jtdc.jpeg)
 
