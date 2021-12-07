@@ -1,12 +1,12 @@
 # JPA Buddy Documentation
 
-This repository contains the source code of the JPA Buddy Documentation. Documentation is published on https://www.jpa-buddy.com/documentation/.
+This repository contains the JPA Buddy Documentation. The documentation is published at https://www.jpa-buddy.com/documentation/.
 
 ![banner](readme/banner.jpg)
 
-# Issues creating
+# Reproting Issues
 
-If you notice a mistake, typo, or something else, you are free to create an issue. We will fix it as soon as possible.
+If you notice a mistake, typo, or would like us to add more information, feel free to create an issue. We will fix it as soon as possible.
 
-# Licence
-All materials located in this repository are allowed to be used for academic purposes and public presentations.
+# License
+The source code is licensed under Apache 2.0. Hence, all materials located in this repository are allowed to be used for academic purposes as well as public presentations.
