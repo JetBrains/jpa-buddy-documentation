@@ -2,7 +2,10 @@
 
 This repository contains the source code of the JPA Buddy Documentation. Documentation is published on https://www.jpa-buddy.com/documentation/.
 
+![banner](readme/banner.jpg)
+
 # Issues creating
+
 If you notice a mistake, typo, or something else, you are free to create an issue. We will fix it as soon as possible.
 
 # Licence
