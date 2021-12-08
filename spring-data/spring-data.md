@@ -36,7 +36,7 @@ For the most efficient navigation in the project, JPA Buddy groups all repositor
 
 ## Queries/Methods Generation 
 
-Spring Data provides the possibility to define a query with the @Query annotation. To write them accurately and in less time, use JPA Palette. Choose one of the following types of queries and configure them with the convenient UI. 
+Spring Data provides the possibility to define a query with the `@`Query annotation. To write them accurately and in less time, use JPA Palette. Choose one of the following types of queries and configure them with the convenient UI. 
 
 ![jpa_palette_query](img/jpa_palette_query.jpeg)
 
@@ -52,7 +52,7 @@ Let's start from the top of the window. You can define one of the possible wrap 
 
 The middle of the window contains the table for the query condition configuration. 
 
-At the bottom of the window you can specify specific for each query parameters, such as: whether the parameters will be named or not, whether to add the @Async annotation and so on. Here you can also add fields by which the result of the query will be ordered. 
+At the bottom of the window you can specify specific for each query parameters, such as: whether the parameters will be named or not, whether to add the `@`Async annotation and so on. Here you can also add fields by which the result of the query will be ordered. 
 
 ![create_query_find_collection](img/create_query_find_collection.jpeg)
 
@@ -88,7 +88,7 @@ Since JPA Inspector is a context-dependent panel intended to modify already exis
 
 ### Async 
 
-Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add @Async annotation, but also to change the return type to one of the following: 
+Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@`Async annotation, but also to change the return type to one of the following: 
 
 - ```java
   Future<ClassName> 
@@ -158,7 +158,7 @@ To make query generic, place the cursor on the query you want to change and chec
 
 ### Query Extracting 
 
-Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures you would prefer to transform into neat @Query-annotated methods. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector. 
+Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures you would prefer to transform into neat `@`Query-annotated methods. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector. 
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lYZielYtVXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -556,7 +556,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 
 Since JPA Buddy supports six databases at once, this is important to have the ability to configure naming strategies and max identifier length.
 
-By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a TelephoneNumber entity is mapped to the telephone_number table. Even if you annotate the entity with @Table(name = "TelephoneNumber"). The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation. 
+By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a TelephoneNumber entity is mapped to the telephone_number table. Even if you annotate the entity with `@`Table(name = "TelephoneNumber"). The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation. 
 
 The following strategies are supported:
 
