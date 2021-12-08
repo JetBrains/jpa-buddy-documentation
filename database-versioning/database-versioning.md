@@ -1,6 +1,4 @@
-
-
-## Database Versioning User Guide 
+## Introduction
 
 Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge: 
 
