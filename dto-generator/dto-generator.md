@@ -49,7 +49,7 @@ On the "Project" tab, you can view the project tree and find the desired class.
 This type can be applied for `@`ToOne associations and `@`ToMany associations with only one selected field.  
 
 <div class="note">
-  New nested class will be created for `@`ToMany associations with more than one selected field instead.
+  New nested class will be created for @ToMany associations with more than one selected field instead.
 </div>
 
 For Flat DTOs, all inner class fields will be top-class fields. Their names will consist of the inner class filed name + fields names.
