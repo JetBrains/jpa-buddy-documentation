@@ -143,7 +143,7 @@ The danger levels can be customized in the plugin preferences in JPA Buddy -> Da
 
 ## Liquibase Support
 
-### Preview Window
+### Changelog Preview Window
 
 ![changelog_preview](img/changelog_preview.jpeg)
 
