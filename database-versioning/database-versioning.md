@@ -139,7 +139,7 @@ The danger levels can be customized in the plugin preferences in JPA Buddy -> Da
 
 ![diff_changes_preferences](img/diff_changes_preferences.jpeg)
 
-![You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the “Ignored” section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
+You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the “Ignored” section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
 
 ## Liquibase Support
 
