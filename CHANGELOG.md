@@ -1,5 +1,30 @@
 # Changelog
 
+## 2021.6.1 - 2021-12-20
+
+### Improvements
+
+* The version of Gradle has been updated to 7.2 [JPAB-1323](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1323)
+* Now @InheritInverseConfiguration is used for MapStruct mappers [JPAB-1246](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1246)
+* "New Association Attribute" dialog improvements [JPAB-1434](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1434) & [JPAB-1425](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1425) 
+* The configuration file is no longer generated for default settings [JPAB-1423](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1423)
+* The "Help" buttons now lead to the documentation page [JPAB-1016](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1016) & [JPAB-1478](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1478)
+
+### Bug-fix
+
+* Changed the approach of generating annotations in Kotlin [JPAB-1151](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1151)
+* Create Repository action is no longer missed if Kotlin is not configured [JPAB-1455](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1455)
+* Missing datasource and subsequent action call no longer causes NullPointerException [JPAB-1455](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1480)
+* The search for generic types converters now works correctly [JPAB-1431](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1431)
+* The IndexNotReadyException exception is not thrown during indexing of the project [JPAB-1461](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1461)
+* Correctly generates diff for entities with Embedded/Embedded attribute without attributes override [JPAB-1471](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1471)
+* Calling ToString action from JPA Inspector no longer duplicates other annotations [JPAB-1440](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1440)
+* Handled IllegalStateException on IDEA 2021.3 [JPAB-1488](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1488)
+* Fixed RuntimeExceptionWithAttachments [JPAB-1479](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1479)
+* The script for renaming columns containing a foreign key is now correctly generated in Liquibase [JPAB-1483](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1483)
+* Throwable exception handled [JPAB-1489](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1489)
+* Opening a project with an existing DB connection no longer causes a NoClassDefFoundError [JPAB-1498](https://issues.jpa-buddy.com/issue/JPAB-JPAB-1498)
+
 ## 2021.6.0 - 2021-12-02
 
 ### New Features
