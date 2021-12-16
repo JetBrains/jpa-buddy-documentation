@@ -116,26 +116,20 @@
 * Reverse Engineering
   - Missing drivers no longer causes an error [JPAB-1177](https://issues.jpa-buddy.com/issue/JPAB-1177)
 
-Other improvements and fixes, see [all resolved issues (110+)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 6.X Bug fix: 0)
+Other improvements and fixes, see [all resolved issues (110+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20216%20%23Resolved%20Bug%20fix:%200)
 
 \* Features in the Incubator are in the active development phase, with major improvements and changes planned in the nearest future. These features will remain free until they are complete. After that, they can become either paid or free, depending on the feature.
 
 ## 5.9 - 2021-11-25
 
 - Diff Generator
-
-- - During diff generation, comments left manually on tables and columns are no longer deleted [JPAB-1426](https://issues.jpa-buddy.com/issue/JPAB-1426)
+  - During diff generation, comments left manually on tables and columns are no longer deleted [JPAB-1426](https://issues.jpa-buddy.com/issue/JPAB-1426)
   - The diff generation works correctly for tables with the schema name specified both in camel or upper cases [JPAB-1427](https://issues.jpa-buddy.com/issue/JPAB-1427)
-
 - Lombok
-
-- - Fixed setter method deletion when Lombok @Setter checkbox is unchecked in JPA Inspector [JPAB-1429](https://issues.jpa-buddy.com/issue/JPAB-1429)
+  - Fixed setter method deletion when Lombok @Setter checkbox is unchecked in JPA Inspector [JPAB-1429](https://issues.jpa-buddy.com/issue/JPAB-1429)
   - Getters not backed up by fields are no longer deleted after changing Lombok ToString checkbox in JPA Inspector [JPAB-1430](https://issues.jpa-buddy.com/issue/JPAB-1430)
-
 - Control-flow exception no longer logged in the stack-trace [JPAB-1405](https://issues.jpa-buddy.com/issue/JPAB-1405)
-
 - Now the apply button is disabled after saving the changes in the Database Drivers window [JPAB-1312](https://issues.jpa-buddy.com/issue/JPAB-1312)
-
 - Editing attributes of unknown collection types no longer breaks the code [JPAB-1278](https://issues.jpa-buddy.com/issue/JPAB-1278)
 
 ## 5.8 - 2021-11-10
@@ -213,7 +207,7 @@ Just clearing out some bugs. Resolved the following issues:
   - java.lang.Throwable: "AWT events are not allowed inside write action" when creating some associations [JPAB-1200](https://issues.jpa-buddy.com/issue/JPAB-1200)
   - java.lang.IllegalStateException: Entity PsiClass from SmartPsiElementPointer is null when collect line markers for converters [JPAB-1207](https://issues.jpa-buddy.com/issue/JPAB-1207)
   - java.lang.Throwable: Non-physical PsiElement for AttributeTypeAnnotator [JPAB-1208](https://issues.jpa-buddy.com/issue/JPAB-1208)
-- Other improvements and fixes, see [all resolved issues (17)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 5.X Bug fix: 4).
+- Other improvements and fixes, see [all resolved issues (17)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%205.X%20Bug%20fix:%204).
 
 ## 5.3 - 2021-09-01
 
@@ -274,7 +268,7 @@ Fixed exceptions:
   - Quick fix "Mark as Embedded" removing the default value in Kotlin [JPAB-1105](https://issues.jpa-buddy.com/issue/JPAB-1105)
   - "Target type" dropdown being empty in Type Mappings settings in projects without Liquibase [JPAB-914](https://issues.jpa-buddy.com/issue/JPAB-914)
   - "Attribute with unsupported type should either be @Transient or have custom type or converter declaration" inspection triggering for enums [JPAB-729](https://issues.jpa-buddy.com/issue/JPAB-729)
-- Other improvements and fixes, see [all resolved issues (70+)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 5.X Bug fix: 0).
+- Other improvements and fixes, see [all resolved issues (70+)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%205.X%20Bug%20fix:%200).
 
 ## 4.6 - 2021-08-11
 
@@ -295,7 +289,7 @@ Fixed exceptions:
   - IllegalStateException when invoking "Create JPA Entity" fix [JPAB-1074](https://issues.jpa-buddy.com/issue/JPAB-1074)
   - IllegalArgumentException after removing discriminatorType value [JPAB-1090](https://issues.jpa-buddy.com/issue/JPAB-1090)
   - 'java.lang.Throwable: Invalid file' when opening some entity, repository and liquibase files [JPAB-1080](https://issues.jpa-buddy.com/issue/JPAB-1080)
-- Other improvements and fixes, see [all resolved issues (15)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 4.X Bug fix: 5).
+- Other improvements and fixes, see [all resolved issues (15)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%204.X%20Bug%20fix:%205).
 
 ## 4.5 - 2021-08-09
 
@@ -316,7 +310,7 @@ Fixed exceptions:
   - IllegalStateException when invoking "Create JPA Entity" fix [JPAB-1074](https://issues.jpa-buddy.com/issue/JPAB-1074)
   - IllegalArgumentException after removing discriminatorType value [JPAB-1090](https://issues.jpa-buddy.com/issue/JPAB-1090)
   - 'java.lang.Throwable: Invalid file' when opening some entity, repository and liquibase files [JPAB-1080](https://issues.jpa-buddy.com/issue/JPAB-1080)
-- Other improvements and fixes, see [all resolved issues (15)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 4.X Bug fix: 5).
+- Other improvements and fixes, see [all resolved issues (15)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%204.X%20Bug%20fix:%205).
 
 ## 4.4 - 2021-07-27
 
@@ -335,7 +329,7 @@ Fixed exceptions:
   - NullPointerException during diff changes generation for entities with JOINED inheritance strategy [JPAB-1033](https://issues.jpa-buddy.com/issue/JPAB-1033)
   - ClassCastException during JPA Inspector "boolean" table cell render [JPAB-1011](https://issues.jpa-buddy.com/issue/JPAB-1011)
   - ClassCastException during when adding equals/hashCode methods from JPA Palette [JPAB-1008](https://issues.jpa-buddy.com/issue/JPAB-1008)
-- Other improvements and fixes, see [all resolved issues (26)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 4.X Bug fix: 4).
+- Other improvements and fixes, see [all resolved issues (26)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%204.X%20Bug%20fix:%204).
 
 ## 4.3 - 2021-07-19
 
@@ -371,7 +365,7 @@ In this release we mostly focused on cleaning up different bugs. The following i
   - "The column type is undefined" exception during diff generation if an @ElementCollection attribute is defined in a @MappedSuperclass entity [JPAB-915](https://issues.jpa-buddy.com/issue/JPAB-915)
   - IllegalArgumentException when adding @Inheritance strategy to an entity [JPAB-920](https://issues.jpa-buddy.com/issue/JPAB-920)
   - IllegalStateException: "Entity PsiClass from SmartPsiElementPointer is null" during plugin update [JPAB-924](https://issues.jpa-buddy.com/issue/JPAB-924)
-- Other smaller improvements and fixes, find the full list in our [issue tracker](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone: 4.X Bug fix: 1).
+- Other smaller improvements and fixes, find the full list in our [issue tracker](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%204.X%20Bug%20fix:%201).
 
 ## 4.0 - 2021-06-10
 
@@ -399,7 +393,7 @@ In this release we mostly focused on cleaning up different bugs. The following i
 - **Important: table and column names are generated in lower case by default now.** To restore the old behavior, go to Settings -> JPA Buddy -> Entity Declaration and change all the "toLowerCase()" calls to "toUpperCase() in the name templates [JPAB-710](https://issues.jpa-buddy.com/issue/JPAB-710)
 - JPA Buddy elements are grouped into categories in the New menu of the project tree [JPAB-727](https://issues.jpa-buddy.com/issue/JPAB-727)
 - Support for IDEA 2021.2 [JPAB-863](https://issues.jpa-buddy.com/issue/JPAB-863)
-- Other smaller improvements and fixes, find the full list in our [issue tracker](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone: 4.X Bug fix: 0).
+- Other smaller improvements and fixes, find the full list in our [issue tracker](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%204.X%20Bug%20fix:%200).
 
 ## 3.2 - 2021-05-26
 
@@ -417,11 +411,11 @@ Another release making JPA Buddy more stable and easy to use!
   - TraceableDisposable.ObjectNotDisposedException [JPAB-848](https://issues.jpa-buddy.com/issue/JPAB-848)
   - PSI RuntimeExceptionWithAttachments [JPAB-842](https://issues.jpa-buddy.com/issue/JPAB-842)
   - Throwable after trying to update the JPA Buddy plugin with enabled Jmix plugin [JPAB-828](https://issues.jpa-buddy.com/issue/JPAB-828)
-- Other bugfixes, the full list can be found in [the issue tracker](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Type: Bug, Exception  Milestone: 3.X Bug fix: 2)
+- Other bugfixes, the full list can be found in [the issue tracker](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Type:%20Bug,%20Exception%20%20Milestone:%203.X%20Bug%20fix:%202)
 
 ## 3.1 - 2021-05-13
 
-This release makes plugin significantly more stable as it introduces [multiple bugfixes](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Type: Bug, Exception  Milestone: 3.X Bug fix: 1). **Thanks to all members of the community who are helping us to make JPA Buddy better!**
+This release makes plugin significantly more stable as it introduces [multiple bugfixes](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Type:%20Bug,%20Exception%20%20Milestone:%203.X%20Bug%20fix:%201). **Thanks to all members of the community who are helping us to make JPA Buddy better!**
 
 - **Fixed bug with: \*java.lang.ClassNotFoundException: org.jetbrains.kotlin.psi.KtElement\***
 - Supported annotation over getters. All actions including fields creation, Liquibase and Flyway scripts generation work correctly with getter-annotated properties [JPAB-276](https://issues.jpa-buddy.com/issue/JPAB-276)
@@ -448,7 +442,7 @@ This release makes plugin significantly more stable as it introduces [multiple b
 - Database Versioning settings reorganization [JPAB-643](https://issues.jpa-buddy.com/issue/JPAB-643)
 - Async repository methods [JPAB-416](https://issues.jpa-buddy.com/issue/JPAB-416)
 - Unidirectional OneToMany with JoinColumn support [JPAB-156](https://issues.jpa-buddy.com/issue/JPAB-156)
-- [Other smaller fixes and improvements](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved Milestone: 3.X  order by: Type , Priority )
+- [Other smaller fixes and improvements](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%203.X%20%20order%20by:%20Type%20,%20Priority)
 
 ## 2.2 - 2021-04-07
 
@@ -473,37 +467,29 @@ This release makes plugin significantly more stable as it introduces [multiple b
 
 ## 2.0 - 2021-03-10
 
-1. **General**
-
-2. - Lombok support: Lombok annotations for entity/attribute generation; code inspections and intentions
-   - Integration with IntelliJ IDEA Ultimate's Data Sources
-   - 'Select in JPA Structure' button for navigating to the opened source code file in JPA Structure
-   - Entities found via @EntityScan are added to the default persistence unit in JPA Structure
-   - 'Detect Connections' action to add DB connections from application.properties to JPA Structure
-   - JDBC drivers are now downloaded from the Internet, not bundled with the plugin
-
-3. **Spring Data**
-
-4. - @Query method generation for Spring Data repositories
-   - Repository methods modification via the JPA Inspector panel
-   - Creating Spring Data JPA projections via a special action (New -> Projection) and an intention in a repository class
-
-5. **JPA**
-
-6. - mappedBy inspections and intentions for @OneToOne, @OneToMany and @ManyToMany
-   - Support for table, entity and column names to be stored in constants
-   - Support for @AttributeOverride(s) / @AssociationOverride(s) for embedded attributes in JPA Inspector
-
-7. **Liquibase**
-
-8. - Ability to specify the PhysicalNamingStrategy for Liquibase changelog generation
-   - Ability to include the newly generated Liquibase changelog or its folder into another changelog during preview
-   - Showing Liquibase execution log to the user
-   - Ability to set default DB connections for persistence units in the Diff Database Changelog dialog
-   - Ability to set the author of the Liquibase changesets during changelog generation
-   - Join table names are generated based on the ImplicitNamingStrategy when no @JoinTable is specified for @ManyToMany association
-
-9. **Other smaller improvements and fixes**
+* General
+  * Lombok support: Lombok annotations for entity/attribute generation; code inspections and intentions
+  * Integration with IntelliJ IDEA Ultimate's Data Sources
+  * 'Select in JPA Structure' button for navigating to the opened source code file in JPA Structure
+  * Entities found via @EntityScan are added to the default persistence unit in JPA Structure
+  * 'Detect Connections' action to add DB connections from application.properties to JPA Structure
+  * JDBC drivers are now downloaded from the Internet, not bundled with the plugin
+* Spring Data
+  * @Query method generation for Spring Data repositories
+  * Repository methods modification via the JPA Inspector panel
+  * Creating Spring Data JPA projections via a special action (New -> Projection) and an intention in a repository class
+* JPA
+  * mappedBy inspections and intentions for @OneToOne, @OneToMany and @ManyToMany
+  * Support for table, entity and column names to be stored in constants
+  * Support for @AttributeOverride(s) / @AssociationOverride(s) for embedded attributes in JPA Inspector
+* Liquibase
+  * Ability to specify the PhysicalNamingStrategy for Liquibase changelog generation
+  * Ability to include the newly generated Liquibase changelog or its folder into another changelog during preview
+  * Showing Liquibase execution log to the user
+  * Ability to set default DB connections for persistence units in the Diff Database Changelog dialog
+  * Ability to set the author of the Liquibase changesets during changelog generation
+  * Join table names are generated based on the ImplicitNamingStrategy when no @JoinTable is specified for @ManyToMany association
+* Other smaller improvements and fixes
 
 ## 1.3 - 2021-02-16
 
