@@ -14,7 +14,7 @@
 * Opening "Edit Persistence Unit dialog" from "Change settings" no longer causes IndexNotReadyException [JPAB-1516](https://issues.jpa-buddy.com/issue/JPAB-1516)
 * Unnecessary CascadeTypes are no longer generated along with CascadeType.ALL [JPAB-1552](https://issues.jpa-buddy.com/issue/JPAB-1552)
 
-[All resolved issues (10+)](https://youtrack.haulmont.com/issues/JPAB?q=Milestone:%20216%20Bug%20fix:%202%20order%20by:%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20State%20desc,%20type)
+[All resolved issues (10+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20216%20Bug%20fix:%202%20order%20by:%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20State%20desc,%20type)
 
 ## 2021.6.1 - 2021-12-20
 
@@ -36,11 +36,11 @@
 * Fixed RuntimeExceptionWithAttachments [JPAB-1479](https://issues.jpa-buddy.com/issue/JPAB-1479)
 * The script for renaming columns containing a foreign key is now correctly generated in Liquibase [JPAB-1483](https://issues.jpa-buddy.com/issue/JPAB-1483)
 * Throwable exception handled [JPAB-1489](https://issues.jpa-buddy.com/issue/JPAB-1489)
-* Add ability to create attribute with ManyToMany and mappedBy [JPAB-1503](https://youtrack.haulmont.com/issue/JPAB-1503)
-* Table name is not generated when creating an entity [JPAB-1504](https://youtrack.haulmont.com/issue/JPAB-1504)
-* Incorrect generation inverse attribute for OneToOne mappedBy attribute [JPAB-1505](https://youtrack.haulmont.com/issue/JPAB-1505)
+* Add ability to create attribute with ManyToMany and mappedBy [JPAB-1503](https://issues.jpa-buddy.com/issue/JPAB-1503)
+* Table name is not generated when creating an entity [JPAB-1504](https://issues.jpa-buddy.com/issue/JPAB-1504)
+* Incorrect generation inverse attribute for OneToOne mappedBy attribute [JPAB-1505](https://issues.jpa-buddy.com/issue/JPAB-1505)
 
-[All resolved issues (20+)](https://youtrack.haulmont.com/issues/JPAB?q=Milestone:%20216%20Bug%20fix:%201%20order%20by:%20Type%20desc,%20%7BSpent%20time%7D%20desc%20)
+[All resolved issues (20+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20216%20Bug%20fix:%201%20order%20by:%20Type%20desc,%20%7BSpent%20time%7D%20desc%20)
 
 ## 2021.6.0 - 2021-12-02
 
@@ -240,7 +240,7 @@ Fixed exceptions:
 **Fixed exceptions:**
 
 - PsiInvalidElementAccessException: Element class com.intellij.psi.impl.source.tree.java.FieldElement of type FIELD [JPAB-1179](https://issues.jpa-buddy.com/issue/JPAB-1179)
-- ClassCastException: class com.intellij.psi.impl.source.PsiParameterImpl cannot be cast to class com.intellij.psi.PsiClass [JPAB-1180](https://youtrack.haulmont.com/issue/JPAB-1180)
+- ClassCastException: class com.intellij.psi.impl.source.PsiParameterImpl cannot be cast to class com.intellij.psi.PsiClass [JPAB-1180](https://issues.jpa-buddy.com/issue/JPAB-1180)
 - PsiInvalidElementAccessException after creating repository method by entity attribute [JPAB-1183](https://issues.jpa-buddy.com/issue/JPAB-1183)
 
 ## 5.1 - 2021-08-27
@@ -248,7 +248,7 @@ Fixed exceptions:
 **Fixed exceptions:**
 
 - PsiInvalidElementAccessException: Element class com.intellij.psi.impl.source.tree.java.FieldElement of type FIELD [JPAB-1179](https://issues.jpa-buddy.com/issue/JPAB-1179)
-- ClassCastException: class com.intellij.psi.impl.source.PsiParameterImpl cannot be cast to class com.intellij.psi.PsiClass [JPAB-1180](https://youtrack.haulmont.com/issue/JPAB-1180)
+- ClassCastException: class com.intellij.psi.impl.source.PsiParameterImpl cannot be cast to class com.intellij.psi.PsiClass [JPAB-1180](https://issues.jpa-buddy.com/issue/JPAB-1180)
 - PsiInvalidElementAccessException after creating repository method by entity attribute [JPAB-1183](https://issues.jpa-buddy.com/issue/JPAB-1183)
 
 ## 5.0 - 2021-08-26
