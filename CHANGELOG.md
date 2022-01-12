@@ -1,5 +1,21 @@
 # Changelog
 
+## 2021.6.2 - 2022-01-12
+
+### Improvements
+* Now plugin can resolve references to changelogs from external libraries [JPAB-1512](https://issues.jpa-buddy.com/issue/JPAB-1512)
+* Plugin archive filename on the JB Marketplace now contains the plugin version [JPAB-1556](https://issues.jpa-buddy.com/issue/JPAB-1556)
+* Diff for entities with the same names in different schemas is now generated correctly [JPAB-1548](https://issues.jpa-buddy.com/issue/JPAB-1548)
+
+### Bug-fix
+
+* Flyway reserved words are now processed correctly in the migrations [JPAB-1565](https://issues.jpa-buddy.com/issue/JPAB-1565)
+* Fixed KotlinIdeaResolutionException during "Convert Java to Kotlin" action [JPAB-1508](https://issues.jpa-buddy.com/issue/JPAB-1508)
+* Opening "Edit Persistence Unit dialog" from "Change settings" no longer causes IndexNotReadyException [JPAB-1516](https://issues.jpa-buddy.com/issue/JPAB-1516)
+* Unnecessary CascadeTypes are no longer generated along with CascadeType.ALL [JPAB-1552](https://issues.jpa-buddy.com/issue/JPAB-1552)
+
+[All resolved issues (10+)](https://youtrack.haulmont.com/issues/JPAB?q=Milestone:%20216%20Bug%20fix:%202%20order%20by:%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20State%20desc,%20type)
+
 ## 2021.6.1 - 2021-12-20
 
 ### Improvements
