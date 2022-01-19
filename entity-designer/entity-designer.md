@@ -124,6 +124,10 @@ Also, there is a drop-down list with possible optimizations that you can apply i
 
 
 
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QLQi02WzItw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### JPA Inspector 
 
 JPA Inspector allows you to configure classes and fields in it. Click on any element that you need to configure, and change the required properties:
