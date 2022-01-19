@@ -66,6 +66,17 @@ After that, the Reverse Engineering Columns window will appear with only those a
 
 ![reverse_engineering_columns](img/reverse_engineering_columns.jpeg)
 
+## Map DB Views to JPA Entities
+
+JPA Buddy follows all best practices providing the most efficient mapping for DB views while reverse engineering:
+ 	1. DB views do not have primary keys. Hence, you need to find a field or (often) a set of fields that can play the role of identifier for the target entity.
+ 	2. Most of the DB views are immutable. So, the entity should be marked as `@`Immutable and expose only getters. And this will help to win a few points in the application performance.
+ 	3. Entities representing DB views can only come from the database. To ensure developers don't create new instances in the business logic, the entity should have only a protected constructor with no parameters to meet the JPA specifications.
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Type Mappings 
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them. 
