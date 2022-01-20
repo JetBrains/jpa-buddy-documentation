@@ -273,6 +273,31 @@ Above the list of changes, there is a button panel with the following actions:
 
 To combine several changes into one migration file or to ignore them, drag them around.
 
+### Java Migration
+
+Sometimes it is necessary to be able to pre-process data in java code. For such cases, Flyway Java migration provides a simple and powerful way to implement the necessary migration logic. In order to be picked up by Flyway, Java-based Migrations must implement the `JavaMigration` interface or inherit from the convenience class `BaseJavaMigration` instead. During the creation of the migration template, JPA Buddy follows the second option, since it encourages Flyway’s default [naming convention](https://flywaydb.org/documentation/concepts/migrations.html#naming-1), enabling Flyway to automatically extract the version and the description from the class name.
+
+To generate java migration, press the plus button in the JPA Structure panel and choose the corresponding item.
+
+![jpa_structure_java_migration](img/jpa_structure_java_migration.jpeg)
+
+In the opened window, you can set class name, source root and package name: 
+
+![flyway_java_migration](img/flyway_java_migration.jpeg)
+
+After that, the following java class will be generated:
+
+```java
+public class V4__ extends BaseJavaMigration {
+
+   @Override
+   public void migrate(Context context) {
+      new JdbcTemplate(new SingleConnectionDataSource(context.getConnection(), true))
+         .execute("");
+   }
+}
+```
+
 ### Flyway Callbacks
 
 While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate [all events](https://flywaydb.org/documentation/concepts/callbacks) that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure panel and choose the corresponding item.
