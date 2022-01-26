@@ -107,3 +107,8 @@ To connect to the non-default scheme you need to specify schema name in the Data
 
 ![ij_ultimate_mysql](img/ij_ultimate_mysql.jpeg)
 
+## Database Drivers
+
+Since IntelliJ IDEA CE doesn't allow configuring database drives, JPA Buddy is to the rescue! Via Tools -> JPA Buddy -> Database Drivers window, you can configure drivers for each supported RDBMSs. Here you can select one of the proposed driver versions and add additional files from your local machine.
+
+![database_drivers](img/database_drivers.jpeg)
