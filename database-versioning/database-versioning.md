@@ -141,6 +141,23 @@ The danger levels can be customized in the plugin preferences in JPA Buddy -> Da
 
 You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the “Ignored” section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
 
+#### Merging statements
+
+Basically, renaming something leads to the two statements:
+
+- Drop an existing value
+- Add the new one
+
+But JPA Buddy can replace such statements with the single rename or modify statement. For example, you will see two statements in the preview window after renaming column/table/sequence name or changing column type. But by choosing any of the related statements, you can merge them:
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nhGhcpdqTMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+Since nothing is being dropped now, some statements may become irrelevant. Immediately after merging the changes, you will be able to choose which changes no longer make sense:
+
+![unnecessary_changes](img/unnecessary_changes.jpeg)
+
 ## Liquibase Support
 
 ### Changelog Preview Window
