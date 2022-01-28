@@ -109,6 +109,6 @@ To connect to the non-default scheme you need to specify schema name in the Data
 
 ## Database Drivers
 
-Since IntelliJ IDEA CE doesn't allow configuring database drives, JPA Buddy is to the rescue! Via Tools -> JPA Buddy -> Database Drivers window, you can configure drivers for each supported RDBMSs. Here you can select one of the proposed driver versions and add additional files from your local machine.
+Since IntelliJ IDEA CE doesn't allow configuring database drives, JPA Buddy is to the rescue! Open Tools -> JPA Buddy -> Database Drivers window. Here you can configure drivers for each supported RDBMS by selecting one of the proposed driver versions and adding additional files from your local machine.
 
 ![database_drivers](img/database_drivers.jpeg)
