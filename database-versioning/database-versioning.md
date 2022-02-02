@@ -154,7 +154,7 @@ But JPA Buddy can replace such statements with the single rename or modify state
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nhGhcpdqTMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Since nothing is being dropped now, some statements may become irrelevant. Immediately after merging the changes, you will be able to choose which changes no longer make sense. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
+After the merge, drop statements may be irrelevant. You can choose changes that should be removed from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
 
 ![unnecessary_changes](img/unnecessary_changes.jpeg)
 
