@@ -292,7 +292,7 @@ To combine several changes into one migration file or to ignore them, drag them 
 
 ### Java Migration
 
-Sometimes it is necessary to be able to pre-process data in java code. For such cases, Flyway provides Java-based migrations. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the convenience class `BaseJavaMigration` instead. During the creation of the migration template, JPA Buddy follows the second option, since it encourages Flyway’s default [naming convention](https://flywaydb.org/documentation/concepts/migrations.html#naming-1), enabling Flyway to automatically extract the version and the description from the class name.
+Java-based migrations are a great fit for all changes that can not easily be expressed using SQL. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the `BaseJavaMigration` class instead. JPA Buddy follows the second option, since it encourages Flyway’s default [naming convention](https://flywaydb.org/documentation/concepts/migrations.html#naming-1), enabling Flyway to automatically extract the version and the description from the class name.
 
 To generate java migration, press the plus button in the JPA Structure panel and choose the corresponding item.
 
