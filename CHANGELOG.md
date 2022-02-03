@@ -3,7 +3,7 @@
 ## 2022.1.0 - 2022-02-07
 
 ### Completely new
-For those who do not like distracting themselves from unnecessary windows, JPA Buddy presents - Minimalistic Mode! You can now control all tools via the keyboard! [JPAB-1122](https://issues.jpa-buddy.com/issue/JPAB-1122)
+JPA Buddy presents - Minimalistic Mode! It's designed to minimize distraction for developers. If you are the one who prefers to have everything at your fingertips – you will definitely like it! [JPAB-1122](https://issues.jpa-buddy.com/issue/JPAB-1122)
 
 ### Features
 * Database Versioning
