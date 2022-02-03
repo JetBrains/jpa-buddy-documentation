@@ -1,5 +1,39 @@
 # Changelog
 
+## 2022.1.0 - 2022-02-07
+
+### Completely new
+For those who do not like distracting themselves from unnecessary windows, JPA Buddy presents - Minimalistic Mode! You can now control all tools via the keyboard! [JPAB-1122](https://issues.jpa-buddy.com/issue/JPAB-1122)
+
+### Features
+* Database Versioning
+  - YAML, SQL and JSON file types are finally supported for the Liquibase diff generator [JPAB-818](https://issues.jpa-buddy.com/issue/JPAB-818)
+  - H2 database is now supported [JPAB-673](https://issues.jpa-buddy.com/issue/JPAB-673)
+  - Now you can generate a database schema initialization script for any project [JPAB-787](https://issues.jpa-buddy.com/issue/JPAB-787)
+* Reverse Engineering
+  - JPA Buddy has learned to understand how entities relate to each other more deeply. Now it better suggests cardinality: OneToOne, OneToMany, ManyToOne and ManyToMany! [JPAB-918](https://issues.jpa-buddy.com/issue/JPAB-918)
+  - @MapsId attribute generation has been supported [JPAB-995](https://issues.jpa-buddy.com/issue/JPAB-995)
+* Spring Data JPA
+  - Now it's possible to generate an "Update" JPQL statement via JPA Palette [JPAB-1086](https://issues.jpa-buddy.com/issue/JPAB-1086)
+
+### Improvements
+* Database Versioning
+  - Now you can deal with the unknown types right at the moment of diff generation [JPAB-1171](https://issues.jpa-buddy.com/issue/JPAB-1171)
+  - Join tables are now supported in the wizards [JPAB-1469](https://issues.jpa-buddy.com/issue/JPAB-1469) & [JPAB-1448](https://issues.jpa-buddy.com/issue/JPAB-1448)
+* Spring Data
+  - Long queries are now much easier to read because they will now be split into multiple lines [JPAB-668](https://issues.jpa-buddy.com/issue/JPAB-668)
+  - For modifying query methods, it's now possible to define transactional params [JPAB-1532](https://issues.jpa-buddy.com/issue/JPAB-1532)
+* Reverse Engineering
+  - Now attributes are divided by type: already migrated, references and columns [JPAB-1487](https://issues.jpa-buddy.com/issue/JPAB-1487)
+
+### Bug-fix
+* An issue with incorrectly generated id column for inverse join column in Many to Many table has been fixed [JPAB-1598](https://issues.jpa-buddy.com/issue/JPAB-1598)
+* TINYINT(1) DEFAULT 0 as a mapping for Boolean now handles correctly during diff generation [JPAB-1599](https://issues.jpa-buddy.com/issue/JPAB-1599)
+* Default timestamps and "on update" statements now handles correctly [JPAB-1600](https://issues.jpa-buddy.com/issue/JPAB-1600)
+* Reference to the folder in the Liquibase .xml file now works correctly [JPAB-1603](https://issues.jpa-buddy.com/issue/JPAB-1603)
+
+[All resolved issues (35+)](https://youtrack.haulmont.com/issues/JPAB?q=Milestone:%20221%20Bug%20fix:%200%20State:%20Fixed%20,%20Verified%20tag:%20changelog%20%20%20%20order%20by:%20type%20desc,%20Priority,State%20desc%20-%7BInternal%20improvement%7D%20-Task%20)
+
 ## 2021.6.2 - 2022-01-12
 
 ### Improvements
