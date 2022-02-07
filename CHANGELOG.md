@@ -32,7 +32,7 @@ JPA Buddy presents - Minimalistic Mode! It's designed to minimize distraction fo
 * Default timestamps and "on update" statements now handles correctly [JPAB-1600](https://issues.jpa-buddy.com/issue/JPAB-1600)
 * Reference to the folder in the Liquibase .xml file now works correctly [JPAB-1603](https://issues.jpa-buddy.com/issue/JPAB-1603)
 
-[All resolved issues (35+)](https://youtrack.haulmont.com/issues/JPAB?q=Milestone:%20221%20Bug%20fix:%200%20State:%20Fixed%20,%20Verified%20tag:%20changelog%20%20%20%20order%20by:%20type%20desc,%20Priority,State%20desc%20-%7BInternal%20improvement%7D%20-Task%20)
+[All resolved issues (55+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20221%20Bug%20fix:%200%20State:%20Fixed%20,%20Verified%20order%20by:%20type%20desc,%20Priority,State%20desc%20-%7BInternal%20improvement%7D%20-Task%20)
 
 ## 2021.6.2 - 2022-01-12
 
