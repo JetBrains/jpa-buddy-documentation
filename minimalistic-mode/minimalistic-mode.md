@@ -12,7 +12,7 @@ To enable or disable minimalistic mode, open "View" in the Toolbar window and cl
 
 ### Via JPA Structure 
 
-Another way to activate minimalistic mode this is to click on the "JPA Buddy Minimalistic Mode" button in the JPA Structure. 
+Another way to activate minimalistic mode is to click on the "JPA Buddy Minimalistic Mode" button in the JPA Structure. 
 
 ![jpa-structure-enable-minimalistic-mode](img/jpa-structure-enable-minimalistic-mode.jpeg)
 
@@ -48,13 +48,13 @@ After that, the resizable and draggable JPA Inspector panel will appear. The coo
 
 - To move through the lines, use the up (↑) and down (↓) buttons. 
 - To change the value in the selected row, press the space bar (⎵) twice. 
-- To close JPA Inspector, click Esc button. 
+- To close JPA Inspector, click the Esc button. 
 
 ![jpa-inspector-popup](img/jpa-inspector-popup.jpeg)
 
-#### *Custom Shortcuts* 
+#### Custom Shortcuts
 
-For JPA Inspector popup, it's possible to bind another shortcut. You can do it directly from "Enable Minimalistic Mode" window, by clicking on the "Add keyboard shortcut": 
+For JPA Inspector popup, it's possible to bind another shortcut. You can do it directly from the "Enable Minimalistic Mode" window, by clicking on the "Add keyboard shortcut": 
 
 ![enable-minialistic-mode](img/enable-minialistic-mode.jpeg)
 
