@@ -8,13 +8,13 @@ There are three ways to activate the minimalistic mode.
 
 To enable or disable minimalistic mode, open "View" in the Toolbar window and click on the toggle button "JPA Buddy Minimalistic Mode". Note that all panels will be removed from the sides. You need to click the same button again to bring them back. 
 
-<img src="img/main-menu-toggle-button.jpeg" alt="main-menu-toggle-button" style="zoom:50%;" />
+![main-menu-toggle-button](img/main-menu-toggle-button.jpeg)
 
 ### Via JPA Structure 
 
 Another way to activate minimalistic mode is to click on the "JPA Buddy Minimalistic Mode" button in the JPA Structure. 
 
-<img src="img/jpa-structure-enable-minimalistic-mode.jpeg" alt="jpa-structure-enable-minimalistic-mode" style="zoom:50%;" />
+![jpa-structure-enable-minimalistic-mode](img/jpa-structure-enable-minimalistic-mode.jpeg)
 
 ### Hide Panels
 
@@ -28,15 +28,15 @@ Since you minimize one of the JPA Buddy panels, it will show a popup message wit
 
 Since one of the primary purposes of [JPA Structure](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-structure) panel is to provide a comprehensive data-centric view of the project, it will be available in the Project panel. You can select it from the drop-down list. 
 
-<img src="img/project-drop-down-list.jpeg" alt="project-drop-down-list" style="zoom: 50%;" />
+![project-drop-down-list](img/project-drop-down-list.jpeg)
 
-<img src="img/project-jpa-structure.jpeg" alt="project-jpa-structure" style="zoom:33%;" />
+![project-jpa-structure](img/project-jpa-structure.jpeg)
 
 ### JPA Palette 
 
 To utilize wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-palette ), you need to call Generate Menu (⌘+N/Alt+Insert). The subsequent interaction with them does not differ from what is described in the section about JPA Palette. 
 
-<img src="img/jpa-palette-generate-menu.jpeg" alt="jpa-palette-generate-menu" style="zoom: 33%;" />
+![jpa-palette-generate-menu](img/jpa-palette-generate-menu.jpeg)
 
 ### JPA Inspector 
 
