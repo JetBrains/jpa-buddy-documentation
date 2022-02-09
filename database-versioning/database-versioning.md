@@ -172,6 +172,8 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 
 “Include to”, “include folder” and “include context” configure whether the changelog should be included in some other changelog. If checked, the “include folder” box will generate the include statement for the whole folder, not only the current changelog.
 
+From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
+
 On the left of the window, there is a preview of the actual changesets to be generated. You can see what each change is going to look like by clicking on them. To combine several changes into one changeset or to ignore them, simply drag them around. The top left corner of the preview window contains various actions to modify the resulting changelog:
 
 ![add_changelog_action](img/add_changelog_action.jpeg)
