@@ -127,6 +127,18 @@ Depending on the setup, there might be no DB that is always in sync with the mai
 
 In four simple steps you get a migration script that describes the changes between the current branch and the target branch.
 
+### Init Schema
+
+![init_schema_actions](img/init_schema_actions.jpeg)
+
+For both, Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure panel, the correspondig window will appear:
+
+![init_schema_changelog](img/init_schema_changelog.jpeg)
+
+Generating script based on the model, you will be able to select persistence unit, scope and one of the [supported DB type](https://www.jpa-buddy.com/documentation/database-connections/#introduction). And in the case when the source is a database, you will need to choose one of the existing connection or create a new one.
+
+![init_schema_based_on_the_db](img/init_schema_based_on_the_db.jpeg)
+
 ### Preview Window
 
 Click OK to proceed to the preview window of the migration script. The preview window for Liquibase looks like this (Flyway preview window is slightly different):
