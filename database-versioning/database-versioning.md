@@ -22,19 +22,23 @@ If you would like to see a short overview and practical examples of using Flyway
 
 To be certain that JPA Buddy is ready to help, make sure that the project contains right maven dependencies: 
 
+```xml
 <dependency> 
  <groupId>org.liquibase</groupId> 
  <artifactId>liquibase-core</artifactId> 
  <version>4.4.3</version> 
 </dependency> 
+```
 
 Or: 
 
+```xml
 <dependency> 
  <groupId>org.flywaydb</groupId> 
  <artifactId>flyway-core</artifactId> 
  <version>7.15.0</version> 
 </dependency> 
+```
 
 JPA Buddy scans the project dependencies and enables the corresponding features. 
 
