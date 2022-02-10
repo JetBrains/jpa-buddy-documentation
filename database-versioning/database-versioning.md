@@ -440,7 +440,13 @@ All you need to generate the script is to choose the required table and DB type.
 
 ## Custom Type Mappings
 
-When the application works with several DBMSs, your schema might have slightly different data types for each of them.
+There is no way to automatically map custom Java types to the SQL/Liquibase types properly. That's why you will need to define the target type manually for those attributes. If such attributes exist in your project, after Liquibase or Flyway script generation actions call, JPA Buddy will show you the following window: 
+
+![undefined_mapping_detected](img/undefined_mapping_detected.jpeg)
+
+JPA Buddy will remember configured mappings, and you can change it at any time from Tools -> JPA Buddy -> Database Versioning -> Type Mappings. 
+
+Also, it may be useful when the application works with several DBMSs. In this case, your schema might have slightly different data types for each of them.
 
 Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in VARCHAR, but MS SQL has a separate NVARCHAR data type for it.
 
