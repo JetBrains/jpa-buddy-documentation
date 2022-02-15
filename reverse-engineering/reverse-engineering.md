@@ -368,9 +368,21 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+## Working With Remote DB 
 
+The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2). 
 
-## Type Mappings 
+![new_entity_db_schema_cache](img/new_entity_db_schema_cache.jpeg)
+
+## Settings
+
+### Fetch Type
+
+To follow best practices and don't cause performance issues, JPA Buddy sets `FetchType.LAZY` for  `@`OneToOne and `@`ManyToOne associations by default. But you can change the default value in any time. Open Preferences -> Tools -> JPA Buddy -> Reverse Engineering:
+
+![fetch_type](img/fetch_type.jpeg)
+
+### Type Mappings
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them. 
 
@@ -379,10 +391,3 @@ Let’s say the application needs to support both PostgreSQL and MS SQL. And you
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types: 
 
 ![preferences_reverse_engineering](img/preferences_reverse_engineering.jpeg)
-
-## Working With Remote DB 
-
-The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2). 
-
-![new_entity_db_schema_cache](img/new_entity_db_schema_cache.jpeg)
-
