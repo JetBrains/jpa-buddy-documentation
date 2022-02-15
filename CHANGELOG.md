@@ -1,5 +1,19 @@
 # Changelog
 
+## 2022.1.1 - 2022-02-16
+
+### Improvements
+* IntelliJ IDEA 2022.1 is now supported [JPAB-1597](https://issues.jpa-buddy.com/issue/JPAB-1597)
+* Query extraction is prevented for derived queries with the 'findFirst' condition and Optional return type [JPAB-1636](https://issues.jpa-buddy.com/issue/JPAB-1636)
+
+### Bug-fix
+* "Add id attribute" quick fix no longer causes "Incorrect java type of attribute" Exception [JPAB-1634](https://issues.jpa-buddy.com/issue/JPAB-1634)
+* UnsupportedOperationException no longer occurs in Liquibase changelogs [JPAB-1633](https://issues.jpa-buddy.com/issue/JPAB-1633)
+* Action call from //TODO comment no longer causes RuntimeExceptionWithAttachments [JPAB-1630](https://issues.jpa-buddy.com/issue/JPAB-1630)
+* The case with Reverse Engineering action call on database table without primary key now handles correctly [JPAB-1629](https://issues.jpa-buddy.com/issue/JPAB-1629)
+
+[All resolved issues (10+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20Milestone:%20221%20Bug%20fix:%201)
+
 ## 2022.1.0 - 2022-02-07
 
 ### Completely new
