@@ -43,13 +43,14 @@ For the entity that have associations, JPA Buddy will create corresponding entit
 </div>
 ### Smart References Detection
 
-JPA Buddy deeply understands your model. In certain cases, it's able to properly detect cardinality: `@`OneToOne, `@`OneToMany, `@`ManyToOne, `@`ManyToMany.
+JPA Buddy deeply understands your model. In certain cases, it's able to properly detect cardinality: `@`OneToOne, `@`OneToMany, `@`ManyToOne, `@`ManyToMany. The coolest thing is that JPA Buddy can show references for which there are no columns in the current table. 
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VYdpesbhND4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 Let's look more precisely at each of these cases.
+
+<div class="note">If the table has a composite primary key, JPA Buddy will generate `@`JoinColumns annotation with multiple columns presented in it, instead of simple `@`JoinColumn.</div>
 
 #### @OneToOne
 
@@ -290,7 +291,7 @@ ALTER TABLE profiles_users
 
 ![many_to_many_wizard](img/many_to_many_wizard.jpeg)
 
-If this association does not exist in any of the entities, JPA Buddy will generate it in the one for which the reverse engineering action was called.
+If this association does not exist in any of the entities, JPA Buddy will generate it in the entity for which the reverse engineering action was called.
 
 ```java
 @Entity
