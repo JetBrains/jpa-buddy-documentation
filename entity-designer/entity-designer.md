@@ -27,7 +27,7 @@ Also, in the Settings -> JPA Buddy -> Entity Declaration, you can choose which l
 
 ### Id and Generation Strategy
 
-The most important attribute of any entity is ID. JPA Buddy allows you to choose the type (1) and generation strategy (2). Also, you can specify what sequence to use for the `Sequence` generation strategy (3).
+According to the JPA specification, an ID attribute is required for an entity definition. JPA Buddy allows you to generate this attribute and choose the type (1) and generation strategy (2). Also, you can specify what sequence to use for the `Sequence` generation strategy (3).
 
 ![sequence_id.jpeg](img/sequence_id.jpeg)
 
@@ -35,11 +35,17 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 ![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)]
 
-Also, you can leave the Id field empty and complete the Id generation later. To do it, hover over the class name and click on the “Add Id attribute” button to generate it.
+Also, you can generate an ID attribute via JPA Palette or quick fix.
 
-For AUTO and IDENTITY strategies, you can define type, name, column name, and mark the attribute as mandatory if required. In addition to configurations described in the previous sentence, you can set generator name, sequence name, initial value, and allocation size for SEQUENCE and TABLE strategies.
+![jpa_palette_id](img/jpa_palette_id.jpeg)
+
+![add_id_quick_fix](img/add_id_quick_fix.jpeg)
+
+After that, the wizard with more comprehensive customization options will apear:
 
 ![new_id_attribute](img/new_id_attribute.jpeg)
+
+See the example of the generated ID below:
 
 ```java
 @Id
