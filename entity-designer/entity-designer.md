@@ -6,20 +6,14 @@ Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will
 
 ## Entity Creation
 
-To create a new Entity, right-click on the desired folder and select New -> JPA -> Entity. In the opened window, you can:
+To create a new Entity, right-click on the desired folder and select New -> JPA -> Entity. Also, you can create a new entity from JPA Structure panel:
 
-- Set class name
-- Define one of the following entity types:
-  - Entity
-  - Embeddable
-  - Mapped Superclass
+![jpa_structure_create_new_entity](/Users/vlasov/Desktop/jpa_structure_create_new_entity.jpeg)
 
-- Select parent entity
-- Configure source root and package
+After that, the following window will appear:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KAIZ1oBjdug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+![new_entity](img/new_entity.jpeg)
+
 
 ### Languages Support
 
@@ -33,12 +27,15 @@ Also, in the Settings -> JPA Buddy -> Entity Declaration, you can choose which l
 
 ### Id and Generation Strategy
 
-After the entity is created, the first attribute that you need to add is the id attribute. Hover over the class name and click on the “Add Id attribute” button to generate it. In the opened window, you can choose one of the following generation strategies:
+The most important attribute of any entity is ID. JPA Buddy allows you to choose the type (1) and generation strategy (2). Also, you can specify what sequence to use for the `Sequence` generation strategy (3).
 
-- AUTO
-- IDENTITY
-- SEQUENCE
-- TABLE
+![sequence_id.jpeg](img/sequence_id.jpeg)
+
+If you want to use an Embedded entity as an ID, JPA Buddy will provide you the list of  `@`Embeddable entities that exist in the project:
+
+![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)]
+
+Also, you can leave the Id field empty and complete the Id generation later. To do it, hover over the class name and click on the “Add Id attribute” button to generate it.
 
 For AUTO and IDENTITY strategies, you can define type, name, column name, and mark the attribute as mandatory if required. In addition to configurations described in the previous sentence, you can set generator name, sequence name, initial value, and allocation size for SEQUENCE and TABLE strategies.
 
