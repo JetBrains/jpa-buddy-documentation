@@ -1,5 +1,18 @@
 # Changelog
 
+## 2022.1.2 - 2022-03-03
+
+### Improvements
+* Now the template for pk constraint name can be configured [JPAB-1639](https://issues.jpa-buddy.com/issue/JPAB-1639)
+* Diff generator is now able to bypass the intermediate classes in the hierarchy of entities that are not marked with JPA annotations [JPAB-1659](https://issues.jpa-buddy.com/issue/JPAB-1659)
+
+### Bug-fix
+* NullPointerException no longer appears when you interact with Reverse Engineering actions via //TODO comments [JPAB-1649](https://issues.jpa-buddy.com/issue/JPAB-1649)
+* The entity name is now formatted correctly when creating an entity from a database table whose name is in camelcase [JPAB-1657](https://issues.jpa-buddy.com/issue/JPAB-1657)
+* Navigation to the column from Liquibase changelog no longer causes IllegalStateException [JPAB-1650](https://issues.jpa-buddy.com/issue/JPAB-1650)
+
+[All resolved issues (5+)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20Milestone:%20221%20Bug%20fix:%202%20order%20by:%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20type,%20State%20desc)
+
 ## 2022.1.1 - 2022-02-16
 
 ### Improvements
