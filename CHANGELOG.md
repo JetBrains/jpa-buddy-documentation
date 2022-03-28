@@ -6,7 +6,7 @@
 * The "Mark as transient" action no longer produces an exception [JPAB-1651](https://issues.jpa-buddy.com/issue/JPAB-1651)
 * The migration script for an entity with reference to an entity with `@EmbeddedId` is now generated correctly [JPAB-1686](https://issues.jpa-buddy.com/issue/JPAB-1686)
 * JPA Buddy is no longer worried about transient type field use instead of the `@Transient` annotation [JPAB-1676](https://issues.jpa-buddy.com/issue/JPAB-1676)
-* Liqubase/Flyway diff generator is now works correctly with `datetime` and `datetime2` types in MSSQL [JPAB-1665](https://issues.jpa-buddy.com/issue/JPAB-1665)
+* Liqubase/Flyway diff generator is now working correctly with `datetime` and `datetime2` types in MSSQL [JPAB-1665](https://issues.jpa-buddy.com/issue/JPAB-1665)
 * The name for the non-owning side of the `@OneToOne` association is now generated in the singular during Reverse Engineering [JPAB-1661](https://issues.jpa-buddy.com/issue/JPAB-1661)
 * The "Create Entity from DB" action no longer produces `NullPointerException` [JPAB-1671](https://issues.jpa-buddy.com/issue/JPAB-1671)
 
