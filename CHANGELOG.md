@@ -11,7 +11,7 @@ Learn more about the commercial subscription [here](https://www.jpa-buddy.com/bl
 ### Reverse Engineering [Incubator]*
 
   - Bulk reverse engineering action is finally here! Generate entities for a dozen of tables at the same time [JPAB-919](https://issues.jpa-buddy.com/issue/JPAB-919)
-  - Number of actions in //TODO comments has been increased [JPAB-992](https://issues.jpa-buddy.com/issue/JPAB-992)
+  - The number of actions in //TODO comments has been increased [JPAB-992](https://issues.jpa-buddy.com/issue/JPAB-992)
   - The `mediumtext` column type no longer causes long entity creation [JPAB-1675](https://issues.jpa-buddy.com/issue/JPAB-1675)
 
 ### DTO Generator [Incubator]*
