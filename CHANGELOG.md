@@ -1,5 +1,48 @@
 # Changelog
 
+## 2022.2.0 - 2022-11-04
+
+Starting with this version, JPA Buddy provides free and paid functionality.
+
+Most of the features stay free, including all visual designers for entities, Spring Data repositories, SQL and Liquibase changelogs. However, some features are available only under commercial license, e.g., differential migration scripts generation. JPA Buddy remains free for students and academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. Also, we offer a 50% discount for universities, educational and non-profit organizations.
+
+Learn more about the commercial subscription [here](https://www.jpa-buddy.com/blog/jpa-buddy-goes-freemium).
+
+### Reverse Engineering [Incubator]*
+
+  - Bulk reverse engineering action is finally here! Generate entities for a dozen of tables at the same time [JPAB-919](https://issues.jpa-buddy.com/issue/JPAB-919)
+  - Number of actions in //TODO comments has been increased [JPAB-992](https://issues.jpa-buddy.com/issue/JPAB-992)
+  - The `mediumtext` column type no longer causes long entity creation [JPAB-1675](https://issues.jpa-buddy.com/issue/JPAB-1675)
+
+### DTO Generator [Incubator]*
+
+  - It's possible now to create a DTO from unresolved references [JPAB-1150](https://issues.jpa-buddy.com/issue/JPAB-1150)
+  - Now, you can see all the DTOs for the entity in the JPA Structure panel [JPAB-1582](https://issues.jpa-buddy.com/issue/JPAB-1582)
+  - Java Records have been supported [JPAB-1147](https://issues.jpa-buddy.com/issue/JPAB-1147)
+ 
+### Entity Designer
+  
+  - Now JPA Buddy is able to generate blanks for Hibernate Event Listeners [JPAB-1130](https://issues.jpa-buddy.com/issue/JPAB-1130)
+  - @Version attribute has been added to the JPA Palette [JPAB-94](https://issues.jpa-buddy.com/issue/JPAB-94)
+  - The Set<> is now used by default for collections [JPAB-1492](https://issues.jpa-buddy.com/issue/JPAB-1492)
+  - Cascade.REMOVE is now disabled for ManyToMany associations [JPAB-1494](https://issues.jpa-buddy.com/issue/JPAB-1494)
+  - Attribute type refactoring now works correctly in Kotlin projects [JPAB-1632](https://issues.jpa-buddy.com/issue/JPAB-1632)
+
+### Liquibase/Flyway Diff Generator
+
+  - PostgreSQL driver 42.3.3 has been supported [JPAB-1700](https://issues.jpa-buddy.com/issue/JPAB-1700)
+  - Support for other liquibase statements has been added [JPAB-1555](https://issues.jpa-buddy.com/issue/JPAB-1555) & [JPAB-133](https://issues.jpa-buddy.com/issue/JPAB-133)
+
+
+### Spring Data
+
+  - EntityGraph is supported for repository methods [JPAB-493](https://issues.jpa-buddy.com/issue/JPAB-493)
+  - You can now create a method for the repository from an unresolved reference [JPAB-1541](https://issues.jpa-buddy.com/issue/JPAB-1541)
+
+Other improvements and fixes, see [all resolved issues (55+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20Milestone:%20222%20%20Bug%20fix:%200%20order%20by:%20Subsystem,%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20type,%20State%20desc).
+
+\* Features in the Incubator are in the active development phase, with major improvements and changes planned in the nearest future. These features will remain free until they are complete. After that, they can become either paid or free, depending on the feature.
+
 ## 2022.1.3 - 2022-03-28
 
 ### Bug-fix
