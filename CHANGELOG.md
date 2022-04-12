@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022.2.1 - 2022-12-04
+
+Fixed a non-critical, but often happening bug with incorrect psi [JPAB-1746](https://issues.jpa-buddy.com/issue/JPAB-1746)
+
 ## 2022.2.0 - 2022-11-04
 
 Starting with this version, JPA Buddy provides free and paid functionality.
