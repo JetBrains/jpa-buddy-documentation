@@ -1,5 +1,77 @@
 # Changelog
 
+## 2022.2.1 - 2022-12-04
+
+Fixed a non-critical, but often happening bug with incorrect psi [JPAB-1746](https://issues.jpa-buddy.com/issue/JPAB-1746)
+
+## 2022.2.0 - 2022-11-04
+
+Starting with this version, JPA Buddy provides free and paid functionality.
+
+Most of the features stay free, including all visual designers for entities, Spring Data repositories, SQL and Liquibase changelogs. However, some features are available only under commercial license, e.g., differential migration scripts generation. JPA Buddy remains free for students and academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. Also, we offer a 50% discount for universities, educational and non-profit organizations.
+
+Learn more about the commercial subscription [here](https://www.jpa-buddy.com/blog/jpa-buddy-goes-freemium).
+
+### Reverse Engineering [Incubator]*
+
+  - Bulk reverse engineering action is finally here! Generate entities for a dozen of tables at the same time [JPAB-919](https://issues.jpa-buddy.com/issue/JPAB-919)
+  - The number of actions in //TODO comments has been increased [JPAB-992](https://issues.jpa-buddy.com/issue/JPAB-992)
+  - The `mediumtext` column type no longer causes long entity creation [JPAB-1675](https://issues.jpa-buddy.com/issue/JPAB-1675)
+
+### DTO Generator [Incubator]*
+
+  - It's possible now to create a DTO from unresolved references [JPAB-1150](https://issues.jpa-buddy.com/issue/JPAB-1150)
+  - Now, you can see all the DTOs for the entity in the JPA Structure panel [JPAB-1582](https://issues.jpa-buddy.com/issue/JPAB-1582)
+  - Java Records have been supported [JPAB-1147](https://issues.jpa-buddy.com/issue/JPAB-1147)
+ 
+### Entity Designer
+  
+  - Now JPA Buddy is able to generate blanks for Hibernate Event Listeners [JPAB-1130](https://issues.jpa-buddy.com/issue/JPAB-1130)
+  - @Version attribute has been added to the JPA Palette [JPAB-94](https://issues.jpa-buddy.com/issue/JPAB-94)
+  - The Set<> is now used by default for collections [JPAB-1492](https://issues.jpa-buddy.com/issue/JPAB-1492)
+  - Cascade.REMOVE is now disabled for ManyToMany associations [JPAB-1494](https://issues.jpa-buddy.com/issue/JPAB-1494)
+  - Attribute type refactoring now works correctly in Kotlin projects [JPAB-1632](https://issues.jpa-buddy.com/issue/JPAB-1632)
+
+### Liquibase/Flyway Diff Generator
+
+  - PostgreSQL driver 42.3.3 has been supported [JPAB-1700](https://issues.jpa-buddy.com/issue/JPAB-1700)
+  - Support for other liquibase statements has been added [JPAB-1555](https://issues.jpa-buddy.com/issue/JPAB-1555) & [JPAB-133](https://issues.jpa-buddy.com/issue/JPAB-133)
+
+
+### Spring Data
+
+  - EntityGraph is supported for repository methods [JPAB-493](https://issues.jpa-buddy.com/issue/JPAB-493)
+  - You can now create a method for the repository from an unresolved reference [JPAB-1541](https://issues.jpa-buddy.com/issue/JPAB-1541)
+
+Other improvements and fixes, see [all resolved issues (55+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20Milestone:%20222%20%20Bug%20fix:%200%20order%20by:%20Subsystem,%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20type,%20State%20desc).
+
+\* Features in the Incubator are in the active development phase, with major improvements and changes planned in the nearest future. These features will remain free until they are complete. After that, they can become either paid or free, depending on the feature.
+
+## 2022.1.3 - 2022-03-28
+
+### Bug-fix
+* The "Mark as transient" action no longer produces an exception [JPAB-1651](https://issues.jpa-buddy.com/issue/JPAB-1651)
+* The migration script for an entity with reference to an entity with `@EmbeddedId` is now generated correctly [JPAB-1686](https://issues.jpa-buddy.com/issue/JPAB-1686)
+* JPA Buddy is no longer worried about transient type field use instead of the `@Transient` annotation [JPAB-1676](https://issues.jpa-buddy.com/issue/JPAB-1676)
+* Liqubase/Flyway diff generator is now working correctly with `datetime` and `datetime2` types in MSSQL [JPAB-1665](https://issues.jpa-buddy.com/issue/JPAB-1665)
+* The name for the non-owning side of the `@OneToOne` association is now generated in the singular during Reverse Engineering [JPAB-1661](https://issues.jpa-buddy.com/issue/JPAB-1661)
+* The "Create Entity from DB" action no longer produces `NullPointerException` [JPAB-1671](https://issues.jpa-buddy.com/issue/JPAB-1671)
+
+[All resolved issues (10+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20221%20Bug%20fix:%203%20)
+
+## 2022.1.2 - 2022-03-03
+
+### Improvements
+* Now the template for pk constraint name can be configured [JPAB-1639](https://issues.jpa-buddy.com/issue/JPAB-1639)
+* Diff generator is now able to bypass the intermediate classes in the hierarchy of entities that are not marked with JPA annotations [JPAB-1659](https://issues.jpa-buddy.com/issue/JPAB-1659)
+
+### Bug-fix
+* NullPointerException no longer appears when you interact with Reverse Engineering actions via //TODO comments [JPAB-1649](https://issues.jpa-buddy.com/issue/JPAB-1649)
+* The entity name is now formatted correctly when creating an entity from a database table whose name is in camelcase [JPAB-1657](https://issues.jpa-buddy.com/issue/JPAB-1657)
+* Navigation to the column from Liquibase changelog no longer causes IllegalStateException [JPAB-1650](https://issues.jpa-buddy.com/issue/JPAB-1650)
+
+[All resolved issues (5+)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20Milestone:%20221%20Bug%20fix:%202%20order%20by:%20Milestone,%20%7BBug%20fix%7D,%20Priority,%20type,%20State%20desc)
+
 ## 2022.1.1 - 2022-02-16
 
 ### Improvements

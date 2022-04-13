@@ -8,7 +8,7 @@ Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will
 
 To create a new Entity, right-click on the desired folder and select New -> JPA -> Entity. Also, you can create a new entity from JPA Structure panel:
 
-![jpa_structure_create_new_entity](/Users/vlasov/Desktop/jpa_structure_create_new_entity.jpeg)
+![jpa_structure_create_new_entity](img/jpa_structure_create_new_entity.jpeg)
 
 After that, the following window will appear:
 
@@ -33,7 +33,7 @@ According to the JPA specification, an ID attribute is required for an entity de
 
 If you want to use an Embedded entity as an ID, JPA Buddy will provide you the list of  `@`Embeddable entities that exist in the project:
 
-![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)]
+![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)
 
 Also, you can generate an ID attribute via JPA Palette or quick fix.
 
