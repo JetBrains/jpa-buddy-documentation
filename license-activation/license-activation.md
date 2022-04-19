@@ -1,29 +1,29 @@
-To make it more convenient for you, we decided not to choose any third-party platform to register subscriptions. The purchase process is entirely managed by JetBrains Marketplace, including payment processing, invoicing, and licensing. To get any license, please visit [this page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing).
+The purchase process is entirely managed by JetBrains Marketplace, including payment processing, invoicing, and licensing. To get a license, please visit [this page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing).
 
 ## Trial Subscription
 
-For new users who haven't tried all the features of JPA Buddy yet, and for those who want to get one month for free, there is a 30-day trial period. You can see how to get it in the following video:
+For new users who haven't tried JPA Buddy yet there is a 30-day trial period. You can see how to obtain it in the following video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XZnA_0vS-zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Purchase Process
 
-For those who have already used the trial period and want to continue using JPA Buddy paid features, two types of subscriptions are available: monthly and annual. To pay for a subscription JetBrains Marketplace provides two possible options:
+For those who have already used the trial period and want to continue using JPA Buddy paid features, there are two types of subscriptions available: monthly and annual. To pay for a subscription, JetBrains Marketplace provides two possible options:
 
 - Pay via Credit Card
 - Pay via PayPal
 
-We will show you in the following video how to buy a subscription via a credit card. All the steps to get and activate a subscription will remain the same if you decide to pay via PayPal.
+In the following video, we will show you how to buy a subscription via a credit card. All the steps to get and activate a subscription will remain the same if you decide to use PayPal.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C63kRXjxhRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Educational And Discounted Licenses
 
-All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do this, scroll through the [Pricing page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing) and follow the "Learn more..." link.
+All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the [Pricing page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing) and follow the "Learn more..." link.
 
 ![discounted_licenses](img/discounted_licenses.jpeg)
 
-When the status of your account is confirmed, a new "Discount available" field will appear. Choose your status in this field and enjoy the new subscription options:
+Since the status of your account is confirmed, a new "Discount available" field will appear. Choose your status in this field and enjoy the new subscription options:
 
 ![discount_available](img/discount_available.jpeg)
 
