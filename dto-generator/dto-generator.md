@@ -65,6 +65,16 @@ private String ownerFirstName;
 private String ownerLastName;
 ```
 
+## Java Records Support
+
+If you use SDK version 16 and higher in your project, then JPA Buddy will provide an additional "Java Record" checkbox in the "New DTO" wizard. To check the SDK version of the project, open File -> Project Structure...
+
+![project_structure](img/project_structure.png)
+
+ <div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_MtJO4QKr0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+
 ## MapStruct Mappers
 
 [MapStruct](https://mapstruct.org/) is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.  
@@ -72,7 +82,6 @@ private String ownerLastName;
  <div class="youtube" align="center">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
-
 ## DTO Declaration Settings
 
 Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> DTO Declaration you can configure:
