@@ -75,16 +75,23 @@ JPA Buddy also provides intention on the entity attributes leading directly to t
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mevqm5DzGRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 ## JPA Inspector 
 
 Since JPA Inspector is a context-dependent panel intended to modify already existing code, let’s consider the scope related to methods and queries. Once you place a cursor on the method or query you can configure the result, signature, query options, and string. 
 
-![jpa_inspector](img/jpa_inspector.jpeg)
+![jpa_inspector](img/jpa_inspector.png)
 
-## Query Refactoring 
+### EntityGraph Support
 
-### Async 
+The EntityGraph feature has been introduced in JPA 2.1, it has been one of the most awaited features for quite a long time. Entity graphs give us another layer of control over data that needs to be fetched. JPA Buddy supports them, so you can build graphs using a handy GUI wizard:
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Duco-QWBXy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Query Refactoring
+
+### Async
 
 Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@`Async annotation, but also to change the return type to one of the following: 
 
