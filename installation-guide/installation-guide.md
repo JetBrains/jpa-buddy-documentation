@@ -85,7 +85,7 @@ To make sure that the plugin is installed correctly, follow these steps:
 
 - Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above. 
 
-![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
+![jpa_buddy_panels](img/jpa_buddy_panels.png)
 
 ## Installing a Specific Version of JPA Buddy 
 
