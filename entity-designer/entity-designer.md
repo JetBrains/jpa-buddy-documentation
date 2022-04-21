@@ -2,7 +2,7 @@
 
 Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find three additional tool windows: JPA Structure, JPA Palette and JPA Inspector. 
 
-![jpa_buddy_panels](img/jpa_buddy_panels.jpeg) 
+![jpa_buddy_panels](img/jpa_buddy_panels.png) 
 
 ## Entity Creation
 
@@ -61,7 +61,7 @@ JPA Structure panel is always available on the bottom-left side. It provides a c
 
 1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
-3. Observe related Spring Data repositories for each entity.
+3. Observe related Spring Data repositories and DTOs for each entity.
 4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
 
 ![jpa_structure](img/jpa_structure.jpeg)
