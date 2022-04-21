@@ -77,17 +77,25 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
 
 ## MapStruct Mappers
 
-[MapStruct](https://mapstruct.org/) is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.  
+[MapStruct](https://mapstruct.org/) is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one. 
 
  <div class="youtube" align="center">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
+JPA Buddy analyzes MapStruct mappers and can define which DTO is associated with which entity. Thanks to this, you can see the DTOs in the corresponding section in the JPA Structure and navigate between entity and DTOs through gutter icons.
+
 ## DTO Declaration Settings
+
+![dto_declarations_preferences](img/dto_declarations_preferences.png)
 
 Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> DTO Declaration you can configure:
 
 - Serializable type
 - Class name postfix 
 - Whether to use Lombok or not
+- Comment link regexp that you can use to mark a class as a DTO. JPA Buddy will detect such comments and will be able to associate the DTO class with the entity. As a result:
+  - The marked class will appear in the DTOs section in the JPA Structure panel (1)
+  - The gutter icon will appear in both entity and DTO to ease the navigation between them (2)
+  - The gutter icons will appear to navigate to the entity fields from the DTO fields (3)
 
-![dto_declarations_preferences](img/dto_declarations_preferences.jpeg)
+![comment_link_regexp](img/comment_link_regexp.png)
