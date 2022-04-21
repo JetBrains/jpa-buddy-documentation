@@ -37,7 +37,7 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 Also, you can generate an ID attribute via JPA Palette or quick fix.
 
-![jpa_palette_id](img/jpa_palette_id.jpeg)
+![jpa_palette_id](img/jpa_palette_id.png)
 
 ![add_id_quick_fix](img/add_id_quick_fix.jpeg)
 
