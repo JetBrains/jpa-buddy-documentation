@@ -1,5 +1,21 @@
 # Changelog
 
+## 2022.2.2 - 2022-25-04
+
+### Improvements
+* `@IdClass` annotation has been supported for Liquibase/Flyway Diff Generator [JPAB-72](https://issues.jpa-buddy.com/issue/JPAB-72)
+* The usability of `//TODO` mapping type in the "Entities from DB" wizard has been improved [JPAB-1707](https://issues.jpa-buddy.com/issue/JPAB-1707)
+* JPA Buddy is now generates the correct `bytea` datatype for `org.hibernate.type.BinaryType` columns for PostgreSQL database [JPAB-1743](https://issues.jpa-buddy.com/issue/JPAB-1743)
+* `@GenericGenerator` parameters have been supported for Liquibase/Flyway Diff Generator [JPAB-1570](https://issues.jpa-buddy.com/issue/JPAB-1570)
+
+### Bug-fix
+* It's now possible to create a connection for the MSSQL database from IJ IDEA Community Edition without any exception [JPAB-1752](https://issues.jpa-buddy.com/issue/JPAB-1752)
+* "Create entities from DB" action no longer produces `IllegalStateException` [JPAB-1762](https://issues.jpa-buddy.com/issue/JPAB-1762)
+* `@ToOne` reference to an entity with `@EmbeddedId` is now generated correctly [JPAB-1732](https://issues.jpa-buddy.com/issue/JPAB-1732)
+* `KotlinExceptionWithAttachments` no longer occurs during query extraction in Kotlin projects [JPAB-1739](https://issues.jpa-buddy.com/issue/JPAB-1739)
+
+For other improvements and fixes, see [all resolved issues (25+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20222%20Bug%20fix:%202%20State:%20Verified%20order%20by:%20Priority,%20type,%20State%20desc).
+
 ## 2022.2.1 - 2022-12-04
 
 Fixed a non-critical, but often happening bug with incorrect psi [JPAB-1746](https://issues.jpa-buddy.com/issue/JPAB-1746)
