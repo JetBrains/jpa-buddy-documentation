@@ -411,12 +411,12 @@ The following variables and macros are available in the templates:
 - `#date([format])` – the current system date in the specified [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
 - `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
 - `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
-  - `semVer.getRawVersion(): 1.2.3-SNAPSHOT
-  - `semVer.getMajor()`: 1
-  - `semVer.getMinor()`: 2
-  - `semVer.getPatch()`: 3
-  - `semVer.getPreRelease()`: SNAPSHOT
-  - `semVer.getMeta()`: meta
+  - `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
+  - `${semVer.getMajor()}`: 1
+  - `${semVer.getMinor()}`: 2
+  - `${semVer.getPatch()}`: 3
+  - `${semVer.getPreRelease()}`: SNAPSHOT
+  - `${semVer.getMeta()}`: meta
 
 
 ## SQL Visual Designer
