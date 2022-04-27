@@ -50,7 +50,7 @@ JPA Buddy deeply understands your model. In certain cases, it's able to properly
 </div>
 Let's look more precisely at each of these cases.
 
-<div class="note">If the table has a composite primary key, JPA Buddy will generate `@`JoinColumns annotation with multiple columns presented in it, instead of simple `@`JoinColumn.</div>
+<div class="note">If the table has a composite primary key, JPA Buddy will generate @JoinColumns annotation with multiple columns presented in it, instead of simple @JoinColumn.</div>
 
 #### @OneToOne
 
@@ -368,6 +368,7 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 ## Working With Remote DB 
 
 The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2). 
