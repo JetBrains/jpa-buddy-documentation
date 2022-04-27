@@ -98,4 +98,6 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
   - The gutter icon will appear in both entity and DTO to ease the navigation between them (2)
   - The gutter icons will appear to navigate to the entity fields from the DTO fields (3)
 
+Example: A DTO for the {@link io.jpabuddy.spring.demo.jpademo.entities.Task} entity.
+
 ![comment_link_regexp](img/comment_link_regexp.png)
