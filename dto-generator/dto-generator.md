@@ -93,11 +93,13 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 - Serializable type
 - Class name postfix 
 - Whether to use Lombok or not
-- Comment link regexp that you can use to mark a class as a DTO. JPA Buddy will detect such comments and will be able to associate the DTO class with the entity. As a result:
-  - The marked class will appear in the DTOs section in the JPA Structure panel (1)
+- Comment link regexp to mark a class as a DTO. JPA Buddy will detect such comments and will be able to associate the DTO class with the entity. The `(.*)` defines the entity name. The search is case-sensitive. For example:
+  - regexp: `A DTO for the \{@link (.*)\} entity\.`
+  - comment: `//A DTO for the {@link io.jpabuddy.spring.demo.jpademo.entities.Project} entity.`
+
+As soon as JPA Buddy is able to associate DTO class with the entity:
+  - The DTO class will appear in the DTOs section in the JPA Structure panel (1)
   - The gutter icon will appear in both entity and DTO to ease the navigation between them (2)
   - The gutter icons will appear to navigate to the entity fields from the DTO fields (3)
-
-Example: A DTO for the {@link io.jpabuddy.spring.demo.jpademo.entities.Task} entity.
 
 ![comment_link_regexp](img/comment_link_regexp.png)
