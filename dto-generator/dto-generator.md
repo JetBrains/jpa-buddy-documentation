@@ -93,9 +93,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 - Serializable type
 - Class name postfix 
 - Whether to use Lombok or not
-- Comment link regexp to mark a class as a DTO. JPA Buddy will detect such comments and will be able to associate the DTO class with the entity. The `(.*)` defines the entity name. The search is case-sensitive. For example:
-  - regexp: `A DTO for the \{@link (.*)\} entity\.`
-  - comment: `//A DTO for the {@link io.jpabuddy.spring.demo.jpademo.entities.Project} entity.`
+- Comment link regexp, that allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the {@link (?.*)} entity.` it will be resolved in the following comment: `//A DTO for the {@link io.jpabuddy.spring.demo.jpademo.entities.Project} entity.`.
 
 As soon as JPA Buddy is able to associate DTO class with the entity:
   - The DTO class will appear in the DTOs section in the JPA Structure panel (1)
