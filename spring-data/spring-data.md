@@ -75,6 +75,12 @@ JPA Buddy also provides intention on the entity attributes leading directly to t
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mevqm5DzGRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+### Unresolved Reference
+
+Sometimes, we first declare a call to the method that doesn't exist yet and only then code it. JPA Buddy will help those developers who adhere to this programming style. Just write the desired signature and move to the query or method creation wizard via special actions:
+
+![unresolved_reference](img/unresolved_reference.png)
+
 ## JPA Inspector 
 
 Since JPA Inspector is a context-dependent panel intended to modify already existing code, let’s consider the scope related to methods and queries. Once you place a cursor on the method or query you can configure the result, signature, query options, and string. 
