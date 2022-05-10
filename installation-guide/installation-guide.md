@@ -117,7 +117,7 @@ Older versions will be available for free as it is shown in the table below:
 
 ## Dependencies 
 
-Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyway, JPA Buddy scans the project dependencies and enables the corresponding features. 
+Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibase and Flyway, it scans the project dependencies and enables the corresponding features. 
 
 <div class="table">
 <table class="tg">
@@ -157,6 +157,10 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, Liquibase, and Flyw
   <tr>
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.flywaydb/flyway-core" target="_blank" rel="noopener noreferrer">Flyway</a></td>
     <td class="tg-0lax">- Generate Flyway migrations by comparing JPA model to target database, model to snapshot or DB to DB. <br>- Scaffold INSERT, UPDATE and DELETE statements for your entities in SQL files.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.mapstruct/mapstruct" target="_blank" rel="noopener noreferrer">MapStruct</a></td>
+    <td class="tg-0lax">- Create MapStruct mappers to convert entities to DTOs and back.</td>
   </tr>
 </tbody>
 </table>
