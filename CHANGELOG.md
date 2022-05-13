@@ -5,11 +5,11 @@
 ### Bug-fix
 
 * Incorrect behavior of Minimalistic Mode has been fixed [JPAB-1771](https://issues.jpa-buddy.com/issue/JPAB-1771) & [JPAB-1800](https://issues.jpa-buddy.com/issue/JPAB-1800)
-* Frequently occuring StringIndexOutOfBoundsException is fixed [JPAB-1814](https://issues.jpa-buddy.com/issue/JPAB-1814)
+* Frequently occuring `StringIndexOutOfBoundsException` is fixed [JPAB-1814](https://issues.jpa-buddy.com/issue/JPAB-1814)
 * Annotations over getters and setters are now generated correctly [JPAB-1797](https://issues.jpa-buddy.com/issue/JPAB-1797)
-* The redundant precision attribute is no longer generated for numeric fields when creating an entity from a database table [JPAB-1779](https://issues.jpa-buddy.com/issue/JPAB-1779)
+* The redundant `precision` attribute is no longer generated for numeric fields when creating an entity from a database table [JPAB-1779](https://issues.jpa-buddy.com/issue/JPAB-1779)
 * After changing the owning side of the many-to-many association, JPA Buddy no longer loses the name of the join table and its columns names [JPAB-1804](https://issues.jpa-buddy.com/issue/JPAB-1804)
-* Supported an array of primitive types, like String[] for the @ElementCollection attributes [JPAB-1786](https://issues.jpa-buddy.com/issue/JPAB-1786)
+* Supported an array of primitive types, like `String[]` for the `@ElementCollection` attributes [JPAB-1786](https://issues.jpa-buddy.com/issue/JPAB-1786)
 
 For other improvements and fixes, see [all resolved issues (20+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20222%20Bug%20fix:%203%20order%20by:%20Priority%20,%20Type%20).
 
