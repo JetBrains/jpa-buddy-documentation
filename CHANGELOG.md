@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 2022.2.4 - 2022-17-05
+
+Fixed a non-critical, but often happening `IllegalArgumentException` [JPAB-1852](https://issues.jpa-buddy.com/issue/JPAB-1852)
+
 ## 2022.2.3 - 2022-16-05
 
 ### Bug-fix
