@@ -168,9 +168,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_one_uc_diagram.jpeg](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/one_to_one_uc_diagram.jpeg?lastModify=1651229099)
+![one_to_one_uc_diagram.jpeg](img/one_to_one_uc_diagram.jpeg)
 
-![one_to_one_uc_wizard](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/one_to_one_uc_wizard.jpeg?lastModify=1651229099)
+![one_to_one_uc_wizard](img/one_to_one_uc_wizard.jpeg)
 
 JPA Buddy will generate `@`OneToOne association with `@`JoinColumn annotation in the User entity, and  `@`OneToOne association with `mappedBy` parameter in the Profile entity:
 
@@ -227,9 +227,9 @@ ALTER TABLE profiles
 
 
 
-![one_to_one_pk_fk_diagram.jpeg](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/one_to_one_pk_fk_diagram.jpeg?lastModify=1651229099)
+![one_to_one_pk_fk_diagram.jpeg](img/one_to_one_pk_fk_diagram.jpeg)
 
- ![one_to_one_pk_fk_wizard.jpeg](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/one_to_one_pk_fk_wizard.jpeg?lastModify=1651229099)
+ ![one_to_one_pk_fk_wizard.jpeg](img/one_to_one_pk_fk_wizard.jpeg)
 
 Since `@`Id should not be a persistence entity, JPA Buddy will generate:
 
@@ -294,9 +294,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_many_many_to_one_diagram](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/one_to_many_many_to_one_diagram.jpeg?lastModify=1651229099)
+![one_to_many_many_to_one_diagram](img/one_to_many_many_to_one_diagram.jpeg)
 
-![one_to_many_many_to_one_wizard](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/one_to_many_many_to_one_wizard.jpeg?lastModify=1651229099)
+![one_to_many_many_to_one_wizard](img/one_to_many_many_to_one_wizard.jpeg)
 
 JPA Buddy will generate the following code:
 
@@ -367,9 +367,9 @@ ALTER TABLE profiles_users
     ADD CONSTRAINT fk_prouse_on_user FOREIGN KEY (users_id) REFERENCES users (id);
 ```
 
-![many_to_many_diagram](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/many_to_many_diagram.jpeg?lastModify=1651229099)
+![many_to_many_diagram](img/many_to_many_diagram.jpeg)
 
-![many_to_many_wizard](file:///Users/vlasov/Documents/GitHub/documentation/reverse-engineering/img/many_to_many_wizard.jpeg?lastModify=1651229099)
+![many_to_many_wizard](img/many_to_many_wizard.jpeg)
 
 If this association does not exist in any of the entities, JPA Buddy will generate it in the entity for which the reverse engineering action was called.
 
