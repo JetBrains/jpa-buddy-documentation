@@ -10,11 +10,13 @@ JPA Buddy allows you to granularly pick tables/views and fields from your databa
   The first thing you need to do to use the reverse engineering features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/">documentation</a>. Check it out to learn more. 
 </div>
 
-In the **IntelliJ IDEA Community Edition**, you can generate entities from DB via JPA Structure: 
+In the **IntelliJ IDEA Community Edition**, you can generate entities from DB via JPA Structure or Project Panel: 
 
 ![jpa_structure_entities_from_db](img/jpa_structure_entities_from_db.png)
 
-In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via JPA Structure and from the Database panel: 
+![project_panel_entities_from_db](img/project_panel_entities_from_db.png)
+
+In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via JPA Structure, Project Panel or from the Database panel: 
 
 ![database_entities_from_db](img/database_entities_from_db.png)
 
@@ -24,22 +26,22 @@ In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via
 
 ### Configuration
 
-At the top of the window, you can configure:
+The menu on the top of the window allows you to configure:
 
 * <a href="https://www.jpa-buddy.com/documentation/database-connections/">DB connection</a>
 * <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#working-with-remote-db">DB schema cache</a>
 * Source root and package to which the generated entities will be saved
 * Whether indexes and constains need to be migrated by ticking the corresponding checkbox
 
-Also, from "Other settings" drop-down list, you can move to the <a href="https://www.jpa-buddy.com/documentation/entity-designer/#settings-1">entity declaration</a> and <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#settings">reverse engineering</a> settings.
+Also, from the "Other settings" drop-down list, you can move to the <a href="https://www.jpa-buddy.com/documentation/entity-designer/#settings-1">entity declaration</a> and <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#settings">reverse engineering</a> settings.
 
 ### Mapped Relations, Tables and Views
 
-On the left of the window, you can see:
+On the left side of the window, you can see:
 
-* Mapped Relations - those tables and views for which there are entities in the project
-* Tables - those tables for which there are no entities yet
-* Views - those views for which there are no entities yet
+* Mapped Relations - tables and views mapped to JPA entities
+* Tables - tables that exist in the DB but are not mapped to entities
+* Views - views that exist in the DB but are not mapped to entities
 
 After selecting any element from the tree, a panel for migrating attributes from columns will appear. Also, you will be able to define a class name in the corresponding field.
 
@@ -55,13 +57,13 @@ All attributes are divided into 3 categories:
 
 #### Creating Enums 
 
-For those attributes that match `String` or `Integer` type, you can change the mapping type from Basic to Enum, and JPA Buddy will create the corresponding Enum class in the project, which will need to be filled in with values manually. 
+For attributes matching the `String` or `Integer` type, you can change the mapping type from Basic to Enum, and JPA Buddy will create the corresponding Enum class in the project. You need to fill the enum with proper values manually.
 
 #### Dealing With Unknown Types 
 
 For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings). 
 
-At the same time, some of the unsupported SQL types can be mapped via the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types) library. And if you have it in your project, JPA Buddy finds suitable types and automatically suggests them during reverse engineering: 
+If you have the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types) library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering: 
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -69,13 +71,13 @@ At the same time, some of the unsupported SQL types can be mapped via the [Hiber
 
 #### // TODO Comments
 
-If you want to postpone the creation of attributes for certain columns, you can choose `//todo comment` as the mapping type. After that, depending on column type, JPA Buddy will generate the //todo comment with the corresponding quick-fix actions that you can call via ⌘+B (Cntl+B) shortcut:
+If you want to postpone an attribute creation for specific columns, you can choose `//todo comment` as the mapping type. JPA Buddy will generate the //todo comment with the corresponding quick-fix actions depending on the column type. You can call these actions via ⌘+B (Cntl+B) shortcut:
 
-* For known basic and association types you can:
+- For known basic and association types you can:
 
   * Uncomment as is
 
-  - Remove column mapping
+  * Remove column mapping
 
 - For unknown column type you can:
   - Define target Java type
@@ -97,21 +99,21 @@ After calling the "Define target Java type" action, the following window will ap
 
 ![mapping_java_type](img/mapping_java_type.png)
 
-Configuring it once, JPA Buddy will remember the choice for following reverse engineering actions. You can always change it in the [settings](#type-mappings).
+JPA Buddy will remember data mappings for the subsequent reverse engineering actions. You can always change them in the [settings](#type-mappings).
 
 ### Map DB Views to JPA Entities
 
 JPA Buddy follows all best practices providing the most efficient mapping for DB views while reverse engineering:  	
-1. DB views do not have primary keys. Hence, JPA Buddy allows selecting a field or (often) a set of fields that can play the role of identifier for the target entity. 
-2. Most of the DB views are immutable. So, JPA Buddy adds @Immutable annotation to the entity and generates only getters. And this will help to win a few points in the application performance.  	
-3. Entities representing DB views can only come from the database. To ensure developers don't create new instances in the business logic, JPA Buddy generates only a protected constructor with no parameters for the entity to meet the JPA specifications.
+1. DB views do not have the primary key. Hence, JPA Buddy allows selecting a field or a set of fields to use as the identifier for the target entity.
+2. Most of the DB views are immutable. So, JPA Buddy adds `@Immutable` annotation to the entity and generates getters only. This helps to achieve better application performance.	
+3. If a JPA entity is mapped to a DB view, a developer should not be able to create a new instance of this entity in the business logic code. For such entities, JPA Buddy generates only a no-arg protected constructor to meet the JPA specifications.
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 ## Reverse Engineering Columns
 
-During development, new columns can be added directly to the database table. JPA Buddy determines which columns already have the appropriate attributes and which do not. To add attributes to the existing entity, choose Columns action in the Reverse Engineering section in JPA Palette.  
+Sometimes, developers use the DB-first application development approach and add columns directly to the DB. After that, they need to update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose Columns action in the Reverse Engineering section in JPA Palette.
 
 ![jpa_palette_reverse_engineering_columns](img/jpa_palette_reverse_engineering_columns.png)
 
@@ -129,7 +131,7 @@ JPA Buddy deeply understands your model. In certain cases, it's able to properly
 
 
 
-Let's look more precisely at each of these cases.
+Let's look more closely at each of these cases.
 
 ### @OneToOne
 
