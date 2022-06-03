@@ -1,5 +1,14 @@
 # Changelog
 
+## 2022.2.5 - 2022-6-06
+
+### Bug-fix
+
+* `IndexOutOfBoundsException` no longer appears during Flyway Versioned Migration generation <a href="https://issues.jpa-buddy.com/issue/JPAB-1853" target="_blank">JPAB-1853</a>
+* Mapper for DTOs is now generated without any issues <a href="https://issues.jpa-buddy.com/issue/JPAB-1876" target="_blank">JPAB-1876</a>
+* Line markers generation no longer causes an `IllegalStateException` <a href="https://issues.jpa-buddy.com/issue/JPAB-1854" target="_blank">JPAB-1854</a>
+* Frequent exceptions that do not affect the plugin functionality will no longer bother you <a href="https://issues.jpa-buddy.com/issue/JPAB-1875" target="_blank">JPAB-1875</a>
+* Now, `@ElementCollection` attributes are created correctly in Kotlin <a href="https://issues.jpa-buddy.com/issue/JPAB-1849" target="_blank">JPAB-1849</a>
 
 ## 2022.2.4 - 2022-17-05
 
