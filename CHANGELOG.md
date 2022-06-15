@@ -1,5 +1,41 @@
 # Changelog
 
+## 2022.3.0 - 2022-20-06
+
+### Completely new
+JPA Buddy presents - **DDL Generator**!
+
+This feature allows developers to convert entities into DDL statements in a few clicks. It can generate both initialization scripts to create a database schema from scratch and differential DDL to update the already existing database to the valid state in accordance with JPA entities <a href="https://issues.jpa-buddy.com/issue/JPAB-1832" target="_blank">JPAB-1832</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-1833" target="_blank">JPAB-1833</a>
+
+### Liquibase/Flyway Diff Generator
+
+* The number of supported databases has increased! Please welcome, IBM Db2 <a href="https://issues.jpa-buddy.com/issue/JPAB-1251" target="_blank">JPAB-1251</a>
+* Comparing entities from different VCS branches via snapshot has become more convenient to use <a href="https://issues.jpa-buddy.com/issue/JPAB-1380" target="_blank">JPAB-1380</a>
+* Now JPA Buddy knows that you are using Hibernate Envers in your project and does not generate drop scripts for audit tables <a href="https://issues.jpa-buddy.com/issue/JPAB-1817" target="_blank">JPAB-1817</a>
+* You can now configure the generator right from the Flyway/Liquibase wizards <a href="https://issues.jpa-buddy.com/issue/JPAB-1734" target="_blank">JPAB-1734</a>
+
+### Reverse Engineering
+
+* Now, JPA Buddy can automatically remove prefixes from the table and column names <a href="https://issues.jpa-buddy.com/issue/JPAB-1841" target="_blank">JPAB-1841</a>
+* Since this release, all reverse engineering actions are also available for IBM Db2 <a href="https://issues.jpa-buddy.com/issue/JPAB-1251" target="_blank">JPAB-1251</a>
+* You can now define the ID generation strategy for each entity right from the "Entities from DB" wizard <a href="https://issues.jpa-buddy.com/issue/JPAB-1501" target="_blank">JPAB-1501</a>
+
+### DTO Generator
+
+* Now you can generate mapping methods right into an existing MapStruct mapper class <a href="https://issues.jpa-buddy.com/issue/JPAB-1238" target="_blank">JPAB-1238</a>
+* The MapStruct method for updating an entity from the DTO now returns an updated entity instead of `void` <a href="https://issues.jpa-buddy.com/issue/JPAB-1792" target="_blank">JPAB-1792</a>
+
+### Entity Designer
+
+* Normalizing entities has become much easier! Just call the new "Extract to MappedSupperclass entity" action and create entities hierarchy in a few clicks <a href="https://issues.jpa-buddy.com/issue/JPAB-944" target="_blank">JPAB-944</a>
+* Incorrect behavior of the Minimalistic Mode has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-1915" target="_blank">JPAB-1915</a>
+
+### Spring Data
+
+* The Projection creation dialog has started to look even better <a href="https://issues.jpa-buddy.com/issue/JPAB-1724" target="_blank">JPAB-1724</a>
+
+For other improvements and fixes, see [all resolved issues (65+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20Milestone:%20223%20Bug%20fix:%200%20%20-Epic%20-%7BInternal%20improvement%7D%20%20State:%20Fixed%20,%20Verified%20order%20by:%20type,%20Priority,%20%7BSpent%20time%7D%20desc).
+
 ## 2022.2.5 - 2022-6-06
 
 ### Bug-fix
