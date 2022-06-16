@@ -11,6 +11,7 @@ For now, JPA Buddy supports following databases:
 - [Oracle](https://www.oracle.com/database/)
 - [HSQLDB](http://hsqldb.org/)
 - [H2](https://www.h2database.com/html/main.html)
+- [IBM Db2](https://www.ibm.com/analytics/db2)
 
 ![jpa_structure_db_connection](img/jpa_structure_db_connection.jpeg)
 
