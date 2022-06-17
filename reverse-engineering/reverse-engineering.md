@@ -424,14 +424,22 @@ The larger the database and the slower the connection of the database (for examp
 
 To follow best practices and don't cause performance issues, JPA Buddy sets `FetchType.LAZY` for  `@`OneToOne and `@`ManyToOne associations by default. But you can change the default value in any time. Open Preferences -> Tools -> JPA Buddy -> Reverse Engineering:
 
-![fetch_type](img/fetch_type.jpeg)
+![fetch_type](img/preferences_fetch_type.png)
+
+### Naming Rules
+
+Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. However, java developers usually prefer to eliminate these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. E.g., In case prefixes to skip are specified as `sys_`, `p_` and reverse engineering is being applied over `sys_user` and `p_product` tables, their prefixes will not appear in the corresponding entity names, so the resulting names will be `User` and `Product` instead of `SysUser` and `PProduct`.
+
+Also, happens the database column names are matched with the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html). E.g., `public`, `interface` and so on... In this case, you can configure the field suffix, so it will be appended to the original column name. So, if you specified the suffix as `Field`, the resulting names will be `publicField` and `interfaceField`.
+
+![preferences_reverse_engineering](img/preferences_naming_rules.png)
 
 ### Type Mappings
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them. 
 
-Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in VARCHAR, but MS SQL has a separate NVARCHAR data type for it. 
+Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it. 
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types: 
 
-![preferences_reverse_engineering](img/preferences_reverse_engineering.jpeg)
+![preferences_mapping_types](img/preferences_mapping_types.png)
