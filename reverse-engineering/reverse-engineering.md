@@ -71,7 +71,7 @@ If you have the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types
 
 #### // TODO Comments
 
-If you want to postpone an attribute creation for specific columns, you can choose `//todo comment` as the mapping type. JPA Buddy will generate the //todo comment with the corresponding quick-fix actions depending on the column type. You can call these actions via ⌘+B (Cntl+B) shortcut:
+If you want to postpone an attribute creation for specific columns, you can choose `//todo comment` as the mapping type. JPA Buddy will generate the //todo comment with the corresponding quick-fix actions depending on the column type. You can call these actions via ⌘+B (Ctrl+B) shortcut:
 
 - For known basic and association types you can:
 
@@ -115,9 +115,9 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 
 ## Reverse Engineering Columns
 
-Sometimes, developers use the DB-first application development approach and add columns directly to the DB. After that, they need to update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose Columns action in the Reverse Engineering section in JPA Palette.
+Sometimes, developers use the DB-first application development approach and add columns directly to the DB. After that, they need to update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Palette or from the IntelliJ IDEA "Generate" menu:
 
-![jpa_palette_reverse_engineering_columns](img/jpa_palette_reverse_engineering_columns.png)
+![reverse_engineering_columns_action](img/reverse_engineering_columns_action.png)
 
 After that, the Reverse Engineering Columns wizard will appear:
 
@@ -170,7 +170,7 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_one_uc_diagram.jpeg](img/one_to_one_uc_diagram.jpeg)
+![one_to_one_uc_diagram.jpeg](img/one_to_one_uc_diagram.png)
 
 ![one_to_one_uc_wizard](img/one_to_one_uc_wizard.jpeg)
 
@@ -229,7 +229,7 @@ ALTER TABLE profiles
 
 
 
-![one_to_one_pk_fk_diagram.jpeg](img/one_to_one_pk_fk_diagram.jpeg)
+![one_to_one_pk_fk_diagram.jpeg](img/one_to_one_pk_fk_diagram.png)
 
  ![one_to_one_pk_fk_wizard.jpeg](img/one_to_one_pk_fk_wizard.jpeg)
 
@@ -296,7 +296,7 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_many_many_to_one_diagram](img/one_to_many_many_to_one_diagram.jpeg)
+![one_to_many_many_to_one_diagram](img/one_to_many_many_to_one_diagram.png)
 
 ![one_to_many_many_to_one_wizard](img/one_to_many_many_to_one_wizard.jpeg)
 
@@ -369,7 +369,7 @@ ALTER TABLE profiles_users
     ADD CONSTRAINT fk_prouse_on_user FOREIGN KEY (users_id) REFERENCES users (id);
 ```
 
-![many_to_many_diagram](img/many_to_many_diagram.jpeg)
+![many_to_many_diagram](img/many_to_many_diagram.png)
 
 ![many_to_many_wizard](img/many_to_many_wizard.jpeg)
 
