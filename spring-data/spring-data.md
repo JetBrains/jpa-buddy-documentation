@@ -88,6 +88,12 @@ Some developers prefer to declare a call to the method that doesn't exist yet fi
 
 ![unresolved_reference](img/unresolved_reference.png)
 
+### Settings
+
+To make the names of derived queries sound as natural as possible, for some logical keywords, Spring Data provides several keyword expressions (e.g., Containing, IsContaining, Contains). If you don't want to see all possible variants of the same conditions in the Query Wizard, you can configure JPA Buddy to display only desired ones:
+
+![conditions_settings](img/conditions_settings.png)
+
 ## JPA Inspector 
 
 Since JPA Inspector is a context-dependent panel intended to modify already existing code, let’s consider the scope related to methods and queries. Once you place a cursor on the method or query you can configure the result, signature, query options, and string. 
