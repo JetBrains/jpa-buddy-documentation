@@ -134,9 +134,9 @@ Sometimes you only need a subset of columns from a table. In such cases, Spring 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xevxVvu_Hbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-In the “New Spring Projection” window, you can define source root and package, choose entity class, set a name for projection class, and select the fields that you want to include in it: 
+In the “New Spring Projection” window, you can define source root and package, choose entity class, set a name for projection class, and select the fields you want to include. Also, JPA Buddy allows you to generate Projections from the same window for the referenced entities. Just check the associated entity in the tree, choose the Projection type and pick the required fields.
 
-![new_spring_projection](img/new_spring_projection.jpeg)
+![new_spring_projection](img/new_spring_projection.png)
 
 For the configuration below the following projection will be generated:
 
