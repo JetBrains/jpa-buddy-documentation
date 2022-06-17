@@ -57,7 +57,7 @@ The middle of the window contains the table for the query condition configuratio
 
 At the bottom of the window you can specify specific for each query parameters, such as: whether the parameters will be named or not, whether to add the `@`Async annotation and so on. Here you can also add fields by which the result of the query will be ordered. 
 
-![create_query_find_collection](img/create_query_find_collection.jpeg)
+![create_query_find_collection](img/create_query_find_collection.png)
 
 For the configuration below, the following query is generated: 
 
@@ -108,23 +108,16 @@ The EntityGraph feature has been introduced in JPA 2.1, it has been one of the m
 
 Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@`Async annotation, but also to change the return type to one of the following: 
 
-- ```java
-  Future<ClassName> 
-  ```
+* Future<ClassName>
+* CompletableFuture<ClassName> 
 
-- ```java
-  CompletableFuture<ClassName> 
-  ```
-
-- ```java
-  ListenableFuture<ClassName> 
-  ```
+- ListenableFuture<ClassName> 
 
 Learn more about asynchronous query results at the corresponding Spring Data JPA documentation [page](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-async). 
 
 To make query async, place the cursor on the query you want to change and choose the result return type from the drop-down list: 
 
-![async](img/async.jpeg)
+![async](img/async.png)
 
 ### Projection Creation
 
@@ -172,7 +165,7 @@ In Spring Data JPA, projections can also be specified during runtime by using ge
 
 To make query generic, place the cursor on the query you want to change and check the box “Dynamic projection”. 
 
-![dynamic_projection](img/dynamic_projection.jpeg)
+![dynamic_projection](img/dynamic_projection.png)
 
 ### Query Extracting 
 
