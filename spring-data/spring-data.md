@@ -9,8 +9,7 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8pHsZ_HvbXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
- In the New JPA Repository window, you can set: 
+In the New JPA Repository window, you can set: 
 
 - Entity for which the repository will be created 
 
@@ -26,7 +25,13 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 - Source root 
 - Package 
 
-![new_jpa_repository](img/new_jpa_repository.jpeg)
+![new_jpa_repository](img/new_jpa_repository_single.png)
+
+Also, JPA Buddy allows you to create repositories for multiple entities at once. To do this, just select several entities in the Project tree or JPA Structure panel and call the "Spring Data Repository" action:
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nSusI0dq7nQ " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## JPA Structure Repositories 
 
