@@ -146,6 +146,13 @@ For projects with Hibernate Validations, a section appears with validations that
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yIOcQ_bGxBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+## Extract to MappedSuperclass
+
+The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy provides a useful action to pull attributes up the hierarchy.
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Lombok
 
@@ -235,7 +242,6 @@ Hibernate Event System is useful when you work with data and need to log or broa
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 ## Inspections
 
 JPA Buddy provides a lot of inspections that help during coding. By default, all inspections are enabled in all scopes and have warning severity. You can see full list of provided inspections and configure them in Settings -> Editor -> Inspections -> JPA Buddy.
