@@ -143,7 +143,7 @@ To generate the DDL script based on the data model you will need to specify the 
 
 Click OK to proceed to the preview window of the migration script. The preview window for Liquibase looks like this (Flyway preview window is slightly different):
 
-![changelog_preview](img/changelog_preview.jpeg)
+![changelog_preview](img/changelog_preview.png)
 
 Some types of changes have custom fields in the preview window. For example, “add not null constraint” change allows you to replace all existing NULL values in the DB with a specified value:
 
@@ -178,13 +178,17 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 
 ### Changelog Preview Window
 
-![changelog_preview](img/changelog_preview.jpeg)
+![changelog_preview](img/changelog_preview.png)
 
-“Directory” and “File name” fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog. 
+If you want to save the changelog as a regular file, then the following configuration options will be available:
 
-“Include to”, “include folder” and “include context” configure whether the changelog should be included in some other changelog. If checked, the “include folder” box will generate the include statement for the whole folder, not only the current changelog.
+* “Directory” and “File name” fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog. 
+* “Include to”, “include folder” and “include context” allows you to configure whether the changelog should be included in some other changelog. If checked, the “include folder” box will generate the include statement for the whole folder, not only the current changelog.
+* From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
 
-From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
+If you want to save the changelog as a scratch file, then you can configure only its name and type.
+
+![liquibase_preview_scratch](img/liquibase_preview_scratch.png)
 
 On the left of the window, there is a preview of the actual changesets to be generated. You can see what each change is going to look like by clicking on them. To combine several changes into one changeset or to ignore them, simply drag them around. The top left corner of the preview window contains various actions to modify the resulting changelog:
 
@@ -282,9 +286,11 @@ The following variables and macros are available in the templates:
 
 ## Flyway Support
 
-### Preview window Actions
+### Migration Preview Window
 
-![flyway_preview](img/flyway_preview.jpeg)
+![flyway_preview](img/flyway_preview.png)
+
+JPA Buddy allows you to select the place where to store the generated script: you can choose a file, scratch file in the IDE or clipboard.
 
 "Directory" and "File name" fields are responsible for configuring the location of the generated migration. If a migration with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that migration. 
 
