@@ -129,7 +129,7 @@ In four simple steps you get a migration script that describes the changes betwe
 
 ### Init Schema
 
-![init_schema_actions](img/init_schema_actions.jpeg)
+![init_schema_actions](img/init_schema_actions.png)
 
 For both Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure panel, the correspondig window will appear:
 
@@ -399,9 +399,9 @@ If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callback
 
 Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway [naming pattern](https://flywaydb.org/documentation/concepts/migrations#naming). In plugin settings you can configure following values for name generation:
 
-![flyway_settings](img/flyway_settings.jpeg)
+![flyway_settings](img/flyway_settings.png)
 
-- Migration prefix. The default value is V.
+- Migration prefix. The default value is `V`.
 - Version pattern. After the hyphen, an example of the generated sequence is presented. 
 - Migration separator. The default value is “_”.
 - Migration description.
@@ -465,7 +465,7 @@ You can change the saved mapping configuration at any time from Tools -> JPA Bud
 
 Also, it may be helpful when the application works with databases from different vendors. In this case, your schema might have slightly different data types for each of them.
 
-Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in VARCHAR, but MS SQL has a separate NVARCHAR data type for it.
+Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
 JPA Buddy lets you specify type mappings for each DBMS, simply check the “Enabled” box on each desired DBMS and add the mappings. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
@@ -637,7 +637,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 
 Since JPA Buddy supports six databases at once, this is important to have the ability to configure naming strategies and max identifier length.
 
-By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a TelephoneNumber entity is mapped to the telephone_number table. Even if you annotate the entity with `@`Table(name = "TelephoneNumber"). The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation. 
+By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a `TelephoneNumber` entity is mapped to the `telephone_number` table. Even if you annotate the entity with `@Table(name = "TelephoneNumber")`. The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation. 
 
 The following strategies are supported:
 
@@ -652,4 +652,4 @@ RDBMSs have their own limitations. For example, table names for [OracleDatabase]
 
 ## Sharing Settings via Version Control 
 
-JPA Buddy settings define conventions that are supposed to be shared among the team members: file naming rules, how to mark or separate change types, which data types to use for DBMSs etc. To make sharing easier, all the plugin settings are stored in the ‘.jpb’ folder in the root of the project. This folder is supposed to be pushed to the version control, which automatically keeps the settings in sync across the development team. 
+JPA Buddy settings define conventions that are supposed to be shared among the team members: file naming rules, how to mark or separate change types, which data types to use for DBMSs etc. To make sharing easier, all the plugin settings are stored in the `.jpb` folder in the root of the project. This folder is supposed to be pushed to the version control, which automatically keeps the settings in sync across the development team. 
