@@ -84,6 +84,12 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
  </div>
 JPA Buddy analyzes MapStruct mappers and can define which DTO is associated with which entity. Thanks to this, you can see the DTOs in the corresponding section in the JPA Structure and navigate between entity and DTOs through gutter icons.
 
+Also, JPA Buddy can help if you prefer to have a single big fat mapper interface with methods for all entities. In this case, use IntelliJ IDEA "Generate Menu" (Cmd+N/Alt+Insert) and create methods for any entity.
+
+ <div class="youtube" align="center">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/XahPsC2TciE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+
 ## DTO Declaration Settings
 
 ![dto_declarations_preferences](img/dto_declarations_preferences.png)
