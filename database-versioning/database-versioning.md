@@ -638,6 +638,59 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 </tbody>
 </table>
 </div>
+## Hibernate Envers Support
+
+The [Hibernate Envers](https://hibernate.org/orm/envers/) provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
+
+![hibernate_envers_settings](img/hibernate_envers_settings.png)
+
+For example, if you have the following entity:
+
+```java
+@Audited
+@Entity(name = "Customer")
+public static class Customer {
+
+	@Id
+	private Long id;
+
+	private String firstName;
+
+	private String lastName;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "created_on")
+	@CreationTimestamp
+	private Date createdOn;
+
+	//Getters and setters are omitted for brevity
+
+}
+```
+
+In the database, it will be mapped to the two, and not one table:
+
+```sql
+create table Customer (
+    id bigint not null,
+    created_on timestamp,
+    firstName varchar(255),
+    lastName varchar(255),
+    primary key (id)
+)
+
+create table Customer_AUD (
+    id bigint not null,
+    REV integer not null,
+    REVTYPE tinyint,
+    created_on timestamp,
+    firstName varchar(255),
+    lastName varchar(255),
+    primary key (id, REV)
+)
+```
+
+When generating migration scripts, JPA Buddy will understand that the `Customer_AUD` table doesn't have to have a corresponding JPA entity, and will not generate a drop statement for it.
 
 ## Naming Strategy and Max Identifier Settings
 
