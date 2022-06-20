@@ -418,8 +418,35 @@ The following variables and macros are available in the templates:
   - `${semVer.getPreRelease()}`: SNAPSHOT
   - `${semVer.getMeta()}`: meta
 
+## DDL By Entities
 
-## SQL Visual Designer
+Generate DDL by Entities action allows developers to convert entities into DDL statements in a couple of clicks. It can generate both initialization scripts to create a database schema from scratch and differential DDL to update the already existing database to the valid state in accordance with JPA entities. Also, this feature is extremely useful to substitute the use of the error-prone `spring.jpa.hibernate.ddl-auto` property. By using the JPA Buddy action you will be able to fully control DDL before execution, setup proper Java -> DB types mapping, map fields with attribute converters and Hibernate types, generate drop statements and many more.
+
+//todo add video
+
+### Resolve SchemaManagementException Automatically
+
+If you stumble upon `SchemaManagementException` on the application startup, it means you have the `ddl-auto` property set to `validate` and Hibernate couldn't properly map JPA entities to your database tables. JPA Buddy allows you to generate DDL to fill up the difference between JPA entities and the database right from the stack trace! Then check the resulting script, run it and start the application again. The same issue could be solved by setting the `ddl-auto` or `hbm2ddl` properties to regenerate the database or update it.
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T3VACEO8sFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+### Show DDL Action
+
+JPA Buddy provides the action to generate DDL statements for only one specific entity. To see the DDL, hover the cursor over the class name and call the action from the IntelliJ IDEA Context Actions menu or JPA Inspector. Also, you can call this action from the Project and JPA Structure panels: just right-click on the target entity.
+
+![show_ddl](img/show_ddl.png)
+
+Next, choose which for which database you need a script and click OK:
+
+![show_ddl_dbs](img/show_ddl_dbs.png)
+
+![sql_preview](img/sql_preview.png)
+
+### SQL Visual Designer
 
 In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette. For each statement, there is a corresponding window that allows you to configure the statement:
 
@@ -427,16 +454,6 @@ In some cases, it’s useful to have SQL scripts for the JPA data model, especia
 <iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-## Show DDL... Action 
-
-To generate create script for existing entities you can use Show DDL action.
-
-![jpa_structure_show_ddl](img/jpa_structure_show_ddl.jpeg)
-
-All you need to generate the script is to choose the required table and DB type. JPA Buddy provides the possibility to generate scripts for the six most popular databases.
-
-![choose_table](img/choose_table.jpeg)
 
 ## Custom Type Mappings
 
