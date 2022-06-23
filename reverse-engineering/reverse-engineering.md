@@ -429,9 +429,9 @@ To follow best practices and don't cause performance issues, JPA Buddy sets `Fet
 
 ### Naming Rules
 
-Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. However, java developers usually prefer to eliminate these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. E.g., In case prefixes to skip are specified as `sys_`, `p_` and reverse engineering is being applied over `sys_user` and `p_product` tables, their prefixes will not appear in the corresponding entity names, so the resulting names will be `User` and `Product` instead of `SysUser` and `PProduct`.
+Naming conventions for database objects are pretty important, especially for big databases. We often see `SYS_`, `DBA_`, `PG_` or other prefixes in DB schemas. In Java, we usually do not use suffixes for class names, we use packages. So, we can safely skip prefixes in JPA entities class names during reverse engineering process. JPA Buddy allows us to specify suffixes in a comma-separated list list like `SYS_, PG_` in the plugin settings. Hence table named `PG_LARGE_OBJECTS` will be transformed into `LargeObject` entity.
 
-Also, happens the database column names are matched with the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html). E.g., `public`, `interface` and so on... In this case, you can configure the field suffix, so it will be appended to the original column name. So, if you specified the suffix as `Field`, the resulting names will be `publicField` and `interfaceField`.
+Also, the column name might match the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html) in some cases. Obviously, it's not possible to create an attribute named `public`. For such cases, JPA Buddy allows you to define field suffix, e.g. `Field` like in the picture below. So, the column named `public` will automatically turn into a `publicField` attribute.
 
 ![preferences_reverse_engineering](img/preferences_naming_rules.png)
 
