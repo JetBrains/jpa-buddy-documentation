@@ -90,7 +90,7 @@ Some developers prefer to declare a call to the method that doesn't exist yet fi
 
 ### Settings
 
-To make the names of derived queries sound as natural as possible, for some logical keywords, Spring Data provides several keyword expressions (e.g., Containing, IsContaining, Contains). If you don't want to see all possible variants of the same conditions in the Query Wizard, you can configure JPA Buddy to display only desired ones:
+Spring Data provides several keyword expressions (e.g., Containing, IsContaining, Contains) for method names. On the one hand, it gives us some flexibility in methods naming. On the other hand, in big teams, different naming for the same actions may be confusing for code reviewers and maintainers. If you have naming standards established for the development team, you can configure JPA Buddy to use only approved keywords for method names generation:
 
 ![conditions_settings](img/conditions_settings.png)
 
