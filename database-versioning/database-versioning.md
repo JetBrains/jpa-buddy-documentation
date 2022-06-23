@@ -450,7 +450,7 @@ Also, this feature is extremely useful if we want to avoid using the automatic s
 
 ### Resolve SchemaManagementException Automatically
 
-If you stumble upon `SchemaManagementException` on the application startup, it means you have the `ddl-auto` property set to `validate` and Hibernate couldn't properly map JPA entities to your database tables. JPA Buddy allows you to generate DDL to fill up the difference between JPA entities and the database right from the stack trace! Then check the resulting script, run it and start the application again. The same issue could be solved by setting the `ddl-auto` or `hbm2ddl` properties to regenerate the database or update it.
+If you stumble upon `SchemaManagementException` on the application startup, it means you have the `ddl-auto` property set to `validate` and Hibernate couldn't properly map JPA entities to your database tables. JPA Buddy allows you to generate DDL to fill up the difference between JPA entities and the database right from the stack trace!
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T3VACEO8sFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
