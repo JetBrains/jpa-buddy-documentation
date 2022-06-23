@@ -176,6 +176,12 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 
 ## Liquibase Support
 
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/26qri-FIwWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
 ### Changelog Preview Window
 
 ![changelog_preview](img/changelog_preview.png)
@@ -283,8 +289,13 @@ The following variables and macros are available in the templates:
   - `${semVer.getPreRelease()}`: SNAPSHOT
   - `${semVer.getMeta()}`: meta
 
-
 ## Flyway Support
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9wEJ29QIDyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
 
 ### Migration Preview Window
 
