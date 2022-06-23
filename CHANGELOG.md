@@ -34,7 +34,7 @@ This feature allows developers to convert entities into DDL statements in a few 
 
 * The Projection creation dialog has started to look even better <a href="https://issues.jpa-buddy.com/issue/JPAB-1724" target="_blank">JPAB-1724</a>
 
-For other improvements and fixes, see [all resolved issues (65+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20Milestone:%20223%20Bug%20fix:%200%20%20-Epic%20-%7BInternal%20improvement%7D%20%20State:%20Fixed%20,%20Verified%20order%20by:%20type,%20Priority,%20%7BSpent%20time%7D%20desc).
+For other improvements and fixes, see [all resolved issues (65+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20Milestone:%20223%20Bug%20fix:%200%20%20-Epic%20-%7BInternal%20improvement%7D%20%20State:%20Fixed%20,%20Verified%20order%20by:%20type,%20Priority).
 
 ## 2022.2.5 - 2022-6-06
 
@@ -102,9 +102,9 @@ Learn more about the commercial subscription [here](https://www.jpa-buddy.com/bl
   - It's possible now to create a DTO from unresolved references [JPAB-1150](https://issues.jpa-buddy.com/issue/JPAB-1150)
   - Now, you can see all the DTOs for the entity in the JPA Structure panel [JPAB-1582](https://issues.jpa-buddy.com/issue/JPAB-1582)
   - Java Records have been supported [JPAB-1147](https://issues.jpa-buddy.com/issue/JPAB-1147)
- 
+
 ### Entity Designer
-  
+
   - Now JPA Buddy is able to generate blanks for Hibernate Event Listeners [JPAB-1130](https://issues.jpa-buddy.com/issue/JPAB-1130)
   - @Version attribute has been added to the JPA Palette [JPAB-94](https://issues.jpa-buddy.com/issue/JPAB-94)
   - The Set<> is now used by default for collections [JPAB-1492](https://issues.jpa-buddy.com/issue/JPAB-1492)
