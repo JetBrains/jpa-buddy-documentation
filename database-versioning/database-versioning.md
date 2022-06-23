@@ -426,9 +426,16 @@ The following variables and macros are available in the templates:
 
 ## DDL By Entities
 
-Generate DDL by Entities action allows developers to convert entities into DDL statements in a couple of clicks. It can generate both initialization scripts to create a database schema from scratch and differential DDL to update the already existing database to the valid state in accordance with JPA entities. Also, this feature is extremely useful to substitute the use of the error-prone `spring.jpa.hibernate.ddl-auto` property. By using the JPA Buddy action you will be able to fully control DDL before execution, setup proper Java -> DB types mapping, map fields with attribute converters and Hibernate types, generate drop statements and many more.
+Generate DDL by Entities action allows developers to convert entities into DDL statements in a couple of clicks. It can generate:
 
-//todo add video
+- Initialization scripts to create a database schema from scratch;
+- Differential DDL to update the already existing database to the valid state in accordance with JPA entities.
+
+Also, this feature is extremely useful if we want to avoid using the automatic scripts generation enabled by `hbm2ddl` or `ddl-auto` properties. By using the JPA Buddy action, you can fully control DDL before execution, setup proper Java -> DB types mapping, map fields with attribute converters and Hibernate types, generate drop statements, and many more.
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u75s7pIyZqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Resolve SchemaManagementException Automatically
 
