@@ -1,10 +1,11 @@
 ## Basics
 
-JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities: 
+JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities:
 
 <div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a-YjeNdvpPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 
 <div class="note">
   The first thing you need to do to use the reverse engineering features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/">documentation</a>. Check it out to learn more. 
