@@ -9,6 +9,8 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8pHsZ_HvbXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+
 In the New JPA Repository window, you can set: 
 
 - Entity for which the repository will be created 

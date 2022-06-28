@@ -656,6 +656,8 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 </tbody>
 </table>
 </div>
+
+
 ## Hibernate Envers Support
 
 The [Hibernate Envers](https://hibernate.org/orm/envers/) provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
