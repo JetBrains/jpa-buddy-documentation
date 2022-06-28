@@ -100,7 +100,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 - Class name postfix.
 - Whether to use Lombok or not.
 - Comment link regexp. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment: `//A DTO for the {@link io.jpabuddy.demo.entities.Project} entity.`. The feature is disabled when the field is empty.
-- Name pattern regexp. It may be useful if you use a strong naming convention between JPA Entities and DTOs. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the simple class name of the target JPA entity use the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty.
+- Name pattern regexp. This option is useful if you use an obligatory naming convention for DTOs. It allows JPA Buddy to associate DTO with its JPA Entity using a DTO name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty.
 
 As soon as JPA Buddy is able to associate DTO class with the entity:
   - The DTO class will appear in the DTOs section in the JPA Structure panel (1)
