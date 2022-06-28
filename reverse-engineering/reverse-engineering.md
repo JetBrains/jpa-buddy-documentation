@@ -429,9 +429,8 @@ To follow best practices and don't cause performance issues, JPA Buddy sets `Fet
 
 ### Naming Rules
 
-Naming conventions for database objects are pretty important, especially for big databases. We often see `SYS_`, `DBA_`, `PG_` or other prefixes in DB schemas. In Java, we usually do not use suffixes for class names, we use packages. So, we can safely skip prefixes in JPA entities class names during reverse engineering process. JPA Buddy allows us to specify suffixes in a comma-separated list list like `SYS_, PG_` in the plugin settings. Hence table named `PG_LARGE_OBJECTS` will be transformed into `LargeObject` entity.
-
-Also, the column name might match the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html) in some cases. Obviously, it's not possible to create an attribute named `public`. For such cases, JPA Buddy allows you to define field suffix, e.g. `Field` like in the picture below. So, the column named `public` will automatically turn into a `publicField` attribute.
+Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
+Also, the database column names sometimes match the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html). E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
 ![preferences_reverse_engineering](img/preferences_naming_rules.png)
 
@@ -439,7 +438,7 @@ Also, the column name might match the [reserved Java keywords](https://docs.orac
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them. 
 
-Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it. 
+Let’s say the application needs to support both PostgreSQL and MS SQL and you need to store Unicode characters in string data. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types: 
 
