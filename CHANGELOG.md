@@ -1,5 +1,26 @@
 # Changelog
 
+## 2022.3.1 - 2022-04-07
+
+### Features
+
+* For Liquibase/Flyway diff generator, the Hibernate `@Nationalized` annotation has been supported <a href="https://issues.jpa-buddy.com/issue/JPAB-1867" target="_blank">JPAB-1867</a>
+* During Reverse Engineering, JPA Buddy now applies the Hibernate `@OnDelete(action = OnDeleteAction.CASCADE)` for migrated columns, if the foreign key contains CASCADE option <a href="https://issues.jpa-buddy.com/issue/JPAB-1741" target="_blank">JPAB-1741</a>
+
+### Improvements
+
+* Since Hibernate 6, the `TextType` value is no longer applicable for columns with type `oid`/`text` in the database. So now, JPA Buddy is also using a new approach <a href="https://issues.jpa-buddy.com/issue/JPAB-1895" target="_blank">JPAB-1895</a>
+* You can now generate EntityGraph for Spring Data queries via the new intention <a href="https://issues.jpa-buddy.com/issue/JPAB-1880" target="_blank">JPAB-1880</a>
+* Liquibase autocompletion is getting more advanced. Now, you can use autocompletion to fill in the database schema names <a href="https://issues.jpa-buddy.com/issue/JPAB-1774" target="_blank">JPAB-1774</a>
+
+### Bug-fix
+
+* While Init Schema Changelog generation, incorrect database type is no longer generated for `OffsetDateTime` attributes <a href="https://issues.jpa-buddy.com/issue/JPAB-1936" target="_blank">JPAB-1936</a>
+* Fixed the `NullPointerException` exception for the case when the user tried to create a DTO with an empty attribute name <a href="https://issues.jpa-buddy.com/issue/JPAB-1941" target="_blank">JPAB-1941</a>
+* Creating a Spring Data Projection from a quick-fix action no longer produces an exception <a href="https://issues.jpa-buddy.com/issue/JPAB-1940" target="_blank">JPAB-1940</a>
+
+For other improvements and fixes, see [all resolved issues (20+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20223%20Bug%20fix:%201%20State:%20Verified,%20Fixed%20).
+
 ## 2022.3.0 - 2022-20-06
 
 ### Completely new
