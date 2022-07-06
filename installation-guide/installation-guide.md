@@ -45,6 +45,17 @@ In the following video, we will show you how to buy a subscription via a credit 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C63kRXjxhRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### The Difference Between an Individual and Company Licenses
+
+Choosing between an Individual and Company license, you should answer two questions:
+
+1) Who pays?
+2) Who manages the license?
+
+A **Personal license** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
+
+A **Company license** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee mustn't use one license at the same time.
+
 ### Educational And Discounted Licenses
 
 All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the [Pricing page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing) and follow the "Learn more..." link.
