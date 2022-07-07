@@ -47,14 +47,20 @@ In the following video, we will show you how to buy a subscription via a credit 
 
 ### The Difference Between an Individual and Company Licenses
 
-Choosing between an Individual and Company license, you should answer two questions:
+The **Personal license** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
 
-1) Who pays?
-2) Who manages the license?
+The **Company license** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee should not use the same license simultaneously.
 
-A **Personal license** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
+The following table should help with choosing the most appropriate licensing schema for you:
 
-A **Company license** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee mustn't use one license at the same time.
+|                                                 | Individual License             | Company License                                              |
+| ----------------------------------------------- | ------------------------------ | ------------------------------------------------------------ |
+| **Who pays for the license?**                   | Developer with their own funds | Company                                                      |
+| **Who manages?**                                | Developer                      | Company. The license can be reassigned between individuals.  |
+| **Can be used by more than one developer?**     | No                             | No                                                           |
+| **Can be used to develop commercial software?** | Yes                            | Yes                                                          |
+| **Can be used for development in a company?**   | Yes                            | Yes                                                          |
+| **What if a developer leaves a company?**       | The license leaves with them   | The license stays within the company and can be assigned to another developer |
 
 ### Educational And Discounted Licenses
 
