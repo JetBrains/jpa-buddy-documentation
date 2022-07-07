@@ -53,14 +53,47 @@ The **Company license** is the standard licensing option for organizations and b
 
 The following table should help with choosing the most appropriate licensing schema for you:
 
-|                                                 | Individual License             | Company License                                              |
-| ----------------------------------------------- | ------------------------------ | ------------------------------------------------------------ |
-| **Who pays for the license?**                   | Developer with their own funds | Company                                                      |
-| **Who manages?**                                | Developer                      | Company. The license can be reassigned between individuals.  |
-| **Can be used by more than one developer?**     | No                             | No                                                           |
-| **Can be used to develop commercial software?** | Yes                            | Yes                                                          |
-| **Can be used for development in a company?**   | Yes                            | Yes                                                          |
-| **What if a developer leaves a company?**       | The license leaves with them   | The license stays within the company and can be assigned to another developer |
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Individual License</th>
+    <th>Company License</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Who pays for the license?</td>
+    <td>Developer with their own funds</td>
+    <td>Company</td>
+  </tr>
+  <tr>
+    <td>Who manages?</td>
+    <td>Developer</td>
+    <td>Company. The license can be reassigned between individuals.</td>
+  </tr>
+  <tr>
+    <td>Can be used by more than one developer?</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Can be used to develop commercial software?</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Can be used for development in a company?</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>What if a developer leaves a company?</td>
+    <td>The license leaves with them</td>
+    <td>The license stays within company and can be assigned to another developer</td>
+  </tr>
+</tbody>
+</table>
 
 ### Educational And Discounted Licenses
 
