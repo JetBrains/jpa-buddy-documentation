@@ -1,5 +1,15 @@
 # Changelog
 
+## 2022.3.2 - 2022-20-07
+
+### Bug-fix
+
+* **Critical Performance Issue!** Code editing performance problems <a href="https://issues.jpa-buddy.com/issue/JPAB-1978" target="_blank">JPAB-1978</a>
+* "Invalid order syntax for part Desc!" exception the availability check for *DefineEntityGraphIntention* intention <a href="https://issues.jpa-buddy.com/issue/JPAB-1979" target="_blank">JPAB-1979</a>
+* Fix navigation from DTO to Entity <a href="https://issues.jpa-buddy.com/issue/JPAB-1962" target="_blank">JPAB-1962</a>
+
+For other improvements and fixes, see [all resolved issues (5+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20%23Resolved%20%20Milestone:%20223%20Bug%20fix:%202).
+
 ## 2022.3.1 - 2022-04-07
 
 ### Features
