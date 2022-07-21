@@ -1,5 +1,17 @@
 # Changelog
 
+## 2022.3.3 - 2022-21-07
+
+Fix bulk exception **StackOverflowError** when calculating DTO line markers for an entity class
+```
+java.lang.StackOverflowError: null
+    at java.util.Objects.hashCode(Objects.java:116)
+    at com.haulmont.jpb.action.creation.entity.JavaDtoClassFinder.A(DtoClassFinder.kt:29)
+    at com.haulmont.jpb.action.creation.entity.JavaDtoClassFinder.A(DtoClassFinder.kt:29)
+    at com.haulmont.jpb.action.creation.entity.JavaDtoClassFinder.A(DtoClassFinder.kt:29)
+```
+
+
 ## 2022.3.2 - 2022-20-07
 
 ### Bug-fix
