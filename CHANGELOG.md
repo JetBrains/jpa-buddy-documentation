@@ -2,7 +2,7 @@
 
 ## 2022.3.3 - 2022-21-07
 
-Fix bulk exception **StackOverflowError** when calculating DTO line markers for an entity class
+Fix bulk exception **StackOverflowError** when calculating DTO line markers for an entity class <a href="https://issues.jpa-buddy.com/issue/JPAB-1986" target="_blank">JPAB-1986</a>
 ```
 java.lang.StackOverflowError: null
     at java.util.Objects.hashCode(Objects.java:116)
