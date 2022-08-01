@@ -1,8 +1,19 @@
 # Changelog
 
+## 2022.3.4 - 2022-01-08
+
+### Bug-fix
+
+* Correct DDL statements are now generated for the edge cases using the `@IdClass` annotation <a href="https://issues.jpa-buddy.com/issue/JPAB-1970" target="_blank">JPAB-1970</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-1985" target="_blank">JPAB-1985</a>
+* Table column names autocompletion in the Liquibase files no longer produces `Non-idempotent Computation` exception <a href="https://issues.jpa-buddy.com/issue/JPAB-1969" target="_blank">JPAB-1969</a>
+* While Reverse Engineering, JPA Buddy now selects the correct mapping types for the `smallint` and `tinyint` types <a href="https://issues.jpa-buddy.com/issue/JPAB-1975" target="_blank">JPAB-1975</a>
+* Reserved characters are now escaped in the Liquibase `include` tags <a href="https://issues.jpa-buddy.com/issue/JPAB-1993" target="_blank">JPAB-1993</a>
+
+For other improvements and fixes, see [all resolved issues (10+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20%7BJPA%20Buddy%7D%20Milestone:%20223%20Bug%20fix:%204%20order%20by:%20Priority,%20type,%20State%20desc).
+
 ## 2022.3.3 - 2022-21-07
 
-Fix bulk exception **StackOverflowError** when calculating DTO line markers for an entity class <a href="https://issues.jpa-buddy.com/issue/JPAB-1986" target="_blank">JPAB-1986</a>
+Fix bulk  **StackOverflowError** when calculating DTO line markers for an entity class <a href="https://issues.jpa-buddy.com/issue/JPAB-1986" target="_blank">JPAB-1986</a>
 ```
 java.lang.StackOverflowError: null
     at java.util.Objects.hashCode(Objects.java:116)
