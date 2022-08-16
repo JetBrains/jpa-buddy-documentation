@@ -1,5 +1,16 @@
 # Changelog
 
+## 2022.3.5 - 2022-18-08
+
+### Bug-fix
+
+* The `@Nationalized` annotation is now generated while reverse engineering if the field is of type `nvarchar`, `ntext`, etc. <a href="https://issues.jpa-buddy.com/issue/JPAB-1998" target="_blank">JPAB-1998</a>
+* After creating the reverse attribute, the class in which this attribute was created opens <a href="https://issues.jpa-buddy.com/issue/JPAB-1966" target="_blank">JPAB-1966</a>
+* Fixed a false positive "Embeddable attribute is not marked as `@Embedded`" inspection <a href="https://issues.jpa-buddy.com/issue/JPAB-1870" target="_blank">JPAB-1870</a>
+* Enabling DB schema caching no longer resets user selection silently <a href="https://issues.jpa-buddy.com/issue/JPAB-1730" target="_blank">JPAB-1730</a>
+* The missed actions for Kotlin users are available again in both: JPA Inspector and Context Actions menu <a href="https://issues.jpa-buddy.com/issue/JPAB-1848" target="_blank">JPAB-1848</a>
+* Some spelling errors have been corrected <a href="https://issues.jpa-buddy.com/issue/JPAB-1994" target="_blank">JPAB-1994</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-1955" target="_blank">JPAB-1955</a>
+
 ## 2022.3.4 - 2022-01-08
 
 ### Bug-fix
