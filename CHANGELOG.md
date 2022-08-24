@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022.3.6 - 2022-25-08
+
+Fixed incorrect error handling from external plugins <a href="https://issues.jpa-buddy.com/issue/JPAB-2014" target="_blank">JPAB-2014</a>
+
 ## 2022.3.5 - 2022-18-08
 
 ### Bug-fix
