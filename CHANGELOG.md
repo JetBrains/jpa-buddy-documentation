@@ -1,5 +1,45 @@
 # Changelog
 
+## 2022.4.0 - 2022-05-09
+
+### Completely new
+
+Most Loved JPA Buddy actions can now be called from the concise Editor Toolbar! You can use it while working with:
+* Entity <a href="https://issues.jpa-buddy.com/issue/JPAB-1924" target="_blank">JPAB-1924</a>
+* Spring Data Repository <a href="https://issues.jpa-buddy.com/issue/JPAB-1925" target="_blank">JPAB-1925</a>
+* XML or SQL files <a href="https://issues.jpa-buddy.com/issue/JPAB-1834" target="_blank">JPAB-1834</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-1943" target="_blank">JPAB-1943</a>
+
+### Liquibase/Flyway/DDL Diff Generator
+
+* The `@JdbcTypeCode` annotation from Hibernate 6 was supported <a href="https://issues.jpa-buddy.com/issue/JPAB-1881" target="_blank">JPAB-1881</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-1884" target="_blank">JPAB-1884</a>
+* You can now use the new `CamelCaseToUnderscoresNamingStrategy` from Hibernate 6 <a href="https://issues.jpa-buddy.com/issue/JPAB-1897" target="_blank">JPAB-1897</a>
+* Now, you can paste generated DDL right to the database console <a href="https://issues.jpa-buddy.com/issue/JPAB-1851" target="_blank">JPAB-1851</a>
+
+### Reverse Engineering
+
+* You can now choose whether to set the schema name for the entity <a href="https://issues.jpa-buddy.com/issue/JPAB-1903" target="_blank">JPAB-1903</a>
+* The `@JdbcTypeCode` annotation from Hibernate 6 was supported <a href="https://issues.jpa-buddy.com/issue/JPAB-1885" target="_blank">JPAB-1885</a>
+* Now, you can choose whether to generate the `@NonNull` annotation for `not null` fields <a href="https://issues.jpa-buddy.com/issue/JPAB-1977" target="_blank">JPAB-1977</a>
+
+### DTO Generator
+
+* It is possible now to rename both entity and DTO fields at once <a href="https://issues.jpa-buddy.com/issue/JPAB-2000" target="_blank">JPAB-2000</a>
+* Now, you can generate fluent setters for mutable DTOs <a href="https://issues.jpa-buddy.com/issue/JPAB-1176" target="_blank">JPAB-1176</a>
+* You can now navigate to Entity class from Projection interface <a href="https://issues.jpa-buddy.com/issue/JPAB-1824" target="_blank">JPAB-1824</a>
+
+### Entity Designer
+
+* Inspection for the non-owning side of the `@OneToOne` associations with the `FetchType.Lazy` attribute was added <a href="https://issues.jpa-buddy.com/issue/JPAB-1818" target="_blank">JPAB-1818</a>
+* Now, you can set up JPA Buddy UI according to your needs <a href="https://issues.jpa-buddy.com/issue/JPAB-1953" target="_blank">JPAB-1953</a>
+* ID generation wizard has been redesigned <a href="https://issues.jpa-buddy.com/issue/JPAB-1416" target="_blank">JPAB-1416</a>
+
+### Spring Data
+
+* Now you can generate a new DTO or projection and apply it as a return type directly from the query/method wizard <a href="https://issues.jpa-buddy.com/issue/JPAB-1803" target="_blank">JPAB-1803</a>
+* The return type of `delete` methods has been redesigned <a href="https://issues.jpa-buddy.com/issue/JPAB-1535" target="_blank">JPAB-1535</a>
+
+For other improvements and fixes, see [all resolved issues (50+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20224%20Bug%20fix:%200%20State:%20Verified,%20Fixed%20).
+
 ## 2022.3.6 - 2022-25-08
 
 Fixed incorrect error handling from external plugins <a href="https://issues.jpa-buddy.com/issue/JPAB-2014" target="_blank">JPAB-2014</a>
