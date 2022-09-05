@@ -82,6 +82,8 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
  <div class="youtube" align="center">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
+
+
 JPA Buddy analyzes MapStruct mappers and can define which DTO is associated with which entity. Thanks to this, you can see the DTOs in the corresponding section in the JPA Structure and navigate between entity and DTOs through gutter icons.
 
 Also, JPA Buddy can help if you prefer to have a single big mapper interface with methods for all entities. In this case, use IntelliJ IDEA "Generate Menu" (Cmd+N/Alt+Insert) in the open mapper class and create methods for any entity.
@@ -97,7 +99,9 @@ Also, JPA Buddy can help if you prefer to have a single big mapper interface wit
 Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> DTO Declaration you can configure:
 
 - Serializable type.
+
 - Class name postfix.
+
 - Whether to use Lombok or not.
 
 - Comment link regexp. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following Javadoc comment:
