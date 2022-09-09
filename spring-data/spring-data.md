@@ -39,40 +39,50 @@ When we have a lot of entities, creating Spring Data repositories one by one bec
 
 For the most efficient navigation in the project, JPA Buddy groups all repositories for each entity. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.  
 
-![jpa_structure_repository](img/jpa_structure_repository.jpeg)
+![jpa_structure_repository](img/jpa_structure_repository.png)
 
 ## Queries/Methods Generation 
 
-Spring Data provides the possibility to define a query with the `@`Query annotation. To write them accurately and in less time, use JPA Palette. Choose one of the following types of queries and configure them with the convenient UI. 
+Spring Data provides the possibility to define a query with the `@Query` annotation. To write them accurately and in less time, use JPA Palette. Choose one of the following types of queries and configure them with the convenient UI. 
 
 ![jpa_palette_query](img/jpa_palette_query.jpeg)
 
 ### Example 
 
-<div class="note">All that will be considered in the example below can be generated not only as a query but also as a method. The difference is that you can configure the method prefix in the Advance panel, and you can&rsquo;t specify the name for it, because it will be generated automatically in accordance to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation">Naming Conventions for Query.</a></div>
+<div class="note">All that we will consider in the example below can be generated as `@Query` and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to [Naming Conventions for Query.](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
+</div>
 
-Let's take a look at the example with Find Collection query creation. 
-
-Let's start from the top of the window. You can define one of the possible wrap types for collection, return value and you can also define the name for the method, but if you rest it empty, the name will be generated automatically following [Naming Conventions for Query.](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)  
-
-The middle of the window contains the table for the query condition configuration. 
-
-At the bottom of the window you can specify specific for each query parameters, such as: whether the parameters will be named or not, whether to add the `@`Async annotation and so on. Here you can also add fields by which the result of the query will be ordered. 
+Let's look at an example of creating a Find Collection Query.
 
 ![create_query_find_collection](img/create_query_find_collection.png)
 
-For the configuration below, the following query is generated: 
+At the top of the window, you can define wrap type for collection and query return type. Moreover, JPA Buddy allows you to generate new [Projection interface](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO class](https://www.jpa-buddy.com/documentation/dto-generator/) right from this window (just click on the `+` button).
+
+You can also specify the method name. Still, if you rest it empty, the name will be generated automatically following [Naming Conventions for Query.](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation) 
+
+The middle of the window contains the table for the query conditions. 
+
+At the bottom of the window, you can specify:
+
+* whether the parameters will be named or not;
+* whether to use `Pageable` parameter or not;
+* and so on. 
+
+Finally, you can specify fields by which the query result will be ordered.
+
+For the above configuration, the following query will be generated:
 
 ```java
-@Query("select distinct o from Owner o " + 
-       "where upper(o.firstName) like upper(concat(:firstName, '%')) " + 
-       "and upper(o.lastName) like upper(concat('%', :lastName, '%')) " + 
-       "order by o.lastName") 
-@Async 
-CompletableFuture<List<Owner>> findOwner(
-  @Param("firstName") String firstName,
-  @Param("lastName") @NonNull String lastName,
-  Pageable pageable); 
+@Query("""
+        select distinct o from Owner o
+        where upper(o.firstName) like upper(concat(:firstName, '%'))
+        and upper(o.lastName) like upper(concat('%', :lastName, '%'))
+        order by o.lastName
+        """)
+    @Async
+    CompletableFuture<List<Owner>> findOwners(@Param("firstName") String firstName,
+                                              @Param("lastName") @NonNull String lastName,
+                                              Pageable pageable);
 ```
 
 ### Entity Intention 
@@ -114,7 +124,7 @@ The EntityGraph feature has been introduced in JPA 2.1, it has been one of the m
 
 ### Async
 
-Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@`Async annotation, but also to change the return type to one of the following: 
+Spring Data JPA provides the possibility to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@Async` annotation, but also to change the return type to one of the following: 
 
 * Future<ClassName>
 * CompletableFuture<ClassName> 
