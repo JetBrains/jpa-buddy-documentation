@@ -247,7 +247,7 @@ Hibernate Event System is useful when you work with data and need to log or broa
 
 JPA Buddy provides a lot of inspections that help during coding. By default, all inspections are enabled in all scopes and have warning severity. You can see full list of provided inspections and configure them in Settings -> Editor -> Inspections -> JPA Buddy.
 
-![inspections](img/inspections.jpeg)
+![inspections](img/inspections.png)
 
 ## Settings
 
