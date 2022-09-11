@@ -119,7 +119,6 @@ The EntityGraph feature has been introduced in JPA 2.1, it has been one of the m
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Duco-QWBXy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 ## Query Refactoring
 
 ### Async
@@ -137,51 +136,7 @@ To make query async, place the cursor on the query you want to change and choose
 
 ![async](img/async.png)
 
-### Projection Creation
 
-Sometimes you only need a subset of columns from a table. In such cases, Spring Data JPA projections come in handy, letting you return only required fields from queries. 
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xevxVvu_Hbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-In the "New Spring Projection" window, you can:
-
-- Define source root and package;
-- Choose entity class;
-- Set a name for a projection class;
-- Select the fields you want to include.
-
-Also, JPA Buddy allows you to generate Projections for the referenced entities. Select the associated entity, choose the Projection type, and pick the required fields.
-
-![new_spring_projection](img/new_spring_projection.png)
-
-For the configuration below the following projection will be generated:
-
-```java
-public interface PetInfo {
-    Integer petId();
-
-    LocalDate getBirthDate();
-
-    String petName();
-
-    OwnerInfo getOwner();
-
-    PetTypeInfo getType();
-
-    interface OwnerInfo {
-        String getFirstName();
-
-        String getLastName();
-    }
-
-    interface PetTypeInfo {
-        Integer getId();
-
-        String getName();
-    }
-} 
-```
 
 ### Dynamic Projection 
 
@@ -206,3 +161,89 @@ For the IntelliJ IDEA Community edition, JPA Buddy provides query autocompletion
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IQDgQ5_l764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+## Projection
+
+Sometimes you only need a subset of columns from a table. In such cases, Spring Data JPA projections come in handy, letting you return only required fields from queries. 
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xevxVvu_Hbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+In the "New Spring Projection" window, you can:
+
+- Define source root and package;
+- Choose entity class;
+- Set a name for a projection class;
+- Select the fields you want to include.
+
+Also, JPA Buddy allows you to generate Projections for the referenced entities. Select the associated entity, choose the Projection type, and pick the required fields.
+
+![new_spring_projection](img/new_spring_projection.png)
+
+For the above configuration the following projection will be generated:
+
+```java
+/**
+ * A Projection for the {@link Pet} entity
+ */
+public interface PetInfo {
+	Integer getId();
+
+	String getName();
+
+	LocalDate getBirthDate();
+
+	PetTypeInfo getType();
+
+	OwnerInfo getOwner();
+
+	/**
+	 * A Projection for the {@link PetType} entity
+	 */
+	interface PetTypeInfo {
+		Integer getId();
+
+		String getName();
+	}
+
+	/**
+	 * A Projection for the {@link Owner} entity
+	 */
+	interface OwnerInfo {
+		String getFirstName();
+
+		String getLastName();
+	}
+}
+```
+
+### Projection Declaration Settings
+
+Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> Projection Declaration you can configure:
+
+* Class name postfix.
+
+* Comment link regexp & Class comment. These options allow JPA Buddy to associate Projection with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A Projection for the \{@link (?<entity>.*)\} entity` it will be resolved in the following Javadoc comment:
+
+  ```java
+  /**
+   * A Projection for the {@link Pet} entity
+   */
+  ```
+
+  The feature is disabled when the fields are empty.
+
+* Name pattern regexp. This option is useful if you use an obligatory naming convention for Projections. It allows JPA Buddy to associate Projection with its JPA Entity using a Projection name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?<entity>.*(?:Info|Prj|Projection|VO|Vo|View|Request|Browse)` means that the `MyEntityInfo`, `MyEntityPrj` and etc. classes will be considered as a Projections for `MyEntity`. 
+
+  The feature is disabled when the field is empty.
+
+![projection_declaration](img/projection_declaration.png)
+
+#### Convinient Navigation between Entity and its Projections
+
+As soon as JPA Buddy is able to associate Projection interface with the entity:
+
+- The Projection interface will appear in the **Dto & Projections** section in the JPA Structure panel and in the Editor Toolbar (1)
+- The gutter icon will appear in the Projection to ease the navigation to its entity (2)
+
+![projection_navigation](img/projection_navigation.png)
