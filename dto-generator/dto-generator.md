@@ -10,9 +10,10 @@ DTO (data transfer object) is an object that carries data between processes. DTO
 
 ## Mutability
 
-By default, JPA Buddy generates immutable DTOs – all the fields are final, and there are no setters for them. To generate DTOs with simple private fields, setters for them, and no-args constructor, check the "Mutable" box.  
+By default, JPA Buddy generates immutable DTOs – all the fields are final, and there are no setters for them. To generate DTOs with simple private fields, setters for them, and no-args constructor, check the **Mutable** box.
+Also, for mutable DTOs, you can define whether to use fluent setters or not. Such setters will return `this` instead of `void`. It can be helpful if you want to chain multiple method calls.
 
-![new_dto_mutable](img/new_dto_mutable.jpeg)
+![new_dto_mutable](img/new_dto_mutable.png)
 
 ## Inner DTOs for associations
 
