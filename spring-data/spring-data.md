@@ -223,7 +223,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 
 * Class name postfix.
 
-* Comment link regexp & Class comment. These options allow JPA Buddy to associate Projection with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A Projection for the \{@link (?<entity>.*)\} entity` it will be resolved in the following Javadoc comment:
+* Comment link regexp. This option allows JPA Buddy to associate Projection with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A Projection for the \{@link (?<entity>.*)\} entity` it will be resolved in the following Javadoc comment:
 
   ```java
   /**
@@ -231,11 +231,13 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
    */
   ```
 
-  The feature is disabled when the fields are empty.
+  The feature is disabled when the field is empty.
 
 * Name pattern regexp. This option is useful if you use an obligatory naming convention for Projections. It allows JPA Buddy to associate Projection with its JPA Entity using a Projection name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?<entity>.*(?:Info|Prj|Projection|VO|Vo|View|Request|Browse)` means that the `MyEntityInfo`, `MyEntityPrj` and etc. classes will be considered as a Projections for `MyEntity`. 
 
   The feature is disabled when the field is empty.
+  
+* Class comment. Defines the comment that will be generated over the Projection interface.
 
 ![projection_declaration](img/projection_declaration.png)
 
