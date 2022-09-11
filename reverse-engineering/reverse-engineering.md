@@ -422,11 +422,17 @@ The larger the database and the slower the connection of the database (for examp
 
 ## Settings
 
-### Fetch Type
+### General
 
-To follow best practices and don't cause performance issues, JPA Buddy sets `FetchType.LAZY` for  `@`OneToOne and `@`ManyToOne associations by default. But you can change the default value in any time. Open Preferences -> Tools -> JPA Buddy -> Reverse Engineering:
+**Fetch Type**
 
-![fetch_type](img/preferences_fetch_type.png)
+To follow best practices and don't cause performance issues, JPA Buddy sets `FetchType.LAZY` for  `@OneToOne` and `@ManyToOne` associations by default.
+
+**Validation Annotations**
+
+Validation annotations gives you another layer of protection in addition to the DB constraints. By default, JPA Buddy will apply such annotations over entity attributes while reverse engineering.
+
+![preferences_general](img/preferences_general.png)
 
 ### Naming Rules
 
