@@ -17,54 +17,16 @@ Also, for mutable DTOs, you can define whether to use fluent setters or not. Suc
 
 ## Inner DTOs for associations
 
-Entities can reference other entities via associations, and JPA Buddy allows you to generate DTOs for the referenced entities from the same window. Just check the referenced entity in the tree, choose the DTO type and pick the required fields. Let’s look at the available DTO types.
+Entities can reference other entities via associations, and JPA Buddy allows you to generate DTOs for the referenced entities from the same window. Just check the referenced entity in the tree, choose the DTO type and pick the required fields.
 
-### New Class
+![inner_dtos.png](img/inner_dtos.png)
 
-A new class will be created in a separate file. You can specify the package and name for it.
+Let’s look at the available DTO types:
 
-![new_dto_new_class](img/new_dto_new_class.jpeg)
-
-### New Nested Class
-
-A new public static nested class will be created.
-
-![new_dto_new_nested_class](img/new_dto_new_nested_class.jpeg)
-
-### Existing Class
-
-You can select a DTO class that already exists in the project. After clicking on the Browse button, a window with two tabs will open.
-
-![new_dto_existing_class](img/new_dto_existing_class.jpeg)
-
-On the "Search by Name" tab, you can find classes using keyword search.
-
-![choose_class_search_by_name](img/choose_class_search_by_name.jpeg)
-
-On the "Project" tab, you can view the project tree and find the desired class.
-
-![choose_class_project](img/choose_class_project.jpeg)
-
-### Flat
-
-This type can be applied for `@`ToOne associations and `@`ToMany associations with only one selected field.  
-
-<div class="note">
-  New nested class will be created for @ToMany associations with more than one selected field instead.
-</div>
-
-For Flat DTOs, all inner class fields will be top-class fields. Their names will consist of the inner class filed name + fields names.
-
-![new_dto_flat](img/new_dto_flat.jpeg)
-
-For the configuration specified above, the following fields will be generated:
-
-```java
-private String name;
-private LocalDate birthDate;
-private String ownerFirstName;
-private String ownerLastName;
-```
+* New Class – a new class will be created in a separate file.
+* New Nested Class – a new public static nested class will be created.
+* Existing Class – you can select a DTO class that already exists in the project.
+* Flat – all inner class fields will be top-class fields. Their names will consist of the inner class name + fields names.
 
 ## Java Records Support
 
@@ -72,7 +34,7 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
 
 ![project_structure](img/project_structure.png)
 
- <div class="youtube" align="center">
+<div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_MtJO4QKr0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
