@@ -13,7 +13,7 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 
 In the New JPA Repository window, you can set: 
 
-- Entity for which the repository will be created 
+- Entity for which the repository will be created
 
 - Class name 
 
@@ -43,9 +43,9 @@ For the most efficient navigation in the project, JPA Buddy groups all repositor
 
 ## Queries/Methods Generation 
 
-Spring Data provides the possibility to define a query with the `@Query` annotation. To write them accurately and in less time, use JPA Palette. Choose one of the following types of queries and configure them with the convenient UI. 
+Spring Data provides the possibility to define a query with the `@Query` annotation. To write them accurately and in less time, use JPA Palette or Editor Toolbar. Choose one of the following types of queries and configure them with the convenient UI. 
 
-![jpa_palette_query](img/jpa_palette_query.jpeg)
+![jpa_palette_query](img/jpa_palette_query.png)
 
 ### Example 
 
