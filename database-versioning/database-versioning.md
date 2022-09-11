@@ -479,6 +479,16 @@ In some cases, it’s useful to have SQL scripts for the JPA data model, especia
 </div>
 
 
+## @JDBCTypeCode Support 
+
+Before Hibernate 6, it was common to use the Hibernate Types library to map non-standard SQL types to Java types, or you could define your own `@Type` or `@Converter`. Since Hibernate 6, you can ditch a dozen Hibernate types and JPA converters and use `@JdbcTypeCode` instead.
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ocNsqBk9fbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
 ## Custom Type Mappings
 
 There is no generic way to automatically map custom Java types to the SQL/Liquibase types. That's why you will need to define the target type manually for those attributes. If such attributes exist in your project, after Liquibase or Flyway script generation actions call, JPA Buddy will show you the following window: 
