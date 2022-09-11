@@ -32,7 +32,8 @@ The menu on the top of the window allows you to configure:
 * <a href="https://www.jpa-buddy.com/documentation/database-connections/">DB connection</a>
 * <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#working-with-remote-db">DB schema cache</a>
 * Source root and package to which the generated entities will be saved
-* Whether indexes and constains need to be migrated by ticking the corresponding checkbox
+* Whether indexes and constraints need to be migrated
+* Whether schema name should be specified in the `@Table` annotation
 
 Also, from the "Other settings" drop-down list, you can move to the <a href="https://www.jpa-buddy.com/documentation/entity-designer/#settings-1">entity declaration</a> and <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#settings">reverse engineering</a> settings.
 
@@ -116,7 +117,7 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 
 ## Reverse Engineering Columns
 
-Sometimes, developers use the DB-first application development approach and add columns directly to the DB. After that, they need to update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Palette or from the IntelliJ IDEA "Generate" menu:
+Sometimes, developers use the DB-first application development approach and add columns directly to the DB. After that, they need to update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Palette (1), Editor Toolbar (2) or from the IntelliJ IDEA "Generate" menu (3):
 
 ![reverse_engineering_columns_action](img/reverse_engineering_columns_action.png)
 
