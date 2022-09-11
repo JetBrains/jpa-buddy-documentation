@@ -10,16 +10,18 @@ JPA Buddy allows you to granularly pick tables/views and fields from your databa
 <div class="note">
   The first thing you need to do to use the reverse engineering features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/">documentation</a>. Check it out to learn more. 
 </div>
+In the **IntelliJ IDEA Community Edition**, you can generate entities from DB via:
 
-In the **IntelliJ IDEA Community Edition**, you can generate entities from DB via JPA Structure or Project Panel: 
+* JPA Structure (1) using plus button;
+* Project Panel (2) using right-click.
 
-![jpa_structure_entities_from_db](img/jpa_structure_entities_from_db.png)
+In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via: 
 
-![project_panel_entities_from_db](img/project_panel_entities_from_db.png)
+* JPA Structure (1) using plus button;
+* Project Panel (2) using right-click;
+* Database panel (3) using right-click;
 
-In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via JPA Structure, Project Panel or from the Database panel: 
-
-![database_entities_from_db](img/database_entities_from_db.png)
+![entities_from_db_action](img/entities_from_db_action.png)
 
 ## Entities from DB Wizard
 
