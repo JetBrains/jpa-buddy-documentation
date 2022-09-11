@@ -273,11 +273,25 @@ Clicking “Update” runs the Liquibase update command with the configured opti
 
 ### Liquibase Settings
 
-Whenever an empty or differential Liquibase changelog is created, JPA Buddy generates the file name based on the templates specified in the plugin settings:
+![liquibase_settings](img/liquibase_settings.png)
 
-![liquibase_settings](img/liquibase_settings.jpeg)
+#### Base Settings
 
-The following variables and macros are available in the templates:
+JPA Buddy allows you to specify:
+
+* Liquibase version that you want to use;
+* Changeset author name;
+* The default file type. The following 4 file types are supported:
+  * XML
+  * SQL
+  * YAML
+  * JSON
+
+#### Changelog Templates
+
+Whenever an empty or differential Liquibase changelog is created, JPA Buddy generates the file name based on the templates. You can configure primary/secondary directory and name of the changelogs.
+
+The following variables and macros are available for the precise configuration:
 
 - `#date([format])` – the current system date in the specified [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
 - `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
@@ -288,6 +302,28 @@ The following variables and macros are available in the templates:
   - `${semVer.getPatch()}`: 3
   - `${semVer.getPreRelease()}`: SNAPSHOT
   - `${semVer.getMeta()}`: meta
+
+#### DB Types
+
+Sometimes software must provide support for a few DBMS types. In this case, Liquibase is the best choice, as it offers a cross-DB solution to declare DDL modifications. JPA Buddy supports this solution as well. When generating cross-DB changelogs, it uses Liquibase properties to specify correct data types for each DBMS:
+
+```xml
+<property name="string.type" value="varchar" dbms="postgresql"/>
+<property name="string.type" value="nvarchar" dbms="mssql"/>
+<changeSet id="1622118750064-2" author="jpa-buddy">
+  <createTable tableName="owners">
+     <column autoIncrement="true" name="id" type="INT">
+        <constraints nullable="false" primaryKey="true" primaryKeyName="PK_OWNERS"/>
+     </column>
+     <column name="first_name" type="${string.type}(255)"/>
+     <column name="last_name" type="${string.type}(255)"/>
+     <column name="address" type="${string.type}(255)"/>
+     <column name="city" type="${string.type}(255)"/>
+  </createTable>
+</changeSet>
+```
+
+Therefore, there is no need to create separate changelogs for different DBMSes.
 
 ## Flyway Support
 
@@ -501,31 +537,9 @@ Also, it may be helpful when the application works with databases from different
 
 Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
-JPA Buddy lets you specify type mappings for each DBMS, simply check the “Enabled” box on each desired DBMS and add the mappings. It is also possible to set mappings for JPA Converters and Hibernate Types:
+JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
-![type_mappings](img/type_mappings.jpeg)
-
-When generating changelogs, JPA Buddy uses Liquibase properties to specify correct data types for each DBMS:
-
-```xml
-<property name="string.type" value="varchar" dbms="postgresql"/>
-<property name="string.type" value="nvarchar" dbms="mssql"/>
-<changeSet id="1622118750064-2" author="jpa-buddy">
-  <createTable tableName="owners">
-     <column autoIncrement="true" name="id" type="INT">
-        <constraints nullable="false" primaryKey="true" primaryKeyName="PK_OWNERS"/>
-     </column>
-     <column name="first_name" type="${string.type}(255)"/>
-     <column name="last_name" type="${string.type}(255)"/>
-     <column name="address" type="${string.type}(255)"/>
-     <column name="city" type="${string.type}(255)"/>
-  </createTable>
-</changeSet>
-```
-
-Therefore, there is no need to create separate changelogs for different DBMSs.
-
-As for generating Flyway migrations, choose the needed DB connection in the corresponding field. JPA Buddy will generate the script according to the mappings that you defined for the selected DB.
+![type_mappings](img/type_mappings.png)
 
 ### Convertors
 
@@ -666,8 +680,6 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 </tbody>
 </table>
 </div>
-
-
 ## Hibernate Envers Support
 
 The [Hibernate Envers](https://hibernate.org/orm/envers/) provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
@@ -732,12 +744,18 @@ The following strategies are supported:
 
 - SpringPhysicalNamingStrategy – the default option
 - PhysicalNamingStrategyStandardlmpl
+- CamelCaseToUnderscoresNamingStrategy (only for projects with Hibernate 6 and later versions)
 
 To learn more about naming strategies, you can check out our [article](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/).
 
 RDBMSs have their own limitations. For example, table names for [OracleDatabase](https://twitter.com/OracleDatabase) earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
 
-![max_db_identifier](img/max_db_identifier.jpeg)
+![max_db_identifier](img/max_db_identifier.png)
+
+Also, you can define:
+
+* whether to create an index for the association foreign key constraint or not;
+* primary key constraint name.
 
 ## Sharing Settings via Version Control 
 
