@@ -114,3 +114,7 @@ To connect to the non-default scheme you need to specify schema name in the Data
 Since IntelliJ IDEA CE doesn't allow configuring database drives, JPA Buddy is to the rescue! Open Tools -> JPA Buddy -> Database Drivers window. Here you can configure drivers for each supported RDBMS by selecting one of the proposed driver versions and adding additional files from your local machine.
 
 ![database_drivers](img/database_drivers.jpeg)
+
+## How to connect via SSH
+
+JPA Buddy uses a different mechanism from what IntelliJ IDEA uses to connect to the database. So, JPA Buddy can't use the SSH tunnel configured in IntelliJ IDEA. To make Buddy works properly in this case, you need to establish an SSH tunnel on the system level. Here is [an example](https://www.linode.com/docs/guides/create-an-ssh-tunnel-for-mysql-remote-access/) of how you can do it.
