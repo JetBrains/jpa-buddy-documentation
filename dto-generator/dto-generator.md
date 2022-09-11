@@ -104,7 +104,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 
 - Whether to use Lombok or not.
 
-- Comment link regexp. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following Javadoc comment:
+- Comment link regexp. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following Javadoc comment:
 
     ```java
     /**
@@ -116,9 +116,13 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 
 - Name pattern regexp. This option is useful if you use an obligatory naming convention for DTOs. It allows JPA Buddy to associate DTO with its JPA Entity using a DTO name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty.
 
-As soon as JPA Buddy is able to associate DTO class with the entity:
-  - The DTO class will appear in the DTOs section in the JPA Structure panel (1)
-  - The gutter icon will appear in both entity and DTO to ease the navigation between them (2)
-  - The gutter icons will appear to navigate to the entity fields from the DTO fields (3)
+- Class comment. Defines the comment that will be generated over the DTO class.
 
-![comment_link_regexp](img/comment_link_regexp.png)
+### Convinient Navigation between Entity and its DTOs
+
+As soon as JPA Buddy is able to associate DTO class with the entity:
+
+  - The DTO class will appear in the **Dto & Projections** section in the JPA Structure panel and in the Editor Toolbar (1)
+- The gutter icon will appear in the DTO to ease the navigation to its entity (2)
+
+![dto_navigation](img/dto_navigation.png)
