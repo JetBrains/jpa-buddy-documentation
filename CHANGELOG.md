@@ -1,5 +1,18 @@
 # Changelog
 
+## 2022.4.1 - 2022-12-09
+
+### Improvements
+
+* Linking a DTO to an entity is now possible not only via Javadoc comment, but also using single and multiline comments <a href="https://issues.jpa-buddy.com/issue/JPAB-2035" target="_blank">JPAB-2035</a>
+* The `jakarta.persistence.GenerationType#UUID` has been supported for `UUID` entity attribute type <a href="https://issues.jpa-buddy.com/issue/JPAB-1871" target="_blank">JPAB-1871</a>
+
+### Bug-fix
+* Fixed often happening `NullPointerException` and `IndexNotReadyException` <a href="https://issues.jpa-buddy.com/issue/JPAB-2046" target="_blank">JPAB-2046</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2047" target="_blank">JPAB-2047</a>
+* Previously mistakenly available "Create JPA Repository" quick-fix for an embeddable entity is no longer available <a href="https://issues.jpa-buddy.com/issue/JPAB-2029" target="_blank">JPAB-2029</a>
+
+For other improvements and fixes, see [all resolved issues (10+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20224%20Bug%20fix:%201).
+
 ## 2022.4.0 - 2022-05-09
 
 ### Completely new
