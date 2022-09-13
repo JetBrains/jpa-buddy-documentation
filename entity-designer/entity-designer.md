@@ -1,8 +1,8 @@
 ## Introduction
 
-Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find three additional tool windows: JPA Structure, JPA Palette and JPA Inspector. 
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find four additional tool windows: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
 
-![jpa_buddy_panels](img/jpa_buddy_panels.png) 
+![jpa_buddy_panels](img/jpa_buddy_panels.png)
 
 ## Entity Creation
 
@@ -35,11 +35,9 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 ![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)
 
-Also, you can generate an ID attribute via JPA Palette or quick fix.
+Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using quick-fix (3).
 
-![jpa_palette_id](img/jpa_palette_id.png)
-
-![add_id_quick_fix](img/add_id_quick_fix.jpeg)
+![jpa_palette_id](img/id_generation.png)
 
 After that, the wizard with more comprehensive customization options will apear:
 
@@ -137,6 +135,14 @@ JPA Inspector allows you to configure classes and fields in it. Click on any ele
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### Editor Toolbar
+
+It is a compact toolbar on top of the editor window that provides fast access to the relevant actions. It doesn't eat the horizontal space but takes a few pixels for a tiny line with small buttons.
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Hibernate Validations
