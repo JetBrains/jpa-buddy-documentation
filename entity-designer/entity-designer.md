@@ -6,14 +6,13 @@ Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will
 
 ## Entity Creation
 
-To create a new Entity, right-click on the desired folder and select New -> JPA -> Entity. Also, you can create a new entity from JPA Structure panel:
+To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Structure panel (2):
 
-![jpa_structure_create_new_entity](img/jpa_structure_create_new_entity.jpeg)
+![jpa_structure_create_new_entity](img/jpa_structure_create_new_entity.png)
 
 After that, the following window will appear:
 
 ![new_entity](img/new_entity.jpeg)
-
 
 ### Languages Support
 
@@ -21,7 +20,7 @@ JPA Buddy supports both [Java](https://www.java.com/) and [Kotlin](https://kotli
 
 ![new_entity_language_choose](img/new_entity_language_choose.jpeg)
 
-Also, in the Settings -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for New Entity window:
+Also, in the Settings -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for the "New Entity" window:
 
 ![settings_scaffolding_language](img/settings_scaffolding_language.jpeg)
 
@@ -59,14 +58,14 @@ JPA Structure panel is always available on the bottom-left side. It provides a c
 
 1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
-3. Observe related Spring Data repositories and DTOs for each entity.
+3. Observe related Spring Data repositories, DTOs and projections for each entity.
 4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
 
-![jpa_structure](img/jpa_structure.jpeg)
+![jpa_structure](img/jpa_structure.png)
 
 ## JPA Palette and Inspector
 
-Once the JPA entity is created, two panels appear at the right side of the window: JPA Palette and JPA Inspector. The content of these panels is context-depended. The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc. 
+Once the JPA entity is created, two panels appear on the right side of the window: JPA Palette and JPA Inspector. The content of these panels is context-depended. The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
 
 ### JPA Palette
 
@@ -96,7 +95,6 @@ JPA Palette provides a corresponding generation window for everything listed bel
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iV6jTbzjgkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 - Reverse Engineering
 
 <div class="youtube" align="center">
@@ -113,7 +111,7 @@ As you can see in the video, via JPA Palette, you can only generate attributes f
 
 #### Associations Performance Tips
 
-Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency. 
+Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency.
 
 During associations creation, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
 
@@ -123,15 +121,13 @@ Also, there is a drop-down list with possible optimizations that you can apply i
 
 ![suggested_optimizations](img/suggested_optimizations.jpeg)
 
-
-
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QLQi02WzItw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### JPA Inspector 
+### JPA Inspector
 
-JPA Inspector allows you to configure classes and fields in it. Click on any element that you need to configure, and change the required properties:
+JPA Inspector allows you to configure JPA entities and attributes in it. Click on any element that you need to configure, and change the required properties:
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -152,6 +148,7 @@ For projects with Hibernate Validations, a section appears with validations that
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yIOcQ_bGxBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 ## Extract to MappedSuperclass
 
 The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy allows you to extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities hierarchy.
@@ -198,7 +195,7 @@ JPA Buddy provides the possibility to generate new entities and attributes with 
 
 ## Hibernate Types & JPA Converters
 
-JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector: 
+JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector:
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -208,13 +205,13 @@ Also, you can create via JPA Structure. Just click on the “Plus” button and 
 
 ![jpa_structure_jpa_converter](img/jpa_structure_jpa_converter.jpeg)
 
-In the Create Custom Type window, you can configure the class name, entity attribute type and database column type. 
+In the Create Custom Type window, you can configure the class name, entity attribute type and database column type.
 
-For JPA Converter you can define whether it will be auto applicable or not. 
+For JPA Converter you can define whether it will be auto applicable or not.
 
 ![create_custom_type_jpa](img/create_custom_type_jpa.jpeg)
 
-For Hibernate Custom Type you can set whether it will be possible to alter the behavior of types based on parameters or not. 
+For Hibernate Custom Type you can set whether it will be possible to alter the behavior of types based on parameters or not.
 
 ![create_custom_type_hibernate](img/create_custom_type_hibernate.jpeg)
 
@@ -288,7 +285,7 @@ public class PetType {
 
 ### Constants Generation
 
-One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in [Thorben Janssen](https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/) article. 
+One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in [Thorben Janssen](https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/) article.
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xc-ayDDdjss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -298,10 +295,9 @@ JPA Buddy provides constants generation for the entity, table, and column names.
 
 ![constants_generation](img/constants_generation.jpeg)
 
- 
-
-### Designer Settings 
+### Designer Settings
 
 In its default mode, JPA Buddy provides three tool windows: JPA Structure, Palette, and Inspector. However, tool windows may steal too much horizontal space, especially for those who prefer 13-inch laptops :) In this case, it was recommended to use the [minimalistic mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/). Besides it, JPA Buddy also provides settings to fine-tune the appearance of the main visual elements:
 
 ![designer_settings](img/designer_settings.png)
+
