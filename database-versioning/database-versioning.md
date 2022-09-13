@@ -217,9 +217,9 @@ By default, Primary and Secondary changelogs are generated in separate directori
 
 ### Creating and Modifying Changelogs
 
-JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds three panels to the IntelliJ IDEA UI: JPA Palette, JPA Inspector and JPA Structure.
+JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds four panels to the IntelliJ IDEA UI: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
 
-![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
+![jpa_buddy_panels](img/jpa_buddy_panels.png)
 
 JPA Structure displays everything that JPA Buddy knows about the project. For Liquibase changelogs, it shows their hierarchy and contents:
 
@@ -234,6 +234,15 @@ JPA Palette and JPA Inspector panels let you generate and modify code. They are 
 For example, here are some options JPA Palette offers for Liquibase changelogs:
 
 ![jpa_palette_db_actions](img/jpa_palette_db_actions.jpeg)
+
+Editor Toolbar provides fast access to the relevant actions. It includes:
+
+1. An action to select the opened file in the JPA Structure
+2. All actions from the JPA Palette
+3. Init Schema Changelog action
+4. Diff Changelog action
+
+![jpa_palette_db_actions](img/editor_toolbar.png)
 
 JPA Buddy understands your data model and prefills the changesets as much as possible. And with the help of JPA Inspector you can explore the attributes of each changelog element:
 
@@ -494,7 +503,7 @@ Next, choose which for which database you need a script and click OK:
 
 ### SQL Visual Designer
 
-In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette. For each statement, there is a corresponding window that allows you to configure the statement:
+In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette or Editor Toolbar. For each statement, there is a corresponding window that allows you to configure the statement:
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
