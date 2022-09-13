@@ -81,7 +81,6 @@ If you want to postpone an attribute creation for specific columns, you can choo
 
   * Uncomment as is
   * Remove column mapping
-
 - For unknown column type you can:
 
   - Define target Java type

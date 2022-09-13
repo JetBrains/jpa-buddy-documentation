@@ -300,4 +300,3 @@ JPA Buddy provides constants generation for the entity, table, and column names.
 In its default mode, JPA Buddy provides three tool windows: JPA Structure, Palette, and Inspector. However, tool windows may steal too much horizontal space, especially for those who prefer 13-inch laptops :) In this case, it was recommended to use the [minimalistic mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/). Besides it, JPA Buddy also provides settings to fine-tune the appearance of the main visual elements:
 
 ![designer_settings](img/designer_settings.png)
-
