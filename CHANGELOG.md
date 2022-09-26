@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022.4.2 - 2022-27-09
+
+### Bug-fix
+* Redundant `@FetchType.LAZY` no longer generated for the inverse side of the one-to-one association while reverse engineering <a href="https://issues.jpa-buddy.com/issue/JPAB-2059" target="_blank">JPAB-2059</a>
+* Fixed `IndexNotReadyException` after creating an ID with `GenerationType.SEQUENCE` <a href="https://issues.jpa-buddy.com/issue/JPAB-2072" target="_blank">JPAB-2072</a>
+* Few typos were fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2060" target="_blank">JPAB-2060</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2062" target="_blank">JPAB-2062</a>
+* "Create New Projection" action is now available from the "DTOs and Projection" section in the JPA Structure <a href="https://issues.jpa-buddy.com/issue/JPAB-2063" target="_blank">JPAB-2063</a>
+
 ## 2022.4.1 - 2022-12-09
 
 ### Improvements
