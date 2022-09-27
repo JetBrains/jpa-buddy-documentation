@@ -17,7 +17,7 @@ For now, JPA Buddy supports following databases:
 
 You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the “Detect Connections” button in the JPA Structure panel and the window will appear with filled fields.
 
-As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding [JetBrains documentation page](https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html). 
+As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding [JetBrains documentation page](https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html).
 
 ![ij_ultimate_data_sources](img/ij_ultimate_data_sources.jpeg)
 
@@ -47,15 +47,15 @@ For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the requi
 
 ### Microsoft SQL Server
 
-The default Microsoft SQL Server schema is “dbo”. To connect to the non-default scheme in Microsoft SQL Server, you should follow the steps described below: 
+The default Microsoft SQL Server schema is “dbo”. To connect to the non-default scheme in Microsoft SQL Server, you should follow the steps described below:
 
-1. Create a login: 
+1. Create a login:
 
 ```sql
 create login JohnDoe with password='saPassword1'
 ```
 
-2. Create a user with default schema from which you want to create an entity: 
+2. Create a user with default schema from which you want to create an entity:
 
 ```sql
 create user JohnDoe for login JohnDoe with default_schema = my_schema 

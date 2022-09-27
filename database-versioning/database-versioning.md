@@ -1,26 +1,26 @@
 ## Introduction
 
-Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge: 
+Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge:
 
-- **Database first.** This approach takes the database as the first-class citizen, while data model classes (POJOs or JPA entities) are derived from the database schema via code generation, aka "Database reverse engineering". Following this scenario, you should not touch the generated classes, because they can be re-generated at any moment, and all changes made in the source code will be lost. Also, this way **doesn't save you from the migration scripts generation**, because they will be required to upgrade the existing installations to the newest version. 
-- **Source code first**. This is an opposite approach having the single source of truth in the data model classes. Hence, the database gets modified in accordance with changes in the data model. To handle database update, the difference between the old state of the database and up-to-date state of the data model classes should be represented in migration scripts of any format (Flyway SQL migrations or Liquibase changelogs). 
+- **Database first.** This approach takes the database as the first-class citizen, while data model classes (POJOs or JPA entities) are derived from the database schema via code generation, aka "Database reverse engineering". Following this scenario, you should not touch the generated classes, because they can be re-generated at any moment, and all changes made in the source code will be lost. Also, this way **doesn't save you from the migration scripts generation**, because they will be required to upgrade the existing installations to the newest version.
+- **Source code first**. This is an opposite approach having the single source of truth in the data model classes. Hence, the database gets modified in accordance with changes in the data model. To handle database update, the difference between the old state of the database and up-to-date state of the data model classes should be represented in migration scripts of any format (Flyway SQL migrations or Liquibase changelogs).
 
-**JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation. 
+**JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation.
 
 ## Database Connection
 
-The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate [documentation](https://www.jpa-buddy.com/documentation/database-connections/). Check it out to learn more. 
+The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate [documentation](https://www.jpa-buddy.com/documentation/database-connections/). Check it out to learn more.
 
-## Library Support 
+## Library Support
 
-JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: [**Flyway**](https://flywaydb.org/) and [**Liquibase**](https://www.liquibase.org/). However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project. 
+JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: [**Flyway**](https://flywaydb.org/) and [**Liquibase**](https://www.liquibase.org/). However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
 
-If you would like to see a short overview and practical examples of using Flyway or Liquibase you can use the following links: 
+If you would like to see a short overview and practical examples of using Flyway or Liquibase you can use the following links:
 
-- https://www.baeldung.com/database-migrations-with-flyway 
-- https://www.baeldung.com/liquibase-refactor-schema-of-java-app 
+- https://www.baeldung.com/database-migrations-with-flyway
+- https://www.baeldung.com/liquibase-refactor-schema-of-java-app
 
-To be certain that JPA Buddy is ready to help, make sure that the project contains right maven dependencies: 
+To be certain that JPA Buddy is ready to help, make sure that the project contains right maven dependencies:
 
 ```xml
 <dependency> 
@@ -30,7 +30,7 @@ To be certain that JPA Buddy is ready to help, make sure that the project contai
 </dependency> 
 ```
 
-Or: 
+Or:
 
 ```xml
 <dependency> 
@@ -40,77 +40,73 @@ Or:
 </dependency> 
 ```
 
-JPA Buddy scans the project dependencies and enables the corresponding features. 
+JPA Buddy scans the project dependencies and enables the corresponding features.
 
-## General Differential Scripts Generation Flow 
+## General Differential Scripts Generation Flow
 
-The general path of the diff scripts generation for both of frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts". 
+The general path of the diff scripts generation for both of frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts".
 
-To generate a differential migration script with JPA Buddy, right-click on the desired folder and select New -> Liquibase -> Diff Changelog or New -> Flyway -> Diff Versioned Migration. Alternatively, click the Plus button on top of the JPA Structure tool window and select the corresponding item there. 
+To generate a differential migration script with JPA Buddy, right-click on the desired folder and select New -> Liquibase -> Diff Changelog or New -> Flyway -> Diff Versioned Migration. Alternatively, click the Plus button on top of the JPA Structure tool window and select the corresponding item there.
 
-In the opened dialog select source (the desired state of the data model) and target (the old state of the data model). 
+In the opened dialog select source (the desired state of the data model) and target (the old state of the data model).
 
-**Resulting migration script(s) = Current State (Source) – Previous State (Target).** 
+**Resulting migration script(s) = Current State (Source) – Previous State (Target).**
 
-In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the state of the source. 
+In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the state of the source.
 
- As a source you can choose between the following options: 
+As a source you can choose between the following options:
 
-- **DB** — should be used in case you have an up-to-date database and would like to generate migration scripts for updating another DB to the same state. 
+- **DB** — should be used in case you have an up-to-date database and would like to generate migration scripts for updating another DB to the same state.
+- **Model** — use it to generate migration scripts representing the difference between the current state of the entity relationship model (JPA entities) and old (target) state.
 
-- **Model** — use it to generate migration scripts representing the difference between the current state of the entity relationship model (JPA entities) and old (target) state. 
+The target can be set to:
 
-The target can be set to: 
+- **DB** — target DB with older version of the schema.
+- **Snapshot** — use this option in case you have the desired state stored in a data model snapshot. It can be generated by JPA Buddy as well.
 
-- **DB** — target DB with older version of the schema. 
-- **Snapshot** — use this option in case you have the desired state stored in a data model snapshot. It can be generated by JPA Buddy as well. 
-
-Click OK to proceed further. JPA Buddy will analyze the difference between Source and Target and show the Preview dialog to enable fine tuning for the resulting migration script. Click Save to add the new script to the project or to append an existing one. 
+Click OK to proceed further. JPA Buddy will analyze the difference between Source and Target and show the Preview dialog to enable fine tuning for the resulting migration script. Click Save to add the new script to the project or to append an existing one.
 
 <div class="youtube" align="center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/xxzfgSvRsMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-### Differential Migration Scripts Generation Options 
+### Differential Migration Scripts Generation Options
 
 #### Using a Database
 
-Comparing a database with another database/snapshot makes sense if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities: 
+Comparing a database with another database/snapshot makes sense if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities:
 
-- using schema auto-generators (Hibernate and EclipseLink provide their own implementations). 
-  Note, that even Hibernate documentation warns against using this way beyond prototyping or testing reasons. 
-- applying changes in JPA entities over the database schema manually. 
-  This approach may appear to be too laborious, especially for early development stages when the data model is being changed frequently. 
+- using schema auto-generators (Hibernate and EclipseLink provide their own implementations).
+  Note, that even Hibernate documentation warns against using this way beyond prototyping or testing reasons.
+- applying changes in JPA entities over the database schema manually.
+  This approach may appear to be too laborious, especially for early development stages when the data model is being changed frequently.
 
 #### Using a Data Model
 
-Following JPA principles, an application represents the data model (entities, associations, indexes, etc.) via the declared JPA entities. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema in the first place. This is why comparing your data model with a database/snapshot is the preferable option for generating differential changelogs. 
+Following JPA principles, an application represents the data model (entities, associations, indexes, etc.) via the declared JPA entities. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema in the first place. This is why comparing your data model with a database/snapshot is the preferable option for generating differential changelogs.
 
-JPA Buddy scans all JPA objects, compares them with a target database or a snapshot and generates a differential migration script. 
+JPA Buddy scans all JPA objects, compares them with a target database or a snapshot and generates a differential migration script.
 
-Using a data model as a source of the current schema state triggers selection of a persistence unit. Following the documentation: 
+Using a data model as a source of the current schema state triggers selection of a persistence unit. Following the documentation:
 
-*A persistence unit defines a set of all entity classes that are managed by EntityManager instances in an application. This set of entity classes represents the data contained within a single data store.* 
+*A persistence unit defines a set of all entity classes that are managed by EntityManager instances in an application. This set of entity classes represents the data contained within a single data store.*
 
-Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units. 
+Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units.
 
-To configure a new persistence unit, click on the plus button in JPA Structure panel and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:  
+To configure a new persistence unit, click on the plus button in JPA Structure panel and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
 
-- You can scan the needed package, and all entities located in it will be added automatically  
-
-- You can manually select entities from the project 
+- You can scan the needed package, and all entities located in it will be added automatically
+- You can manually select entities from the project
 
 <div class="youtube" align="center">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/uaNFvkNLT9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 #### Using a Data Model Snapshot
 
-JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or hard to obtain a database for a certain state of the model, for example, when merging changes into some older version of the application. It may be simply impossible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, so no database will be required for differential migration scripts generation. 
+JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or hard to obtain a database for a certain state of the model, for example, when merging changes into some older version of the application. It may be simply impossible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, so no database will be required for differential migration scripts generation.
 
-To generate a snapshot, click the **Plus** button on top of the JPA Structure tool window and select the **JSON Snapshot** item. 
+To generate a snapshot, click the **Plus** button on top of the JPA Structure tool window and select the **JSON Snapshot** item.
 
 ![json_snapshot](img/json_snapshot.jpeg)
 
@@ -180,15 +176,13 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/26qri-FIwWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-
 ### Changelog Preview Window
 
 ![changelog_preview](img/changelog_preview.png)
 
 If you want to save the changelog as a regular file, then the following configuration options will be available:
 
-* “Directory” and “File name” fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog. 
+* “Directory” and “File name” fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog.
 * “Include to”, “include folder” and “include context” allows you to configure whether the changelog should be included in some other changelog. If checked, the “include folder” box will generate the include statement for the whole folder, not only the current changelog.
 * From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
 
@@ -205,10 +199,10 @@ The following actions are provided:
 - *Add Changelog* — create a secondary changelog
 - *Add Change Set* — create a new changeset in the selected changelog
 - *Remove from Changelog* with options:
+
   - *Remove from Changelog* — simply remove the changes from the current changelog
   - *Remove and Ignore* — remove the changes and add them to “Ignored”, so they are excluded from future changesets too
   - *Restore from Ignored* — move the changes from “Ignored” to the changelog
-
 - *Set Context* (for changesets)
 - *Set Labels* (for changesets)
 - *Show Other Actions* — select all changes based on the danger level, expand/collapse all changes
@@ -223,9 +217,9 @@ By default, Primary and Secondary changelogs are generated in separate directori
 
 ### Creating and Modifying Changelogs
 
-JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds three panels to the IntelliJ IDEA UI: JPA Palette, JPA Inspector and JPA Structure.
+JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds four panels to the IntelliJ IDEA UI: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
 
-![jpa_buddy_panels](img/jpa_buddy_panels.jpeg)
+![jpa_buddy_panels](img/jpa_buddy_panels.png)
 
 JPA Structure displays everything that JPA Buddy knows about the project. For Liquibase changelogs, it shows their hierarchy and contents:
 
@@ -241,7 +235,16 @@ For example, here are some options JPA Palette offers for Liquibase changelogs:
 
 ![jpa_palette_db_actions](img/jpa_palette_db_actions.jpeg)
 
-JPA Buddy understands your data model and prefills the changesets as much as possible. And with the help of JPA Inspector you can explore the attributes of each changelog element: 
+Editor Toolbar provides fast access to the relevant actions. It includes:
+
+1. An action to select the opened file in the JPA Structure
+2. All actions from the JPA Palette
+3. Init Schema Changelog action
+4. Diff Changelog action
+
+![jpa_palette_db_actions](img/editor_toolbar.png)
+
+JPA Buddy understands your data model and prefills the changesets as much as possible. And with the help of JPA Inspector you can explore the attributes of each changelog element:
 
 ![liquibase_changelog_preview](img/liquibase_changelog_preview.jpeg)
 
@@ -251,14 +254,13 @@ JPA Buddy also makes writing code by hand easier by providing code completion ba
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zZhOW5hvlK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 ### Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
 
 The JPA Structure panel also offers a way to run Liquibase updates and preview SQL. To run an update, click the “Liquibase Update” button:
 
 ![jpa_structure_liquibase_update](img/jpa_structure_liquibase_update.jpeg)
 
-The Liquibase Update window will open with configuration options: 
+The Liquibase Update window will open with configuration options:
 
 - the path to the changelog file
 - which DB connection to use
@@ -331,33 +333,31 @@ Therefore, there is no need to create separate changelogs for different DBMSes.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9wEJ29QIDyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-
 ### Migration Preview Window
 
 ![flyway_preview](img/flyway_preview.png)
 
 JPA Buddy allows you to select the place where to store the generated script: you can choose a file, scratch file in the IDE or clipboard.
 
-"Directory" and "File name" fields are responsible for configuring the location of the generated migration. If a migration with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that migration. 
+"Directory" and "File name" fields are responsible for configuring the location of the generated migration. If a migration with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that migration.
 
 On the left of the window, there is a preview of the actual changes to be generated. You can see what each change is going to look like by clicking on them.
 
 ![flyway_add_migration](img/flyway_add_migration.jpeg)
 
-Above the list of changes, there is a button panel with the following actions: 
+Above the list of changes, there is a button panel with the following actions:
 
-- Add Versioned Migration— create a secondary versioned migration. 
-- Remove from Versioned Migration with options: 
-  - Remove from Versioned Migration — to remove the changes from the current migration. 
+- Add Versioned Migration— create a secondary versioned migration.
+- Remove from Versioned Migration with options:
+
+  - Remove from Versioned Migration — to remove the changes from the current migration.
   - Remove and Ignore — to remove the changes and add them to the "Ignored" section, so they are excluded from future migrations too.
-
 - Restore from Ignored — move the changes from "Ignored" to the migration.
 - Move to Another Versioned Migration — by default, a single migration script is created on each diff generation with all the changes. This action lets you move a change to another migration file.
-- Show Other Actions — This button will help you to conveniently interact with a large number of changes in the migration files: 
+- Show Other Actions — This button will help you to conveniently interact with a large number of changes in the migration files:
+
   - "Select all ..."
   - "Expand/collapse all"
-
 
 To combine several changes into one migration file or to ignore them, drag them around.
 
@@ -369,7 +369,7 @@ To generate java migration, press the plus button in the JPA Structure panel and
 
 ![jpa_structure_java_migration](img/jpa_structure_java_migration.jpeg)
 
-In the opened window, you can set class name, source root and package name: 
+In the opened window, you can set class name, source root and package name:
 
 ![flyway_java_migration](img/flyway_java_migration.jpeg)
 
@@ -396,15 +396,14 @@ While migrations are sufficient for most needs, certain situations require you t
 
 JPA Buddy provides Flyway SQL Callback window, with the following fields:
 
-- “Source root” and “Directory” fields are responsible for the location of the generated file: 
+- “Source root” and “Directory” fields are responsible for the location of the generated file:
 
   ![sql_callback](img/sql_callback.jpeg)
-
 - “Callback event” field allows you to choose one of the events that Flyway supports:
 
 ![choose_callback_event](img/choose_callback_event.jpeg)
 
-- Optionally the callbacks may also include a description. The value in the “Description” filed will be appended along with the separator to the callback name. 
+- Optionally the callbacks may also include a description. The value in the “Description” filed will be appended along with the separator to the callback name.
 
 #### Java Callbacks
 
@@ -413,13 +412,11 @@ If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callback
 ![flyway_java_callback](img/flyway_java_callback.jpeg)
 
 - “Class” and “Class name” these fields are responsible for configuring corresponding values for generated java-class.
-
 - “Callback event” field allows you to choose several events that Flyway supports:
 
   ![three_choosed_callback_events](img/three_choosed_callback_events.jpeg)
-
-- “Can handle in transaction” checkbox defines whether true or false will return the canHandleInTransaction overridden method from the Callback interface. 
-- “Source root” and “Directory” fields are responsible for the location of the generated file. 
+- “Can handle in transaction” checkbox defines whether true or false will return the canHandleInTransaction overridden method from the Callback interface.
+- “Source root” and “Directory” fields are responsible for the location of the generated file.
 
 ```java
   public class TestCallback implements Callback { 
@@ -435,12 +432,12 @@ If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callback
     public boolean canHandleInTransaction(Event event, Context context) { 
         return true; 
     } 
-     
+   
     @Override 
     public void handle(Event event, Context context) { 
         *//**TODO handle logic...* 
     } 
-     
+   
     public String getCallbackName() { 
         return "Test"; 
     } 
@@ -455,7 +452,7 @@ Whenever an empty or differential Flyway migration is created, JPA Buddy generat
 ![flyway_settings](img/flyway_settings.png)
 
 - Migration prefix. The default value is `V`.
-- Version pattern. After the hyphen, an example of the generated sequence is presented. 
+- Version pattern. After the hyphen, an example of the generated sequence is presented.
 - Migration separator. The default value is “_”.
 - Migration description.
 
@@ -492,8 +489,6 @@ If you stumble upon `SchemaManagementException` on the application startup, it m
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T3VACEO8sFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-
 ### Show DDL Action
 
 JPA Buddy provides the action to generate DDL statements for only one specific entity. To see the DDL, hover the cursor over the class name and call the action from the IntelliJ IDEA Context Actions menu or JPA Inspector. Also, you can call this action from the Project and JPA Structure panels: just right-click on the target entity.
@@ -508,14 +503,13 @@ Next, choose which for which database you need a script and click OK:
 
 ### SQL Visual Designer
 
-In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette. For each statement, there is a corresponding window that allows you to configure the statement:
+In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette or Editor Toolbar. For each statement, there is a corresponding window that allows you to configure the statement:
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-## @JDBCTypeCode Support 
+## @JDBCTypeCode Support
 
 Before Hibernate 6, it was common to use the Hibernate Types library to map non-standard SQL types to Java types, or you could define your own `@Type` or `@Converter`. Since Hibernate 6, you can ditch a dozen Hibernate types and JPA converters and use `@JdbcTypeCode` instead.
 
@@ -523,15 +517,13 @@ Before Hibernate 6, it was common to use the Hibernate Types library to map non-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ocNsqBk9fbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-
 ## Custom Type Mappings
 
-There is no generic way to automatically map custom Java types to the SQL/Liquibase types. That's why you will need to define the target type manually for those attributes. If such attributes exist in your project, after Liquibase or Flyway script generation actions call, JPA Buddy will show you the following window: 
+There is no generic way to automatically map custom Java types to the SQL/Liquibase types. That's why you will need to define the target type manually for those attributes. If such attributes exist in your project, after Liquibase or Flyway script generation actions call, JPA Buddy will show you the following window:
 
 ![undefined_mapping_detected](img/undefined_mapping_detected.jpeg)
 
-You can change the saved mapping configuration at any time from Tools -> JPA Buddy -> Database Versioning -> Type Mappings. 
+You can change the saved mapping configuration at any time from Tools -> JPA Buddy -> Database Versioning -> Type Mappings.
 
 Also, it may be helpful when the application works with databases from different vendors. In this case, your schema might have slightly different data types for each of them.
 
@@ -738,7 +730,7 @@ When generating migration scripts, JPA Buddy will understand that the `Customer_
 
 Since JPA Buddy supports six databases at once, this is important to have the ability to configure naming strategies and max identifier length.
 
-By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a `TelephoneNumber` entity is mapped to the `telephone_number` table. Even if you annotate the entity with `@Table(name = "TelephoneNumber")`. The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation. 
+By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a `TelephoneNumber` entity is mapped to the `telephone_number` table. Even if you annotate the entity with `@Table(name = "TelephoneNumber")`. The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation.
 
 The following strategies are supported:
 
@@ -757,6 +749,6 @@ Also, you can define:
 * whether to create an index for the association foreign key constraint or not;
 * primary key constraint name.
 
-## Sharing Settings via Version Control 
+## Sharing Settings via Version Control
 
-JPA Buddy settings define conventions that are supposed to be shared among the team members: file naming rules, how to mark or separate change types, which data types to use for DBMSs etc. To make sharing easier, all the plugin settings are stored in the `.jpb` folder in the root of the project. This folder is supposed to be pushed to the version control, which automatically keeps the settings in sync across the development team. 
+JPA Buddy settings define conventions that are supposed to be shared among the team members: file naming rules, how to mark or separate change types, which data types to use for DBMSs etc. To make sharing easier, all the plugin settings are stored in the `.jpb` folder in the root of the project. This folder is supposed to be pushed to the version control, which automatically keeps the settings in sync across the development team.
