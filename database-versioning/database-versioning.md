@@ -217,7 +217,7 @@ By default, Primary and Secondary changelogs are generated in separate directori
 
 ### Creating and Modifying Changelogs
 
-JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds four panels to the IntelliJ IDEA UI: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
+JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds three panels and a toolbar to the IntelliJ IDEA UI: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
 
 ![jpa_buddy_panels](img/jpa_buddy_panels.png)
 
