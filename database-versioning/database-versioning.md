@@ -93,7 +93,7 @@ Using a data model as a source of the current schema state triggers selection of
 
 Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units.
 
-To configure a new persistence unit, click on the plus button in JPA Structure panel and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
+To configure a new persistence unit, click on the plus button in the JPA Structure panel and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
 
 - You can scan the needed package, and all entities located in it will be added automatically
 - You can manually select entities from the project
@@ -235,10 +235,10 @@ For example, here are some options JPA Palette offers for Liquibase changelogs:
 
 ![jpa_palette_db_actions](img/jpa_palette_db_actions.jpeg)
 
-Editor Toolbar provides fast access to the relevant actions. It includes:
+Editor Toolbar provides fast access to relevant actions. It includes:
 
-1. An action to select the opened file in the JPA Structure
-2. All actions from the JPA Palette
+1. An action to select the opened file in JPA Structure
+2. All actions from JPA Palette
 3. Init Schema Changelog action
 4. Diff Changelog action
 
