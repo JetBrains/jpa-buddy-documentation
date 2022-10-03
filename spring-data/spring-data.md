@@ -148,7 +148,7 @@ Derived query methods are a handy way to define queries. But over time, they may
 
 ### Query Autocompletion
 
-For the IntelliJ IDEA Community edition, JPA Buddy provides query autocompletion, as it is in the IntelliJ IDEA Ultimate Edition. Place the cursor on the query and click on the “Query edit...” in the JPA Inspector.
+For the IntelliJ IDEA Community edition, JPA Buddy provides query autocompletion (similar to what IntelliJ IDEA Ultimate Edition provides). Place the cursor on the query and click on the “Query edit...” in the JPA Inspector.
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IQDgQ5_l764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
