@@ -1,6 +1,6 @@
 ## Introduction
 
-Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find four additional tool windows: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find three additional tool windows and a toolbar: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
 
 ![jpa_buddy_panels](img/jpa_buddy_panels.png)
 
@@ -34,7 +34,7 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 ![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)
 
-Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using quick-fix (3).
+Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using a quick-fix (3).
 
 ![jpa_palette_id](img/id_generation.png)
 
@@ -135,7 +135,7 @@ JPA Inspector allows you to configure JPA entities and attributes in it. Click o
 
 ### Editor Toolbar
 
-It is a compact toolbar on top of the editor window that provides fast access to the relevant actions. It doesn't eat the horizontal space but takes a few pixels for a tiny line with small buttons.
+Editor Toolbar contains relevant action depending on the file content. You can find it on top of the editor window. If you don't have the toolbar check [visual designer settings](https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings).
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
