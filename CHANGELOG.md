@@ -1,5 +1,15 @@
 # Changelog
 
+## 2022.4.3 - 2022-17-10
+
+### Bug-fix
+
+* `@OneToMany` association in MappedSuperclass no longer causes exceptions for Liquibase/Flyway/DDL Generators <a href="https://issues.jpa-buddy.com/issue/JPAB-2103" target="_blank">JPAB-2103</a>
+* Fixed duplicated `addColumn` change for Liquibase generate diff changelog action <a href="https://issues.jpa-buddy.com/issue/JPAB-2124" target="_blank">JPAB-2124</a>
+* DTO line markes collecting no longer produces `NullPointerException` <a href="https://issues.jpa-buddy.com/issue/JPAB-2123" target="_blank">JPAB-2123</a>
+* Now, JPA Buddy properly displays all entities in the hierarchy tree for the projects with Micronaut dependencies <a href="https://issues.jpa-buddy.com/issue/JPAB-2102" target="_blank">JPAB-2102</a>
+* Fixed non-critical but often happening exceptions <a href="https://issues.jpa-buddy.com/issue/JPAB-2085" target="_blank">JPAB-2085</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2086" target="_blank">JPAB-2086</a>
+
 ## 2022.4.2 - 2022-27-09
 
 ### Bug-fix
