@@ -1,5 +1,11 @@
 # Changelog
 
+## 2022.4.4 - 2022-17-10
+
+### Bug-fix
+
+* Fixed an exception happening while looking for persistence units <a href="https://issues.jpa-buddy.com/issue/JPAB-2129" target="_blank">JPAB-2129</a>
+
 ## 2022.4.3 - 2022-17-10
 
 ### Bug-fix
