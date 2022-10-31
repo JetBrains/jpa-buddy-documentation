@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022.4.5 - 2022-31-10
+
+### Bug-fix
+
+* JPA Buddy is now available for IntelliJ IDEA 2022.3 <a href="https://issues.jpa-buddy.com/issue/JPAB-2090" target="_blank">JPAB-2090</a>
+* `ClassCastException` no longer appears while generating Kotlin data class as DTO from the Java entity <a href="https://issues.jpa-buddy.com/issue/JPAB-2128" target="_blank">JPAB-2128</a>
+* Fixed `MethodInvocationException` for the case when owning entity does not have a column annotation for the `id` attribute <a href="https://issues.jpa-buddy.com/issue/JPAB-2136" target="_blank">JPAB-2136</a>
+
 ## 2022.4.4 - 2022-17-10
 
 ### Bug-fix
