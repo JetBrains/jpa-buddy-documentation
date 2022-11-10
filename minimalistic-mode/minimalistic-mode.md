@@ -6,25 +6,31 @@ The minimalistic mode is designed to minimize distraction for developers. If you
 
 ## Enabling Minimalistic Mode
 
-There are three ways to activate the minimalistic mode.
+### Via JPA Buddy Tool Window
 
-### Via Main Menu
+To enable minimalistic mode, click on the "JPA Buddy Minimalistic Mode" button in the JPA Buddy tool window.
 
-To enable or disable minimalistic mode, open "View" in the Toolbar window and click on the toggle button "JPA Buddy Minimalistic Mode". Note that all panels will be removed from the sides. You need to click the same button again to bring them back.
+![tool-window-enable](img/tool-window-enable.png)
 
-![main-menu-toggle-button](img/main-menu-toggle-button.jpeg)
+### Via Settings
 
-### Via JPA Structure
+Another way to activate minimalistic mode is via settings. Open **Settings -> Tools -> JPA Buddy -> Designer Settings** and switch **View mode** to **Minimalistic**.
 
-Another way to activate minimalistic mode is to click on the "JPA Buddy Minimalistic Mode" button in the JPA Structure.
+![settings-minimalistic](img/settings-minimalistic.png)
 
-![jpa-structure-enable-minimalistic-mode](img/jpa-structure-enable-minimalistic-mode.jpeg)
+<div class="note">
+    Read more about Designer Settings <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">here</a>.
+</div>
 
-### Hide Panels
+## Disabling Minimalistic Mode
 
-Since you minimize one of the JPA Buddy panels, it will show a popup message with the suggestion to activate the minimalistic mode.
+To disable minimalistic mode, open **Settings -> Tools -> JPA Buddy -> Designer Settings** and switch **View mode** to **Extensive**. 
 
-![popup-message-with-suggestion](img/popup-message-with-suggestion.jpeg)
+![settings-extensive](img/settings-extensive.png)
+
+<div class="note">
+    Read more about Designer Settings <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">here</a>.
+</div>
 
 ## Using Features in the Minimalistic View
 
@@ -60,7 +66,7 @@ After that, the resizable and draggable JPA Inspector panel will appear. The coo
 
 For JPA Inspector popup, it's possible to bind another shortcut. You can do it directly from the "Enable Minimalistic Mode" window, by clicking on the "Add keyboard shortcut":
 
-![enable-minialistic-mode](img/enable-minialistic-mode.jpeg)
+![enable-minimalistic-mode](img/enable-minimalistic-mode.png)
 
 or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set wanted combination.
 
