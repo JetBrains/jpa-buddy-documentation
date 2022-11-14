@@ -1,5 +1,15 @@
 # Changelog
 
+## 2022.4.6 - 2022-14-11
+
+### Bug-fix
+
+* `@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)` annotation over abstract class no longer causes redundant scripts generation <a href="https://issues.jpa-buddy.com/issue/JPAB-2146" target="_blank">JPAB-2146</a>
+* Now, JPA Buddy properly handles `@PrimaryKeyJoinColumn` annotation for Liquibase diff generator <a href="https://issues.jpa-buddy.com/issue/JPAB-2147" target="_blank">JPAB-2147</a>
+* Fixed an issue with incorrect scripts generation for tables from non-default database schemas <a href="https://issues.jpa-buddy.com/issue/JPAB-2148" target="_blank">JPAB-2148</a>
+* JPA Buddy "Minimalistic Mode" action is now avalable in View menu <a href="https://issues.jpa-buddy.com/issue/JPAB-2151" target="_blank">JPAB-2151</a>
+* Fixed incorrect display of the "DB Type Selection" wizard for IntelliJ IDEA EAP 2022.3 <a href="https://issues.jpa-buddy.com/issue/JPAB-2159" target="_blank">JPAB-2159</a>
+
 ## 2022.4.5 - 2022-31-10
 
 ### Bug-fix
