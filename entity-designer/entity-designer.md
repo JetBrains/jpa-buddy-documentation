@@ -1,14 +1,20 @@
 ## Introduction
 
-Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find three additional tool windows and a toolbar: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find additional tool window (1) and a toolbar (2).
 
-![jpa_buddy_panels](img/jpa_buddy_panels.png)
+![first-sight](img/first-sight.png)
 
-## Entity Creation
+### JPA Buddy Tool Window
 
-To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Structure panel (2):
+JPA Buddy tool window consist of two tabs: [JPA Structure](#jpa-structure) (1) and [JPA Designer](#jpa-designer) (2). JPA Designer, in its turn, splits into two more parts called: [JPA Palette](#jpa-palette) (3) and [JPA Inspector](#jpa-inspector) (4).
 
-![jpa_structure_create_new_entity](img/jpa_structure_create_new_entity.png)
+![jpa-buddy-tool-window](img/jpa-buddy-tool-window.png)
+
+## Entity Generation
+
+To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Buddy tool window (2):
+
+![jpa-structure-create-new-entity](img/jpa-structure-create-new-entity.png)
 
 After that, the following window will appear:
 
@@ -20,11 +26,11 @@ JPA Buddy supports both [Java](https://www.java.com/) and [Kotlin](https://kotli
 
 ![new_entity_language_choose](img/new_entity_language_choose.jpeg)
 
-Also, in the Settings -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for the "New Entity" window:
+Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for the "New Entity" window:
 
 ![settings_scaffolding_language](img/settings_scaffolding_language.jpeg)
 
-### Id and Generation Strategy
+### ID and Its Generation Strategy
 
 According to the JPA specification, an ID attribute is required for an entity definition. JPA Buddy allows you to generate this attribute and choose the type (1) and generation strategy (2). Also, you can specify what sequence to use for the `Sequence` generation strategy (3).
 
@@ -36,9 +42,9 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using a quick-fix (3).
 
-![jpa_palette_id](img/id_generation.png)
+![id-generation](img/id-generation.png)
 
-After that, the wizard with more comprehensive customization options will apear:
+After that, the wizard with more comprehensive customization options will appear:
 
 ![new_id_attribute](img/new_id_attribute.jpeg)
 
@@ -54,18 +60,20 @@ private Long id;
 
 ## JPA Structure
 
-JPA Structure panel is always available on the bottom-left side. It provides a comprehensive data-centric view on the project. You can use it for many different purposes:
+JPA Structure panel provides a comprehensive data-centric view on the project. You can use it for many purposes:
 
 1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
 3. Observe related Spring Data repositories, DTOs and projections for each entity.
 4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
 
-![jpa_structure](img/jpa_structure.png)
+![jpa_structure](img/jpa-structure.png)
 
-## JPA Palette and Inspector
+## JPA Designer
 
-Once the JPA entity is created, two panels appear on the right side of the window: JPA Palette and JPA Inspector. The content of these panels is context-depended. The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
+Once the JPA entity is created, Designer tab appears in the JPA Buddy tool window. It splits into two parts called: JPA Palette (1) and JPA Inspector (2). The content of these panels is context-depended. The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
+
+![jpa-designer](img/jpa-designer.png)
 
 ### JPA Palette
 
@@ -151,7 +159,7 @@ For projects with Hibernate Validations, a section appears with validations that
 
 ## Extract to MappedSuperclass
 
-The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy allows you to extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities hierarchy.
+The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy allows you to extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -169,13 +177,13 @@ The application is growing and the JPA model is evolving as well. Eventually, it
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6qZXvz-Fs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- Always exclude lazy attributes when using `@`ToString - by default, `@`ToString includes all the object fields. Such an approach can have an unwanted side-effect for JPA entities: accidentally loading lazy attributes. This can easily harm the application performance or lead to a LazyInitializationException if it happens outside a transaction.
+- Always exclude lazy attributes when using `@`ToString - by default, `@`ToString includes all the object fields. Such an approach can have an unwanted side effect for JPA entities: accidentally loading lazy attributes. This can easily harm the application performance or lead to a LazyInitializationException if it happens outside a transaction.
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fUtRJBKskig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- Don’t forget to add `@`NoArgsConstructor to entities with `@`Builder or `@`AllArgsConstructor – they introduce their own constructors, so the compiler doesn’t generate a default one. A no-argument constructor is required for all JPA entities according to the specification.
+- Don’t forget to add `@`NoArgsConstructor to entities with `@`Builder or `@`AllArgsConstructor – they introduce their own constructors, so the compiler doesn't generate a default one. A no-argument constructor is required for all JPA entities according to the specification.
 
 ![no_args_constructor](img/no_args_constructor.jpeg)
 
@@ -185,7 +193,7 @@ Check out our [article](https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-g
 
 For the projects with Lombok in JPA Inspector appears section with possible annotations that you can add to the entity.
 
-![jpa_inspector_lombok_annotations](img/jpa_inspector_lombok_annotations.jpeg)
+![jpa-inspector-lombok-annotations](img/jpa-inspector-lombok-annotations.png)
 
 ### Settings
 
@@ -203,7 +211,7 @@ JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Ty
 
 Also, you can create via JPA Structure. Just click on the “Plus” button and choose JPA Converter or Hibernate Custom Type:
 
-![jpa_structure_jpa_converter](img/jpa_structure_jpa_converter.jpeg)
+![jpa-structure-jpa-converter](img/jpa-structure-jpa-converter.png)
 
 In the Create Custom Type window, you can configure the class name, entity attribute type and database column type.
 
