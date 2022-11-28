@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022.4.7 - 2022-28-11
+
+* Now, the script for the `@ManyToMany` association ID is generated properly <a href="https://issues.jpa-buddy.com/issue/JPAB-2173" target="_blank">JPAB-2173</a>
+* The "Navigate to JPA converter" line marker no longer appears outside of the entity classes <a href="https://issues.jpa-buddy.com/issue/JPAB-2171" target="_blank">JPAB-2171</a>
+* The "Spring Data Projection" action is no longer available without corresponding Spring dependency <a href="https://issues.jpa-buddy.com/issue/JPAB-2168" target="_blank">JPAB-2168</a>
+* Now, JPA Buddy remembers the previously selected `GenerationType` even after deleting the ID attribute <a href="https://issues.jpa-buddy.com/issue/JPAB-2180" target="_blank">JPAB-2180</a>
+* The `@GeneratedValue` annotation is no longer mistakenly added to the ID attribute marked with the `@EmbeddedId` annotation <a href="https://issues.jpa-buddy.com/issue/JPAB-2179" target="_blank">JPAB-2179</a>
+
 ## 2022.4.6 - 2022-14-11
 
 ### Bug-fix
