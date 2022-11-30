@@ -107,6 +107,16 @@ JPA Buddy provides a support for generic mappers' inheritance:
    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcY-dDWqihg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
+### Mapper Declaration
+
+JPA Buddy provides flexible settings for mapper declaration. To configure naming patterns or mapping naming strategy for collection, open Tools -> JPA Buddy -> Mapper Declaration:
+ 
+![mapper-declaration](img/mapper-declaration.png)
+
+## Keep DTOs in sync with its JPA entity
+
+### Refactor attributes
+
 Often DTOs are used at the API controller level, aimed to declare only fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. Hence, changing the property name in an entity often leads to the corrupted mapping logic. That's why JPA Buddy helps developers to refactor entity properties along with the related fields in DTOs:
 
 <div class="youtube" align="center">
