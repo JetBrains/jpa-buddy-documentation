@@ -78,20 +78,20 @@ Often DTOs are used at the API controller level, aimed to declare only fields re
 
 Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> DTO Declaration you can configure:
 
-- Serializable type.
-- Class name postfix.
-- Whether to use Lombok or not.
-- Comment link regexp. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
+1. Serializable type.
+2. Class name postfix.
+3. Whether to use Lombok or not.
+4. Comment link regexp. It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
 
   ```java
   // A DTO for the {@link io.jpabuddy.demo.entities.Project} entity.
   ```
 
   The feature is disabled when the field is empty.
-- Name pattern regexp. This option is useful if you use an obligatory naming convention for DTOs. It allows JPA Buddy to associate DTO with its JPA Entity using a DTO name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty.
-- Class comment. Defines the comment that will be generated over the DTO class.
+5. Name pattern regexp. This option is useful if you use an obligatory naming convention for DTOs. It allows JPA Buddy to associate DTO with its JPA Entity using a DTO name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty. 
+6. Class comment. Defines the comment that will be generated over the DTO class.
 
-### Convinient Navigation between Entity and its DTOs
+### Convenient Navigation between Entity and its DTOs
 
 As soon as JPA Buddy is able to associate DTO class with the entity:
 

@@ -1,4 +1,4 @@
-## Basics
+## Introduction
 
 JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities:
 
