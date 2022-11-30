@@ -1,4 +1,6 @@
-The minimalistic mode is designed to minimize distraction for developers. If you are the one who prefers to have everything at your fingertips – you will like it! All JPA Buddy panels will be hidden and its content will be available in standard IntelliJ IDEA windows, such as Project panel, Generate Menu and so on...
+## Introduction
+
+The minimalistic mode is designed to minimize distraction for developers. If you are the one who prefers to have everything at your fingertips – you will like it! JPA Buddy panel will be hidden and its content will be available in standard IntelliJ IDEA windows, such as Project panel, Generate Menu and so on...
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fSUnqcZVWnM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -69,7 +71,3 @@ For JPA Inspector popup, it's possible to bind another shortcut. You can do it d
 ![enable-minimalistic-mode](img/enable-minimalistic-mode.png)
 
 or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set wanted combination.
-
-![preferences-map-shortcut](img/preferences-map-shortcut.jpeg)
-
-![keyboard-shortcut](img/keyboard-shortcut.jpeg)
