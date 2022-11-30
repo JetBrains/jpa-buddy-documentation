@@ -1,4 +1,4 @@
-## Basics
+## Introduction
 
 DTO (data transfer object) is an object that carries data between processes. DTOs for JPA entities generally contain a subset of entity attributes. For example, if you need to expose only a few of the entity attributes via REST API, you can map entities to DTOs with those attributes and serialize only them. Basically, DTOs allow you to decouple presentation/business logic layer from the data access layer.
 
@@ -58,13 +58,54 @@ The most remarkable thing about JPA Buddy is that it even detects the relationsh
 
 JPA Buddy analyzes MapStruct mappers and can define which DTO is associated with which entity. Thanks to this, you can see the DTOs in the corresponding section in the JPA Structure and navigate between entity and DTOs through gutter icons.
 
+### Mapping Methods
+
 Also, JPA Buddy can help if you prefer to have a single big mapper interface with methods for all entities. In this case, use IntelliJ IDEA "Generate Menu" (Cmd+N/Alt+Insert) in the open mapper class and create methods for any entity.
 
 <div class="youtube" align="center">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/XahPsC2TciE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
-## Refactor entity properties along with the related fields in DTOs
+### Generic Mappers Inheritance
+
+MapStruct allows to declare generic mappers:
+
+```java
+public interface EntityMapper<D, E> {
+    E toEntity(D dto);
+
+    D toDto(E entity);
+
+    List<E> toEntity(List<D> dtoList);
+
+    List<D> toDto(List<E> entityList);
+}
+```
+
+Such a mapper is convenient to use as a parent for all other mappers and keep them concise and clean:
+
+```java
+@Mapper(componentModel = "spring")
+public interface UserMapper extends EntityMapper<UserDTO, User> {}
+```
+
+Still, complex mapping logic can be easily added if required:
+
+````java
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
+public interface ProjectMapper extends EntityMapper<ProjectDTO, Project> {
+    @AfterMapping
+    default void linkTasks(@MappingTarget Project project) {
+        project.getTasks().forEach(task -> task.setProject(project));
+    }
+}
+````
+
+JPA Buddy provides a support for generic mappers' inheritance:
+
+<div class="youtube" align="center">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcY-dDWqihg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
 
 Often DTOs are used at the API controller level, aimed to declare only fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. Hence, changing the property name in an entity often leads to the corrupted mapping logic. That's why JPA Buddy helps developers to refactor entity properties along with the related fields in DTOs:
 
