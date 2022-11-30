@@ -35,3 +35,13 @@ If you prefer to design a database first and then code JPA entities to map the t
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## DTO Generator
+
+DTOs are essential for web apps, but their implementation brings boilerplate. Dozens of classes that nearly copy your entities, each comes with a mapper. With the **DTO Generation** feature, you can save time from routine work. Using it, you can create DTOs and MapStruct mappers based on the JPA entity definition.
+
+But it’s not all! As time passes, entities may change, and you need to change DTOs accordingly. JPA Buddy addresses this problem as well. It allows you to **synchronize an entity with its DTO** and vice versa.
+
+Also, JPA Buddy provides **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
+
+//paid video will appear here

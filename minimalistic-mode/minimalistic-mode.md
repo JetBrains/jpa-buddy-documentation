@@ -38,7 +38,7 @@ To disable minimalistic mode, open **Settings -> Tools -> JPA Buddy -> Designer 
 
 ### JPA Structure
 
-Since one of the primary purposes of [JPA Structure](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-structure) panel is to provide a comprehensive data-centric view of the project, it will be available in the Project panel. You can select it from the drop-down list.
+Since one of the primary purposes of [JPA Structure](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-structure) tab is to provide a comprehensive data-centric view of the project, it will be available in the Project panel. You can select it from the drop-down list.
 
 ![project-drop-down-list](img/project-drop-down-list.jpeg)
 

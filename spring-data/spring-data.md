@@ -33,17 +33,17 @@ When we have a lot of entities, creating Spring Data repositories one by one bec
 
 For the most efficient navigation in the project, JPA Buddy groups all repositories for each entity. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.
 
-![jpa_structure_repository](img/jpa_structure_repository.png)
+![-structure-repository](img/jpa-structure-repository.png)
 
 ## Queries/Methods Generation
 
-Spring Data provides the ability to define a query with the `@Query` annotation. You can use JPA Palette or Editor Toolbar to write them quickly and without any typos. Choose one of the following types of queries and configure them with the convenient UI.
+Spring Data provides the ability to define a query with the `@Query` annotation. You can use JPA Designer (1) or Editor Toolbar (2) to write them quickly and without any typos. Choose one of the following types of queries and configure them with the convenient UI.
 
-![jpa_palette_query](img/jpa_palette_query.png)
+![jpa-palette-query](img/jpa-palette-query.png)
 
 ### Example
 
-<div class="note">All that we will consider in the example below can be generated as `@Query` and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to [Naming Conventions for Query.](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
+<div class="note">All that we will consider in the example below can be generated as @Query and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to [Naming Conventions for Query.](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
 </div>
 
 Let's look at an example of creating a Find Collection Query.
@@ -99,11 +99,11 @@ Spring Data provides several keyword expressions for derived query method names.
 
 ![conditions_settings](img/conditions_settings.png)
 
-## JPA Inspector
+## Existing methods/queries modification
 
-Since JPA Inspector is a context-dependent panel intended to modify already existing code, let’s consider the scope related to methods and queries. Once you place a cursor on the method or query you can configure the result, signature, query options, and string.
+To configure the method or query, place a cursor on it. Then, JPA Inspector section will appear in the JPA Designer tab:
 
-![jpa_inspector](img/jpa_inspector.png)
+![jpa-inspector](img/jpa-inspector.png.png)
 
 ### EntityGraph Support
 
@@ -112,6 +112,7 @@ The EntityGraph feature has been introduced in JPA 2.1, it has been one of the m
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Duco-QWBXy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 ## Query Refactoring
 
 ### Async
@@ -120,8 +121,7 @@ Spring Data JPA provides the ability to run repository queries asynchronously. T
 
 * Future<ClassName>
 * CompletableFuture<ClassName>
-
-- ListenableFuture<ClassName>
+* ListenableFuture<ClassName>
 
 Learn more about asynchronous query results at the corresponding Spring Data JPA documentation [page](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-async).
 
@@ -209,6 +209,10 @@ public interface PetInfo {
 }
 ```
 
+### Keep Projections in sync with its JPA entity
+
+As time passes, entities may change, and you need to change projections accordingly. JPA Buddy allows you to synchronize an entity with its projection and vice versa. Read more about this feature in the [DTO Generator](https://www.jpa-buddy.com/documentation/dto-generator/keep-dtos-in-sync-with-its-jpa-entity) section.
+
 ### Projection Declaration Settings
 
 Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> Projection Declaration you can configure:
@@ -223,7 +227,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
   ```
 
   The feature is disabled when the field is empty.
-3. Name pattern regexp. This option is useful if you use an obligatory naming convention for Projections. It allows JPA Buddy to associate Projection with its JPA Entity using a Projection name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?<entity>.*(?:Info|Prj|Projection|VO|Vo|View|Request|Browse)` means that the `MyEntityInfo`, `MyEntityPrj` and etc. classes will be considered as a Projections for `MyEntity`.
+3. Name pattern regexp. This option is useful if you use an obligatory naming convention for Projections. It allows JPA Buddy to associate Projection with its JPA Entity using a Projection name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?<entity>.*(?:Info|Prj|Projection|VO|Vo|View|Request|Browse)` means that the `MyEntityInfo`, `MyEntityPrj` etc. classes will be considered as a Projections for `MyEntity`.
 
   The feature is disabled when the field is empty. 
 4. Class comment. Defines the comment that will be generated over the Projection interface.
@@ -237,4 +241,4 @@ As soon as JPA Buddy is able to associate Projection interface with the entity:
 - The Projection interface will appear in the **Dto & Projections** section in the JPA Structure panel and in the Editor Toolbar (1)
 - The gutter icon will appear in the Projection to ease the navigation to its entity (2)
 
-![projection_navigation](img/projection_navigation.png)
+![projection-navigation](img/projection-navigation.png)

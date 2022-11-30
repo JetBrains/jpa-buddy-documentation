@@ -60,7 +60,7 @@ private Long id;
 
 ## JPA Structure
 
-JPA Structure panel provides a comprehensive data-centric view on the project. You can use it for many purposes:
+JPA Structure tab provides a comprehensive data-centric view on the project. You can use it for many purposes:
 
 1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
@@ -71,7 +71,7 @@ JPA Structure panel provides a comprehensive data-centric view on the project. Y
 
 ## JPA Designer
 
-Once the JPA entity is created, Designer tab appears in the JPA Buddy tool window. It splits into two parts called: JPA Palette (1) and JPA Inspector (2). The content of these panels is context-depended. The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
+Once the JPA entity is created, Designer tab appears in the JPA Buddy tool window. The content of this tab is context-depended. Designer tab splits into two parts called: JPA Palette (1) and JPA Inspector (2). The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
 
 ![jpa-designer](img/jpa-designer.png)
 

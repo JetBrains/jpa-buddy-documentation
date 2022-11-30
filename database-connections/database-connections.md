@@ -13,9 +13,9 @@ For now, JPA Buddy supports following databases:
 - [H2](https://www.h2database.com/html/main.html)
 - [IBM Db2](https://www.ibm.com/analytics/db2)
 
-![jpa_structure_db_connection](img/jpa_structure_db_connection.jpeg)
+![jpa-structure-db-connection](img/jpa-structure-db-connection.png)
 
-You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the “Detect Connections” button in the JPA Structure panel and the window will appear with filled fields.
+You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the “Detect Connections” button in the JPA Structure tab and the window will appear with filled fields.
 
 As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding [JetBrains documentation page](https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html).
 
