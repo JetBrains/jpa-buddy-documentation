@@ -308,12 +308,3 @@ JPA Buddy provides constants generation for the entity, table, and column names.
 In its default mode, JPA Buddy provides functionally rich tool window. However, tool windows may steal too much horizontal space, especially for those who prefer 13-inch laptops. In this case, it was recommended to use the [minimalistic mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/). Besides it, JPA Buddy also provides settings to fine-tune the appearance of the main visual elements:
 
 ![designer_settings](img/designer_settings.png)
-
-### Coding Assistance
-
-JPA Buddy provides flexible settings to make the use of [coding assistance](//todo add link to section) features even more handful. You can:
-1) Enable/disable automatic detection for bean injection type;
-2) Define the [bean injection strategy](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-collaborators) that JPA Buddy will follow while code generation;
-3) Whether to use the [smart completion](//todo add link to the section) feature or not.
-
-![settings-coding-assistance](img/settings-coding-assistance.png)
