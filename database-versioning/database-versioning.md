@@ -1,9 +1,14 @@
 ## Introduction
 
-Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge:
+Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge.
 
-- **Database first.** This approach takes the database as the first-class citizen, while data model classes (POJOs or JPA entities) are derived from the database schema via code generation, aka "Database reverse engineering". Following this scenario, you should not touch the generated classes, because they can be re-generated at any moment, and all changes made in the source code will be lost. Also, this way **doesn't save you from the migration scripts generation**, because they will be required to upgrade the existing installations to the newest version.
-- **Source code first**. This is an opposite approach having the single source of truth in the data model classes. Hence, the database gets modified in accordance with changes in the data model. To handle database update, the difference between the old state of the database and up-to-date state of the data model classes should be represented in migration scripts of any format (Flyway SQL migrations or Liquibase changelogs).
+### Database first
+
+This approach takes the database as the first-class citizen, while data model classes (POJOs or JPA entities) are derived from the database schema via code generation, aka "Database reverse engineering". Following this scenario, you should not touch the generated classes, because they can be re-generated at any moment, and all changes made in the source code will be lost. Also, this way **doesn't save you from the migration scripts generation**, because they will be required to upgrade the existing installations to the newest version.
+
+### Source code first
+
+This is an opposite approach having the single source of truth in the data model classes. Hence, the database gets modified in accordance with changes in the data model. To handle database update, the difference between the old state of the database and up-to-date state of the data model classes should be represented in migration scripts of any format (Flyway SQL migrations or Liquibase changelogs).
 
 **JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation.
 
@@ -93,7 +98,7 @@ Using a data model as a source of the current schema state triggers selection of
 
 Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units.
 
-To configure a new persistence unit, click on the plus button in the JPA Structure panel and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
+To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
 
 - You can scan the needed package, and all entities located in it will be added automatically
 - You can manually select entities from the project
@@ -106,9 +111,9 @@ To configure a new persistence unit, click on the plus button in the JPA Structu
 
 JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or hard to obtain a database for a certain state of the model, for example, when merging changes into some older version of the application. It may be simply impossible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, so no database will be required for differential migration scripts generation.
 
-To generate a snapshot, click the **Plus** button on top of the JPA Structure tool window and select the **JSON Snapshot** item.
+To generate a snapshot, open JPA Buddy panel and click the **Plus** button. Then, select the **Data model snapshot** item.
 
-![json_snapshot](img/json_snapshot.jpeg)
+![data-model-snapshot](img/data-model-snapshot.png)
 
 This allows you to capture the state of the data model at some older point, so that you can create a diff migration script describing all the modifications that happened from that point until now.
 
@@ -127,7 +132,7 @@ In four simple steps you get a migration script that describes the changes betwe
 
 ![init_schema_actions](img/init_schema_actions.png)
 
-For both Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure panel, the correspondig window will appear:
+For both Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure tab, the corresponding window will appear:
 
 ![init_schema_changelog](img/init_schema_changelog.jpeg)
 
@@ -217,23 +222,19 @@ By default, Primary and Secondary changelogs are generated in separate directori
 
 ### Creating and Modifying Changelogs
 
-JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds three panels and a toolbar to the IntelliJ IDEA UI: JPA Structure (1), JPA Palette (2), JPA Inspector (3) and Editor Toolbar (4).
-
-![jpa_buddy_panels](img/jpa_buddy_panels.png)
+JPA Buddy also offers tools for viewing, creating and modifying changelogs by hand. It adds additional UI elements to IntelliJ IDEA.
 
 JPA Structure displays everything that JPA Buddy knows about the project. For Liquibase changelogs, it shows their hierarchy and contents:
 
-![jpa_structure_liquibase](img/jpa_structure_liquibase.jpeg)
+![jpa-structure-liquibase](img/jpa-structure-liquibase.png)
 
-To create a new changelog, right-click the desired folder in the project tree and select New -> Liquibase -> Empty Changelog. Or click the “plus” button in the top-left corner of the JPA Structure panel:
+To create a new changelog, right-click the desired folder in the project tree and select New -> Liquibase -> Empty Changelog. Or click the “plus” button in the top-left corner of the JPA Structure tab:
 
-![empty_liquibase_changelog](img/empty_liquibase_changelog.jpeg)
+![empty-liquibase-changelog](img/empty-liquibase-changelog.png)
 
-JPA Palette and JPA Inspector panels let you generate and modify code. They are context-dependent, they display options available for the opened file type. The Palette is used for code generation, and the Inspector for code modification.
+JPA Designer tab lets you generate and modify code. This tab is context-dependent, and displays options available for the opened file type. This tab splits into two parts: JPA Palette (1) and JPA Inspector (2). JPA Palette is used for code generation, and JPA Inspector for code modification.
 
-For example, here are some options JPA Palette offers for Liquibase changelogs:
-
-![jpa_palette_db_actions](img/jpa_palette_db_actions.jpeg)
+![jpa-buddy-designer](img/jpa-buddy-designer.png)
 
 Editor Toolbar provides fast access to relevant actions. It includes:
 
@@ -256,9 +257,9 @@ JPA Buddy also makes writing code by hand easier by providing code completion ba
 
 ### Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
 
-The JPA Structure panel also offers a way to run Liquibase updates and preview SQL. To run an update, click the “Liquibase Update” button:
+The JPA Structure tab also offers a way to run Liquibase updates and preview SQL. To run an update, click the “Liquibase Update” button:
 
-![jpa_structure_liquibase_update](img/jpa_structure_liquibase_update.jpeg)
+![jpa-structure-liquibase-update](img/jpa-structure-liquibase-update.png)
 
 The Liquibase Update window will open with configuration options:
 
@@ -345,7 +346,7 @@ On the left of the window, there is a preview of the actual changes to be genera
 
 ![flyway_add_migration](img/flyway_add_migration.jpeg)
 
-Above the list of changes, there is a button panel with the following actions:
+Above the list of changes, there is a buttons panel with the following actions:
 
 - Add Versioned Migration— create a secondary versioned migration.
 - Remove from Versioned Migration with options:
@@ -365,9 +366,9 @@ To combine several changes into one migration file or to ignore them, drag them 
 
 Java-based migrations are a great fit for all changes that can not easily be expressed using SQL. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the `BaseJavaMigration` class. JPA Buddy follows the second option and generates the class name according to Flyway’s default [naming convention](https://flywaydb.org/documentation/concepts/migrations.html#naming-1). This enables Flyway to automatically extract the version and the description from the class name.
 
-To generate java migration, press the plus button in the JPA Structure panel and choose the corresponding item.
+To generate java migration, press the plus button in the JPA Structure tab and choose the corresponding item.
 
-![jpa_structure_java_migration](img/jpa_structure_java_migration.jpeg)
+![jpa-structure-java-migration](img/jpa-structure-java-migration.png)
 
 In the opened window, you can set class name, source root and package name:
 
@@ -388,9 +389,9 @@ public class V4__ extends BaseJavaMigration {
 
 ### Flyway Callbacks
 
-While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate [all events](https://flywaydb.org/documentation/concepts/callbacks) that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure panel and choose the corresponding item.
+While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate [all events](https://flywaydb.org/documentation/concepts/callbacks) that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure tab and choose the corresponding item.
 
-![jpa_structure_java_callback](img/jpa_structure_java_callback.jpeg)
+![jpa-structure-callbacks](img/jpa-structure-callbacks.png)
 
 #### SQL Callbacks
 
@@ -491,7 +492,7 @@ If you stumble upon `SchemaManagementException` on the application startup, it m
 
 ### Show DDL Action
 
-JPA Buddy provides the action to generate DDL statements for only one specific entity. To see the DDL, hover the cursor over the class name and call the action from the IntelliJ IDEA Context Actions menu or JPA Inspector. Also, you can call this action from the Project and JPA Structure panels: just right-click on the target entity.
+JPA Buddy provides the action to generate DDL statements for only one specific entity. To see the DDL, hover the cursor over the class name and call the action from the IntelliJ IDEA Context Actions menu or JPA Inspector. Also, you can call this action from the Project panel and JPA Structure tab: just right-click on the target entity.
 
 ![show_ddl](img/show_ddl.png)
 
@@ -672,6 +673,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 </tbody>
 </table>
 </div>
+
 ## Hibernate Envers Support
 
 The [Hibernate Envers](https://hibernate.org/orm/envers/) provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.

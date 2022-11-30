@@ -1,4 +1,4 @@
-## Basics
+## Introduction
 
 JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities:
 
@@ -21,7 +21,7 @@ In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via
 * Project Panel (2) using right-click;
 * Database panel (3) using right-click;
 
-![entities_from_db_action](img/entities_from_db_action.png)
+![entities-from-db-action](img/entities-from-db-action.png)
 
 ## Entities from DB Wizard
 
@@ -118,9 +118,9 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 
 ## Reverse Engineering Columns
 
-Some developers prefer the DB-first application development approach. First, they add columns directly to the database and then update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Palette (1), Editor Toolbar (2) or from the IntelliJ IDEA "Generate" menu (3):
+Some developers prefer the DB-first application development approach. First, they add columns directly to the database and then update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Designer (1), Editor Toolbar (2) or from the IntelliJ IDEA "Generate" menu (3):
 
-![reverse_engineering_columns_action](img/reverse_engineering_columns_action.png)
+![reverse-engineering-columns-action](img/reverse-engineering-columns-action.png)
 
 After that, the Reverse Engineering Columns wizard will appear:
 

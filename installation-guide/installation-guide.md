@@ -189,7 +189,7 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
   </tr>
   <tr>
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator" target="_blank" rel="noopener noreferrer">Hibernate Validator</a></td>
-    <td class="tg-0lax" rowspan="2">Add Hibernate Validator annotations to Entity attributes via the JPA Inspector panel.</td>
+    <td class="tg-0lax" rowspan="2">Add Hibernate Validator annotations to Entity attributes via JPA Designer.</td>
   </tr>
   <tr>
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">SpringBoot</a> <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">Starter Validation</a></td>
@@ -226,9 +226,9 @@ To make sure that the plugin is installed correctly, follow these steps:
 
 ![settings_plugin_installed](img/settings_plugin_installed.jpeg)
 
-- Open existing or create a new entity and click somewhere in it. You should find three additional tool windows: JPA Structure, JPA Palette, and JPA Inspector. Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above.
+- Open existing or create a new entity and click somewhere in it. You should find Editor Toolbar (1) and JPA Buddy tool window (2). Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above.
 
-![jpa_buddy_panels](img/jpa_buddy_panels.png)
+![first-sight](img/first-sight.png)
 
 ## Installing a Specific Version of JPA Buddy
 
