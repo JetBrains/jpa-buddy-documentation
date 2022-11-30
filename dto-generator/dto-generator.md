@@ -72,6 +72,14 @@ Often DTOs are used at the API controller level, aimed to declare only fields re
    <iframe width="560" height="315" src="https://www.youtube.com/embed/AY-lB-uKDDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
+### Add attributes
+
+Happens, you have added a new attribute to the entity. Then, some already existing DTOs will also need this field. JPA Buddy allows you to add a new field to all the required DTOs at once.
+
+<div class="youtube" align="center">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+
 ## DTO Declaration Settings
 
 ![dto_declarations_preferences](img/dto_declarations_preferences.png)
