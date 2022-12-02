@@ -60,19 +60,6 @@ Some developers prefer to declare an object that doesn't exist yet first and onl
 
 Then, corresponding wizards will open.
 
-## JPQL Support for IntelliJ IDEA CE
-
-JPA Buddy provides code completion based on the context, helping you write JPQL code faster and without typos. Also, it highlights the query:
-
-![jpql-community-support](img/jpql-community-support.png)
-
-To enable this feature:
-
-1. Place the cursor at the JPQL query
-2. Call "Context actions" menu (⌥+⏎ for macOS / Alt+⏎ for Win/Linux)
-3. Select "Inject language or reference"
-4. Choose "JPQLCommunity"
-
 ## Settings
 
 JPA Buddy provides flexible settings to make the use of coding assistance features even more handful. You can:
