@@ -1,5 +1,37 @@
 # Changelog
 
+## 2022.5.0 - 2022-05-12
+
+### Coding Assistance
+
+JPA Buddy introduces coding assistance features for JPA entities, Spring Data repositories, DTOs and MapStruct mappers that make development more straightforward and transparent:
+
+* Create and inject Spring Data Repositories & MapStruct mappers on the fly <a href="https://issues.jpa-buddy.com/issue/JPAB-2054" target="_blank">JPAB-2054</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2023" target="_blank">JPAB-2023</a>
+* Generate Spring Data methods/queries via smart postfix completions <a href="https://issues.jpa-buddy.com/issue/JPAB-2038" target="_blank">JPAB-2038</a>
+* Apply mappings via "mapTo..." postfix completion <a href="https://issues.jpa-buddy.com/issue/JPAB-2052" target="_blank">JPAB-2052</a>
+* Generate JPA-related objects from unresolved references <a href="https://issues.jpa-buddy.com/issue/JPAB-2141" target="_blank">JPAB-2141</a>
+
+### DTO Generator
+
+* Now, you can generate JPA entities from any java/kotlin class <a href="https://issues.jpa-buddy.com/issue/JPAB-1727" target="_blank">JPAB-1727</a>
+* MapStruct mapper can now be generated from separate wizard <a href="https://issues.jpa-buddy.com/issue/JPAB-1913" target="_blank">JPAB-1913</a>
+* You can now add fields from the entity to its DTOs and vice versa <a href="https://issues.jpa-buddy.com/issue/JPAB-2001" target="_blank">JPAB-2001</a>
+* Generic MapStruct mappers have been supported <a href="https://issues.jpa-buddy.com/issue/JPAB-2055" target="_blank">JPAB-2055</a>
+
+### Entity Designer
+
+* All three JPA Buddy tool windows (Structure, Panel and Inspector) now represent a unified panel <a href="https://issues.jpa-buddy.com/issue/JPAB-1906" target="_blank">JPAB-1906</a>
+* You can now view entities hierarchy from Editor Toolbar <a href="https://issues.jpa-buddy.com/issue/JPAB-1989" target="_blank">JPAB-1989</a>
+* The "Entity Declaration" settings were improved <a href="https://issues.jpa-buddy.com/issue/JPAB-1899" target="_blank">JPAB-1899</a>
+
+### Liquibase/Flyway/DDL Diff Generator
+
+* `@TimeZoneStorage` and `@TimeZoneColumn` annotations from Hibernate 6 have been supported <a href="https://issues.jpa-buddy.com/issue/JPAB-1893" target="_blank">JPAB-1893</a>
+* Now, you can create liquibase changelogs from unresolved references <a href="https://issues.jpa-buddy.com/issue/JPAB-1788" target="_blank">JPAB-1788</a>
+* Changes that can be merged are now highlighted with the special icon in the preview dialog <a href="https://issues.jpa-buddy.com/issue/JPAB-1589" target="_blank">JPAB-1589</a>
+
+For other improvements and fixes, see [all resolved issues (60+)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20225%20%20State:%20Fixed,%20Verified%20sort%20by:%20Priority).
+
 ## 2022.4.7 - 2022-28-11
 
 * Now, the script for the `@ManyToMany` association ID is generated properly <a href="https://issues.jpa-buddy.com/issue/JPAB-2173" target="_blank">JPAB-2173</a>
