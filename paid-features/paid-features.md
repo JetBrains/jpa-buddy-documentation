@@ -44,4 +44,6 @@ But it’s not all! As time passes, entities may change, and you need to change 
 
 Also, JPA Buddy provides **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
 
-//paid video will appear here
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nCbxL-GeDDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
