@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022.5.1 - 2022-07-12
+
+* The exception while calculating Liquibase actions was fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2222" target="_blank">JPAB-2222</a>
+* Displaying tool window no longer causes `IndexNotReadyException` <a href="https://issues.jpa-buddy.com/issue/JPAB-2221" target="_blank">JPAB-2221</a>
+* The false availability of the "Create DTO..." quick-fix has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2219" target="_blank">JPAB-2219</a>
+* The Spring Data JPA Repository for inherited entities is now generated properly <a href="https://issues.jpa-buddy.com/issue/JPAB-2210" target="_blank">JPAB-2210</a>
+* Now, the MapStruct mapper can link the associated attribute, even after renaming <a href="https://issues.jpa-buddy.com/issue/JPAB-2209" target="_blank">JPAB-2209</a>
+
 ## 2022.5.0 - 2022-05-12
 
 ### Coding Assistance
