@@ -1,5 +1,14 @@
 # Changelog
 
+## 2022.5.2 - 2022-20-12
+
+* Smart completions from JPA Buddy no longer appear before most suited IntelliJ IDEA options <a href="https://issues.jpa-buddy.com/issue/JPAB-2239" target="_blank">JPAB-2239</a>
+* JPA Buddy no longer skips columns from the `@Embedded` attribute of `@MappedSuperclass` type <a href="https://issues.jpa-buddy.com/issue/JPAB-2247" target="_blank">JPAB-2247</a>
+* "The incoming YAML document exceeds the limit" exception during reverse engineering was fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2242" target="_blank">JPAB-2242</a>
+* Fixed non-critical but often happening exceptions <a href="https://issues.jpa-buddy.com/issue/JPAB-2253" target="_blank">JPAB-2253</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2249" target="_blank">JPAB-2249</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2248" target="_blank">JPAB-2248</a>
+
+For other improvements and fixes, see [all resolved issues (10+)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%20225%20Bug%20fix:%202%20).
+
 ## 2022.5.1 - 2022-07-12
 
 * The exception while calculating Liquibase actions was fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2222" target="_blank">JPAB-2222</a>
