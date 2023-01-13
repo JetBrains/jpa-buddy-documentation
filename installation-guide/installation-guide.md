@@ -28,7 +28,7 @@ The purchase process is entirely managed by JetBrains Marketplace, including pay
 
 ### Trial Subscription
 
-For new users who haven't tried JPA Buddy yet there is a 30-day trial period. You can see how to obtain it in the following video:
+For new users who haven't tried JPA Buddy yet there is a [30-day trial period](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing). You can see how to obtain it in the following video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XZnA_0vS-zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -36,8 +36,8 @@ For new users who haven't tried JPA Buddy yet there is a 30-day trial period. Yo
 
 For those who have already used the trial period and want to continue using JPA Buddy paid features, there are two types of subscriptions available: monthly and annual. To pay for a subscription, JetBrains Marketplace provides two possible options:
 
-- Pay via Credit Card
-- Pay via PayPal
+- [Pay via Credit Card](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing)
+- [Pay via PayPal](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing)
 
 In the following video, we will show you how to buy a subscription via a credit card. All the steps to get and activate a subscription will remain the same if you decide to use PayPal.
 
@@ -45,9 +45,9 @@ In the following video, we will show you how to buy a subscription via a credit 
 
 ### The Difference Between an Individual and Company Licenses
 
-The **Personal license** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
+The [**Personal license**](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=personal) is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
 
-The **Company license** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee should not use the same license simultaneously.
+The [**Company license**](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=commercial) is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee should not use the same license simultaneously.
 
 The following table should help with choosing the most appropriate licensing schema for you:
 
