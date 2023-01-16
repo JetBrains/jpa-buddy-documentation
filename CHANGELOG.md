@@ -1,5 +1,16 @@
 # Changelog
 
+## 2022.5.3 - 2023-16-01
+
+* Now, JPA Buddy creates the correct sequence for IDs annotated with `@GeneratedValue(strategy = GenerationType.SEQUENCE)` in projects with Hibernate 6 <a href="https://issues.jpa-buddy.com/issue/JPAB-2268" target="_blank">JPAB-2268</a>
+* For PostgreSQL, JPABuddy now generates an `OID` column instead of `TEXT` for fields annotated with `@Lob` <a href="https://issues.jpa-buddy.com/issue/JPAB-2276" target="_blank">JPAB-2276</a>
+* `RuntimeExceptionWithAttachments` no longer appears at the time of the project opening <a href="https://issues.jpa-buddy.com/issue/JPAB-2270" target="_blank">JPAB-2270</a>
+* False negative highlights for the MapStruct `@Mapper` annotation when an entity comes from external dependency was fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2275" target="_blank">JPAB-2275</a>
+* A redundant unique constraint for the primary key is no longer generated <a href="https://issues.jpa-buddy.com/issue/JPAB-2273" target="_blank">JPAB-2273</a>
+
+For other improvements and fixes, see [all resolved issues (15+)](https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20%23Resolved%20Milestone:%20225%20Bug%20fix:%203%20).
+
+
 ## 2022.5.2 - 2022-20-12
 
 * Smart completions from JPA Buddy no longer appear before most suited IntelliJ IDEA options <a href="https://issues.jpa-buddy.com/issue/JPAB-2239" target="_blank">JPAB-2239</a>
