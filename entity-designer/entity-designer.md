@@ -1,6 +1,6 @@
 ## Introduction
 
-Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find additional tool window (1) and a toolbar (2).
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find additional tool window (2) and a toolbar (1).
 
 ![first-sight](img/first-sight.png)
 
