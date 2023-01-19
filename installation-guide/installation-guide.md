@@ -24,7 +24,9 @@ You can install JPA Buddy for running IntelliJ IDEA. Open Preferences -> Plugins
 
 ## License Activation
 
-The purchase process is entirely managed by JetBrains Marketplace, including payment processing, invoicing, and licensing. To get a license, please visit [this page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing).
+The purchase process is entirely managed by [**JetBrains Marketplace**](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing), including payment processing, invoicing, and licensing. To get a license, please visit [this page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing).
+
+[![visit-jetbrains-marketplace](img/visit-jetbrains-marketplace.png)](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing)
 
 ### Trial Subscription
 
