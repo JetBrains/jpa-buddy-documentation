@@ -1,5 +1,16 @@
 # Changelog
 
+## 2022.5.4 - 2023-30-01
+
+1. Now, JPA Buddy provides the correct DDL in the "Show DDL" action for the case when `@ElementCollection` is declared inside an `@Embeddable` entity <a href="https://issues.jpa-buddy.com/issue/JPAB-2310" target="_blank">JPAB-2310</a>
+2. The `referencedColumnName` parameter of the `@JoinColumn` annotation is now correctly considered when generating migration scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-2301" target="_blank">JPAB-2301</a>
+3. The wrong generation of the MapStruct mapper in the entity package, not in the specified one, has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2313" target="_blank">JPAB-2313</a>
+4. Redundant `@Getter`/`@Setter` Lombok annotations are no longer generated for M2M associations <a href="https://issues.jpa-buddy.com/issue/JPAB-2282" target="_blank">JPAB-2282</a>
+5. `PluginException`, `ClassCastException`, `RuntimeExceptionWithAttachments` and `Throwable` exceptions were handled <a href="https://issues.jpa-buddy.com/issue/JPAB-2295" target="_blank">JPAB-2295</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2306" target="_blank">JPAB-2306</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2328" target="_blank">JPAB-2328</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2329" target="_blank">JPAB-2329</a>
+
+
+For other improvements and fixes, see [all resolved issues (15+)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20%23Resolved%20Milestone:%20225%20Bug%20fix:%204%20).
+
 ## 2022.5.3 - 2023-16-01
 
 * Now, JPA Buddy creates the correct sequence for IDs annotated with `@GeneratedValue(strategy = GenerationType.SEQUENCE)` in projects with Hibernate 6 <a href="https://issues.jpa-buddy.com/issue/JPAB-2268" target="_blank">JPAB-2268</a>
