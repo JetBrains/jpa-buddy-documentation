@@ -1,10 +1,38 @@
 # Changelog
 
+## 2023.1.0 - 2023-02-20
+
+### DTO Generator & Coding Assistance
+
+* The DTO Generator was untied from entities, so now it's possible to create a DTO for any domain model class, including MongoDB document or even not-annotated POJO. Quick fix for unresolved references also supports such options <a href="https://issues.jpa-buddy.com/issue/JPAB-2064" target="_blank">JPAB-2064</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2336" target="_blank">JPAB-2336</a>
+* Now, completion contributor functionality and quick fixes for unresolved references are available in Kotlin <a href="https://issues.jpa-buddy.com/issue/JPAB-2022" target="_blank">JPAB-2022</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2093" target="_blank">JPAB-2093</a>
+* Improved settings for more detailed customization of which autocompletion options the user wants to see or hide <a href="https://issues.jpa-buddy.com/issue/JPAB-2240" target="_blank">JPAB-2240</a>
+
+### Liquibase/Flyway/DDL Diff Generator
+
+* Support of `@ForeignKey` annotation was added <a href="https://issues.jpa-buddy.com/issue/JPAB-270" target="_blank">JPAB-270</a>
+* Added more options to specify the column data type for the entity attribute type or backward using annotations `@JavaType`, `@Type` or `@JdbcType` <a href="https://issues.jpa-buddy.com/issue/JPAB-1888" target="_blank">JPAB-1888</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-1887" target="_blank">JPAB-1887</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2340" target="_blank">JPAB-2340</a>
+* Now, JPA Buddy correctly generates foreign key constraints for association attributes with generic type <a href="https://issues.jpa-buddy.com/issue/JPAB-860" target="_blank">JPAB-860</a>
+
+### Entity Designer
+
+* Ability to adjust `@Audited` and `@EntityListeners` annotations was added to the inspector <a href="https://issues.jpa-buddy.com/issue/JPAB-2216" target="_blank">JPAB-2216</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2217" target="_blank">JPAB-2217</a>
+* Now, the user can specify column length for string enumeration <a href="https://issues.jpa-buddy.com/issue/JPAB-2158" target="_blank">JPAB-2158</a>
+* Improved detecting of Lombok dependency to use it in entities <a href="https://issues.jpa-buddy.com/issue/JPAB-2321" target="_blank">JPAB-2321</a>
+
+### Other
+
+* JPA Buddy is now available for IntelliJ IDEA 2023.1 <a href="https://issues.jpa-buddy.com/issue/JPAB-2316" target="_blank">JPAB-2316</a>
+* The ability to separate tool windows is back <a href="https://issues.jpa-buddy.com/issue/JPAB-2223" target="_blank">JPAB-2223</a>
+* Added support of YAML configuration files as sources to detect connection parameters <a href="https://issues.jpa-buddy.com/issue/JPAB-2134" target="_blank">JPAB-2134</a>
+
+For other improvements and fixes, see <a href="https://issues.jpa-buddy.com/issues?q=%23Resolved%20%20project:%20%7BJPA%20Buddy%7D%20Milestone:%20231" target="_blank">all resolved issues (50+)</a>.
+
 ## 2022.5.5 - 2023-13-02
 
-* Now, JPA Buddy generates correct migration scripts for indexes which contain a column with `DESC` keyword <a href="https://issues.jpa-buddy.com/issue/JPAB-2346" target="_blank">JPAB-2346</a>
+* Now, JPA Buddy generates correct migration scripts for indexes that contain a column with `DESC` keyword <a href="https://issues.jpa-buddy.com/issue/JPAB-2346" target="_blank">JPAB-2346</a>
 * Inappropriate actions are not shown anymore for MongoDB files <a href="https://issues.jpa-buddy.com/issue/JPAB-2327" target="_blank">JPAB-2327</a>
-* Added validation warning when one tries to create a duplicate of entity from DB <a href="https://issues.jpa-buddy.com/issue/JPAB-2354" target="_blank">JPAB-2354</a>
+* Added validation warning when one tries to create a duplicate of an entity from DB <a href="https://issues.jpa-buddy.com/issue/JPAB-2354" target="_blank">JPAB-2354</a>
 * Corrected Kotlin support in DTO generation and interaction with repository methods <a href="https://issues.jpa-buddy.com/issue/JPAB-2365" target="_blank">JPAB-2365</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2351" target="_blank">JPAB-2351</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2289" target="_blank">JPAB-2289</a>
 
 For other improvements and fixes, see <a href = "https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20%23Resolved%20Milestone:%20225%20Bug%20fix:%205%20State:%20-Duplicate">all resolved issues (8)</a>.
