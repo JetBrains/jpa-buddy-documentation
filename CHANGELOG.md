@@ -1,12 +1,21 @@
 # Changelog
 
+## 2022.5.5 - 2023-13-02
+
+* Now, JPA Buddy generates correct migration scripts for indexes which contain a column with `DESC` keyword <a href="https://issues.jpa-buddy.com/issue/JPAB-2346" target="_blank">JPAB-2346</a>
+* Inappropriate actions are not shown anymore for MongoDB files <a href="https://issues.jpa-buddy.com/issue/JPAB-2327" target="_blank">JPAB-2327</a>
+* Added validation warning when one tries to create a duplicate of entity from DB <a href="https://issues.jpa-buddy.com/issue/JPAB-2354" target="_blank">JPAB-2354</a>
+* Corrected Kotlin support in DTO generation and interaction with repository methods <a href="https://issues.jpa-buddy.com/issue/JPAB-2365" target="_blank">JPAB-2365</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2351" target="_blank">JPAB-2351</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2289" target="_blank">JPAB-2289</a>
+
+For other improvements and fixes, see <a href = "https://issues.jpa-buddy.com/issues/JPAB?q=project:%20JPAB%20%23Resolved%20Milestone:%20225%20Bug%20fix:%205%20State:%20-Duplicate">all resolved issues (8)</a>.
+
 ## 2022.5.4 - 2023-30-01
 
-1. Now, JPA Buddy provides the correct DDL in the "Show DDL" action for the case when `@ElementCollection` is declared inside an `@Embeddable` entity <a href="https://issues.jpa-buddy.com/issue/JPAB-2310" target="_blank">JPAB-2310</a>
-2. The `referencedColumnName` parameter of the `@JoinColumn` annotation is now correctly considered when generating migration scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-2301" target="_blank">JPAB-2301</a>
-3. The wrong generation of the MapStruct mapper in the entity package, not in the specified one, has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2313" target="_blank">JPAB-2313</a>
-4. Redundant `@Getter`/`@Setter` Lombok annotations are no longer generated for M2M associations <a href="https://issues.jpa-buddy.com/issue/JPAB-2282" target="_blank">JPAB-2282</a>
-5. `PluginException`, `ClassCastException`, `RuntimeExceptionWithAttachments` and `Throwable` exceptions were handled <a href="https://issues.jpa-buddy.com/issue/JPAB-2295" target="_blank">JPAB-2295</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2306" target="_blank">JPAB-2306</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2328" target="_blank">JPAB-2328</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2329" target="_blank">JPAB-2329</a>
+* Now, JPA Buddy provides the correct DDL in the "Show DDL" action for the case when `@ElementCollection` is declared inside an `@Embeddable` entity <a href="https://issues.jpa-buddy.com/issue/JPAB-2310" target="_blank">JPAB-2310</a>
+* The `referencedColumnName` parameter of the `@JoinColumn` annotation is now correctly considered when generating migration scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-2301" target="_blank">JPAB-2301</a>
+* The wrong generation of the MapStruct mapper in the entity package, not in the specified one, has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2313" target="_blank">JPAB-2313</a>
+* Redundant `@Getter`/`@Setter` Lombok annotations are no longer generated for M2M associations <a href="https://issues.jpa-buddy.com/issue/JPAB-2282" target="_blank">JPAB-2282</a>
+* `PluginException`, `ClassCastException`, `RuntimeExceptionWithAttachments` and `Throwable` exceptions were handled <a href="https://issues.jpa-buddy.com/issue/JPAB-2295" target="_blank">JPAB-2295</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2306" target="_blank">JPAB-2306</a>, <a href="https://issues.jpa-buddy.com/issue/JPAB-2328" target="_blank">JPAB-2328</a> & <a href="https://issues.jpa-buddy.com/issue/JPAB-2329" target="_blank">JPAB-2329</a>
 
 
 For other improvements and fixes, see [all resolved issues (15+)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20%23Resolved%20Milestone:%20225%20Bug%20fix:%204%20).
