@@ -25,7 +25,7 @@ In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via
 
 ## Entities from DB Wizard
 
-![entities_from_db](img/entities_from_db.png)
+![entities-from-db](img/entities-from-db.png)
 
 ### Configuration
 
@@ -100,7 +100,7 @@ Here is the example of generated //todo comment for the attribute with unknown c
 
 After calling the "Define target Java type" action, the following window will appear:
 
-![mapping_java_type](img/mapping_java_type.png)
+![mapping-java-type](img/mapping-java-type.png)
 
 JPA Buddy will remember data mappings for the subsequent reverse engineering actions. You can always change them in the [settings](#type-mappings).
 
@@ -124,7 +124,7 @@ Some developers prefer the DB-first application development approach. First, the
 
 After that, the Reverse Engineering Columns wizard will appear:
 
-![reverse_engineering_columns](img/reverse_engineering_columns.png)
+![reverse-engineering-columns](img/reverse-engineering-columns.png)
 
 The attributes migration flow here is identical to what was described in the [Entities from DB wizard](#migrating-attributes) section.
 
@@ -171,9 +171,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_one_uc_diagram.jpeg](img/one_to_one_uc_diagram.png)
+![one-to-one-uc-diagram.jpeg](img/one-to-one-uc-diagram.png)
 
-![one_to_one_uc_wizard](img/one_to_one_uc_wizard.jpeg)
+![one-to-one-uc-wizard](img/one-to-one-uc-wizard.jpeg)
 
 JPA Buddy will generate `@`OneToOne association with `@`JoinColumn annotation in the User entity, and  `@`OneToOne association with `mappedBy` parameter in the Profile entity:
 
@@ -228,9 +228,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_one_pk_fk_diagram.jpeg](img/one_to_one_pk_fk_diagram.png)
+![one-to-one-pk-fk-diagram.jpeg](img/one-to-one-pk-fk-diagram.png)
 
-![one_to_one_pk_fk_wizard.jpeg](img/one_to_one_pk_fk_wizard.jpeg)
+![one-to-one-pk-fk-wizard.jpeg](img/one-to-one-pk-fk-wizard.jpeg)
 
 Since `@`Id should not be a persistence entity, JPA Buddy will generate:
 
@@ -295,9 +295,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_many_many_to_one_diagram](img/one_to_many_many_to_one_diagram.png)
+![one-to-many-many-to-one-diagram](img/one-to-many-many-to-one-diagram.png)
 
-![one_to_many_many_to_one_wizard](img/one_to_many_many_to_one_wizard.jpeg)
+![one-to-many-many-to-one-wizard](img/one-to-many-many-to-one-wizard.jpeg)
 
 JPA Buddy will generate the following code:
 
@@ -368,9 +368,9 @@ ALTER TABLE profiles_users
     ADD CONSTRAINT fk_prouse_on_user FOREIGN KEY (users_id) REFERENCES users (id);
 ```
 
-![many_to_many_diagram](img/many_to_many_diagram.png)
+![many-to-many-diagram](img/many-to-many-diagram.png)
 
-![many_to_many_wizard](img/many_to_many_wizard.jpeg)
+![many-to-many-wizard](img/many-to-many-wizard.jpeg)
 
 If this association does not exist in any of the entities, JPA Buddy will generate it in the entity for which the reverse engineering action was called.
 
@@ -415,7 +415,7 @@ public class Profile {
 
 The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2).
 
-![new_entity_db_schema_cache](img/new_entity_db_schema_cache.png)
+![new-entity-db-schema-cache](img/new-entity-db-schema-cache.png)
 
 ## Settings
 
