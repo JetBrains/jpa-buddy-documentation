@@ -52,7 +52,7 @@ The most remarkable thing about JPA Buddy is that it even detects the relationsh
 
 ## Generate DTOs from any Java/Kotlin classes
 
-Nowadays, the DTO pattern is widely used in software development. It is not only used with JPA entities, but also with regular POJO classes. With JPA Buddy, you are not restricted to using DTOs with just JPA entities. You can create DTOs from any Java or Kotlin class, which gives you more flexibility and control over your code.
+Nowadays, the DTO pattern is widely used in software development. It is not only used with JPA entities, but also with regular POJO classes. With JPA Buddy, you are not restricted to using DTOs with just JPA entities. You can create DTOs from any Java or Kotlin class, which gives you more flexibility and control over your code. For example, check out how easy you can use JPA Buddy with MongoDB documents:
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OrvtVvQ0eJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
