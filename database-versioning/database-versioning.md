@@ -130,31 +130,31 @@ In four simple steps you get a migration script that describes the changes betwe
 
 ### Init Schema
 
-![init_schema_actions](img/init_schema_actions.png)
+![init-schema-actions](img/init-schema-actions.png)
 
 For both Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure tab, the corresponding window will appear:
 
-![init_schema_changelog](img/init_schema_changelog.jpeg)
+![init-schema-changelog](img/init-schema-changelog.jpeg)
 
 To generate the DDL script based on the data model you will need to specify the corresponding persistence unit, scope and one of the [supported DB types](https://www.jpa-buddy.com/documentation/database-connections/#introduction). In case you compare two databases, you will need to choose one of the existing connections for both of them.
 
-![init_schema_based_on_the_db](img/init_schema_based_on_the_db.jpeg)
+![init-schema-based-on-the-db](img/init-schema-based-on-the-db.jpeg)
 
 ### Preview Window
 
 Click OK to proceed to the preview window of the migration script. The preview window for Liquibase looks like this (Flyway preview window is slightly different):
 
-![changelog_preview](img/changelog_preview.png)
+![changelog-preview](img/changelog-preview.png)
 
 Some types of changes have custom fields in the preview window. For example, “add not null constraint” change allows you to replace all existing NULL values in the DB with a specified value:
 
-![changelog_preview_update_null](img/changelog_preview_update_null.jpeg)
+![changelog-preview-update-null](img/changelog-preview-update-null.jpeg)
 
 Each change type is color-coded according to its danger level: green for SAFE, yellow for CAUTION and red for DANGER. SAFE operations are the ones that cannot cause loss of data in any way, for example, adding a column does not affect the existing data. Operations marked with CAUTION are generally safe but require your attention: for instance, adding a NOT NULL constraint can fail if there are null values in the column. DANGER operations can cause loss of data, for example, dropping a column or modifying data type.
 
 The danger levels can be customized in the plugin preferences in JPA Buddy -> Database Versioning -> Diff Changes:
 
-![diff_changes_preferences](img/diff_changes_preferences.jpeg)
+![diff-changes-preferences](img/diff-changes-preferences.jpeg)
 
 You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the “Ignored” section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
 
@@ -173,7 +173,7 @@ But JPA Buddy can replace such statements with the single rename or modify state
 
 After the merge, drop statements may be irrelevant. You can choose changes that should be removed from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
 
-![unnecessary_changes](img/unnecessary_changes.jpeg)
+![unnecessary-changes](img/unnecessary-changes.jpeg)
 
 ## Liquibase Support
 
@@ -183,7 +183,7 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 
 ### Changelog Preview Window
 
-![changelog_preview](img/changelog_preview.png)
+![changelog-preview](img/changelog-preview.png)
 
 If you want to save the changelog as a regular file, then the following configuration options will be available:
 
@@ -193,11 +193,11 @@ If you want to save the changelog as a regular file, then the following configur
 
 If you want to save the changelog as a scratch file, then you can configure only its name and type.
 
-![liquibase_preview_scratch](img/liquibase_preview_scratch.png)
+![liquibase-preview-scratch](img/liquibase-preview-scratch.png)
 
 On the left of the window, there is a preview of the actual changesets to be generated. You can see what each change is going to look like by clicking on them. To combine several changes into one changeset or to ignore them, simply drag them around. The top left corner of the preview window contains various actions to modify the resulting changelog:
 
-![add_changelog_action](img/add_changelog_action.jpeg)
+![add-changelog-action](img/add-changelog-action.jpeg)
 
 The following actions are provided:
 
@@ -243,11 +243,11 @@ Editor Toolbar provides fast access to relevant actions. It includes:
 3. Init Schema Changelog action
 4. Diff Changelog action
 
-![jpa_palette_db_actions](img/editor_toolbar.png)
+![jpa-palette-db-actions](img/editor-toolbar.png)
 
 JPA Buddy understands your data model and prefills the changesets as much as possible. And with the help of JPA Inspector you can explore the attributes of each changelog element:
 
-![liquibase_changelog_preview](img/liquibase_changelog_preview.jpeg)
+![liquibase-changelog-preview](img/liquibase-changelog-preview.jpeg)
 
 JPA Buddy also makes writing code by hand easier by providing code completion based on the JPA data model:
 
@@ -268,15 +268,15 @@ The Liquibase Update window will open with configuration options:
 - Liquibase context and labels
 - the log level of the operation
 
-![liquibase_update](img/liquibase_update.jpeg)
+![liquibase-update](img/liquibase-update.jpeg)
 
 Clicking “Update” runs the Liquibase update command with the configured options. Clicking “Show SQL” displays a preview window:
 
-![sql_preview](img/sql_preview.jpeg)
+![sql-preview](img/sql-preview.jpeg)
 
 ### Liquibase Settings
 
-![liquibase_settings](img/liquibase_settings.png)
+![liquibase-settings](img/liquibase-settings.png)
 
 #### Base Settings
 
@@ -336,7 +336,7 @@ Therefore, there is no need to create separate changelogs for different DBMSes.
 
 ### Migration Preview Window
 
-![flyway_preview](img/flyway_preview.png)
+![flyway-preview](img/flyway-preview.png)
 
 JPA Buddy allows you to select the place where to store the generated script: you can choose a file, scratch file in the IDE or clipboard.
 
@@ -344,7 +344,7 @@ JPA Buddy allows you to select the place where to store the generated script: yo
 
 On the left of the window, there is a preview of the actual changes to be generated. You can see what each change is going to look like by clicking on them.
 
-![flyway_add_migration](img/flyway_add_migration.jpeg)
+![flyway-add-migration](img/flyway-add-migration.jpeg)
 
 Above the list of changes, there is a buttons panel with the following actions:
 
@@ -372,7 +372,7 @@ To generate java migration, press the plus button in the JPA Structure tab and c
 
 In the opened window, you can set class name, source root and package name:
 
-![flyway_java_migration](img/flyway_java_migration.jpeg)
+![flyway-java-migration](img/flyway-java-migration.jpeg)
 
 After that, the following java class will be generated:
 
@@ -399,10 +399,10 @@ JPA Buddy provides Flyway SQL Callback window, with the following fields:
 
 - “Source root” and “Directory” fields are responsible for the location of the generated file:
 
-  ![sql_callback](img/sql_callback.jpeg)
+  ![sql-callback](img/sql-callback.jpeg)
 - “Callback event” field allows you to choose one of the events that Flyway supports:
 
-![choose_callback_event](img/choose_callback_event.jpeg)
+![choose-callback-event](img/choose-callback-event.jpeg)
 
 - Optionally the callbacks may also include a description. The value in the “Description” filed will be appended along with the separator to the callback name.
 
@@ -410,12 +410,12 @@ JPA Buddy provides Flyway SQL Callback window, with the following fields:
 
 If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callbacks. JPA Buddy provides Flyway Java Callback window, with the following fields:
 
-![flyway_java_callback](img/flyway_java_callback.jpeg)
+![flyway-java-callback](img/flyway-java-callback.jpeg)
 
 - “Class” and “Class name” these fields are responsible for configuring corresponding values for generated java-class.
 - “Callback event” field allows you to choose several events that Flyway supports:
 
-  ![three_choosed_callback_events](img/three_choosed_callback_events.jpeg)
+  ![three-choosed-callback-events](img/three-choosed-callback-events.jpeg)
 - “Can handle in transaction” checkbox defines whether true or false will return the canHandleInTransaction overridden method from the Callback interface.
 - “Source root” and “Directory” fields are responsible for the location of the generated file.
 
@@ -450,7 +450,7 @@ If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callback
 
 Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway [naming pattern](https://flywaydb.org/documentation/concepts/migrations#naming). In plugin settings you can configure following values for name generation:
 
-![flyway_settings](img/flyway_settings.png)
+![flyway-settings](img/flyway-settings.png)
 
 - Migration prefix. The default value is `V`.
 - Version pattern. After the hyphen, an example of the generated sequence is presented.
@@ -494,13 +494,13 @@ If you stumble upon `SchemaManagementException` on the application startup, it m
 
 JPA Buddy provides the action to generate DDL statements for only one specific entity. To see the DDL, hover the cursor over the class name and call the action from the IntelliJ IDEA Context Actions menu or JPA Inspector. Also, you can call this action from the Project panel and JPA Structure tab: just right-click on the target entity.
 
-![show_ddl](img/show_ddl.png)
+![show-ddl](img/show-ddl.png)
 
 Next, choose which for which database you need a script and click OK:
 
-![show_ddl_dbs](img/show_ddl_dbs.png)
+![show-ddl-dbs](img/show-ddl-dbs.png)
 
-![sql_preview](img/sql_preview.png)
+![sql-preview](img/sql-preview.png)
 
 ### SQL Visual Designer
 
@@ -522,7 +522,7 @@ Before Hibernate 6, it was common to use the Hibernate Types library to map non-
 
 There is no generic way to automatically map custom Java types to the SQL/Liquibase types. That's why you will need to define the target type manually for those attributes. If such attributes exist in your project, after Liquibase or Flyway script generation actions call, JPA Buddy will show you the following window:
 
-![undefined_mapping_detected](img/undefined_mapping_detected.jpeg)
+![undefined-mapping-detected](img/undefined-mapping-detected.jpeg)
 
 You can change the saved mapping configuration at any time from Tools -> JPA Buddy -> Database Versioning -> Type Mappings.
 
@@ -532,7 +532,7 @@ Let’s say the application needs to support both PostgreSQL and MS SQL. And you
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
-![type_mappings](img/type_mappings.png)
+![type-mappings](img/type-mappings.png)
 
 ### Convertors
 
@@ -678,7 +678,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 
 The [Hibernate Envers](https://hibernate.org/orm/envers/) provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
 
-![hibernate_envers_settings](img/hibernate_envers_settings.png)
+![hibernate-envers-settings](img/hibernate-envers-settings.png)
 
 For example, if you have the following entity:
 
@@ -744,7 +744,7 @@ To learn more about naming strategies, you can check out our [article](https://w
 
 RDBMSs have their own limitations. For example, table names for [OracleDatabase](https://twitter.com/OracleDatabase) earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
 
-![max_db_identifier](img/max_db_identifier.png)
+![max-db-identifier](img/max-db-identifier.png)
 
 Also, you can define:
 
