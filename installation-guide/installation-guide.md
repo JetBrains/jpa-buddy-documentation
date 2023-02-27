@@ -23,7 +23,7 @@ JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ I
 
 To install JPA Buddy, open Preferences -> Plugins and search for JPA Buddy. Then, simply click on the installation button and you're good to go!
 
-![jpa_buddy_install](img/jpa_buddy_install.jpeg)
+![jpa-buddy-install](img/jpa-buddy-install.jpeg)
 
 ## License Activation
 
@@ -102,11 +102,11 @@ The following table should help with choosing the most appropriate licensing sch
 
 All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the [Pricing page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing) and follow the "Learn more..." link.
 
-![discounted_licenses](img/discounted_licenses.jpeg)
+![discounted-licenses](img/discounted-licenses.jpeg)
 
 Since the status of your account is confirmed, a new "Discount available" field will appear. Choose your status in this field and enjoy the new subscription options:
 
-![discount_available](img/discount_available.jpeg)
+![discount-available](img/discount-available.jpeg)
 
 ### Promos
 
@@ -221,7 +221,7 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
 
 *After adding one of the dependencies to the project, do not forget to click on the "Load Maven/Gradle Changes" button in the upper right corner.*
 
-![load_maven_changes](img/load_maven_changes.jpeg)
+![load-maven-changes](img/load-maven-changes.jpeg)
 
 ## Verifying Installation
 
@@ -229,7 +229,7 @@ To make sure that the plugin is installed correctly, follow these steps:
 
 - Open Plugin Settings IntelliJ IDEA window: clicks File -> Settings -> Plugins -> Installed. Make sure that JPA Buddy there is in this section and enabled.
 
-![settings_plugin_installed](img/settings_plugin_installed.jpeg)
+![settings-plugin-installed](img/settings-plugin-installed.jpeg)
 
 - Open existing or create a new entity and click somewhere in it. You should find Editor Toolbar (1) and JPA Buddy tool window (2). Note that visual tools will appear only after JPA Buddy detects one of the dependencies described in the section above.
 
@@ -247,19 +247,19 @@ To make sure that the plugin is installed correctly, follow these steps:
 
 - In the opened window, click on the "Download" button.
 
-![marketplace_description](img/marketplace_description.jpeg)
+![marketplace-description](img/marketplace-description.jpeg)
 
 - Save .zip file to your PC.
 - Now you have two options:
 
   - Open File -> Settings -> Plugins page click on the settings icon next to the "installed" tab and choose "install plugin from disk". Find the downloaded .zip file, select it, and click "ok".
 
-  ![install_from_disk](img/install_from_disk.jpeg)
+  ![install-from-disk](img/install-from-disk.jpeg)
 
   - Simply drag and drop the .zip file to any IntelliJ IDEA window.
 - To apply changes, click on the "Restart IDE" button
 
-![restart_ide](img/restart_ide.jpeg)
+![restart-ide](img/restart-ide.jpeg)
 
 ## Something went wrong? Contact us!
 
