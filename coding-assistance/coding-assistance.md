@@ -60,6 +60,14 @@ Some developers prefer to declare an object that doesn't exist yet first and onl
 
 Then, corresponding wizards will open.
 
+## Kotlin Support
+
+All the features that Java developers love are also available to Kotlin fans. Whether you're creating Spring Data repositories on the fly, injecting MapStruct mappers, or scaffolding method calls – JPA Buddy has got you covered. And if you're looking to create a REST endpoint in Kotlin, JPA Buddy makes it incredibly easy:
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O6PzJdDcFWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Settings
 
 JPA Buddy provides flexible settings to make the use of coding assistance features even more handful. You can:
