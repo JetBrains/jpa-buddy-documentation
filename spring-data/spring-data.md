@@ -242,3 +242,11 @@ As soon as JPA Buddy is able to associate Projection interface with the entity:
 - The gutter icon will appear in the Projection to ease the navigation to its entity (2)
 
 ![projection-navigation](img/projection-navigation.png)
+
+## Auditing Support
+
+Having auditing in a large application is a crucial aspect. With JPA Buddy, you can now effortlessly include commonly used audit fields by utilizing annotations such as `@CreatedBy`, `@CreatedDate`, `@LastModifiedBy` and `@LastModifiedDate`. What's more, JPA Buddy will notify you if you forget to add the `@EnableJpaAuditing` annotation to your configuration or if the AuditingEntityListener is not added to the current entity. This leaves even less room for the mistake!
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1D5zEzLX1iY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
