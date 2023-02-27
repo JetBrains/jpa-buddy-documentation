@@ -447,3 +447,9 @@ Let’s say the application needs to support both PostgreSQL and MS SQL and you 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
 ![preferences_mapping_types](img/preferences_mapping_types.png)
+
+See how you can configure type mappings for reverse engineering in JPA Buddy to make use of the `@JavaType` annotation from Hibernate 6:
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck?t=89" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
