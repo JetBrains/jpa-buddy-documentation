@@ -201,7 +201,7 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
   </tr>
   <tr>
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/com.vladmihalcea/hibernate-types-52" target="_blank" rel="noopener noreferrer">Hibernate Types</a></td>
-    <td class="tg-0lax">Assign Hibernate Custom Types to attributes via a code inspection with a quick fix.</td>
+    <td class="tg-0lax">Assign Hibernate Custom Types to attributes via a code inspection with a quick fix (Alt+Enter/⌥ ⏎).</td>
   </tr>
   <tr>
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.liquibase/liquibase-core" target="_blank" rel="noopener noreferrer">Liquibase</a></td>
