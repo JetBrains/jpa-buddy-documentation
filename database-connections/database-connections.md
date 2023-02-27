@@ -1,6 +1,6 @@
 ## Introduction
 
-JPA Structure panel is responsible for everything related to DB configurations. To create a new DB connection, click on the “Plus” button and choose “DB Connection”. To use [Reverse Engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/) and [Database Versioning](https://www.jpa-buddy.com/documentation/database-versioning/) features, the first thing you will need to do is create a database connection.
+JPA Structure panel is responsible for everything related to DB configurations. To create a new DB connection, click on the "Plus" button and choose "DB Connection". To use [Reverse Engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/) and [Database Versioning](https://www.jpa-buddy.com/documentation/database-versioning/) features, the first thing you will need to do is create a database connection.
 
 For now, JPA Buddy supports following databases:
 
@@ -15,7 +15,7 @@ For now, JPA Buddy supports following databases:
 
 ![jpa-structure-db-connection](img/jpa-structure-db-connection.png)
 
-You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the “Detect Connections” button in the JPA Structure tab and the window will appear with filled fields.
+You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* or *application.yaml* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the "Detect Connections" button in the JPA Structure tab and the window will appear with filled fields.
 
 As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding [JetBrains documentation page](https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html).
 
@@ -27,7 +27,7 @@ For the IntelliJ IDEA Community edition, JPA Buddy offers a similar mechanism.
 
 ## Non-Default Schema Connection
 
-Some of the RDBMSs that JPA Buddy supports provide the possibility to create non-default schemas, but not all of them work well with JDBC. That’s why you can face with some known issues during diff generations, or reverse engineering. For now, these issues can only be solved with some workaround. Below are examples of connecting to non-default schemas for all databases supported by JPA Buddy.
+Some RDBMSs that JPA Buddy supports provide the possibility to create non-default schemas, but not all of them work well with JDBC. That’s why you can face with some known issues during diff generations, or reverse engineering. For now, these issues can only be solved with some workaround. Below are examples of connecting to non-default schemas for all databases supported by JPA Buddy.
 
 <div class="note">
 We show two screenshots for all the examples below: the first from the IntelliJ IDEA Community Edition, the second from the IntelliJ IDEA Ultimate Edition.
@@ -35,7 +35,7 @@ We show two screenshots for all the examples below: the first from the IntelliJ 
 
 ### PostgreSQL
 
-The default PostgreSQL schema is “public”. For other schemes you need to specify desired schema name in the Connection params field via “currentSchema” parameter:
+The default PostgreSQL schema is "public". For other schemes you need to specify desired schema name in the Connection params field via "currentSchema" parameter:
 
 ![ij_community_postgres](img/ij_community_postgres.jpeg)
 
@@ -47,7 +47,7 @@ For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the requi
 
 ### Microsoft SQL Server
 
-The default Microsoft SQL Server schema is “dbo”. To connect to the non-default scheme in Microsoft SQL Server, you should follow the steps described below:
+The default Microsoft SQL Server schema is "dbo". To connect to the non-default scheme in Microsoft SQL Server, you should follow the steps described below:
 
 1. Create a login:
 
@@ -98,7 +98,7 @@ And for the connection via service name like this:
 ![ij_ultimate_oracle_service](img/ij_ultimate_oracle_service.jpeg)
 
 <div class="note">
-Reverse engineering does not work for system tables located in the "SYS” schema.
+Reverse engineering does not work for system tables located in the "SYS" schema.
 </div>
 
 ### MySQL & MariaDB
