@@ -1,5 +1,11 @@
 # Changelog
 
+## 2023.1.1 - 2023-02-22
+
+* When using `@Type` annotation, JPA Buddy no longer produces an exception while generating Liquibase/Flyway scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-2390" target="_blank">JPAB-2390</a>
+* A new option to disable pluralization of entity names during reverse engineering has been added to the settings <a href="https://issues.jpa-buddy.com/issue/JPAB-2385" target="_blank">JPAB-2385</a>
+* The `equals()` method now accesses fields through getters <a href="https://issues.jpa-buddy.com/issue/JPAB-2367" target="_blank">JPAB-2367</a>
+
 ## 2023.1.0 - 2023-02-20
 
 ### DTO Generator & Coding Assistance
