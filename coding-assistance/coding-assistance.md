@@ -73,6 +73,6 @@ All the features that Java developers love are also available to Kotlin fans. Wh
 JPA Buddy provides flexible settings to make the use of coding assistance features even more handful. You can:
 1) Enable/disable automatic detection for bean injection type;
 2) Define the [bean injection strategy](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-collaborators) that JPA Buddy will follow while code generation;
-3) Whether to use the smart completion features or not.
+3) Configure whether to use the smart completion features or not.
 
 ![settings-coding-assistance](img/settings-coding-assistance.png)
