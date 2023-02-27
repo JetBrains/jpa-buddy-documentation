@@ -21,7 +21,7 @@ In the New JPA Repository window, you can set:
 - Source root
 - Package
 
-![new_jpa_repository](img/new_jpa_repository_single.png)
+![new-jpa-repository](img/new-jpa-repository-single.png)
 
 When we have a lot of entities, creating Spring Data repositories one by one becomes a tedious job. With JPA Buddy, you can speed up this process. To create repositories for JPA entities, you need to take three steps. Select entities in the project tree, invoke the JPA Buddy wizard, then adjust your selection. That's it! Look how this feature can speed up the development process:
 
@@ -33,7 +33,7 @@ When we have a lot of entities, creating Spring Data repositories one by one bec
 
 For the most efficient navigation in the project, JPA Buddy groups all repositories for each entity. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.
 
-![-structure-repository](img/jpa-structure-repository.png)
+![jpa-structure-repository](img/jpa-structure-repository.png)
 
 ## Queries/Methods Generation
 
@@ -48,7 +48,7 @@ Spring Data provides the ability to define a query with the `@Query` annotation.
 
 Let's look at an example of creating a Find Collection Query.
 
-![create_query_find_collection](img/create_query_find_collection.png)
+![create-query-find-collection](img/create-query-find-collection.png)
 
 At the top of the window, you can define wrap type for collection and query return type. Moreover, JPA Buddy allows you to generate new [Projection interface](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO class](https://www.jpa-buddy.com/documentation/dto-generator/) right from this window (just click on the `+` button).
 
@@ -91,19 +91,19 @@ JPA Buddy also provides intention on the entity attributes leading directly to t
 
 Some developers prefer to declare a call to the method that doesn't exist yet first and only then implement it. JPA Buddy will help those developers who adhere to this programming style. Just write the desired signature and move to the query or method creation wizard via special actions:
 
-![unresolved_reference](img/unresolved_reference.png)
+![unresolved-reference](img/unresolved-reference.png)
 
 ### Settings
 
 Spring Data provides several keyword expressions for derived query method names. You can use NameContaining, NameIsContaining, or NameContains - the result is the same. On the one hand, it gives us some flexibility in methods naming. On the other hand, in big teams, different naming for the same actions may be confusing for code reviewers and maintainers. If you have naming standards established for the development team, you can configure JPA Buddy to use only approved keywords for method names generation:
 
-![conditions_settings](img/conditions_settings.png)
+![conditions-settings](img/conditions-settings.png)
 
 ## Existing methods/queries modification
 
 To configure the method or query, place a cursor on it. Then, JPA Inspector section will appear in the JPA Designer tab:
 
-![jpa-inspector](img/jpa-inspector.png.png)
+![jpa-inspector](img/jpa-inspector.png)
 
 ### EntityGraph Support
 
@@ -135,7 +135,7 @@ In Spring Data JPA, projections can also be specified during runtime by using ge
 
 To make query generic, place the cursor on the query you want to change and check the box “Dynamic projection”.
 
-![dynamic_projection](img/dynamic_projection.png)
+![dynamic-projection](img/dynamic-projection.png)
 
 ### Query Extracting
 
@@ -170,7 +170,7 @@ In the "New Spring Projection" window, you can:
 
 Also, JPA Buddy allows you to generate Projections for the referenced entities. Select the associated entity, choose the Projection type, and pick the required fields.
 
-![new_spring_projection](img/new_spring_projection.png)
+![new-spring-projection](img/new-spring-projection.png)
 
 For the above configuration the following projection will be generated:
 
@@ -232,7 +232,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
   The feature is disabled when the field is empty. 
 4. Class comment. Defines the comment that will be generated over the Projection interface.
 
-![projection_declaration](img/projection_declaration.png)
+![projection-declaration](img/projection-declaration.png)
 
 #### Convenient Navigation between Entity and its Projections
 
