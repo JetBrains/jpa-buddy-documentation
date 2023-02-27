@@ -18,35 +18,35 @@ To create a new JPA entity, right-click on the desired folder and select New -> 
 
 After that, the following window will appear:
 
-![new_entity](img/new_entity.jpeg)
+![new-entity](img/new-entity.jpeg)
 
 ### Languages Support
 
 JPA Buddy supports both [Java](https://www.java.com/) and [Kotlin](https://kotlinlang.org/). When JPA Buddy detects the [Kotlin dependency](https://kotlinlang.org/docs/maven.html) in your project, an additional option appears in the “New Entity” window, letting you pick the language:
 
-![new_entity_language_choose](img/new_entity_language_choose.jpeg)
+![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
 Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for the "New Entity" window:
 
-![settings_scaffolding_language](img/settings_scaffolding_language.jpeg)
+![settings-scaffolding-language](img/settings-scaffolding-language.jpeg)
 
 ### ID and Its Generation Strategy
 
 According to the JPA specification, an ID attribute is required for an entity definition. JPA Buddy allows you to generate this attribute and choose the type (1) and generation strategy (2). Also, you can specify what sequence to use for the `Sequence` generation strategy (3).
 
-![sequence_id.jpeg](img/sequence_id.jpeg)
+![sequence-id.jpeg](img/sequence-id.jpeg)
 
 If you want to use an Embedded entity as an ID, JPA Buddy will provide you the list of  `@`Embeddable entities that exist in the project:
 
-![embeddable_entity_as_id](img/embeddable_entity_as_id.jpeg)
+![embeddable-entity-as-id](img/embeddable-entity-as-id.jpeg)
 
-Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using a quick-fix (3).
+Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using a quick-fix (Alt+Enter/⌥ ⏎) (3).
 
 ![id-generation](img/id-generation.png)
 
 After that, the wizard with more comprehensive customization options will appear:
 
-![new_id_attribute](img/new_id_attribute.jpeg)
+![new-id-attribute](img/new-id-attribute.jpeg)
 
 See the example of the generated ID below:
 
@@ -67,7 +67,7 @@ JPA Structure tab provides a comprehensive data-centric view on the project. You
 3. Observe related Spring Data repositories, DTOs and projections for each entity.
 4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
 
-![jpa_structure](img/jpa-structure.png)
+![jpa-structure](img/jpa-structure.png)
 
 ## JPA Designer
 
@@ -123,11 +123,11 @@ Hibernate comes with many relationships mapping types, but not all of them are e
 
 During associations creation, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
 
-![learn_more](img/learn_more.jpeg)
+![learn-more](img/learn-more.jpeg)
 
 Also, there is a drop-down list with possible optimizations that you can apply in one click:
 
-![suggested_optimizations](img/suggested_optimizations.jpeg)
+![suggested-optimizations](img/suggested-optimizations.jpeg)
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QLQi02WzItw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -185,7 +185,7 @@ The application is growing and the JPA model is evolving as well. Eventually, it
 
 - Don’t forget to add `@`NoArgsConstructor to entities with `@`Builder or `@`AllArgsConstructor – they introduce their own constructors, so the compiler doesn't generate a default one. A no-argument constructor is required for all JPA entities according to the specification.
 
-![no_args_constructor](img/no_args_constructor.jpeg)
+![no-args-constructor](img/no-args-constructor.jpeg)
 
 Check out our [article](https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go-wrong/) to learn more about why it is so important to follow the rules above.
 
@@ -199,7 +199,7 @@ For the projects with Lombok in JPA Inspector appears section with possible anno
 
 JPA Buddy provides the possibility to generate new entities and attributes with Lombok annotations. To configure whether attributes you want to add at once with new entities and attributes, choose required at the bottom of the Entity Declaration window.
 
-![lombok_settings](img/lombok_settings.jpeg)
+![lombok-settings](img/lombok-settings.jpeg)
 
 ## Hibernate Types & JPA Converters
 
@@ -217,11 +217,11 @@ In the Create Custom Type window, you can configure the class name, entity attri
 
 For JPA Converter you can define whether it will be auto applicable or not.
 
-![create_custom_type_jpa](img/create_custom_type_jpa.jpeg)
+![create-custom-type-jpa](img/create-custom-type-jpa.jpeg)
 
 For Hibernate Custom Type you can set whether it will be possible to alter the behavior of types based on parameters or not.
 
-![create_custom_type_hibernate](img/create_custom_type_hibernate.jpeg)
+![create-custom-type-hibernate](img/create-custom-type-hibernate.jpeg)
 
 Here is the example of generated Hibernate Custom Type:
 
@@ -301,10 +301,10 @@ One of the most important characteristics of a project is maintainability. JPA p
 
 JPA Buddy provides constants generation for the entity, table, and column names. You can also choose where you want to place constants.
 
-![constants_generation](img/constants_generation.jpeg)
+![constants-generation](img/constants-generation.jpeg)
 
 ### Designer Settings
 
 In its default mode, JPA Buddy provides functionally rich tool window. However, tool windows may steal too much horizontal space, especially for those who prefer 13-inch laptops. In this case, it was recommended to use the [minimalistic mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/). Besides it, JPA Buddy also provides settings to fine-tune the appearance of the main visual elements:
 
-![designer_settings](img/designer_settings.png)
+![designer-settings](img/designer-settings.png)
