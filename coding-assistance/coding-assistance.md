@@ -54,7 +54,7 @@ Some developers prefer to declare an object that doesn't exist yet first and onl
 
 1. Spring Data JPA Repository – in case the reference ends with the value specified in the [Spring Data Repository settings](https://www.jpa-buddy.com/documentation/spring-data/#settings). Default value is "Repository".
 2. Projection – in case the reference ends with the value specified in the [Projection declaration settings](https://www.jpa-buddy.com/documentation/spring-data/#projection-declaration-settings). Default values are: "Info", "Prj", "Projection", "VO", "Vo", "View", "Request", "Browse".
-3. DTO – in all other cases.
+3. DTO – in case the reference ends with the value specified in the [DTO Declaration Settings](https://www.jpa-buddy.com/documentation/dto-generator/#dto-declaration-settings). Default value is "Dto".
 
 ![unresolved-references](img/unresolved-references.png)
 
