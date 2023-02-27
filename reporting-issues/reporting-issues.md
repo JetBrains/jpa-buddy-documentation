@@ -23,15 +23,15 @@ To speed up the process of solving the problem that has arisen, we need to know:
 
 - Plugin version. File -> Settings -> Plugins. For example, in the picture below, the installed JPA Buddy version is 5.4-212
 
-![settings_plugins_installed](img/settings_plugins_installed.jpeg)
+![settings-plugins-installed](img/settings-plugins-installed.jpeg)
 
 - IntelliJ IDEA version. Help -> About -> Copy.
 
-![about_intellij_idea](img/about_intellij_idea.jpeg)
+![about-intellij-idea](img/about-intellij-idea.jpeg)
 
 - If something goes entirely in an unpredictable way and the error reporting mechanism with stake trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS).
 
-![help_show_log](img/help_show_log.jpeg)
+![help-show-log](img/help-show-log.jpeg)
 
 - The order of actions that must be done to reproduce the problem.
 
