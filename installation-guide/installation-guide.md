@@ -1,24 +1,27 @@
 ## What is JPA Buddy?
 
-JPA Buddy is a plugin for IntelliJ IDEA that makes working with JPA and related technologies easier. It provides development tools for Hibernate, EclipseLink, Spring Data JPA, Liquibase, Flyway, SQL, and similar things.
+JPA Buddy is an **[IntelliJ IDEA plugin](https://plugins.jetbrains.com/plugin/15075-jpa-buddy)** that helps developers work efficiently with Hibernate, EclipseLink, Spring Data JPA, Flyway, Liquibase, Lombok, MapStruct, and other related technologies in both Java and Kotlin.
 
-JPA Buddy makes the development process easier by:
+**The plugin is intended to:**
+– Lower barrier to entry into development with JPA
+– Boost developer’s productivity
+– Make sure your code follows best practices
 
-- introducing rich code generation capabilities
+**JPA Buddy delivers:**
+– [Intuitive wizards to work with JPA](https://www.jpa-buddy.com/documentation/entity-designer/)
+– [Automatic database versioning changelog generation](https://www.jpa-buddy.com/documentation/database-versioning/)
+– [Smart inspections to make the code better](https://www.jpa-buddy.com/documentation/entity-designer/#inspections-1)
+– [JPA Entities generation based on tables (reverse engineering)](https://www.jpa-buddy.com/documentation/reverse-engineering/)
+– [Visual DTO designer and mapper code generator](https://www.jpa-buddy.com/documentation/dto-generator/)
+– [Coding assistance to make development more straightforward and transparent](https://www.jpa-buddy.com/documentation/coding-assistance/)
 
-  - [Data model](https://www.jpa-buddy.com/documentation/entity-designer/)
-  - [Spring Data](https://www.jpa-buddy.com/documentation/spring-data/) interfaces
-  - [DB migrations](https://www.jpa-buddy.com/documentation/database-versioning/) (Liquibase, Flyway)
-  - [Reverse engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/)
-- integrating smart inspections
-- providing better navigation via a data-centric view of the project
-- offering comprehensive coding assistance capabilities
+You can use JPA Buddy in any project with Spring Boot, Jakarta Enterprise Edition, Quarkus, Micronaut, or even without any framework.
 
 ## Installation and Project Setup
 
 JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ IDEA Ultimate Edition. It is available on the [JetBrains marketplace](https://plugins.jetbrains.com/plugin/15075-jpa-buddy), where it can be downloaded and installed.
 
-You can install JPA Buddy for running IntelliJ IDEA. Open Preferences -> Plugins and search for JPA Buddy, then simply push the install button, and there you go!
+To install JPA Buddy, open Preferences -> Plugins and search for JPA Buddy. Then, simply click on the installation button and you're good to go!
 
 ![jpa_buddy_install](img/jpa_buddy_install.jpeg)
 
@@ -216,7 +219,7 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
 </table>
 </div>
 
-*After adding one of the dependencies to the project, do not forget to click on the "Load Maven Changes" button in the upper right corner.*
+*After adding one of the dependencies to the project, do not forget to click on the "Load Maven/Gradle Changes" button in the upper right corner.*
 
 ![load_maven_changes](img/load_maven_changes.jpeg)
 
@@ -234,27 +237,27 @@ To make sure that the plugin is installed correctly, follow these steps:
 
 ## Installing a Specific Version of JPA Buddy
 
-Every version of JPA Buddy supports a range of IntelliJ IDEA versions. For example, JPA Buddy 4.3 works correctly with IntelliJ IDEA from 2021.1 to 2021.1.3. But if you have to install JPA Buddy on the other version of IntelliJ IDEA, you can do the following:
+[Every version of JPA Buddy](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/versions) supports a range of IntelliJ IDEA versions. For example, JPA Buddy 2023.1 works correctly with IntelliJ IDEA 2022.2, 2022.3 and 2023.1. But if you have to install JPA Buddy on the other version of IntelliJ IDEA, you can do the following:
 
-- Open JPA Buddy JetBrains Marketplace [page.](https://plugins.jetbrains.com/plugin/15075-jpa-buddy)
+- Open [JPA Buddy JetBrains Marketplace page](https://plugins.jetbrains.com/plugin/15075-jpa-buddy).
 - Open Versions tab.
 - Find a version of JPA Buddy which satisfies the version of your IntelliJ IDEA and click on it.
 
 ![marketplace](img/marketplace.jpeg)
 
-- In the opened window, click on the “Download” button.
+- In the opened window, click on the "Download" button.
 
 ![marketplace_description](img/marketplace_description.jpeg)
 
 - Save .zip file to your PC.
 - Now you have two options:
 
-  - Open File -> Settings -> Plugins page click on the settings icon next to the “installed” tab and choose “install plugin from disc”. Find the downloaded .zip file, select it, and click “ok”.
+  - Open File -> Settings -> Plugins page click on the settings icon next to the "installed" tab and choose "install plugin from disk". Find the downloaded .zip file, select it, and click "ok".
 
   ![install_from_disk](img/install_from_disk.jpeg)
 
   - Simply drag and drop the .zip file to any IntelliJ IDEA window.
-- To apply changes, click on the “Restart IDE” button
+- To apply changes, click on the "Restart IDE" button
 
 ![restart_ide](img/restart_ide.jpeg)
 
