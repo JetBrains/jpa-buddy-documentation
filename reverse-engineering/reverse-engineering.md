@@ -143,7 +143,7 @@ There are two situations when we know for 100% that the cardinality of the relat
 1. Table has a column with the unique constraint that refers to the primary key of another table
 2. Primary key of the table is a foreign key
 
-**Situation №1:**
+**Case №1:**
 
 ```sql
 CREATE TABLE profiles
@@ -204,7 +204,7 @@ public class Profile {
 }
 ```
 
-**Situation №2:**
+**Case №2:**
 
 ```sql
 CREATE TABLE users
