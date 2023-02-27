@@ -13,13 +13,13 @@ JPA Buddy offers DTO generation from JPA entities via visual designer:
 By default, JPA Buddy generates immutable DTOs – all the fields are final, and there are no setters for them. To generate DTOs with simple private fields, setters for them, and no-args constructor, check the **Mutable** box.
 Also, for mutable DTOs, you can define whether to use fluent setters or not. Such setters will return `this` instead of `void`. It can be helpful if you want to chain multiple method calls.
 
-![new_dto_mutable](img/new_dto_mutable.png)
+![new-dto-mutable](img/new-dto-mutable.png)
 
 ## Inner DTOs for associations
 
 Entities can reference other entities via associations, and JPA Buddy allows you to generate DTOs for the referenced entities from the same window. Just check the referenced entity in the tree, choose the DTO type and pick the required fields.
 
-![inner_dtos.png](img/inner_dtos.png)
+![inner-dtos.png](img/inner-dtos.png)
 
 Let’s look at the available DTO types:
 
@@ -32,7 +32,7 @@ Let’s look at the available DTO types:
 
 If you use SDK version 16 and higher in your project, then JPA Buddy will provide an additional "Java Record" checkbox in the "New DTO" wizard. To check the SDK version of the project, open File -> Project Structure...
 
-![project_structure](img/project_structure.png)
+![project-structure](img/project-structure.png)
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_MtJO4QKr0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -143,7 +143,7 @@ Happens, you have added a new attribute to the entity. Then, some already existi
 
 ## DTO Declaration Settings
 
-![dto_declarations_preferences](img/dto_declarations_preferences.png)
+![dto-declarations-preferences](img/dto-declarations-preferences.png)
 
 Each project may follow its own conventions for code writing. In the Tools -> JPA Buddy -> DTO Declaration you can configure:
 
@@ -164,4 +164,4 @@ As soon as JPA Buddy is able to associate DTO class with the entity:
 - The DTO class will appear in the **Dto & Projections** section in the JPA Structure tab and in the Editor Toolbar (1)
 - The gutter icon will appear in the DTO to ease the navigation to its entity (2)
 
-![dto_navigation](img/dto_navigation.png)
+![dto-navigation](img/dto-navigation.png)
