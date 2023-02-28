@@ -510,13 +510,23 @@ In some cases, it’s useful to have SQL scripts for the JPA data model, especia
 <iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## @JDBCTypeCode Support
+## Hibernate 6 Support
 
-Before Hibernate 6, it was common to use the Hibernate Types library to map non-standard SQL types to Java types, or you could define your own `@Type` or `@Converter`. Since Hibernate 6, you can ditch a dozen Hibernate types and JPA converters and use `@JdbcTypeCode` instead.
+Before Hibernate 6, the Hibernate Types library or `@Type`/`@Converter` annotations were commonly used to map non-standard SQL types to Java types. With Hibernate 6, new annotations for mapping are available, allowing for the elimination of numerous Hibernate types and JPA converters. Currently, JPA Buddy supports these new mapping annotations:
+
+* `@JdbcType`, `@JdbcTypeCode` & `@JdbcTypeRegistration`
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ocNsqBk9fbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+* `@Type`, `@JavaType` & `@JavaTypeRegistration`
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+* `@TimeZoneStorage` & `@TimeZoneColumn`
 
 ## Custom Type Mappings
 
