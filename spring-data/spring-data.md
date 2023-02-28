@@ -10,6 +10,8 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8pHsZ_HvbXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<div class="note">You can create a Spring Data JPA repository only for an entity with a field annotated with `@Id`.</div>
+
 In the New JPA Repository window, you can set:
 
 - Entity, which the repository will be created for
