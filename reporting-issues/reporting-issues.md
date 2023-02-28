@@ -27,7 +27,7 @@ To speed up the process of solving the problem that has arisen, we need to know:
 
 - IntelliJ IDEA version. Help -> About -> Copy.
 
-![about-intellij-idea](img/about-intellij-idea.jpeg)
+![about-intellij-idea](img/about-intellij-idea.png)
 
 - If something goes entirely in an unpredictable way and the error reporting mechanism with stake trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS).
 
