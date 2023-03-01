@@ -1,4 +1,4 @@
-Most of the JPA Buddy features are available for free, including all visual designers for entities, Spring Data repositories, SQL and Liquibase changelogs. However, some features are available only under a commercial license. In this section, we will tell you how paid features help developers accelerate the development process and save a lot of time from routine work. Find out more info about license activation <a href="https://www.jpa-buddy.com/documentation/#license-activation">here</a>.
+Most of the JPA Buddy features are available for free, including all visual designers for entities, Spring Data repositories, SQL and Liquibase changelogs. However, some features are available only under a commercial license. In this section, we will tell you how paid features help developers accelerate the development process and save a lot of time from routine work. Find out more info about license activation **<a href="https://www.jpa-buddy.com/documentation/#license-activation">here</a>**.
 
 ## Liquibase
 
@@ -6,8 +6,8 @@ Most of the JPA Buddy features are available for free, including all visual desi
 
 Also, JPA Buddy provides **Init schema Liquibase changelog** action that helps developers to generate a database schema from scratch. It can use your JPA entities or existing database as a source. As a result, you will get a Liquibase changelog with all required commands for schema initialization. This feature can be extremely helpful if you integrate Liquibase into your existing application, or decide to generate a single script for DB initialization instead of running tons of old changelogs. Also, it may help to set up new development or testing environments.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/26qri-FIwWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/26qri-FIwWo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Flyway
@@ -16,42 +16,42 @@ Also, JPA Buddy provides **Init schema Liquibase changelog** action that helps d
 
 Also, JPA Buddy provides **Init schema Flyway migration** action that helps developers to generate a database schema from scratch. It can use your JPA entities or existing database as a source. As a result, you will get a Flyway versioned migration containing DDL required for schema initialization. This feature can be extremely helpful if you integrate Flyway into your existing application, or decide to generate a single script for DB initialization instead of running tons of old migrations. Also, it may help to set up new development or testing environments.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9wEJ29QIDyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9wEJ29QIDyM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## DDL by Entities
 
-**Generate DDL by Entities** action allows developers to convert entities into DDL statements in a couple of clicks. It can generate both initialization scripts to create a database schema from scratch and differential DDL to update the already existing database to the valid state in accordance with JPA entities. Also, this feature is extremely useful to substitute the use of the error-prone spring.jpa.hibernate.ddl-auto property. By using the JPA Buddy action you will be able to fully control DDL before execution, setup proper Java -> DB types mapping, map fields with attribute converters and Hibernate types, generate drop statements and many more.
+**Generate DDL by Entities** action allows developers to convert entities into DDL statements in a couple of clicks. It can generate both initialization scripts to create a database schema from scratch and differential DDL to update the already existing database to the valid state in accordance with JPA entities. Also, this feature is extremely useful to substitute the use of the error-prone `spring.jpa.hibernate.ddl-auto` property. By using the JPA Buddy action you will be able to fully control DDL before execution, setup proper Java <-> DB types mapping, map fields with attribute converters and Hibernate types, generate drop statements and many more.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u75s7pIyZqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u75s7pIyZqU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Reverse Engineering
 
 If you prefer to design a database first and then code JPA entities to map the tables or if you develop an application over an already existing database, this feature will be extremely handy for you and save a lot of time from routine work! Using **Entities from DB action** you will be able to convert selected DB tables and their attributes into JPA entities in a few clicks, including constraints, indexes, column properties, etc. It also supports mappings for ManyToOne, OneToOne, OneToMany and ManyToMany associations. The best part of it is that it doesn't regenerate the whole entity, but adds new fields into the existing entity declaration.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## DTO Generator
 
 DTOs are essential for web apps, but their implementation brings boilerplate. Dozens of classes that nearly copy your entities, each comes with a mapper. With the **DTO Generation** feature, you can save time from routine work. Using it, you can create DTOs and MapStruct mappers based on the JPA entity definition.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qpnM_k-TGFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qpnM_k-TGFk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 But it’s not all! As time passes, entities may change, and you need to change DTOs accordingly. JPA Buddy addresses this problem as well. It allows you to **synchronize an entity with its DTO** and vice versa.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Also, JPA Buddy provides **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

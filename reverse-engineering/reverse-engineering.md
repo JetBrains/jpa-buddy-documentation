@@ -2,8 +2,8 @@
 
 JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div class="note">
@@ -25,7 +25,7 @@ In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via
 
 ## Entities from DB Wizard
 
-![entities_from_db](img/entities_from_db.png)
+![entities-from-db](img/entities-from-db.png)
 
 ### Configuration
 
@@ -67,25 +67,23 @@ For attributes matching the `String` or `Integer` type, you can change the mappi
 
 For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings).
 
-If you have the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types) library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
+If you have the <a href="https://github.com/vladmihalcea/hibernate-types">HibernateTypes</a> library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 #### // TODO Comments
 
 If you want to postpone an attribute creation for specific columns, you can choose `//todo comment` as the mapping type. JPA Buddy will generate the //todo comment with the corresponding quick-fix actions depending on the column type. You can call these actions via ⌘+B (Ctrl+B) shortcut:
 
-- For known basic and association types you can:
-
+* For known basic and association types you can:
   * Uncomment as is
   * Remove column mapping
-- For unknown column type you can:
-
-  - Define target Java type
-  - Uncomment as is
-  - Remove column mapping
+* For unknown column type you can:
+  * Define target Java type
+  * Uncomment as is
+  * Remove column mapping
 
 Here is the example of generated //todo comment for the attribute with unknown column type:
 
@@ -100,7 +98,7 @@ Here is the example of generated //todo comment for the attribute with unknown c
 
 After calling the "Define target Java type" action, the following window will appear:
 
-![mapping_java_type](img/mapping_java_type.png)
+![mapping-java-type](img/mapping-java-type.png)
 
 JPA Buddy will remember data mappings for the subsequent reverse engineering actions. You can always change them in the [settings](#type-mappings).
 
@@ -112,8 +110,8 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 2. Most of the DB views are immutable. So, JPA Buddy adds `@Immutable` annotation to the entity and generates getters only. This helps to achieve better application performance.
 3. If a JPA entity is mapped to a DB view, a developer should not be able to create a new instance of this entity in the business logic code. For such entities, JPA Buddy generates only a no-arg protected constructor to meet the JPA specifications.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Reverse Engineering Columns
@@ -124,7 +122,7 @@ Some developers prefer the DB-first application development approach. First, the
 
 After that, the Reverse Engineering Columns wizard will appear:
 
-![reverse_engineering_columns](img/reverse_engineering_columns.png)
+![reverse-engineering-columns](img/reverse-engineering-columns.png)
 
 The attributes migration flow here is identical to what was described in the [Entities from DB wizard](#migrating-attributes) section.
 
@@ -143,7 +141,7 @@ There are two situations when we know for 100% that the cardinality of the relat
 1. Table has a column with the unique constraint that refers to the primary key of another table
 2. Primary key of the table is a foreign key
 
-**Situation №1:**
+**Case №1:**
 
 ```sql
 CREATE TABLE profiles
@@ -171,9 +169,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_one_uc_diagram.jpeg](img/one_to_one_uc_diagram.png)
+![one-to-one-uc-diagram.jpeg](img/one-to-one-uc-diagram.png)
 
-![one_to_one_uc_wizard](img/one_to_one_uc_wizard.jpeg)
+![one-to-one-uc-wizard](img/one-to-one-uc-wizard.jpeg)
 
 JPA Buddy will generate `@`OneToOne association with `@`JoinColumn annotation in the User entity, and  `@`OneToOne association with `mappedBy` parameter in the Profile entity:
 
@@ -204,7 +202,7 @@ public class Profile {
 }
 ```
 
-**Situation №2:**
+**Case №2:**
 
 ```sql
 CREATE TABLE users
@@ -228,9 +226,9 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_one_pk_fk_diagram.jpeg](img/one_to_one_pk_fk_diagram.png)
+![one-to-one-pk-fk-diagram.jpeg](img/one-to-one-pk-fk-diagram.png)
 
-![one_to_one_pk_fk_wizard.jpeg](img/one_to_one_pk_fk_wizard.jpeg)
+![one-to-one-pk-fk-wizard.jpeg](img/one-to-one-pk-fk-wizard.jpeg)
 
 Since `@`Id should not be a persistence entity, JPA Buddy will generate:
 
@@ -295,13 +293,13 @@ ALTER TABLE profiles
     ADD CONSTRAINT FK_PROFILES_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
 ```
 
-![one_to_many_many_to_one_diagram](img/one_to_many_many_to_one_diagram.png)
+![one-to-many-many-to-one-diagram](img/one-to-many-many-to-one-diagram.png)
 
-![one_to_many_many_to_one_wizard](img/one_to_many_many_to_one_wizard.jpeg)
+![one-to-many-many-to-one-wizard](img/one-to-many-many-to-one-wizard.jpeg)
 
 JPA Buddy will generate the following code:
 
-```sql
+```java
 @Entity
 @Table(name = "users")
 public class User {
@@ -368,9 +366,9 @@ ALTER TABLE profiles_users
     ADD CONSTRAINT fk_prouse_on_user FOREIGN KEY (users_id) REFERENCES users (id);
 ```
 
-![many_to_many_diagram](img/many_to_many_diagram.png)
+![many-to-many-diagram](img/many-to-many-diagram.png)
 
-![many_to_many_wizard](img/many_to_many_wizard.jpeg)
+![many-to-many-wizard](img/many-to-many-wizard.jpeg)
 
 If this association does not exist in any of the entities, JPA Buddy will generate it in the entity for which the reverse engineering action was called.
 
@@ -415,35 +413,37 @@ public class Profile {
 
 The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2).
 
-![new_entity_db_schema_cache](img/new_entity_db_schema_cache.png)
+![new-entity-db-schema-cache](img/new-entity-db-schema-cache.png)
 
 ## Settings
 
 ### General
 
-**Fetch Type**
+1. Fetch Type – to follow best practices and avoid potential performance issues, JPA Buddy sets `FetchType.LAZY` for  `@OneToOne` and `@ManyToOne` associations by default.
+2. Validation Annotations – validation annotations give you another layer of protection in addition to the DB constraints. By default, JPA Buddy will apply such annotations over entity attributes while reverse engineering.
+3. Pluralization - by default, JPA Buddy uses the singular form for entity names. For example, if you have a table called `users`, JPA Buddy will generate a `User` entity. If you disable this option, JPA Buddy will keep the original name of the table and only capitalize the first letter – `Users`. 
 
-To follow best practices and avoid potential performance issues, JPA Buddy sets `FetchType.LAZY` for  `@OneToOne` and `@ManyToOne` associations by default.
-
-**Validation Annotations**
-
-Validation annotations give you another layer of protection in addition to the DB constraints. By default, JPA Buddy will apply such annotations over entity attributes while reverse engineering.
-
-![preferences_general](img/preferences_general.png)
+![preferences-general](img/preferences-general.png)
 
 ### Naming Rules
 
 Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
-Also, the database column names sometimes match the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html). E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
+Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
-![preferences_reverse_engineering](img/preferences_naming_rules.png)
+![preferences_reverse_engineering](img/preferences-naming-rules.png)
 
 ### Type Mappings
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them.
 
-Let’s say the application needs to support both PostgreSQL and MS SQL and you need to store Unicode characters in string data. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
+Let's say the application needs to support both PostgreSQL and MS SQL and you need to store Unicode characters in string data. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
-![preferences_mapping_types](img/preferences_mapping_types.png)
+![preferences_mapping_types](img/preferences-mapping-types.png)
+
+See how you can configure type mappings for reverse engineering in JPA Buddy to make use of the `@JavaType` annotation from Hibernate 6:
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck?t=89" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

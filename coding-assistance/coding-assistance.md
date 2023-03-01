@@ -10,8 +10,8 @@ Such segregation looks natural because each layer has its clear responsibility a
 
 JPA Buddy addresses this problem by integrating a lot of coding assistance features for JPA entities, Spring Data repositories, DTOs and MapStruct mappers that make development more straightforward and transparent.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J0rix2wqOFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J0rix2wqOFU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Code Completion
@@ -54,17 +54,25 @@ Some developers prefer to declare an object that doesn't exist yet first and onl
 
 1. Spring Data JPA Repository – in case the reference ends with the value specified in the [Spring Data Repository settings](https://www.jpa-buddy.com/documentation/spring-data/#settings). Default value is "Repository".
 2. Projection – in case the reference ends with the value specified in the [Projection declaration settings](https://www.jpa-buddy.com/documentation/spring-data/#projection-declaration-settings). Default values are: "Info", "Prj", "Projection", "VO", "Vo", "View", "Request", "Browse".
-3. DTO – in all other cases.
+3. DTO – in case the reference ends with the value specified in the [DTO Declaration Settings](https://www.jpa-buddy.com/documentation/dto-generator/#dto-declaration-settings). Default value is "Dto".
 
 ![unresolved-references](img/unresolved-references.png)
 
 Then, corresponding wizards will open.
 
+## Kotlin Support
+
+All the features that Java developers love are also available to Kotlin fans. Whether you're creating Spring Data repositories on the fly, injecting MapStruct mappers, or scaffolding method calls – JPA Buddy has got you covered. And if you're looking to create a REST endpoint in Kotlin, JPA Buddy makes it incredibly easy:
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O6PzJdDcFWQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Settings
 
 JPA Buddy provides flexible settings to make the use of coding assistance features even more handful. You can:
-1) Enable/disable automatic detection for bean injection type;
-2) Define the [bean injection strategy](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-collaborators) that JPA Buddy will follow while code generation;
-3) Whether to use the smart completion features or not.
+1. Enable/disable automatic detection for bean injection type;
+2. Define the <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-collaborators">bean injection strategy</a> that JPA Buddy will follow while code generation;
+3. Configure whether to use the smart completion features or not.
 
 ![settings-coding-assistance](img/settings-coding-assistance.png)
