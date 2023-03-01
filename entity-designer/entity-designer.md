@@ -1,18 +1,102 @@
 ## Introduction
 
-Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find additional tool window (2) and a toolbar (1).
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find editor toolbar (1) and additional tool windows (2,3).
 
 ![first-sight](img/first-sight.png)
 
-### JPA Buddy Tool Window
+## JPA Buddy Tool Windows
 
-JPA Buddy tool window consist of two tabs: [JPA Structure](#jpa-structure) (1) and [JPA Designer](#jpa-designer) (2). JPA Designer, in its turn, splits into two more parts called: [JPA Palette](#jpa-palette) (3) and [JPA Inspector](#jpa-inspector) (4).
+JPA Buddy provides 3 additional tool windows:
 
-![jpa-buddy-tool-window](img/jpa-buddy-tool-window.png)
+* [JPA Structure](#jpa-structure) (1) 
+* [JPA Palette](#jpa-palette) (2)
+* [JPA Inspector](#jpa-inspector) (3)
+
+![jpa-buddy-tool-windows](img/jpa-buddy-tool-window.png)
+
+Depending on the settings specified in the [designer settings](#designer-settings), these panels can be displayed differently: together, separately, embedded in the standard IntelliJ IDEA panels, or hidden altogether.
+
+### JPA Structure
+
+JPA Structure tab provides a comprehensive data-centric view on the project. You can use it for many purposes:
+
+1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
+2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
+3. Observe related Spring Data repositories, DTOs and projections for each entity.
+4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
+
+![jpa-structure](img/jpa-structure.png)
+
+If you don't see the JPA Structure check [visual designer settings](#designer-settings).
+
+### JPA Palette
+
+![jpa-palette](img/jpa-palette.png)
+
+The idea of the JPA Palette is to generate attributes, indexes, queries, etc.
+
+JPA Palette provides a corresponding generation window for everything listed below. There is a slight difference between them according to the context, but they all have a similar design:
+
+- <a href="https://www.youtube.com/embed/8A_ftrU_yYE">Attributes</a>
+- <a href="https://www.youtube.com/embed/d77p30UXBzc">Lifecycle Callbacks</a>
+- <a href="https://www.youtube.com/embed/9YVtxVeN9Yk">Indexes</a>
+- <a href="https://www.youtube.com/embed/iV6jTbzjgkE">Named Query</a>
+- <a href="https://youtu.be/az9ghvGczys">Reverse Engineering</a>
+- <a href="https://youtu.be/jTdMIOfyx2Q">Utilities – Equals/HashCode/ToString</a>
+
+If you don't see the JPA Palette check [visual designer settings](#designer-settings).
+
+#### Associations Performance Tips
+
+Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency.
+
+During associations creation, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
+
+![learn-more](img/learn-more.jpeg)
+
+Also, there is a drop-down list with possible optimizations that you can apply in one click:
+
+![suggested-optimizations](img/suggested-optimizations.jpeg)
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QLQi02WzItw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### JPA Inspector
+
+![jpa-inspector](img/jpa-inspector.png)
+
+JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
+
+JPA Inspector allows you to configure JPA entities and attributes in it. Click on any element that you need to configure, and change the required properties:
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+If you don't see the JPA Inspector check [visual designer settings](#designer-settings).
+
+#### Hibernate Validations
+
+For projects with Hibernate Validations, a section appears with validations that you can apply for the selected attribute:
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yIOcQ_bGxBc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### Editor Toolbar
+
+Editor Toolbar contains relevant action depending on the file content. You can find it on top of the editor window.
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+If you don't see the Editor Toolbar check [visual designer settings](#designer-settings).
 
 ## Entity Generation
 
-To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Buddy tool window (2):
+To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Structure (2):
 
 ![jpa-structure-create-new-entity](img/jpa-structure-create-new-entity.png)
 
@@ -22,7 +106,7 @@ After that, the following window will appear:
 
 ### Languages Support
 
-JPA Buddy supports both [Java](https://www.java.com/) and [Kotlin](https://kotlinlang.org/). When JPA Buddy detects the [Kotlin dependency](https://kotlinlang.org/docs/maven.html) in your project, an additional option appears in the “New Entity” window, letting you pick the language:
+JPA Buddy supports both <a href="https://www.java.com/">Java</a> and <a href="https://kotlinlang.org/">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html">Kotlin dependency</a> in your project, an additional option appears in the “New Entity” window, letting you pick the language:
 
 ![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
@@ -52,142 +136,51 @@ See the example of the generated ID below:
 
 ```java
 @Id
-@GeneratedValue(strategy=GenerationType.SEQUENCE,generator = "owners_seq")
-@SequenceGenerator(name = "owners_seq",sequenceName = "SEQ_OWNER", initialValue = 5, allocationSize = 10)
+@GeneratedValue(
+    strategy=GenerationType.SEQUENCE,
+    generator = "owners_seq"
+)
+@SequenceGenerator(
+    name = "owners_seq",
+    sequenceName = "SEQ_OWNER",
+    initialValue = 5,
+    allocationSize = 10
+)
 @Column(name = "id", nullable = false)
 private Long id;
 ```
-
-## JPA Structure
-
-JPA Structure tab provides a comprehensive data-centric view on the project. You can use it for many purposes:
-
-1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
-2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
-3. Observe related Spring Data repositories, DTOs and projections for each entity.
-4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
-
-![jpa-structure](img/jpa-structure.png)
-
-## JPA Designer
-
-Once the JPA entity is created, Designer tab appears in the JPA Buddy tool window. The content of this tab is context-depended. Designer tab splits into two parts called: JPA Palette (1) and JPA Inspector (2). The idea of the JPA Palette is to generate attributes, indexes, queries, etc. Meanwhile, JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
-
-![jpa-designer](img/jpa-designer.png)
-
-### JPA Palette
-
-JPA Palette provides a corresponding generation window for everything listed below. There is a difference between them according to the context, but they all have a similar design.
-
-- Attributes
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8A_ftrU_yYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-- Lifecycle Callbacks
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/d77p30UXBzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-- Indexes
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9YVtxVeN9Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-- Named Query
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iV6jTbzjgkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-- Reverse Engineering
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/az9ghvGczys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-As you can see in the video, via JPA Palette, you can only generate attributes for the entity. But JPA Buddy provides more features for this. You can learn more in [Reverse Engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/) documentation.
-
-- Utilities (Equals/HashCode/ToString) - JPA Buddy follows best practices for Equals/HashCode/ToString generated implementations. Learn more about this topic in articles by [Thorben Janssen](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/).
-
-<div class="youtube" align="center"> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jTdMIOfyx2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-#### Associations Performance Tips
-
-Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency.
-
-During associations creation, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
-
-![learn-more](img/learn-more.jpeg)
-
-Also, there is a drop-down list with possible optimizations that you can apply in one click:
-
-![suggested-optimizations](img/suggested-optimizations.jpeg)
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QLQi02WzItw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-### JPA Inspector
-
-JPA Inspector allows you to configure JPA entities and attributes in it. Click on any element that you need to configure, and change the required properties:
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-### Editor Toolbar
-
-Editor Toolbar contains relevant action depending on the file content. You can find it on top of the editor window. If you don't have the toolbar check [visual designer settings](https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings).
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-### Hibernate Validations
-
-For projects with Hibernate Validations, a section appears with validations that you can apply for the selected attribute:
-
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yIOcQ_bGxBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 ## Extract to MappedSuperclass
 
 The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy allows you to extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Lombok
 
 ### Inspections
 
-[Lombok](https://projectlombok.org/) is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
+<a href="https://projectlombok.org/">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
 
 - Avoid using `@`EqualsAndHashCode and `@`Data with JPA entities. Entities are immutable by their nature, so implementing equals() and hashCode() for them is not a trivial task. The implementations provided by Lombok are not well suited for JPA entities and may cause issues with collections and accidental loading of lazy attributes.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E6qZXvz-Fs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E6qZXvz-Fs0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 - Always exclude lazy attributes when using `@`ToString - by default, `@`ToString includes all the object fields. Such an approach can have an unwanted side effect for JPA entities: accidentally loading lazy attributes. This can easily harm the application performance or lead to a LazyInitializationException if it happens outside a transaction.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fUtRJBKskig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fUtRJBKskig" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 - Don’t forget to add `@`NoArgsConstructor to entities with `@`Builder or `@`AllArgsConstructor – they introduce their own constructors, so the compiler doesn't generate a default one. A no-argument constructor is required for all JPA entities according to the specification.
 
 ![no-args-constructor](img/no-args-constructor.jpeg)
 
-Check out our [article](https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go-wrong/) to learn more about why it is so important to follow the rules above.
+Check out our <a href="https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go-wrong/">article</a> to learn more about why it is so important to follow the rules above.
 
 ### Annotations
 
@@ -205,8 +198,8 @@ JPA Buddy provides the possibility to generate new entities and attributes with 
 
 JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Also, you can create via JPA Structure. Just click on the “Plus” button and choose JPA Converter or Hibernate Custom Type:
@@ -250,8 +243,8 @@ public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Bool
 
 Hibernate Event System is useful when you work with data and need to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Inspections
@@ -266,8 +259,8 @@ JPA Buddy provides a lot of inspections that help during coding. By default, all
 
 Java code style may change from project to project. Also, working with external databases you have to follow naming conventions for tables, columns, etc., when mapping them to JPA entities. JPA Buddy offers you flexible configurations of naming templates, which are automatically applied to new entities and attributes.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/npHuDl8pdmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/npHuDl8pdmM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div class="note">The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/">our article</a>. JPA Buddy allows you to choose naming strategies for scripts generation in the <a href="https://www.jpa-buddy.com/documentation/database-versioning/#naming-strategy-and-max-identifier-settings">settings</a>.</div>
@@ -293,10 +286,10 @@ public class PetType {
 
 ### Constants Generation
 
-One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in [Thorben Janssen](https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/) article.
+One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in <a href="https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/">Thorben Janssen</a> article.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xc-ayDDdjss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xc-ayDDdjss" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 JPA Buddy provides constants generation for the entity, table, and column names. You can also choose where you want to place constants.
