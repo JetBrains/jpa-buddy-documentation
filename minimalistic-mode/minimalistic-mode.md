@@ -2,8 +2,8 @@
 
 The minimalistic mode is designed to minimize distraction for developers. If you are the one who prefers to have everything at your fingertips – you will like it! JPA Buddy panel will be hidden and its content will be available in standard IntelliJ IDEA windows, such as Project panel, Generate Menu and so on...
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fSUnqcZVWnM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fSUnqcZVWnM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Enabling Minimalistic Mode
@@ -58,9 +58,9 @@ To utilize wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/en
 
 After that, the resizable and draggable JPA Inspector panel will appear. The cool thing is that you can navigate through it and change anything using the mouse or only the keyboard:
 
-- To move through the lines, use the up (↑) and down (↓) buttons.
-- To change the value in the selected row, press the space bar (⎵) twice.
-- To close JPA Inspector, click the Esc button.
+* To move through the lines, use the up (↑) and down (↓) buttons.
+* To change the value in the selected row, press the space bar (⎵) twice.
+* To close JPA Inspector, click the Esc button.
 
 ![jpa-inspector-popup](img/jpa-inspector-popup.jpeg)
 

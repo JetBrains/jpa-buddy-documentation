@@ -2,8 +2,8 @@
 
 JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div class="note">
@@ -67,25 +67,23 @@ For attributes matching the `String` or `Integer` type, you can change the mappi
 
 For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings).
 
-If you have the [HibernateTypes](https://github.com/vladmihalcea/hibernate-types) library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
+If you have the <a href="https://github.com/vladmihalcea/hibernate-types">HibernateTypes</a> library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 #### // TODO Comments
 
 If you want to postpone an attribute creation for specific columns, you can choose `//todo comment` as the mapping type. JPA Buddy will generate the //todo comment with the corresponding quick-fix actions depending on the column type. You can call these actions via ⌘+B (Ctrl+B) shortcut:
 
-- For known basic and association types you can:
-
+* For known basic and association types you can:
   * Uncomment as is
   * Remove column mapping
-- For unknown column type you can:
-
-  - Define target Java type
-  - Uncomment as is
-  - Remove column mapping
+* For unknown column type you can:
+  * Define target Java type
+  * Uncomment as is
+  * Remove column mapping
 
 Here is the example of generated //todo comment for the attribute with unknown column type:
 
@@ -112,8 +110,8 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 2. Most of the DB views are immutable. So, JPA Buddy adds `@Immutable` annotation to the entity and generates getters only. This helps to achieve better application performance.
 3. If a JPA entity is mapped to a DB view, a developer should not be able to create a new instance of this entity in the business logic code. For such entities, JPA Buddy generates only a no-arg protected constructor to meet the JPA specifications.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Reverse Engineering Columns
@@ -301,7 +299,7 @@ ALTER TABLE profiles
 
 JPA Buddy will generate the following code:
 
-```sql
+```java
 @Entity
 @Table(name = "users")
 public class User {
@@ -430,7 +428,7 @@ The larger the database and the slower the connection of the database (for examp
 ### Naming Rules
 
 Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
-Also, the database column names sometimes match the [reserved Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html). E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
+Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
 ![preferences_reverse_engineering](img/preferences-naming-rules.png)
 
@@ -438,7 +436,7 @@ Also, the database column names sometimes match the [reserved Java keywords](htt
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them.
 
-Let’s say the application needs to support both PostgreSQL and MS SQL and you need to store Unicode characters in string data. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
+Let's say the application needs to support both PostgreSQL and MS SQL and you need to store Unicode characters in string data. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
@@ -446,6 +444,6 @@ JPA Buddy lets you specify type mappings for each DBMS. It is also possible to s
 
 See how you can configure type mappings for reverse engineering in JPA Buddy to make use of the `@JavaType` annotation from Hibernate 6:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck?t=89" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck?t=89" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

@@ -14,16 +14,16 @@ This is an opposite approach having the single source of truth in the data model
 
 ## Database Connection
 
-The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate [documentation](https://www.jpa-buddy.com/documentation/database-connections/). Check it out to learn more.
+The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/">documentation</a>. Check it out to learn more.
 
 ## Library Support
 
-JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: [**Flyway**](https://flywaydb.org/) and [**Liquibase**](https://www.liquibase.org/). However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
+JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/">Flyway</a>** and **<a href="https://www.liquibase.org/">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
 
 If you would like to see a short overview and practical examples of using Flyway or Liquibase you can use the following links:
 
-- https://www.baeldung.com/database-migrations-with-flyway
-- https://www.baeldung.com/liquibase-refactor-schema-of-java-app
+* https://www.baeldung.com/database-migrations-with-flyway
+* https://www.baeldung.com/liquibase-refactor-schema-of-java-app
 
 To be certain that JPA Buddy is ready to help, make sure that the project contains right maven dependencies:
 
@@ -71,8 +71,8 @@ The target can be set to:
 
 Click OK to proceed further. JPA Buddy will analyze the difference between Source and Target and show the Preview dialog to enable fine tuning for the resulting migration script. Click Save to add the new script to the project or to append an existing one.
 
-<div class="youtube" align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/xxzfgSvRsMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/xxzfgSvRsMk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Differential Migration Scripts Generation Options
@@ -98,13 +98,13 @@ Using a data model as a source of the current schema state triggers selection of
 
 Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units.
 
-To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose “Persistence Unit”. In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
+To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose "Persistence Unit". In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
 
 - You can scan the needed package, and all entities located in it will be added automatically
 - You can manually select entities from the project
 
-<div class="youtube" align="center">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/uaNFvkNLT9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/uaNFvkNLT9M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 #### Using a Data Model Snapshot
@@ -146,7 +146,7 @@ Click OK to proceed to the preview window of the migration script. The preview w
 
 ![changelog-preview](img/changelog-preview.png)
 
-Some types of changes have custom fields in the preview window. For example, “add not null constraint” change allows you to replace all existing NULL values in the DB with a specified value:
+Some types of changes have custom fields in the preview window. For example, "add not null constraint" change allows you to replace all existing NULL values in the DB with a specified value:
 
 ![changelog-preview-update-null](img/changelog-preview-update-null.jpeg)
 
@@ -156,7 +156,7 @@ The danger levels can be customized in the plugin preferences in JPA Buddy -> Da
 
 ![diff-changes-preferences](img/diff-changes-preferences.jpeg)
 
-You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the “Ignored” section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
+You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the "Ignored" section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
 
 #### Merging statements
 
@@ -167,8 +167,8 @@ Basically, renaming schema elements, such as table name, column name, etc., lead
 
 But JPA Buddy can replace such statements with the single rename or modify statement. For example, you will see two statements in the preview window after renaming column/table/sequence name or changing column type. But by choosing any of the related statements, you can merge them:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nhGhcpdqTMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nhGhcpdqTMs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 After the merge, drop statements may be irrelevant. You can choose changes that should be removed from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
@@ -177,8 +177,8 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 
 ## Liquibase Support
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/26qri-FIwWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/26qri-FIwWo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Changelog Preview Window
@@ -187,8 +187,8 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 
 If you want to save the changelog as a regular file, then the following configuration options will be available:
 
-* “Directory” and “File name” fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog.
-* “Include to”, “include folder” and “include context” allows you to configure whether the changelog should be included in some other changelog. If checked, the “include folder” box will generate the include statement for the whole folder, not only the current changelog.
+* "Directory" and "File name" fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog.
+* "Include to", "include folder" and "include context" allows you to configure whether the changelog should be included in some other changelog. If checked, the "include folder" box will generate the include statement for the whole folder, not only the current changelog.
 * From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
 
 If you want to save the changelog as a scratch file, then you can configure only its name and type.
@@ -201,22 +201,21 @@ On the left of the window, there is a preview of the actual changesets to be gen
 
 The following actions are provided:
 
-- *Add Changelog* — create a secondary changelog
-- *Add Change Set* — create a new changeset in the selected changelog
-- *Remove from Changelog* with options:
-
-  - *Remove from Changelog* — simply remove the changes from the current changelog
-  - *Remove and Ignore* — remove the changes and add them to “Ignored”, so they are excluded from future changesets too
-  - *Restore from Ignored* — move the changes from “Ignored” to the changelog
-- *Set Context* (for changesets)
-- *Set Labels* (for changesets)
-- *Show Other Actions* — select all changes based on the danger level, expand/collapse all changes
+* *Add Changelog* — create a secondary changelog
+* *Add Change Set* — create a new changeset in the selected changelog
+* *Remove from Changelog* with options:
+  * *Remove from Changelog* — simply remove the changes from the current changelog
+  * *Remove and Ignore* — remove the changes and add them to "Ignored", so they are excluded from future changesets too
+  * *Restore from Ignored* — move the changes from "Ignored" to the changelog
+* *Set Context* (for changesets)
+* *Set Labels* (for changesets)
+* *Show Other Actions* — select all changes based on the danger level, expand/collapse all changes
 
 ### Primary and Secondary Changelogs
 
 JPA Buddy lets you put the changes into two types of changelogs: Primary and Secondary. One use case for this is separating safe changes that can be run automatically and changes that require your attention and need to be run manually.
 
-The changes can be separated automatically by their type (in Settings -> Diff Change Types). Alternatively, you can create a secondary changelog manually in the Preview window using the “Add Changelog” action. Then you can simply drag the desired changesets into the new changelog.
+The changes can be separated automatically by their type (in Settings -> Diff Change Types). Alternatively, you can create a secondary changelog manually in the Preview window using the "Add Changelog" action. Then you can simply drag the desired changesets into the new changelog.
 
 By default, Primary and Secondary changelogs are generated in separate directories, which can be customized in the plugin settings. Read more in the Settings -> Database Versioning -> Liquibase section.
 
@@ -228,7 +227,7 @@ JPA Structure displays everything that JPA Buddy knows about the project. For Li
 
 ![jpa-structure-liquibase](img/jpa-structure-liquibase.png)
 
-To create a new changelog, right-click the desired folder in the project tree and select New -> Liquibase -> Empty Changelog. Or click the “plus” button in the top-left corner of the JPA Structure tab:
+To create a new changelog, right-click the desired folder in the project tree and select New -> Liquibase -> Empty Changelog. Or click the "plus" button in the top-left corner of the JPA Structure tab:
 
 ![empty-liquibase-changelog](img/empty-liquibase-changelog.png)
 
@@ -251,26 +250,26 @@ JPA Buddy understands your data model and prefills the changesets as much as pos
 
 JPA Buddy also makes writing code by hand easier by providing code completion based on the JPA data model:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zZhOW5hvlK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zZhOW5hvlK8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Running Liquibase changelogs/previewing SQL without Gradle/Maven plugins
 
-The JPA Structure tab also offers a way to run Liquibase updates and preview SQL. To run an update, click the “Liquibase Update” button:
+The JPA Structure tab also offers a way to run Liquibase updates and preview SQL. To run an update, click the "Liquibase Update" button:
 
 ![jpa-structure-liquibase-update](img/jpa-structure-liquibase-update.png)
 
 The Liquibase Update window will open with configuration options:
 
-- the path to the changelog file
-- which DB connection to use
-- Liquibase context and labels
-- the log level of the operation
+* the path to the changelog file
+* which DB connection to use
+* Liquibase context and labels
+* the log level of the operation
 
 ![liquibase-update](img/liquibase-update.jpeg)
 
-Clicking “Update” runs the Liquibase update command with the configured options. Clicking “Show SQL” displays a preview window:
+Clicking "Update" runs the Liquibase update command with the configured options. Clicking "Show SQL" displays a preview window:
 
 ![sql-preview](img/sql-preview.jpeg)
 
@@ -296,15 +295,15 @@ Whenever an empty or differential Liquibase changelog is created, JPA Buddy gene
 
 The following variables and macros are available for the precise configuration:
 
-- `#date([format])` – the current system date in the specified [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
-- `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
+- `#date([format])` – the current system date in the specified <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>. For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
+- `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html">DecimalFormat</a> of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
 - `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
-  - `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
-  - `${semVer.getMajor()}`: 1
-  - `${semVer.getMinor()}`: 2
-  - `${semVer.getPatch()}`: 3
-  - `${semVer.getPreRelease()}`: SNAPSHOT
-  - `${semVer.getMeta()}`: meta
+  * `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
+  * `${semVer.getMajor()}`: 1
+  * `${semVer.getMinor()}`: 2
+  * `${semVer.getPatch()}`: 3
+  * `${semVer.getPreRelease()}`: SNAPSHOT
+  * `${semVer.getMeta()}`: meta
 
 #### DB Types
 
@@ -330,8 +329,8 @@ Therefore, there is no need to create separate changelogs for different DBMSes.
 
 ## Flyway Support
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9wEJ29QIDyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9wEJ29QIDyM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Migration Preview Window
@@ -348,23 +347,21 @@ On the left of the window, there is a preview of the actual changes to be genera
 
 Above the list of changes, there is a buttons panel with the following actions:
 
-- Add Versioned Migration— create a secondary versioned migration.
-- Remove from Versioned Migration with options:
-
-  - Remove from Versioned Migration — to remove the changes from the current migration.
-  - Remove and Ignore — to remove the changes and add them to the "Ignored" section, so they are excluded from future migrations too.
-- Restore from Ignored — move the changes from "Ignored" to the migration.
-- Move to Another Versioned Migration — by default, a single migration script is created on each diff generation with all the changes. This action lets you move a change to another migration file.
-- Show Other Actions — This button will help you to conveniently interact with a large number of changes in the migration files:
-
-  - "Select all ..."
-  - "Expand/collapse all"
+* Add Versioned Migration— create a secondary versioned migration.
+* Remove from Versioned Migration with options:
+  * Remove from Versioned Migration — to remove the changes from the current migration.
+  * Remove and Ignore — to remove the changes and add them to the "Ignored" section, so they are excluded from future migrations too.
+* Restore from Ignored — move the changes from "Ignored" to the migration.
+* Move to Another Versioned Migration — by default, a single migration script is created on each diff generation with all the changes. This action lets you move a change to another migration file.
+* Show Other Actions — This button will help you to conveniently interact with a large number of changes in the migration files:
+  * "Select all ..."
+  * "Expand/collapse all"
 
 To combine several changes into one migration file or to ignore them, drag them around.
 
 ### Java Migration
 
-Java-based migrations are a great fit for all changes that can not easily be expressed using SQL. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the `BaseJavaMigration` class. JPA Buddy follows the second option and generates the class name according to Flyway’s default [naming convention](https://flywaydb.org/documentation/concepts/migrations.html#naming-1). This enables Flyway to automatically extract the version and the description from the class name.
+Java-based migrations are a great fit for all changes that can not easily be expressed using SQL. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the `BaseJavaMigration` class. JPA Buddy follows the second option and generates the class name according to Flyway's default <a href="https://flywaydb.org/documentation/concepts/migrations.html#naming-1">naming convention</a>. This enables Flyway to automatically extract the version and the description from the class name.
 
 To generate java migration, press the plus button in the JPA Structure tab and choose the corresponding item.
 
@@ -389,7 +386,7 @@ public class V4__ extends BaseJavaMigration {
 
 ### Flyway Callbacks
 
-While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate [all events](https://flywaydb.org/documentation/concepts/callbacks) that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure tab and choose the corresponding item.
+While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate <a href="https://flywaydb.org/documentation/concepts/callbacks">all events</a> that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure tab and choose the corresponding item.
 
 ![jpa-structure-callbacks](img/jpa-structure-callbacks.png)
 
@@ -397,27 +394,27 @@ While migrations are sufficient for most needs, certain situations require you t
 
 JPA Buddy provides Flyway SQL Callback window, with the following fields:
 
-- “Source root” and “Directory” fields are responsible for the location of the generated file:
+* "Source root" and "Directory" fields are responsible for the location of the generated file:
 
   ![sql-callback](img/sql-callback.jpeg)
-- “Callback event” field allows you to choose one of the events that Flyway supports:
+* "Callback event" field allows you to choose one of the events that Flyway supports:
 
 ![choose-callback-event](img/choose-callback-event.jpeg)
 
-- Optionally the callbacks may also include a description. The value in the “Description” filed will be appended along with the separator to the callback name.
+* Optionally the callbacks may also include a description. The value in the "Description" filed will be appended along with the separator to the callback name.
 
 #### Java Callbacks
 
-If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callbacks. JPA Buddy provides Flyway Java Callback window, with the following fields:
+If SQL Callbacks aren't flexible enough for you, flyway supports Java Callbacks. JPA Buddy provides Flyway Java Callback window, with the following fields:
 
 ![flyway-java-callback](img/flyway-java-callback.jpeg)
 
-- “Class” and “Class name” these fields are responsible for configuring corresponding values for generated java-class.
-- “Callback event” field allows you to choose several events that Flyway supports:
+* "Class" and "Class name" these fields are responsible for configuring corresponding values for generated java-class.
+* "Callback event" field allows you to choose several events that Flyway supports:
 
   ![three-choosed-callback-events](img/three-choosed-callback-events.jpeg)
-- “Can handle in transaction” checkbox defines whether true or false will return the canHandleInTransaction overridden method from the Callback interface.
-- “Source root” and “Directory” fields are responsible for the location of the generated file.
+* "Can handle in transaction" checkbox defines whether true or false will return the canHandleInTransaction overridden method from the Callback interface.
+* "Source root" and "Directory" fields are responsible for the location of the generated file.
 
 ```java
   public class TestCallback implements Callback { 
@@ -448,46 +445,46 @@ If SQL Callbacks aren’t flexible enough for you, flyway supports Java Callback
 
 ### Flyway Settings
 
-Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway [naming pattern](https://flywaydb.org/documentation/concepts/migrations#naming). In plugin settings you can configure following values for name generation:
+Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway <a href="https://flywaydb.org/documentation/concepts/migrations#naming">naming pattern</a>. In plugin settings you can configure following values for name generation:
 
 ![flyway-settings](img/flyway-settings.png)
 
-- Migration prefix. The default value is `V`.
-- Version pattern. After the hyphen, an example of the generated sequence is presented.
-- Migration separator. The default value is “_”.
-- Migration description.
+* Migration prefix. The default value is `V`.
+* Version pattern. After the hyphen, an example of the generated sequence is presented.
+* Migration separator. The default value is "_".
+* Migration description.
 
 The following variables and macros are available in the templates:
 
-- `#date([format])` – the current system date in the specified [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
-- `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
-- `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
-  - `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
-  - `${semVer.getMajor()}`: 1
-  - `${semVer.getMinor()}`: 2
-  - `${semVer.getPatch()}`: 3
-  - `${semVer.getPreRelease()}`: SNAPSHOT
-  - `${semVer.getMeta()}`: meta
+* `#date([format])` – the current system date in the specified <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>. For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
+* `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html">DecimalFormat</a> of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
+* `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
+  * `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
+  * `${semVer.getMajor()}`: 1
+  * `${semVer.getMinor()}`: 2
+  * `${semVer.getPatch()}`: 3
+  * `${semVer.getPreRelease()}`: SNAPSHOT
+  * `${semVer.getMeta()}`: meta
 
 ## DDL By Entities
 
 Generate DDL by Entities action allows developers to convert entities into DDL statements in a couple of clicks. It can generate:
 
-- Initialization scripts to create a database schema from scratch;
-- Differential DDL to update the already existing database to the valid state in accordance with JPA entities.
+* Initialization scripts to create a database schema from scratch;
+* Differential DDL to update the already existing database to the valid state in accordance with JPA entities.
 
 Also, this feature is extremely useful if we want to avoid using the automatic scripts generation enabled by `hbm2ddl` or `ddl-auto` properties. By using the JPA Buddy action, you can fully control DDL before execution, setup proper Java -> DB types mapping, map fields with attribute converters and Hibernate types, generate drop statements, and many more.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u75s7pIyZqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u75s7pIyZqU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Resolve SchemaManagementException Automatically
 
 If you stumble upon `SchemaManagementException` on the application startup, it means you have the `ddl-auto` property set to `validate` and Hibernate couldn't properly map JPA entities to your database tables. JPA Buddy allows you to generate DDL to fill up the difference between JPA entities and the database right from the stack trace!
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/T3VACEO8sFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T3VACEO8sFc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Show DDL Action
@@ -504,10 +501,10 @@ Next, choose which for which database you need a script and click OK:
 
 ### SQL Visual Designer
 
-In some cases, it’s useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette or Editor Toolbar. For each statement, there is a corresponding window that allows you to configure the statement:
+In some cases, it's useful to have SQL scripts for the JPA data model, especially when you need to quickly set up a fresh database. JPA Buddy can generate a wide range of SQL statements via JPA Palette or Editor Toolbar. For each statement, there is a corresponding window that allows you to configure the statement:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/61_tr0QovfU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Hibernate 6 Support
@@ -516,14 +513,14 @@ Before Hibernate 6, the Hibernate Types library or `@Type`/`@Converter` annotati
 
 * `@JdbcType`, `@JdbcTypeCode` & `@JdbcTypeRegistration`
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ocNsqBk9fbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ocNsqBk9fbQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 * `@Type`, `@JavaType` & `@JavaTypeRegistration`
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 * `@TimeZoneStorage` & `@TimeZoneColumn`
@@ -538,7 +535,7 @@ You can change the saved mapping configuration at any time from Tools -> JPA Bud
 
 Also, it may be helpful when the application works with databases from different vendors. In this case, your schema might have slightly different data types for each of them.
 
-Let’s say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
+Let's say the application needs to support both PostgreSQL and MS SQL. And you want to store Unicode characters in your strings. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
@@ -546,9 +543,9 @@ JPA Buddy lets you specify type mappings for each DBMS. It is also possible to s
 
 ### Convertors
 
-In order to simplify type mapping, JPA Buddy introduces DB-agnostic SQL types, that are transformed into the DB-specific type. For example, “varchar" is transformed into “varchar2” for Oracle DB and left as “varchar" for PostgreSQL.
+In order to simplify type mapping, JPA Buddy introduces DB-agnostic SQL types, that are transformed into the DB-specific type. For example, "varchar" is transformed into "varchar2" for Oracle DB and left as "varchar" for PostgreSQL.
 
-Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCHAR” or “character varying”), which in most cases are interchangeable. Unknown types are used as is without any transformations. Check out the full list of aliases in the table:
+Each DB-agnostic type has a set of aliases (for example, "java.sql.Types.VARCHAR" or "character varying"), which in most cases are interchangeable. Unknown types are used as is without any transformations. Check out the full list of aliases in the table:
 
 <div class="table">
 <table class="tg">
@@ -686,7 +683,7 @@ Each DB-agnostic type has a set of aliases (for example, “java.sql.Types.VARCH
 
 ## Hibernate Envers Support
 
-The [Hibernate Envers](https://hibernate.org/orm/envers/) provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
+<a href="https://hibernate.org/orm/envers/">Hibernate Envers</a> provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
 
 ![hibernate-envers-settings](img/hibernate-envers-settings.png)
 
@@ -746,13 +743,13 @@ By default, Spring Boot configures the physical naming strategy with SpringPhysi
 
 The following strategies are supported:
 
-- SpringPhysicalNamingStrategy – the default option
-- PhysicalNamingStrategyStandardlmpl
-- CamelCaseToUnderscoresNamingStrategy (only for projects with Hibernate 6 and later versions)
+* `SpringPhysicalNamingStrategy` – the default option
+* `PhysicalNamingStrategyStandardlmpl`
+* `CamelCaseToUnderscoresNamingStrategy` (only for projects with Hibernate 6 and later versions)
 
-To learn more about naming strategies, you can check out our [article](https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/).
+To learn more about naming strategies, you can check out our <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/">article</a>.
 
-RDBMSs have their own limitations. For example, table names for [OracleDatabase](https://twitter.com/OracleDatabase) earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
+RDBMSs have their own limitations. For example, table names for <a href="https://twitter.com/OracleDatabase">OracleDatabase</a> earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
 
 ![max-db-identifier](img/max-db-identifier.png)
 

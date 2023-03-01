@@ -50,7 +50,7 @@ If you don't see the JPA Palette check [visual designer settings](#designer-sett
 
 Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency.
 
-During associations creation, JPA Buddy provides short explanation in “Learn more” button, why the current configuration is not efficient and may cause performance issues:
+During associations creation, JPA Buddy provides short explanation in "Learn more" button, why the current configuration is not efficient and may cause performance issues:
 
 ![learn-more](img/learn-more.jpeg)
 
@@ -106,7 +106,7 @@ After that, the following window will appear:
 
 ### Languages Support
 
-JPA Buddy supports both <a href="https://www.java.com/">Java</a> and <a href="https://kotlinlang.org/">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html">Kotlin dependency</a> in your project, an additional option appears in the “New Entity” window, letting you pick the language:
+JPA Buddy supports both <a href="https://www.java.com/">Java</a> and <a href="https://kotlinlang.org/">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html">Kotlin dependency</a> in your project, an additional option appears in the "New Entity" window, letting you pick the language:
 
 ![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
@@ -176,7 +176,7 @@ The application is growing and the JPA model is evolving as well. Eventually, it
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fUtRJBKskig" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- Don’t forget to add `@`NoArgsConstructor to entities with `@`Builder or `@`AllArgsConstructor – they introduce their own constructors, so the compiler doesn't generate a default one. A no-argument constructor is required for all JPA entities according to the specification.
+- Don't forget to add `@`NoArgsConstructor to entities with `@`Builder or `@`AllArgsConstructor – they introduce their own constructors, so the compiler doesn't generate a default one. A no-argument constructor is required for all JPA entities according to the specification.
 
 ![no-args-constructor](img/no-args-constructor.jpeg)
 
@@ -202,7 +202,7 @@ JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Ty
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Also, you can create via JPA Structure. Just click on the “Plus” button and choose JPA Converter or Hibernate Custom Type:
+Also, you can create via JPA Structure. Just click on the "Plus" button and choose JPA Converter or Hibernate Custom Type:
 
 ![jpa-structure-jpa-converter](img/jpa-structure-jpa-converter.png)
 

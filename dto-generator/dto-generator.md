@@ -4,8 +4,8 @@ DTO (data transfer object) is an object that carries data between processes. DTO
 
 JPA Buddy offers DTO generation from JPA entities via visual designer:
 
-<div class="youtube" align="center">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/qpnM_k-TGFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/qpnM_k-TGFk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ## Mutability
@@ -34,16 +34,16 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
 
 ![project-structure](img/project-structure.png)
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_MtJO4QKr0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_MtJO4QKr0A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ## Generate Entities from POJOs
 
 JPA Buddy provides **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 The most remarkable thing about JPA Buddy is that it even detects the relationship's cardinality and allows to generate related entities or select existing ones:
@@ -54,16 +54,16 @@ The most remarkable thing about JPA Buddy is that it even detects the relationsh
 
 Nowadays, the DTO pattern is widely used in software development. It is not only used with JPA entities, but also with regular POJO classes. With JPA Buddy, you are not restricted to using DTOs with just JPA entities. You can create DTOs from any Java or Kotlin class, which gives you more flexibility and control over your code. For example, check out how easy you can use JPA Buddy with MongoDB documents:
 
-<div class="youtube" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OrvtVvQ0eJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OrvtVvQ0eJE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## MapStruct Mappers
 
-[MapStruct](https://mapstruct.org/) is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
+<a href="https://mapstruct.org/">MapStruct</a> is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
 
-<div class="youtube" align="center">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 JPA Buddy analyzes MapStruct mappers and can define which DTO is associated with which entity. Thanks to this, you can see the DTOs in the corresponding section in the JPA Structure and navigate between entity and DTOs through gutter icons.
@@ -72,8 +72,8 @@ JPA Buddy analyzes MapStruct mappers and can define which DTO is associated with
 
 Also, JPA Buddy can help if you prefer to have a single big mapper interface with methods for all entities. In this case, use IntelliJ IDEA "Generate Menu" (Cmd+N/Alt+Insert) in the open mapper class and create methods for any entity.
 
-<div class="youtube" align="center">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/XahPsC2TciE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/XahPsC2TciE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ### Generic Mappers Inheritance
@@ -113,8 +113,8 @@ public interface ProjectMapper extends EntityMapper<ProjectDTO, Project> {
 
 JPA Buddy provides a support for generic mappers' inheritance:
 
-<div class="youtube" align="center">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcY-dDWqihg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcY-dDWqihg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ### Mapper Declaration
@@ -129,16 +129,16 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
 
 Often DTOs are used at the API controller level, aimed to declare only fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. Hence, changing the property name in an entity often leads to the corrupted mapping logic. That's why JPA Buddy helps developers to refactor entity properties along with the related fields in DTOs:
 
-<div class="youtube" align="center">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/AY-lB-uKDDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/AY-lB-uKDDE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ### Add attributes
 
 Happens, you have added a new attribute to the entity. Then, some already existing DTOs will also need this field. JPA Buddy allows you to add a new field to all the required DTOs at once.
 
-<div class="youtube" align="center">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ## DTO Declaration Settings
@@ -161,7 +161,7 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 
 As soon as JPA Buddy is able to associate DTO class with the entity:
 
-- The DTO class will appear in the **Dto & Projections** section in the JPA Structure tab and in the Editor Toolbar (1)
-- The gutter icon will appear in the DTO to ease the navigation to its entity (2)
+* The DTO class will appear in the **Dto & Projections** section in the JPA Structure tab and in the Editor Toolbar (1)
+* The gutter icon will appear in the DTO to ease the navigation to its entity (2)
 
 ![dto-navigation](img/dto-navigation.png)
