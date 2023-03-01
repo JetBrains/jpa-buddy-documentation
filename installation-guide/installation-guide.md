@@ -1,6 +1,6 @@
 ## What is JPA Buddy?
 
-JPA Buddy is an **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy">IntelliJ IDEA plugin</a>** that helps developers work efficiently with Hibernate, EclipseLink, Spring Data JPA, Flyway, Liquibase, Lombok, MapStruct, and other related technologies in both Java and Kotlin.
+JPA Buddy is an **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy" target="_blank">IntelliJ IDEA plugin</a>** that helps developers work efficiently with Hibernate, EclipseLink, Spring Data JPA, Flyway, Liquibase, Lombok, MapStruct, and other related technologies in both Java and Kotlin.
 
 **The plugin is intended to:**
 * Lower barrier to entry into development with JPA
@@ -19,7 +19,7 @@ You can use JPA Buddy in any project with Spring Boot, Jakarta Enterprise Editio
 
 ## Installation and Project Setup
 
-JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ IDEA Ultimate Edition. It is available on the <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy">JetBrains marketplace</a>, where it can be downloaded and installed.
+JPA Buddy is compatible with both IntelliJ IDEA Community Edition and IntelliJ IDEA Ultimate Edition. It is available on the <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy" target="_blank">JetBrains marketplace</a>, where it can be downloaded and installed.
 
 To install JPA Buddy, open Preferences -> Plugins and search for JPA Buddy. Then, simply click on the installation button and you're good to go!
 
@@ -27,13 +27,13 @@ To install JPA Buddy, open Preferences -> Plugins and search for JPA Buddy. Then
 
 ## License Activation
 
-The purchase process is entirely managed by **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing">JetBrains Marketplace</a>**, including payment processing, invoicing, and licensing. To get a license, please visit <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing">this page</a>.
+The purchase process is entirely managed by **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">JetBrains Marketplace</a>**, including payment processing, invoicing, and licensing. To get a license, please visit <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">this page</a>.
 
 [![visit-jetbrains-marketplace](img/visit-jetbrains-marketplace.png)](https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing)
 
 ### Trial Subscription
 
-For new users who haven't tried JPA Buddy yet there is a <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing">30-day trial period</a>. You can see how to obtain it in the following video:
+For new users who haven't tried JPA Buddy yet there is a <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">30-day trial period</a>. You can see how to obtain it in the following video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XZnA_0vS-zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -41,8 +41,8 @@ For new users who haven't tried JPA Buddy yet there is a <a href="https://plugin
 
 For those who have already used the trial period and want to continue using JPA Buddy paid features, there are two types of subscriptions available: monthly and annual. To pay for a subscription, JetBrains Marketplace provides two possible options:
 
-* <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing">Pay via Credit Card</a>
-* <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing">Pay via PayPal</a>
+* <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">Pay via Credit Card</a>
+* <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">Pay via PayPal</a>
 
 In the following video, we will show you how to buy a subscription via a credit card. All the steps to get and activate a subscription will remain the same if you decide to use PayPal.
 
@@ -50,9 +50,9 @@ In the following video, we will show you how to buy a subscription via a credit 
 
 ### The Difference Between an Individual and Company Licenses
 
-The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=personal">Personal license</a>** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
+The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=personal" target="_blank">Personal license</a>** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
 
-The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=commercial">Company license</a>** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee should not use the same license simultaneously.
+The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=commercial" target="_blank">Company license</a>** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee should not use the same license simultaneously.
 
 The following table should help with choosing the most appropriate licensing schema for you:
 
@@ -100,7 +100,7 @@ The following table should help with choosing the most appropriate licensing sch
 
 ### Educational And Discounted Licenses
 
-All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing">Pricing page</a> and follow the "Learn more..." link.
+All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">Pricing page</a> and follow the "Learn more..." link.
 
 ![discounted-licenses](img/discounted-licenses.jpeg)
 
@@ -112,9 +112,9 @@ Since the status of your account is confirmed, a new "Discount available" field 
 
 We are going to give away little gifts to our active community members.
 
-Still don't follow us on <a href="https://twitter.com/JPABuddy">Twitter</a>? Subscribe, send a private message to us and we will grant you one month free!
+Still don't follow us on <a href="https://twitter.com/JPABuddy" target="_blank">Twitter</a>? Subscribe, send a private message to us and we will grant you one month free!
 
-Has more than 500 subscribers on Twitter and share our tweets 3-4 times per month? Let us know via the contact form on our <a href="https://www.jpa-buddy.com/contacts/">website</a>, because you definitely deserve the next month of free use!
+Has more than 500 subscribers on Twitter and share our tweets 3-4 times per month? Let us know via the contact form on our <a href="https://www.jpa-buddy.com/contacts/" target="_blank">website</a>, because you definitely deserve the next month of free use!
 
 Reported a severe bug? Shared great ideas that become a part of our roadmap? We will not leave you without a present!
 
@@ -235,9 +235,9 @@ To make sure that the plugin is installed correctly, follow these steps:
 
 ## Installing a Specific Version of JPA Buddy
 
-<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/versions">Every version of JPA Buddy</a> supports a range of IntelliJ IDEA versions. For example, JPA Buddy 2023.1 works correctly with IntelliJ IDEA 2022.2, 2022.3 and 2023.1. But if you have to install JPA Buddy on the other version of IntelliJ IDEA, you can do the following:
+<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/versions" target="_blank">Every version of JPA Buddy</a> supports a range of IntelliJ IDEA versions. For example, JPA Buddy 2023.1 works correctly with IntelliJ IDEA 2022.2, 2022.3 and 2023.1. But if you have to install JPA Buddy on the other version of IntelliJ IDEA, you can do the following:
 
-* Open <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy">JPA Buddy JetBrains Marketplace page</a>.
+* Open <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy" target="_blank">JPA Buddy JetBrains Marketplace page</a>.
 * Open Versions tab.
 * Find a version of JPA Buddy which satisfies the version of your IntelliJ IDEA and click on it.
 

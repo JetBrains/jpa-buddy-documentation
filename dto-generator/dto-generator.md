@@ -60,7 +60,7 @@ Nowadays, the DTO pattern is widely used in software development. It is not only
 
 ## MapStruct Mappers
 
-<a href="https://mapstruct.org/">MapStruct</a> is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
+<a href="https://mapstruct.org/" target="_blank">MapStruct</a> is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

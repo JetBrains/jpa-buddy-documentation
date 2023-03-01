@@ -37,12 +37,12 @@ The idea of the JPA Palette is to generate attributes, indexes, queries, etc.
 
 JPA Palette provides a corresponding generation window for everything listed below. There is a slight difference between them according to the context, but they all have a similar design:
 
-- <a href="https://www.youtube.com/embed/8A_ftrU_yYE">Attributes</a>
-- <a href="https://www.youtube.com/embed/d77p30UXBzc">Lifecycle Callbacks</a>
-- <a href="https://www.youtube.com/embed/9YVtxVeN9Yk">Indexes</a>
-- <a href="https://www.youtube.com/embed/iV6jTbzjgkE">Named Query</a>
-- <a href="https://youtu.be/az9ghvGczys">Reverse Engineering</a>
-- <a href="https://youtu.be/jTdMIOfyx2Q">Utilities – Equals/HashCode/ToString</a>
+- <a href="https://www.youtube.com/embed/8A_ftrU_yYE" target="_blank">Attributes</a>
+- <a href="https://www.youtube.com/embed/d77p30UXBzc" target="_blank">Lifecycle Callbacks</a>
+- <a href="https://www.youtube.com/embed/9YVtxVeN9Yk" target="_blank">Indexes</a>
+- <a href="https://www.youtube.com/embed/iV6jTbzjgkE" target="_blank">Named Query</a>
+- <a href="https://youtu.be/az9ghvGczys" target="_blank">Reverse Engineering</a>
+- <a href="https://youtu.be/jTdMIOfyx2Q" target="_blank">Utilities – Equals/HashCode/ToString</a>
 
 If you don't see the JPA Palette check [visual designer settings](#designer-settings).
 
@@ -106,7 +106,7 @@ After that, the following window will appear:
 
 ### Languages Support
 
-JPA Buddy supports both <a href="https://www.java.com/">Java</a> and <a href="https://kotlinlang.org/">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html">Kotlin dependency</a> in your project, an additional option appears in the "New Entity" window, letting you pick the language:
+JPA Buddy supports both <a href="https://www.java.com/" target="_blank">Java</a> and <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html" target="_blank">Kotlin dependency</a> in your project, an additional option appears in the "New Entity" window, letting you pick the language:
 
 ![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
@@ -162,7 +162,7 @@ The application is growing and the JPA model is evolving as well. Eventually, it
 
 ### Inspections
 
-<a href="https://projectlombok.org/">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
+<a href="https://projectlombok.org/" target="_blank">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
 
 - Avoid using `@`EqualsAndHashCode and `@`Data with JPA entities. Entities are immutable by their nature, so implementing equals() and hashCode() for them is not a trivial task. The implementations provided by Lombok are not well suited for JPA entities and may cause issues with collections and accidental loading of lazy attributes.
 
@@ -180,7 +180,7 @@ The application is growing and the JPA model is evolving as well. Eventually, it
 
 ![no-args-constructor](img/no-args-constructor.jpeg)
 
-Check out our <a href="https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go-wrong/">article</a> to learn more about why it is so important to follow the rules above.
+Check out our <a href="https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go-wrong/" target="_blank">article</a> to learn more about why it is so important to follow the rules above.
 
 ### Annotations
 
@@ -263,7 +263,7 @@ Java code style may change from project to project. Also, working with external 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/npHuDl8pdmM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<div class="note">The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/">our article</a>. JPA Buddy allows you to choose naming strategies for scripts generation in the <a href="https://www.jpa-buddy.com/documentation/database-versioning/#naming-strategy-and-max-identifier-settings">settings</a>.</div>
+<div class="note">The name that is specified is logical, and the appropriate physical naming strategy will be applied to it. Even if you have specified the name in a certain way, it may be saved to the database with a different one. Learn more about naming strategies in <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/" target="_blank">our article</a>. JPA Buddy allows you to choose naming strategies for scripts generation in the <a href="https://www.jpa-buddy.com/documentation/database-versioning/#naming-strategy-and-max-identifier-settings" target="_blank">settings</a>.</div>
 
 *By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation provides the same table structure as Hibernate 4: all dots are replaced by underscores and camel casing is replaced by underscores as well. Additionally, by default, all table names are generated in lower case. For example, for both of the entity declarations below, the actual name of the DB table will be pet_type.*
 
@@ -286,7 +286,7 @@ public class PetType {
 
 ### Constants Generation
 
-One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in <a href="https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/">Thorben Janssen</a> article.
+One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in <a href="https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/" target="_blank">Thorben Janssen</a> article.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xc-ayDDdjss" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

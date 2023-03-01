@@ -4,20 +4,20 @@ JPA Structure panel is responsible for everything related to DB configurations. 
 
 For now, JPA Buddy supports following databases:
 
-* <a href="https://www.postgresql.org/">PostgreSQL</a>
-* <a href="https://www.microsoft.com/sql-server/sql-server-2019?rtc=1">MSSQL</a>
-* <a href="https://www.mysql.com/">MySQL</a>
-* <a href="https://mariadb.org/">MariaDB</a>
-* <a href="https://www.oracle.com/database/">Oracle</a>
-* <a href="http://hsqldb.org/">HSQLDB</a>
-* <a href="https://www.h2database.com/html/main.html">H2</a>
-* <a href="https://www.ibm.com/analytics/db2">IBM Db2</a>
+* <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
+* <a href="https://www.microsoft.com/sql-server/sql-server-2019?rtc=1" target="_blank">MSSQL</a>
+* <a href="https://www.mysql.com/" target="_blank">MySQL</a>
+* <a href="https://mariadb.org/" target="_blank">MariaDB</a>
+* <a href="https://www.oracle.com/database/" target="_blank">Oracle</a>
+* <a href="http://hsqldb.org/" target="_blank">HSQLDB</a>
+* <a href="https://www.h2database.com/html/main.html" target="_blank">H2</a>
+* <a href="https://www.ibm.com/analytics/db2" target="_blank">IBM Db2</a>
 
 ![jpa-structure-db-connection](img/jpa-structure-db-connection.png)
 
 You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* or *application.yaml* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the "Detect Connections" button in the JPA Structure tab and the window will appear with filled fields.
 
-As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html">JetBrains documentation page</a>.
+As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
 
 ![ij-ultimate-data-sources](img/ij-ultimate-data-sources.jpeg)
 
@@ -75,7 +75,7 @@ For JDBC the connection setup will look like this:
 
 ![ij-ultimate-mssql-jdbc](img/ij-ultimate-mssql-jdbc.jpeg)
 
-And for <a href="http://jtds.sourceforge.net/faq.html">JTDS</a> like this:
+And for <a href="http://jtds.sourceforge.net/faq.html" target="_blank">JTDS</a> like this:
 
 ![ij-community-mssql-jtds](img/ij-community-mssql-jtds.jpeg)
 
@@ -117,4 +117,4 @@ Since IntelliJ IDEA CE doesn't allow configuring database drives, JPA Buddy is t
 
 ## How to connect via SSH
 
-JPA Buddy uses a different mechanism from what IntelliJ IDEA uses to connect to the database. So, JPA Buddy can't use the SSH tunnel configured in IntelliJ IDEA. To make Buddy works properly in this case, you need to establish an SSH tunnel on the system level. Here is <a href="https://www.linode.com/docs/guides/create-an-ssh-tunnel-for-mysql-remote-access/">an example</a> of how you can do it.
+JPA Buddy uses a different mechanism from what IntelliJ IDEA uses to connect to the database. So, JPA Buddy can't use the SSH tunnel configured in IntelliJ IDEA. To make Buddy works properly in this case, you need to establish an SSH tunnel on the system level. Here is <a href="https://www.linode.com/docs/guides/create-an-ssh-tunnel-for-mysql-remote-access/" target="_blank">an example</a> of how you can do it.

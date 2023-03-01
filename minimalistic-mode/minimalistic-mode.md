@@ -21,7 +21,7 @@ Another way to activate minimalistic mode is via settings. Open **Settings -> To
 ![settings-minimalistic](img/settings-minimalistic.png)
 
 <div class="note">
-    Read more about Designer Settings <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">here</a>.
+    Read more about Designer Settings <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings" target="_blank">here</a>.
 </div>
 
 ## Disabling Minimalistic Mode
@@ -31,7 +31,7 @@ To disable minimalistic mode, open **Settings -> Tools -> JPA Buddy -> Designer 
 ![settings-extensive](img/settings-extensive.png)
 
 <div class="note">
-    Read more about Designer Settings <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">here</a>.
+    Read more about Designer Settings <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings" target="_blank">here</a>.
 </div>
 
 ## Using Features in the Minimalistic View

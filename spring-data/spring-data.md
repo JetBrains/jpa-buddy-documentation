@@ -1,6 +1,6 @@
 ## Introduction
 
-<a href="https://spring.io/projects/spring-data-jpa">Spring Data JPA</a> is part of the larger Spring Data family that makes it easy to implement JPA-based repositories quickly. JPA Buddy provides a clear UI for generating repositories, projections, queries, etc., for both Java and Kotlin entities. To enable those features, your project should contain dependencies mentioned in the [Installation Guide](https://www.jpa-buddy.com/documentation/).
+<a href="https://spring.io/projects/spring-data-jpa" target="_blank">Spring Data JPA</a> is part of the larger Spring Data family that makes it easy to implement JPA-based repositories quickly. JPA Buddy provides a clear UI for generating repositories, projections, queries, etc., for both Java and Kotlin entities. To enable those features, your project should contain dependencies mentioned in the [Installation Guide](https://www.jpa-buddy.com/documentation/).
 
 ## Repository Creation
 
@@ -17,9 +17,9 @@ In the New JPA Repository window, you can set:
 * Entity, which the repository will be created for
 * Class name
 * Parent class for the repository. It can be:
-  * Repository from <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories">org.springframework.data.repository</a> package
+  * Repository from <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories" target="_blank">org.springframework.data.repository</a> package
   * Repository from your project
-* Whether the repository will extend <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#specifications">JpaSpecificationExecutor</a> or not
+* Whether the repository will extend <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#specifications" target="_blank">JpaSpecificationExecutor</a> or not
 * Source root
 * Package
 
@@ -45,7 +45,7 @@ Spring Data provides the ability to define a query with the `@Query` annotation.
 
 ### Example
 
-<div class="note">All that we will consider in the example below can be generated as @Query and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation">Naming Conventions for Query</a>.
+<div class="note">All that we will consider in the example below can be generated as @Query and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
 </div>
 
 Let's look at an example of creating a Find Collection Query.
@@ -54,7 +54,7 @@ Let's look at an example of creating a Find Collection Query.
 
 At the top of the window, you can define wrap type for collection and query return type. Moreover, JPA Buddy allows you to generate new [Projection interface](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO class](https://www.jpa-buddy.com/documentation/dto-generator/) right from this window (just click on the `+` button).
 
-You can also specify the method name. Still, if you rest it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation">Naming Conventions for Query</a>.
+You can also specify the method name. Still, if you rest it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
 
 The middle of the window contains the table for the query conditions.
 
@@ -125,7 +125,7 @@ Spring Data JPA provides the ability to run repository queries asynchronously. T
 * CompletableFuture<ClassName>
 * ListenableFuture<ClassName>
 
-Learn more about asynchronous query results at the corresponding Spring Data JPA documentation <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-async">page</a>.
+Learn more about asynchronous query results at the corresponding Spring Data JPA documentation <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-async" target="_blank">page</a>.
 
 To make query async, place the cursor on the query you want to change and choose the result return type from the drop-down list:
 

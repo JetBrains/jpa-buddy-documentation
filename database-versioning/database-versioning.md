@@ -14,11 +14,11 @@ This is an opposite approach having the single source of truth in the data model
 
 ## Database Connection
 
-The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/">documentation</a>. Check it out to learn more.
+The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">documentation</a>. Check it out to learn more.
 
 ## Library Support
 
-JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/">Flyway</a>** and **<a href="https://www.liquibase.org/">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
+JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/" target="_blank">Flyway</a>** and **<a href="https://www.liquibase.org/" target="_blank">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
 
 If you would like to see a short overview and practical examples of using Flyway or Liquibase you can use the following links:
 
@@ -295,8 +295,8 @@ Whenever an empty or differential Liquibase changelog is created, JPA Buddy gene
 
 The following variables and macros are available for the precise configuration:
 
-- `#date([format])` – the current system date in the specified <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>. For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
-- `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html">DecimalFormat</a> of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
+- `#date([format])` – the current system date in the specified <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" target="_blank">SimpleDateFormat</a>. For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
+- `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html" target="_blank">DecimalFormat</a> of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
 - `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
   * `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
   * `${semVer.getMajor()}`: 1
@@ -361,7 +361,7 @@ To combine several changes into one migration file or to ignore them, drag them 
 
 ### Java Migration
 
-Java-based migrations are a great fit for all changes that can not easily be expressed using SQL. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the `BaseJavaMigration` class. JPA Buddy follows the second option and generates the class name according to Flyway's default <a href="https://flywaydb.org/documentation/concepts/migrations.html#naming-1">naming convention</a>. This enables Flyway to automatically extract the version and the description from the class name.
+Java-based migrations are a great fit for all changes that can not easily be expressed using SQL. These migrations represent java classes that implement the `JavaMigration` interface or inherit from the `BaseJavaMigration` class. JPA Buddy follows the second option and generates the class name according to Flyway's default <a href="https://flywaydb.org/documentation/concepts/migrations.html#naming-1" target="_blank">naming convention</a>. This enables Flyway to automatically extract the version and the description from the class name.
 
 To generate java migration, press the plus button in the JPA Structure tab and choose the corresponding item.
 
@@ -386,7 +386,7 @@ public class V4__ extends BaseJavaMigration {
 
 ### Flyway Callbacks
 
-While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate <a href="https://flywaydb.org/documentation/concepts/callbacks">all events</a> that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure tab and choose the corresponding item.
+While migrations are sufficient for most needs, certain situations require you to execute the same action over and over again. With the help of JPA Buddy, you can generate <a href="https://flywaydb.org/documentation/concepts/callbacks" target="_blank">all events</a> that Flyway supports. To generate SQL or java callbacks, press the plus button in the JPA Structure tab and choose the corresponding item.
 
 ![jpa-structure-callbacks](img/jpa-structure-callbacks.png)
 
@@ -445,7 +445,7 @@ If SQL Callbacks aren't flexible enough for you, flyway supports Java Callbacks.
 
 ### Flyway Settings
 
-Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway <a href="https://flywaydb.org/documentation/concepts/migrations#naming">naming pattern</a>. In plugin settings you can configure following values for name generation:
+Whenever an empty or differential Flyway migration is created, JPA Buddy generates the file name based on the flyway <a href="https://flywaydb.org/documentation/concepts/migrations#naming" target="_blank">naming pattern</a>. In plugin settings you can configure following values for name generation:
 
 ![flyway-settings](img/flyway-settings.png)
 
@@ -456,8 +456,8 @@ Whenever an empty or differential Flyway migration is created, JPA Buddy generat
 
 The following variables and macros are available in the templates:
 
-* `#date([format])` – the current system date in the specified <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>. For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
-* `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html">DecimalFormat</a> of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
+* `#date([format])` – the current system date in the specified <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" target="_blank">SimpleDateFormat</a>. For example, `#date(\"yyyy-MM-dd\")` returns the date formatted as 2020-12-31.
+* `#increment([start], [step], [decimalFormat])` — a number that is used to keep the name unique. `start` value is used for the first file and is incremented by step for each next file. `decimalFormat` parameter specifies the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html" target="_blank">DecimalFormat</a> of the number. For example, `#increment(1.0, 0.1, \"#.0\")` returns the value formatted as 1.1, 1.2, 1.3, etc.
 * `semVer` — semantic version of the project (aka SemVer), is a widely adopted version scheme that uses a sequence of three digits (Major.Minor.Patch), an optional pre-release tag and optional build meta tag. The object contains the following methods (the full version in the examples is 1.2.3-SNAPSHOT+meta):
   * `${semVer.getRawVersion()}`: 1.2.3-SNAPSHOT
   * `${semVer.getMajor()}`: 1
@@ -683,7 +683,7 @@ Each DB-agnostic type has a set of aliases (for example, "java.sql.Types.VARCHAR
 
 ## Hibernate Envers Support
 
-<a href="https://hibernate.org/orm/envers/">Hibernate Envers</a> provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
+<a href="https://hibernate.org/orm/envers/" target="_blank">Hibernate Envers</a> provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
 
 ![hibernate-envers-settings](img/hibernate-envers-settings.png)
 
@@ -747,9 +747,9 @@ The following strategies are supported:
 * `PhysicalNamingStrategyStandardlmpl`
 * `CamelCaseToUnderscoresNamingStrategy` (only for projects with Hibernate 6 and later versions)
 
-To learn more about naming strategies, you can check out our <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/">article</a>.
+To learn more about naming strategies, you can check out our <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/" target="_blank">article</a>.
 
-RDBMSs have their own limitations. For example, table names for <a href="https://twitter.com/OracleDatabase">OracleDatabase</a> earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
+RDBMSs have their own limitations. For example, table names for <a href="https://twitter.com/OracleDatabase" target="_blank">OracleDatabase</a> earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
 
 ![max-db-identifier](img/max-db-identifier.png)
 

@@ -7,7 +7,7 @@ JPA Buddy allows you to granularly pick tables/views and fields from your databa
 </div>
 
 <div class="note">
-  The first thing you need to do to use the reverse engineering features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/">documentation</a>. Check it out to learn more. 
+  The first thing you need to do to use the reverse engineering features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">documentation</a>. Check it out to learn more. 
 </div>
 
 In the **IntelliJ IDEA Community Edition**, you can generate entities from DB via:
@@ -31,13 +31,13 @@ In the **IntelliJ IDEA Ultimate Edition**, you can generate entities from DB via
 
 The menu on the top of the window allows you to configure:
 
-* <a href="https://www.jpa-buddy.com/documentation/database-connections/">DB connection</a>
-* <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#working-with-remote-db">DB schema cache</a>
+* <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">DB connection</a>
+* <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#working-with-remote-db" target="_blank">DB schema cache</a>
 * Source root and package to which the generated entities will be saved
 * Whether indexes and constraints need to be migrated
 * Whether schema name should be specified in the `@Table` annotation
 
-Also, from the "Other settings" drop-down list, you can move to the <a href="https://www.jpa-buddy.com/documentation/entity-designer/#settings-1">entity declaration</a> and <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#settings">reverse engineering</a> settings.
+Also, from the "Other settings" drop-down list, you can move to the <a href="https://www.jpa-buddy.com/documentation/entity-designer/#settings-1" target="_blank">entity declaration</a> and <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#settings" target="_blank">reverse engineering</a> settings.
 
 ### Mapped Relations, Tables and Views
 
@@ -67,7 +67,7 @@ For attributes matching the `String` or `Integer` type, you can change the mappi
 
 For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings).
 
-If you have the <a href="https://github.com/vladmihalcea/hibernate-types">HibernateTypes</a> library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
+If you have the <a href="https://github.com/vladmihalcea/hibernate-types" target="_blank">HibernateTypes</a> library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -428,7 +428,7 @@ The larger the database and the slower the connection of the database (for examp
 ### Naming Rules
 
 Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
-Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
+Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
 ![preferences_reverse_engineering](img/preferences-naming-rules.png)
 
