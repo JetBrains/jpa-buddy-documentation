@@ -35,7 +35,9 @@ The purchase process is entirely managed by **<a href="https://plugins.jetbrains
 
 For new users who haven't tried JPA Buddy yet there is a <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">30-day trial period</a>. You can see how to obtain it in the following video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XZnA_0vS-zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XZnA_0vS-zk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Purchase Process
 
@@ -46,7 +48,9 @@ For those who have already used the trial period and want to continue using JPA 
 
 In the following video, we will show you how to buy a subscription via a credit card. All the steps to get and activate a subscription will remain the same if you decide to use PayPal.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C63kRXjxhRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C63kRXjxhRs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### The Difference Between an Individual and Company Licenses
 
