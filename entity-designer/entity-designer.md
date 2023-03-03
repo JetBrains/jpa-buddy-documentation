@@ -6,7 +6,7 @@ Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will
 
 ## JPA Buddy Tool Windows
 
-JPA Buddy provides 3 additional tool windows:
+JPA Buddy provides the following tool windows:
 
 * [JPA Structure](#jpa-structure) (1) 
 * [JPA Palette](#jpa-palette) (2)
@@ -14,28 +14,28 @@ JPA Buddy provides 3 additional tool windows:
 
 ![jpa-buddy-tool-windows](img/jpa-buddy-tool-window.png)
 
-Depending on the settings specified in the [designer settings](#designer-settings), these panels can be displayed differently: together, separately, embedded in the standard IntelliJ IDEA panels, or hidden altogether.
+The panel appearance can be set in the [designer settings](#designer-settings). They can be displayed together, as separate panels, integrated into the standard IntelliJ IDEA panels, or not shown at all.
 
 ### JPA Structure
 
-JPA Structure tab provides a comprehensive data-centric view on the project. You can use it for many purposes:
+The JPA Structure tab offers a comprehensive, data-centric view of the project. You can use it for various purposes:
 
-1. Traverse through the data model. The entity structure is represented hierarchically. You can easily observe and navigate to entities referencing the current one and ones the current entity refers to. This is an extremely useful feature, especially for those who are just diving into an existing project with a large entity graph or for code reviewers, who often see parts of the data model for the first time and have limited time to understand how it is designed.
+1. Traverse through the data model and observe the entity structure represented hierarchically. This feature allows for easy navigation to entities referencing the current one, as well as ones that the current entity refers to. This is an extremely useful feature, especially for those who are new to an existing project with a large entity graph or for code reviewers who have limited time to understand how the data model is designed.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
 3. Observe related Spring Data repositories, DTOs and projections for each entity.
-4. Specify plugin-related settings such as DB connection, persistence units and others, which the plugin was not able to detect automatically.
+4. Edit additional project artifacts such as DB connections, persistence units, and others that the plugin could not detect automatically.
 
 ![jpa-structure](img/jpa-structure.png)
 
-If you don't see the JPA Structure check [visual designer settings](#designer-settings).
+You can set up JPA Structure visibility in [visual designer settings](#designer-settings).
 
 ### JPA Palette
 
 ![jpa-palette](img/jpa-palette.png)
 
-The idea of the JPA Palette is to generate attributes, indexes, queries, etc.
+The JPA Palette aims to generate code appropriate in the current context. For an entity, it can be an attribute or index; for a repository - query method, etc.
 
-JPA Palette provides a corresponding generation window for everything listed below. There is a slight difference between them according to the context, but they all have a similar design:
+JPA Palette provides code-generation wizards for the following:
 
 - <a href="https://www.youtube.com/embed/8A_ftrU_yYE" target="_blank">Attributes</a>
 - <a href="https://www.youtube.com/embed/d77p30UXBzc" target="_blank">Lifecycle Callbacks</a>
@@ -44,17 +44,17 @@ JPA Palette provides a corresponding generation window for everything listed bel
 - <a href="https://youtu.be/az9ghvGczys" target="_blank">Reverse Engineering</a>
 - <a href="https://youtu.be/jTdMIOfyx2Q" target="_blank">Utilities – Equals/HashCode/ToString</a>
 
-If you don't see the JPA Palette check [visual designer settings](#designer-settings).
+You can set up JPA Palette visibility in [visual designer settings](#designer-settings).
 
 #### Associations Performance Tips
 
-Hibernate comes with many relationships mapping types, but not all of them are equal in terms of efficiency.
+Hibernate has many relationship mapping types, but not all are equally efficient.
 
-During associations creation, JPA Buddy provides short explanation in "Learn more" button, why the current configuration is not efficient and may cause performance issues:
+During association creation, JPA Buddy briefly explains why the current configuration is inefficient and may cause performance. Use the "Learn more" button to see it.
 
 ![learn-more](img/learn-more.jpeg)
 
-Also, there is a drop-down list with possible optimizations that you can apply in one click:
+Also, you can apply optimizations suggested by JPA Buddy. Just select it from a drop-down list with possible options:
 
 ![suggested-optimizations](img/suggested-optimizations.jpeg)
 
@@ -66,7 +66,7 @@ Also, there is a drop-down list with possible optimizations that you can apply i
 
 ![jpa-inspector](img/jpa-inspector.png)
 
-JPA Inspector is designed to edit existing attributes, indexes, queries, etc.
+JPA Inspector is designed to edit existing code: attributes, indexes, queries, etc.
 
 JPA Inspector allows you to configure JPA entities and attributes in it. Click on any element that you need to configure, and change the required properties:
 
@@ -74,7 +74,7 @@ JPA Inspector allows you to configure JPA entities and attributes in it. Click o
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-If you don't see the JPA Inspector check [visual designer settings](#designer-settings).
+You can set up JPA Inspector visibility in [visual designer settings](#designer-settings).
 
 #### Hibernate Validations
 
@@ -92,7 +92,7 @@ Editor Toolbar contains relevant action depending on the file content. You can f
 <iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-If you don't see the Editor Toolbar check [visual designer settings](#designer-settings).
+You can set up Editor Toolbar visibility in [visual designer settings](#designer-settings).
 
 ## Entity Generation
 
