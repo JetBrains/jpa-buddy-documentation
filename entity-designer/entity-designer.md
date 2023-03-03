@@ -27,7 +27,7 @@ The JPA Structure tab offers a comprehensive, data-centric view of the project. 
 
 ![jpa-structure](img/jpa-structure.png)
 
-<div class="note">You can set up JPA Structure visibility in [visual designer settings](#designer-settings).</div>
+<div class="note">You can set up JPA Structure visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
 
 ### JPA Palette
 
@@ -44,7 +44,7 @@ JPA Palette provides code-generation wizards for the following:
 - <a href="https://youtu.be/az9ghvGczys" target="_blank">Reverse Engineering</a>
 - <a href="https://youtu.be/jTdMIOfyx2Q" target="_blank">Utilities – Equals/HashCode/ToString</a>
 
-<div class="note">You can set up JPA Palette visibility in [visual designer settings](#designer-settings).</div>
+<div class="note">You can set up JPA Palette visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
 
 #### Associations Performance Tips
 
@@ -74,7 +74,7 @@ JPA Inspector allows you to configure JPA entities and attributes in it. Click o
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SwnxWJMVin0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<div class="note">You can set up JPA Inspector visibility in [visual designer settings](#designer-settings).</div>
+<div class="note">You can set up JPA Inspector visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
 
 #### Hibernate Validations
 
@@ -92,7 +92,7 @@ Editor Toolbar contains relevant action depending on the file content. You can f
 <iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<div class="note">You can set up Editor Toolbar visibility in [visual designer settings](#designer-settings).</div>
+<div class="note">You can set up Editor Toolbar visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
 
 ## Entity Generation
 
