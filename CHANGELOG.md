@@ -1,5 +1,15 @@
 # Changelog
 
+## 2023.1.2 - 2023-03-13
+
+* The index on view in the database no longer causes `ExecutionException` while reverse engineering <a href="https://issues.jpa-buddy.com/issue/JPAB-2381" target="_blank">JPAB-2381</a>
+* You can now adjust the query conditions table size in the "Creating repository methods" wizard <a href="https://issues.jpa-buddy.com/issue/JPAB-2386" target="_blank">JPAB-2386</a>
+* The Flyway init migration for MySQL no longer fails with an exception if an entity contains the id with the `SEQUENCE` generation type <a href="https://issues.jpa-buddy.com/issue/JPAB-2339" target="_blank">JPAB-2339</a>
+* The improper code scaffolding for "mapTo..." postfix completion has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2392" target="_blank">JPAB-2392</a>
+* JPA Buddy no longer throws an exception while generating differential scripts with Liquibase 4.19+ <a href="https://issues.jpa-buddy.com/issue/JPAB-2404" target="_blank">JPAB-2404</a>
+
+For other improvements and fixes, see [all resolved issues (15+)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20project:%20%7BJPA%20Buddy%7D%20Milestone:%20231%20Bug%20fix:%202%20-%7BCan%27t%20Reproduce%7D).
+
 ## 2023.1.1 - 2023-02-22
 
 * When using `@Type` annotation, JPA Buddy no longer produces an exception while generating Liquibase/Flyway scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-2390" target="_blank">JPAB-2390</a>
