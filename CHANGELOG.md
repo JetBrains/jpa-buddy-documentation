@@ -1,5 +1,14 @@
 # Changelog
 
+## 2023.1.3 - 2023-03-24
+
+* The nullability algorithm for database versioning scripts now matches Hibernate's algorithm <a href="https://issues.jpa-buddy.com/issue/JPAB-2387" target="_blank">JPAB-2387</a>
+* The column type is now defined if `JoinTable` refers to the parent entity with `TABLE_PER_CLASS` strategy <a href="https://issues.jpa-buddy.com/issue/JPAB-2408" target="_blank">JPAB-2408</a>
+* Cosmetic problems with the custom field used for the DTO class in the Entity to DTO mapping dialog have been resolved <a href="https://issues.jpa-buddy.com/issue/JPAB-2401" target="_blank">JPAB-2401</a>
+* Automatically selecting *-to-one associations after the corresponding *-to-many association is selected has been implemented <a href="https://issues.jpa-buddy.com/issue/JPAB-2409" target="_blank">JPAB-2409</a>
+* The unnecessary schema name for the H2 database has been removed when adding `INSERT` statements to Liqubase script <a href="https://issues.jpa-buddy.com/issue/JPAB-2403" target="_blank">JPAB-2403</a>
+* A reference to the new changelog file is now inserted at the beginning of the root changelog <a href="https://issues.jpa-buddy.com/issue/JPAB-2402" target="_blank">JPAB-2402</a>
+
 ## 2023.1.2 - 2023-03-13
 
 * The index on view in the database no longer causes `ExecutionException` while reverse engineering <a href="https://issues.jpa-buddy.com/issue/JPAB-2381" target="_blank">JPAB-2381</a>
