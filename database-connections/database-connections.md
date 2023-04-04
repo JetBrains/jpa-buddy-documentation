@@ -21,7 +21,7 @@ As the IntelliJ IDEA Ultimate provides numerous options for data sources configu
 
 ![ij-ultimate-data-sources](img/ij-ultimate-data-sources.jpeg)
 
-For the IntelliJ IDEA Community edition, JPA Buddy offers a similar mechanism.
+JPA Buddy provides a similar mechanism for the IntelliJ IDEA Community edition.
 
 ![ij-community-db-connection](img/ij-community-db-connection.jpeg)
 
