@@ -30,7 +30,7 @@ According to your [injection settings](#settings), JPA Buddy will inject the rep
 
 #### Generate & Call Methods/Queries
 
-With JPA Buddy, you don't need to switch focus between multiple editors. It allows to call [query visual designers](https://www.jpa-buddy.com/documentation/spring-data/#example) right from here:
+With JPA Buddy, you don't need to switch focus between multiple editors. It allows you to call [query visual designers](https://www.jpa-buddy.com/documentation/spring-data/#example) right from here:
 
 ![repository-methods-generation](img/repository-methods-generation.png)
 
