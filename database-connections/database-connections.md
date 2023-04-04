@@ -2,7 +2,7 @@
 
 JPA Structure panel is responsible for everything related to DB configurations. To create a new DB connection, click on the "Plus" button and choose "DB Connection". To use [Reverse Engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/) and [Database Versioning](https://www.jpa-buddy.com/documentation/database-versioning/) features, the first thing you will need to do is create a database connection.
 
-For now, JPA Buddy supports following databases:
+For now, JPA Buddy supports the following databases:
 
 * <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
 * <a href="https://www.microsoft.com/sql-server/sql-server-2019?rtc=1" target="_blank">MSSQL</a>
@@ -17,17 +17,17 @@ For now, JPA Buddy supports following databases:
 
 You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* or *application.yaml* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the "Detect Connections" button in the JPA Structure tab and the window will appear with filled fields.
 
-As the IntelliJ IDEA Ultimate provides a large number of options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
+As the IntelliJ IDEA Ultimate provides numerous options for data sources configurations, there is no need to create other connections to make JPA Buddy work. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
 
 ![ij-ultimate-data-sources](img/ij-ultimate-data-sources.jpeg)
 
-For the IntelliJ IDEA Community edition, JPA Buddy offers a similar mechanism.
+JPA Buddy provides a similar mechanism for the IntelliJ IDEA Community edition.
 
 ![ij-community-db-connection](img/ij-community-db-connection.jpeg)
 
 ## Non-Default Schema Connection
 
-Some RDBMSs that JPA Buddy supports provide the possibility to create non-default schemas, but not all of them work well with JDBC. That’s why you can face with some known issues during diff generations, or reverse engineering. For now, these issues can only be solved with some workaround. Below are examples of connecting to non-default schemas for all databases supported by JPA Buddy.
+Some RDBMSs that JPA Buddy supports provide the possibility to create non-default schemas, but not all of them work well with JDBC. That's why you may encounter some known issues when generating diffs or reverse engineering. For now, these issues can only be solved with some workaround. Below are examples of connecting to non-default schemas for all databases supported by JPA Buddy.
 
 <div class="note">
 We show two screenshots for all the examples below: the first from the IntelliJ IDEA Community Edition, the second from the IntelliJ IDEA Ultimate Edition.
@@ -42,7 +42,7 @@ The default PostgreSQL schema is "public". For other schemes you need to specify
 ![ij-ultimate-postgres](img/ij-ultimate-postgres.jpeg)
 
 <div class="note">
-For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the required schema without any actions from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.
+JPA Buddy automatically creates the required schema connection for IntelliJ IDEA Ultimate, without any additional actions required from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.
 </div>
 
 ### Microsoft SQL Server
@@ -55,7 +55,7 @@ The default Microsoft SQL Server schema is "dbo". To connect to the non-default 
     create login JohnDoe with password='saPassword1'
     ```
 
-2. Create a user with default schema from which you want to create an entity:
+2. Create a user with a default schema from which you want to create an entity:
 
     ```sql
     create user JohnDoe for login JohnDoe with default_schema = my_schema 
@@ -67,7 +67,7 @@ The default Microsoft SQL Server schema is "dbo". To connect to the non-default 
     exec sp_addrolemember 'db_owner', 'JohnDoe' 
     ```
 
-4. Create a new connection with the newly created user’s credentials and add schema name in the database URL field
+4. Create a new connection with the newly created user’s credentials and add a schema name in the database URL field
 
 For JDBC the connection setup will look like this:
 
@@ -83,7 +83,7 @@ And for <a href="http://jtds.sourceforge.net/faq.html" target="_blank">JTDS</a> 
 
 ### Oracle
 
-In Oracle, schema, user and database are the same thing. Hence, to connect to the non-default scheme you need to specify schema name in the user field.
+In Oracle, schema, user and database are the same thing. Hence, to connect to the non-default scheme you need to specify its schema name in the user field.
 
 For the connection via SID setup will look like this:
 
@@ -103,7 +103,7 @@ Reverse engineering does not work for system tables located in the "SYS" schema.
 
 ### MySQL & MariaDB
 
-To connect to the non-default scheme you need to specify schema name in the Database URL field:
+To connect to the non-default scheme you need to specify the schema name in the Database URL field:
 
 ![ij-community-mysql](img/ij-community-mysql.jpeg)
 
@@ -117,4 +117,4 @@ Since IntelliJ IDEA CE doesn't allow configuring database drives, JPA Buddy is t
 
 ## How to connect via SSH
 
-JPA Buddy uses a different mechanism from what IntelliJ IDEA uses to connect to the database. So, JPA Buddy can't use the SSH tunnel configured in IntelliJ IDEA. To make Buddy works properly in this case, you need to establish an SSH tunnel on the system level. Here is <a href="https://www.linode.com/docs/guides/create-an-ssh-tunnel-for-mysql-remote-access/" target="_blank">an example</a> of how you can do it.
+JPA Buddy uses a different mechanism from what IntelliJ IDEA uses to connect to the database. So, JPA Buddy can't use the SSH tunnel configured in IntelliJ IDEA. To make Buddy work properly in this case, you need to establish an SSH tunnel on the system level. Here is <a href="https://www.linode.com/docs/guides/create-an-ssh-tunnel-for-mysql-remote-access/" target="_blank">an example</a> of how you can do it.
