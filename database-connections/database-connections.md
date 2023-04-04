@@ -42,7 +42,7 @@ The default PostgreSQL schema is "public". For other schemes you need to specify
 ![ij-ultimate-postgres](img/ij-ultimate-postgres.jpeg)
 
 <div class="note">
-For IntelliJ IDEA Ultimate, JPA Buddy provides connection creating for the required schema without any actions from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.
+JPA Buddy automatically creates the required schema connection for IntelliJ IDEA Ultimate, without any additional actions required from you. For example, use a connection with the default schema (public) and try to create an entity from another schema. JPA Buddy will create and configure another DB connection with the parameters as described above.
 </div>
 
 ### Microsoft SQL Server
