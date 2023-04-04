@@ -55,7 +55,7 @@ The default Microsoft SQL Server schema is "dbo". To connect to the non-default 
     create login JohnDoe with password='saPassword1'
     ```
 
-2. Create a user with default schema from which you want to create an entity:
+2. Create a user with a default schema from which you want to create an entity:
 
     ```sql
     create user JohnDoe for login JohnDoe with default_schema = my_schema 
@@ -67,7 +67,7 @@ The default Microsoft SQL Server schema is "dbo". To connect to the non-default 
     exec sp_addrolemember 'db_owner', 'JohnDoe' 
     ```
 
-4. Create a new connection with the newly created user’s credentials and add schema name in the database URL field
+4. Create a new connection with the newly created user’s credentials and add a schema name in the database URL field
 
 For JDBC the connection setup will look like this:
 
@@ -83,7 +83,7 @@ And for <a href="http://jtds.sourceforge.net/faq.html" target="_blank">JTDS</a> 
 
 ### Oracle
 
-In Oracle, schema, user and database are the same thing. Hence, to connect to the non-default scheme you need to specify schema name in the user field.
+In Oracle, schema, user and database are the same thing. Hence, to connect to the non-default scheme you need to specify its schema name in the user field.
 
 For the connection via SID setup will look like this:
 
@@ -103,7 +103,7 @@ Reverse engineering does not work for system tables located in the "SYS" schema.
 
 ### MySQL & MariaDB
 
-To connect to the non-default scheme you need to specify schema name in the Database URL field:
+To connect to the non-default scheme you need to specify the schema name in the Database URL field:
 
 ![ij-community-mysql](img/ij-community-mysql.jpeg)
 
