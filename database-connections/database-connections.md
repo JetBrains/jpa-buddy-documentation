@@ -2,7 +2,7 @@
 
 JPA Structure panel is responsible for everything related to DB configurations. To create a new DB connection, click on the "Plus" button and choose "DB Connection". To use [Reverse Engineering](https://www.jpa-buddy.com/documentation/reverse-engineering/) and [Database Versioning](https://www.jpa-buddy.com/documentation/database-versioning/) features, the first thing you will need to do is create a database connection.
 
-For now, JPA Buddy supports following databases:
+For now, JPA Buddy supports the following databases:
 
 * <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
 * <a href="https://www.microsoft.com/sql-server/sql-server-2019?rtc=1" target="_blank">MSSQL</a>
