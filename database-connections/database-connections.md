@@ -17,7 +17,7 @@ For now, JPA Buddy supports the following databases:
 
 You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* or *application.yaml* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the "Detect Connections" button in the JPA Structure tab and the window will appear with filled fields.
 
-As the IntelliJ IDEA Ultimate provides numerous options for data sources configurations, there is no need to create other connections to make JPA Buddy work. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
+As the IntelliJ IDEA Ultimate provides numerous options for data sources configurations, there is no needs to create other connections to make JPA Buddy works. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
 
 ![ij-ultimate-data-sources](img/ij-ultimate-data-sources.jpeg)
 
