@@ -24,7 +24,7 @@ By following the same coding style, you can also inject an existing Spring Data 
 
 ![spring-data-jpa-repository-generation-injection](img/spring-data-jpa-repository-generation-injection.png)
 
-According to your [injection settings](#settings), JPA Buddy will inject the repository into the current class. Example below shows constructor based injection:
+According to your [injection settings](#settings), JPA Buddy will inject the repository into the current class. The example below shows constructor based injection:
 
 ![spring-data-jpa-repository-generation-injection](img/repository-injection-result.png)
 
