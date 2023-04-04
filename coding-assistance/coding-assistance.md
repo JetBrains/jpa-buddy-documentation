@@ -24,13 +24,13 @@ By following the same coding style, you can also inject an existing Spring Data 
 
 ![spring-data-jpa-repository-generation-injection](img/spring-data-jpa-repository-generation-injection.png)
 
-According to your [injection settings](#settings), JPA Buddy will inject the repository into the current class. Example below shows constructor based injection:
+According to your [injection settings](#settings), JPA Buddy will inject the repository into the current class. The example below shows constructor based injection:
 
 ![spring-data-jpa-repository-generation-injection](img/repository-injection-result.png)
 
 #### Generate & Call Methods/Queries
 
-With JPA Buddy, you don't need to switch focus between multiple editors. It allows to call [query visual designers](https://www.jpa-buddy.com/documentation/spring-data/#example) right from here:
+With JPA Buddy, you don't need to switch focus between multiple editors. It allows you to call [query visual designers](https://www.jpa-buddy.com/documentation/spring-data/#example) right from here:
 
 ![repository-methods-generation](img/repository-methods-generation.png)
 
@@ -50,7 +50,7 @@ Here is the code that JPA Buddy will generate after selecting the "mapToPetDto" 
 
 ## Generate JPA related objects from unresolved references
 
-Some developers prefer to declare an object that doesn't exist yet first and only then implement it. JPA Buddy will help those developers who adhere to this programming style. It suggests to create:
+Some developers may choose to declare an object before implementing it. JPA Buddy will help those developers who adhere to this programming style. It suggests creating:
 
 1. Spring Data JPA Repository – in case the reference ends with the value specified in the [Spring Data Repository settings](https://www.jpa-buddy.com/documentation/spring-data/#settings). Default value is "Repository".
 2. Projection – in case the reference ends with the value specified in the [Projection declaration settings](https://www.jpa-buddy.com/documentation/spring-data/#projection-declaration-settings). Default values are: "Info", "Prj", "Projection", "VO", "Vo", "View", "Request", "Browse".
