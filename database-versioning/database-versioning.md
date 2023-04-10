@@ -14,7 +14,7 @@ This is the opposite approach, here the data model classes serve as the single s
 
 ## Database Connection
 
-The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">documentation</a>. Check it out to learn more.
+The first thing you need to do to use the database versioning features is to create a DB connection. A separate <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">documentation</a> describes how to do this correctly and mentions any possible problems you may encounter. Check it out to learn more.
 
 ## Library Support
 
