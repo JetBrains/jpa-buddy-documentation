@@ -18,7 +18,7 @@ The first thing you need to do to use the database versioning features is to cre
 
 ## Library Support
 
-JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/" target="_blank">Flyway</a>** and **<a href="https://www.liquibase.org/" target="_blank">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
+JPA Buddy supports two popular solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/" target="_blank">Flyway</a>** and **<a href="https://www.liquibase.org/" target="_blank">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
 
 If you would like to see a short overview and practical examples of using Flyway or Liquibase you can use the following links:
 
