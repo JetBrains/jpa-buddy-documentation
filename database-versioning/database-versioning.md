@@ -77,7 +77,7 @@ Click OK to proceed further. JPA Buddy will analyze the difference between Sourc
 
 #### Using a Database
 
-Comparing a database with another database/snapshot makes sense if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities:
+It makes sense to comparing a database with another database/snapshot, if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities:
 
 - using schema auto-generators (Hibernate and EclipseLink provide their own implementations).
   Note, that even Hibernate documentation warns against using this way beyond prototyping or testing reasons.
