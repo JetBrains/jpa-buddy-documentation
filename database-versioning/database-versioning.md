@@ -186,7 +186,7 @@ If you want to save the changelog as a regular file, then the following configur
 
 * "Directory" and "File name" fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog.
 * You can use "Include to", "Include folder", and "Include context" to specify whether a changelog should be included in another changelog. If you check the "Include folder" box, it generates the include statement for the entire folder, not just the current changelog.
-* From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
+* From the "File type" drop-down list, you can choose one of the four file types (YAML, JSON, SQL, XML) supported by Liquibase , in which JPA Buddy will generate the changelog.
 
 If you want to save the changelog as a scratch file, then you can configure only its name and type.
 
