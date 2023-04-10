@@ -107,7 +107,7 @@ To configure a new persistence unit, click on the plus button in the JPA Structu
 
 #### Using a Data Model Snapshot
 
-JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or hard to obtain a database for a certain state of the model, for example, when merging changes into some older version of the application. It may be simply impossible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, so no database will be required for differential migration scripts generation.
+JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or difficult to obtain a database for a certain state of the model, for example, when merging changes into some earlier application version. It may be simply unfeasible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, eliminating the need for a database when producing differential migration scripts.
 
 To generate a snapshot, open JPA Buddy panel and click the **Plus** button. Then, select the **Data model snapshot** item.
 
