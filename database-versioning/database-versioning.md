@@ -86,7 +86,7 @@ It makes sense to comparing a database with another database/snapshot, if you ha
 
 #### Using a Data Model
 
-An application uses JPA entities to represent the data model, including entities, associations, indexes, and other related elements, in accordance with JPA principles. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema in the first place. This is why comparing your data model with a database/snapshot is the preferable option for generating differential changelogs.
+An application uses JPA entities to represent the data model, including entities, associations, indexes, and other related elements, in accordance with JPA principles. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema. This is why it's preferable to compare your data model with a database/snapshot for generating differential changelogs.
 
 JPA Buddy scans all JPA objects, compares them with a target database or a snapshot and generates a differential migration script.
 
