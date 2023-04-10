@@ -96,7 +96,7 @@ When a data model serves as the source for the current schema state, it causes t
 
 Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units.
 
-To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose "Persistence Unit". In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
+To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose "Persistence Unit". In the opened window, you can define the persistence unit name, the default DB connection and select the required entities. For entity selection, there are two possibilities that you can combine:
 
 - You can scan the needed package, and all entities located in it will be added automatically
 - You can manually select entities from the project
