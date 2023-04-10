@@ -148,7 +148,7 @@ Some types of changes have custom fields in the preview window. For example, "ad
 
 ![changelog-preview-update-null](img/changelog-preview-update-null.jpeg)
 
-Each change type is color-coded according to its danger level: green for SAFE, yellow for CAUTION and red for DANGER. SAFE operations are the ones that cannot cause loss of data in any way, for example, adding a column does not affect the existing data. Operations marked with CAUTION are generally safe but require your attention: for instance, adding a NOT NULL constraint can fail if there are null values in the column. DANGER operations can cause loss of data, for example, dropping a column or modifying data type.
+Each change type is color-coded according to its danger level: green for SAFE, yellow for CAUTION and red for DANGER. SAFE operations are the ones that cannot cause loss of data in any way, for example, adding a column does not affect the existing data. Operations marked with CAUTION are generally safe but require your attention: for instance, adding a NOT NULL constraint can fail if there are null values in the column. DANGER operations can cause loss of data, for example, dropping a column or modifying a data type.
 
 The danger levels can be customized in the plugin preferences in JPA Buddy -> Database Versioning -> Diff Changes:
 
