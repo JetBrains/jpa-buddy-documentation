@@ -162,13 +162,13 @@ Basically, renaming schema elements, such as table name, column name, etc., lead
 - Drop an existing value
 - Add a new one
 
-But JPA Buddy can replace such statements with the single rename or modify statement. For example, you will see two statements in the preview window after renaming column/table/sequence name or changing column type. But by choosing any of the related statements, you can merge them:
+But JPA Buddy can replace such statements with a single rename or modify statement. For example, you will see two statements in the preview window after renaming a column/table/sequence or changing a column type. But by choosing any of the related statements, you can merge them:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nhGhcpdqTMs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-After the merge, drop statements may be irrelevant. You can choose changes that should be removed from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
+After the merge, drop statements may be irrelevant. You can choose the changes that you want to remove from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
 
 ![unnecessary-changes](img/unnecessary-changes.jpeg)
 
