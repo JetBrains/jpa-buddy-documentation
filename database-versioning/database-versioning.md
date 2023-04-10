@@ -47,7 +47,7 @@ Or:
 
 ## General Differential Scripts Generation Flow
 
-The general path of the diff scripts generation for both of frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts".
+The general path of the diff scripts generation for both frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts".
 
 To generate a differential migration script with JPA Buddy, right-click on the desired folder and select New -> Liquibase -> Diff Changelog or New -> Flyway -> Diff Versioned Migration. Alternatively, click the Plus button on top of the JPA Structure tool window and select the corresponding item there.
 
@@ -55,7 +55,7 @@ In the opened dialog select source (the desired state of the data model) and tar
 
 **Resulting migration script(s) = Current State (Source) – Previous State (Target).**
 
-In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the state of the source.
+In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the source's state.
 
 As a source you can choose between the following options:
 
