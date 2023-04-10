@@ -8,7 +8,7 @@ In this approach, the database takes precedence over data model classes (POJOs o
 
 ### Source code first
 
-This is an opposite approach having the single source of truth in the data model classes. Hence, the database gets modified in accordance with changes in the data model. To handle database update, the difference between the old state of the database and up-to-date state of the data model classes should be represented in migration scripts of any format (Flyway SQL migrations or Liquibase changelogs).
+This is the opposite approach, here the data model classes serve as the single source of truth. Hence, the database gets modified by changes made in the data model. To update the database, migration scripts must represent the changes between the outdated database state and the current state of the data model classes in any format, such as Flyway SQL migrations or Liquibase changelogs.
 
 **JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation.
 
