@@ -25,7 +25,7 @@ If you would like to see a short overview and practical examples of using Flyway
 * https://www.baeldung.com/database-migrations-with-flyway
 * https://www.baeldung.com/liquibase-refactor-schema-of-java-app
 
-To be certain that JPA Buddy is ready to help, make sure that the project contains right maven dependencies:
+Make sure that the project contains the right maven dependencies to enable the corresponding features:
 
 ```xml
 <dependency> 
@@ -44,8 +44,6 @@ Or:
  <version>7.15.0</version> 
 </dependency> 
 ```
-
-JPA Buddy scans the project dependencies and enables the corresponding features.
 
 ## General Differential Scripts Generation Flow
 
