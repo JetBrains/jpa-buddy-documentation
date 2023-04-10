@@ -109,7 +109,7 @@ To configure a new persistence unit, click on the plus button in the JPA Structu
 
 JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or difficult to obtain a database for a certain state of the model, for example, when merging changes into some earlier application version. It may be simply unfeasible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, eliminating the need for a database when producing differential migration scripts.
 
-To generate a snapshot, open JPA Buddy panel and click the **Plus** button. Then, select the **Data model snapshot** item.
+To generate a snapshot, open JPA Buddy panel and click on the **Plus** button. Then, select the **Data model snapshot** item.
 
 ![data-model-snapshot](img/data-model-snapshot.png)
 
@@ -117,7 +117,7 @@ This allows you to capture the state of the data model at some older point, so t
 
 For example, you have been working in a feature branch and modified the model. Before merging, it is necessary to create a diff changelog describing the changes in this branch only.
 
-Depending on the setup, there might be no DB that is always in sync with the main branch. Things get even more complicated when you need to merge not into the main branch, but some other state of the application (for example, into a release branch). It may be simply impossible to keep a database dump for each release. JPA Buddy offers a simpler solution:
+Depending on the setup, there might be no DB that is always in sync with the main branch. Things get even more complicated when you need to merge changes into a state of the application other than the main branch, such as a release branch. It may be simply impossible to keep a database dump for each release. JPA Buddy offers a simpler solution:
 
 1. Checkout the target branch (for example, main or release)
 2. Create a snapshot of the model in that branch
