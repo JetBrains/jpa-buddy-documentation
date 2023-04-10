@@ -192,7 +192,7 @@ If you want to save the changelog as a scratch file, then you can configure only
 
 ![liquibase-preview-scratch](img/liquibase-preview-scratch.png)
 
-On the left of the window, there is a preview of the actual changesets to be generated. You can see what each change is going to look like by clicking on them. To combine several changes into one changeset or to ignore them, simply drag them around. The top left corner of the preview window contains various actions to modify the resulting changelog:
+The left side of the window shows a preview of the changesets that will be generated. You can click on each change to see what it will look like. To combine several changes into one changeset or to ignore them, simply drag and drop them. The top left corner of the preview window contains various actions to modify the resulting changelog:
 
 ![add-changelog-action](img/add-changelog-action.jpeg)
 
