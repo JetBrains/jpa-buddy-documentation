@@ -1,6 +1,6 @@
 ## Introduction
 
-Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge.
+To ensure the data model in the source code matches the relational databases, it's crucial to keep them synchronized. There are two commonly used methods to tackle this challenge.
 
 ### Database first
 
