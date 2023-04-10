@@ -57,7 +57,7 @@ In the opened dialog select source (the desired state of the data model) and tar
 
 In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the source's state.
 
-As a source you can choose between the following options:
+You can choose between the following source options:
 
 - **DB** — should be used in case you have an up-to-date database and would like to generate migration scripts for updating another DB to the same state.
 - **Model** — use it to generate migration scripts representing the difference between the current state of the entity relationship model (JPA entities) and old (target) state.
