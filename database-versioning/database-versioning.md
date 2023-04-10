@@ -4,7 +4,7 @@ To ensure the data model in the source code matches the relational databases, it
 
 ### Database first
 
-This approach takes the database as the first-class citizen, while data model classes (POJOs or JPA entities) are derived from the database schema via code generation, aka "Database reverse engineering". Following this scenario, you should not touch the generated classes, because they can be re-generated at any moment, and all changes made in the source code will be lost. Also, this way **doesn't save you from the migration scripts generation**, because they will be required to upgrade the existing installations to the newest version.
+In this approach, the database takes precedence over data model classes (POJOs or JPA entities), which are generated from the database schema through code generation, also known as "Database reverse engineering." It's essential to avoid altering the generated classes since they can be regenerated at any time, and any changes made in the source code will be lost. However, this approach does not eliminate the need for migration script generation, as they are necessary for upgrading existing installations to the latest version.
 
 ### Source code first
 
