@@ -90,7 +90,7 @@ An application uses JPA entities to represent the data model, including entities
 
 JPA Buddy scans all JPA objects, compares them with a target database or a snapshot and generates a differential migration script.
 
-Using a data model as a source of the current schema state triggers selection of a persistence unit. Following the documentation:
+When a data model serves as the source for the current schema state, it causes the selection of a persistence unit. Following the documentation:
 
 *A persistence unit defines a set of all entity classes that are managed by EntityManager instances in an application. This set of entity classes represents the data contained within a single data store.*
 
