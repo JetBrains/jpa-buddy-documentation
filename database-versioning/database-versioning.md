@@ -130,7 +130,7 @@ In four simple steps you get a migration script that describes the changes betwe
 
 ![init-schema-actions](img/init-schema-actions.png)
 
-For both Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure tab, the corresponding window will appear:
+For both Liquibase and Flyway, JPA Buddy provides an action to generate an initialization script for your schema. Once you select this action from the JPA Structure tab, the corresponding window will appear:
 
 ![init-schema-changelog](img/init-schema-changelog.jpeg)
 
