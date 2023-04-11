@@ -1,31 +1,31 @@
 ## Introduction
 
-Working with relational databases it is important to keep them synchronized with the data model represented in the source code. There are two popular approaches to this challenge.
+To ensure the data model in the source code matches the relational databases, it's crucial to keep them synchronized. There are two commonly used methods to tackle this challenge.
 
 ### Database first
 
-This approach takes the database as the first-class citizen, while data model classes (POJOs or JPA entities) are derived from the database schema via code generation, aka "Database reverse engineering". Following this scenario, you should not touch the generated classes, because they can be re-generated at any moment, and all changes made in the source code will be lost. Also, this way **doesn't save you from the migration scripts generation**, because they will be required to upgrade the existing installations to the newest version.
+In this approach, the database takes precedence over data model classes (POJOs or JPA entities), which are generated from the database schema through code generation, also known as "Database reverse engineering." It's essential to avoid altering the generated classes since they can be regenerated at any time, and any changes made in the source code will be lost. However, this approach **does not eliminate the need for migration script generation**, as they are necessary for upgrading existing installations to the latest version.
 
 ### Source code first
 
-This is an opposite approach having the single source of truth in the data model classes. Hence, the database gets modified in accordance with changes in the data model. To handle database update, the difference between the old state of the database and up-to-date state of the data model classes should be represented in migration scripts of any format (Flyway SQL migrations or Liquibase changelogs).
+This is the opposite approach, here the data model classes serve as the single source of truth. Hence, the database gets modified by changes made in the data model. To update the database, migration scripts must represent the changes between the outdated database state and the current state of the data model classes in any format, such as Flyway SQL migrations or Liquibase changelogs.
 
-**JPA Buddy** provides convenient tools that help developers to proceed with each of the described scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation.
+**JPA Buddy** provides convenient tools to help developers proceed with each of these two scenarios. This guide shows how JPA Buddy can save a lot of time for differential update scripts generation.
 
 ## Database Connection
 
-The first thing you need to do to use the database versioning features is to create a DB connection. The correct way to do it and possible issues are described in the separate <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">documentation</a>. Check it out to learn more.
+The first thing you need to do to use the database versioning features is to create a DB connection. A separate <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">documentation</a> describes how to do this correctly and mentions any possible problems you may encounter. Check it out to learn more.
 
 ## Library Support
 
-JPA Buddy supports two most used solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/" target="_blank">Flyway</a>** and **<a href="https://www.liquibase.org/" target="_blank">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
+JPA Buddy supports two popular solutions that are often used in Java applications along with JPA: **<a href="https://flywaydb.org/" target="_blank">Flyway</a>** and **<a href="https://www.liquibase.org/" target="_blank">Liquibase</a>**. However, there is an option to obtain DDL scripts for your JPA entities even if none of these are used in the project.
 
 If you would like to see a short overview and practical examples of using Flyway or Liquibase you can use the following links:
 
 * https://www.baeldung.com/database-migrations-with-flyway
 * https://www.baeldung.com/liquibase-refactor-schema-of-java-app
 
-To be certain that JPA Buddy is ready to help, make sure that the project contains right maven dependencies:
+Make sure that the project contains the right maven dependencies to enable the corresponding features:
 
 ```xml
 <dependency> 
@@ -45,11 +45,9 @@ Or:
 </dependency> 
 ```
 
-JPA Buddy scans the project dependencies and enables the corresponding features.
-
 ## General Differential Scripts Generation Flow
 
-The general path of the diff scripts generation for both of frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts".
+The general path of the diff scripts generation for both frameworks is nearly the same. However, there are some differences which are also highlighted in this guide. To avoid repetition, we will call both Liquibase changelogs and Flyway versioned migrations "migration scripts".
 
 To generate a differential migration script with JPA Buddy, right-click on the desired folder and select New -> Liquibase -> Diff Changelog or New -> Flyway -> Diff Versioned Migration. Alternatively, click the Plus button on top of the JPA Structure tool window and select the corresponding item there.
 
@@ -57,16 +55,16 @@ In the opened dialog select source (the desired state of the data model) and tar
 
 **Resulting migration script(s) = Current State (Source) – Previous State (Target).**
 
-In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the state of the source.
+In other words, JPA Buddy will generate the resulting migration script for upgrading the target database to the source's state.
 
-As a source you can choose between the following options:
+You can choose between the following source options:
 
 - **DB** — should be used in case you have an up-to-date database and would like to generate migration scripts for updating another DB to the same state.
-- **Model** — use it to generate migration scripts representing the difference between the current state of the entity relationship model (JPA entities) and old (target) state.
+- **Model** — use it to generate migration scripts representing the difference between the current state of the entity relationship model (JPA entities) and the old (target) state.
 
 The target can be set to:
 
-- **DB** — target DB with older version of the schema.
+- **DB** — target DB with an older version of the schema.
 - **Snapshot** — use this option in case you have the desired state stored in a data model snapshot. It can be generated by JPA Buddy as well.
 
 Click OK to proceed further. JPA Buddy will analyze the difference between Source and Target and show the Preview dialog to enable fine tuning for the resulting migration script. Click Save to add the new script to the project or to append an existing one.
@@ -79,7 +77,7 @@ Click OK to proceed further. JPA Buddy will analyze the difference between Sourc
 
 #### Using a Database
 
-Comparing a database with another database/snapshot makes sense if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities:
+It makes sense to comparing a database with another database/snapshot, if you have a source database already synchronized with your data model. There are two popular approaches for keeping a database in accordance with JPA entities:
 
 - using schema auto-generators (Hibernate and EclipseLink provide their own implementations).
   Note, that even Hibernate documentation warns against using this way beyond prototyping or testing reasons.
@@ -88,17 +86,17 @@ Comparing a database with another database/snapshot makes sense if you have a so
 
 #### Using a Data Model
 
-Following JPA principles, an application represents the data model (entities, associations, indexes, etc.) via the declared JPA entities. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema in the first place. This is why comparing your data model with a database/snapshot is the preferable option for generating differential changelogs.
+An application uses JPA entities to represent the data model, including entities, associations, indexes, and other related elements, in accordance with JPA principles. In other words, it already contains sufficient information about the database schema. So, your source code is the only point of truth, which represents the up-to-date (source) schema. This is why it's preferable to compare your data model with a database/snapshot for generating differential changelogs.
 
 JPA Buddy scans all JPA objects, compares them with a target database or a snapshot and generates a differential migration script.
 
-Using a data model as a source of the current schema state triggers selection of a persistence unit. Following the documentation:
+When a data model serves as the source for the current schema state, it causes the selection of a persistence unit. Following the documentation:
 
 *A persistence unit defines a set of all entity classes that are managed by EntityManager instances in an application. This set of entity classes represents the data contained within a single data store.*
 
 Effectively this means that if your application uses multiple data stores, you will need to generate migration scripts separately for each of them, specifying corresponding persistence units.
 
-To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose "Persistence Unit". In the opened window, you can define the persistence unit name, the default DB connection and select required entities. For entity selection, there are two possibilities that you can combine:
+To configure a new persistence unit, click on the plus button in the JPA Structure tab and choose "Persistence Unit". In the opened window, you can define the persistence unit name, the default DB connection and select the required entities. For entity selection, you have two possibilities:
 
 - You can scan the needed package, and all entities located in it will be added automatically
 - You can manually select entities from the project
@@ -109,9 +107,9 @@ To configure a new persistence unit, click on the plus button in the JPA Structu
 
 #### Using a Data Model Snapshot
 
-JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or hard to obtain a database for a certain state of the model, for example, when merging changes into some older version of the application. It may be simply impossible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, so no database will be required for differential migration scripts generation.
+JPA Buddy allows using a data model snapshot as the target of the comparison. Sometimes, it is impossible or difficult to obtain a database for a certain state of the model, for example, when merging changes into some earlier application version. It may be simply unfeasible to keep a database dump for each release. JPA Buddy lets you checkout the required version of the application and generate a JSON snapshot based on the JPA entities, eliminating the need for a database when producing differential migration scripts.
 
-To generate a snapshot, open JPA Buddy panel and click the **Plus** button. Then, select the **Data model snapshot** item.
+To generate a snapshot, open JPA Buddy panel and click on the **Plus** button. Then, select the **Data model snapshot** item.
 
 ![data-model-snapshot](img/data-model-snapshot.png)
 
@@ -119,7 +117,7 @@ This allows you to capture the state of the data model at some older point, so t
 
 For example, you have been working in a feature branch and modified the model. Before merging, it is necessary to create a diff changelog describing the changes in this branch only.
 
-Depending on the setup, there might be no DB that is always in sync with the main branch. Things get even more complicated when you need to merge not into the main branch, but some other state of the application (for example, into a release branch). It may be simply impossible to keep a database dump for each release. JPA Buddy offers a simpler solution:
+Depending on the setup, there might be no DB that is always in sync with the main branch. Things get even more complicated when you need to merge changes into a state of the application other than the main branch, such as a release branch. Maintaining a database dump for each release may not be practical. JPA Buddy offers a simpler alternative:
 
 1. Checkout the target branch (for example, main or release)
 2. Create a snapshot of the model in that branch
@@ -132,7 +130,7 @@ In four simple steps you get a migration script that describes the changes betwe
 
 ![init-schema-actions](img/init-schema-actions.png)
 
-For both Liquibase and Flyway, JPA Buddy provides action to generate initialization script for you schema. Once you select this action from JPA Structure tab, the corresponding window will appear:
+For both Liquibase and Flyway, JPA Buddy provides an action to generate an initialization script for your schema. Once you select this action from the JPA Structure tab, the corresponding window will appear:
 
 ![init-schema-changelog](img/init-schema-changelog.jpeg)
 
@@ -150,28 +148,27 @@ Some types of changes have custom fields in the preview window. For example, "ad
 
 ![changelog-preview-update-null](img/changelog-preview-update-null.jpeg)
 
-Each change type is color-coded according to its danger level: green for SAFE, yellow for CAUTION and red for DANGER. SAFE operations are the ones that cannot cause loss of data in any way, for example, adding a column does not affect the existing data. Operations marked with CAUTION are generally safe but require your attention: for instance, adding a NOT NULL constraint can fail if there are null values in the column. DANGER operations can cause loss of data, for example, dropping a column or modifying data type.
+Each change type is color-coded according to its danger level: green for SAFE, yellow for CAUTION and red for DANGER. SAFE operations are the ones that cannot cause loss of data in any way, for example, adding a column does not affect the existing data. Operations marked with CAUTION are generally safe but require your attention: for instance, adding a NOT NULL constraint can fail if there are null values in the column. DANGER operations can cause loss of data, for example, dropping a column or modifying a data type.
 
 The danger levels can be customized in the plugin preferences in JPA Buddy -> Database Versioning -> Diff Changes:
 
 ![diff-changes-preferences](img/diff-changes-preferences.jpeg)
 
-You can also configure whether each change type is placed in the primary/secondary location or ignored completely. The ignored changes will be excluded from all newly generated migration scripts by default, instead they will be displayed in the "Ignored" section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels that should be used for each change type.
-
+You can configure the location of each change type, either in the primary or secondary location, or ignore it altogether. By default, newly generated migration scripts will exclude ignored changes but display them in the "Ignored" section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels to use for each change type.
 #### Merging statements
 
-Basically, renaming schema elements, such as table name, column name, etc., leads to the two statements:
+Basically, renaming schema elements, such as table name, column name, etc., leads to two statements:
 
 - Drop an existing value
-- Add the new one
+- Add a new one
 
-But JPA Buddy can replace such statements with the single rename or modify statement. For example, you will see two statements in the preview window after renaming column/table/sequence name or changing column type. But by choosing any of the related statements, you can merge them:
+But JPA Buddy can replace such statements with a single rename or modify statement. For example, you will see two statements in the preview window after renaming a column/table/sequence or changing a column type. But by choosing any of the related statements, you can merge them:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nhGhcpdqTMs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-After the merge, drop statements may be irrelevant. You can choose changes that should be removed from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
+After the merge, drop statements may be irrelevant. You can choose the changes that you want to remove from the migration scripts. For example, after renaming an id column (rather than dropping an old value and adding a new one), there is no need to add a new primary key for it:
 
 ![unnecessary-changes](img/unnecessary-changes.jpeg)
 
@@ -188,14 +185,14 @@ After the merge, drop statements may be irrelevant. You can choose changes that 
 If you want to save the changelog as a regular file, then the following configuration options will be available:
 
 * "Directory" and "File name" fields are responsible for configuring the location of the generated changelog. If a changelog with the specified name already exists, you will be prompted with a warning, after which the changes will be appended to that changelog.
-* "Include to", "include folder" and "include context" allows you to configure whether the changelog should be included in some other changelog. If checked, the "include folder" box will generate the include statement for the whole folder, not only the current changelog.
-* From the "File type" drop-down list, you can choose one of the four supported by Liquibase file type (YAML, JSON, SQL, XML), in which JPA Buddy will generate the changelog.
+* You can use "Include to", "Include folder", and "Include context" to specify whether a changelog should be included in another changelog. If you check the "Include folder" box, it generates the include statement for the entire folder, not just the current changelog.
+* From the "File type" drop-down list, you can choose one of the four file types (YAML, JSON, SQL, XML) supported by Liquibase , in which JPA Buddy will generate the changelog.
 
 If you want to save the changelog as a scratch file, then you can configure only its name and type.
 
 ![liquibase-preview-scratch](img/liquibase-preview-scratch.png)
 
-On the left of the window, there is a preview of the actual changesets to be generated. You can see what each change is going to look like by clicking on them. To combine several changes into one changeset or to ignore them, simply drag them around. The top left corner of the preview window contains various actions to modify the resulting changelog:
+The left side of the window shows a preview of the changesets that will be generated. You can click on each change to see what it will look like. To combine several changes into one changeset or to ignore them, simply drag and drop them. The top left corner of the preview window contains various actions to modify the resulting changelog:
 
 ![add-changelog-action](img/add-changelog-action.jpeg)
 
