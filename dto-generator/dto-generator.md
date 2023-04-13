@@ -26,7 +26,7 @@ Let’s look at the available DTO types:
 * New Class – a new class will be created in a separate file.
 * New Nested Class – a new public static nested class will be created.
 * Existing Class – you can select a DTO class that already exists in the project.
-* Flat – all inner class fields will be top-class fields. Their names will consist of the inner class name + fields names.
+* Flat – all inner class fields will be top-class fields. The names of the generated entities will be formed by combining the inner class name with the field names.
 
 ## Java Records Support
 
