@@ -119,7 +119,7 @@ JPA Buddy supports generic mappers' inheritance:
 
 ### Mapper Declaration
 
-JPA Buddy provides flexible settings for mapper declaration. To configure naming patterns or mapping naming strategy for collection, open Tools -> JPA Buddy -> Mapper Declaration:
+JPA Buddy provides flexible settings for mapper declaration. To configure naming patterns or mapping naming strategy for collections, open Tools -> JPA Buddy -> Mapper Declaration:
  
 ![mapper-declaration](img/mapper-declaration.png)
 
