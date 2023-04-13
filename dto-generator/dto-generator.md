@@ -162,6 +162,6 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 Once JPA Buddy associates a DTO class with its corresponding entity:
 
 * The DTO class will appear in the **Dto & Projections** section in the JPA Structure tab and in the Editor Toolbar (1)
-* The gutter icon will appear in the DTO to ease the navigation to its entity (2)
+* A gutter icon will appear in the DTO class, providing a convenient way to navigate to its associated entity (2)
 
 ![dto-navigation](img/dto-navigation.png)
