@@ -150,16 +150,16 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 1. Serializable type.
 2. Class name postfix.
 3. Whether to use Lombok or not.
-4. Name pattern regexp. This option is useful if you follow an obligatory naming convention for DTOs. It allows JPA Buddy to associate a DTO with its JPA Entity using a DTO name only. You can specify a placeholder for the simple class name of the target JPA entity using the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty. 
+4. Name pattern regexp. This option is useful if you follow an obligatory naming convention for DTOs. It allows JPA Buddy to associate a DTO with its JPA Entity using a DTO name only. You can specify a placeholder for the simple class name of the target JPA entity using the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. This feature is disabled when the field is empty. 
 5. Class comment. Defines the comment that will be generated over the DTO class.
-6. Comment link regexp (The feature is disabled when the field is empty). It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
+6. Comment link regexp (The feature is disabled when the field is empty). It allows JPA Buddy to associate a DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
   ```java
   // A DTO for the {@link io.jpabuddy.demo.entities.Project} entity.
   ```
 
 ### Convenient Navigation between Entity and its DTOs
 
-As soon as JPA Buddy is able to associate DTO class with the entity:
+Once JPA Buddy is able to associate DTO class with the entity:
 
 * The DTO class will appear in the **Dto & Projections** section in the JPA Structure tab and in the Editor Toolbar (1)
 * The gutter icon will appear in the DTO to ease the navigation to its entity (2)
