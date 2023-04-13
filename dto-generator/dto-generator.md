@@ -46,7 +46,7 @@ JPA Buddy provides an **Entity from POJO** action that helps to generate a JPA e
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The most remarkable thing about JPA Buddy is that it even detects the relationship's cardinality and allows to generate related entities or select existing ones:
+JPA Buddy's notable feature is its ability to detect the relationship's cardinality and generate related entities or select existing ones:
 
 ![entity-from-pojo.png](img/entity-from-pojo.png)
 
