@@ -40,7 +40,7 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
 
 ## Generate Entities from POJOs
 
-JPA Buddy provides **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
+JPA Buddy provides an **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
