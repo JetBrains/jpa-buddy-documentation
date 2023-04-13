@@ -127,7 +127,7 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
 
 ### Refactor attributes
 
-DTOs are commonly used at the API controller level to define only the fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. However, changing the property name in an entity often leads to a corrupted mapping logic. JPA Buddy helps developers to refactor entity properties along with the related fields in DTOs:
+DTOs are commonly used at the API controller level to define only the fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. However, changing the property name in an entity often leads to a corrupted mapping logic. JPA Buddy helps developers refactor entity properties along with their related fields in DTOs:
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/AY-lB-uKDDE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -135,7 +135,7 @@ DTOs are commonly used at the API controller level to define only the fields req
 
 ### Add attributes
 
-Happens, you have added a new attribute to the entity. Then, some already existing DTOs will also need this field. JPA Buddy allows you to add a new field to all the required DTOs at once.
+If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once.
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
