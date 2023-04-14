@@ -162,7 +162,7 @@ As your application grows and the JPA model evolves, you may realize that certai
 
 ### Inspections
 
-<a href="https://projectlombok.org/" target="_blank">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
+<a href="https://projectlombok.org/" target="_blank">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA. JPA Buddy helps you follow best practices when using Lombok in your JPA entities with a set of inspections:
 
 **Avoid using `@`EqualsAndHashCode and `@`Data with JPA entities.** 
 
