@@ -190,7 +190,7 @@ Check out our <a href="https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go
 
 ### Annotations
 
-For the projects with Lombok in JPA Inspector appears section with possible annotations that you can add to the entity.
+For projects with Lombok, the JPA Inspector displays a section with possible annotations that you can add to the entity.
 
 ![jpa-inspector-lombok-annotations](img/jpa-inspector-lombok-annotations.png)
 
