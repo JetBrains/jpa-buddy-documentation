@@ -35,7 +35,7 @@ The JPA Structure tab offers a comprehensive, data-centric view of the project. 
 
 The JPA Palette aims to generate appropriate code for the current context. For an entity, it can be an attribute or index; for a repository - a query method, etc.
 
-JPA Palette provides code-generation wizards for the following:
+JPA Palette provides code-generation wizards for the following features:
 
 - <a href="https://www.youtube.com/embed/8A_ftrU_yYE" target="_blank">Attributes</a>
 - <a href="https://www.youtube.com/embed/d77p30UXBzc" target="_blank">Lifecycle Callbacks</a>
@@ -44,13 +44,13 @@ JPA Palette provides code-generation wizards for the following:
 - <a href="https://youtu.be/az9ghvGczys" target="_blank">Reverse Engineering</a>
 - <a href="https://youtu.be/jTdMIOfyx2Q" target="_blank">Utilities – Equals/HashCode/ToString</a>
 
-<div class="note">You can set up JPA Palette visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
+<div class="note">You can set up JPA Palette's visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
 
 #### Associations Performance Tips
 
 Hibernate has many relationship mapping types, but not all are equally efficient.
 
-During association creation, JPA Buddy briefly explains why the current configuration is inefficient and may cause performance. Use the "Learn more" button to see it.
+During association creation, JPA Buddy briefly explains why the current configuration is inefficient and may cause performance issues. Use the "Learn more" button to see it.
 
 ![learn-more](img/learn-more.jpeg)
 
