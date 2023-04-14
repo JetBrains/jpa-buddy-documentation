@@ -128,7 +128,7 @@ Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) o
 
 ![id-generation](img/id-generation.png)
 
-After that, the wizard with more comprehensive customization options will appear:
+After that, a wizard with more comprehensive customization options will appear:
 
 ![new-id-attribute](img/new-id-attribute.jpeg)
 
@@ -152,7 +152,7 @@ private Long id;
 
 ## Extract to MappedSuperclass
 
-The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy allows you to extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
+As your application grows and the JPA model evolves, you may realize that certain attributes are common among multiple entities and should be extracted to a `@MappedSuperclass` for better code organization. JPA Buddy can easily extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
