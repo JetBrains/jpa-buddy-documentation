@@ -20,7 +20,7 @@ You can customize the appearance of the panel in the [designer settings](#design
 
 The JPA Structure tab offers a comprehensive, data-centric view of the project. You can use it for various purposes:
 
-1. Traverse through the data model and observe the entity structure represented hierarchically. This feature allows for easy navigation to entities referencing the current one, as well as ones that the current entity refers to. This is an extremely useful feature, especially for those who are new to an existing project with a large entity graph or for code reviewers who have limited time to understand how the data model is designed.
+1. Traverse through the data model and observe the entity structure represented hierarchically. This feature allows for easy navigation to entities referencing the current one, as well as ones that the current entity refers to. This is an extremely useful feature, especially for those who are new to an existing project with a large entity graph or for code reviewers who have limited time to understand the data model design.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
 3. Observe related Spring Data repositories, DTOs and projections for each entity.
 4. Edit additional project artifacts such as DB connections, persistence units, and others that the plugin could not detect automatically.
