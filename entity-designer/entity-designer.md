@@ -196,7 +196,7 @@ For projects with Lombok, the JPA Inspector displays a section with possible ann
 
 ### Settings
 
-JPA Buddy provides the possibility to generate new entities and attributes with Lombok annotations. To configure whether attributes you want to add at once with new entities and attributes, choose required at the bottom of the Entity Declaration window.
+JPA Buddy provides a possibility to generate new entities and attributes with Lombok annotations. To configure which attributes you want to add when creating new entities or attributes, you can select the desired options at the bottom of the Entity Declaration window.
 
 ![lombok-settings](img/lombok-settings.jpeg)
 
