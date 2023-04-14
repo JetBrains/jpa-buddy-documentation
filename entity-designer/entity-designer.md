@@ -14,7 +14,7 @@ JPA Buddy provides the following tool windows:
 
 ![jpa-buddy-tool-windows](img/jpa-buddy-tool-window.png)
 
-The panel appearance can be set in the [designer settings](#designer-settings). They can be displayed together, as separate panels, integrated into the standard IntelliJ IDEA panels, or not shown at all.
+You can customize the appearance of the panel in the [designer settings](#designer-settings). You have the option to display it together with other panels, as separate panels, integrate it into the standard IntelliJ IDEA panels, or hide it altogether.
 
 ### JPA Structure
 
