@@ -208,7 +208,7 @@ JPA Buddy helps you generate blanks for JPA Converter or a Hibernate Custom Type
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Also, you can create via JPA Structure. Just click on the "Plus" button and choose JPA Converter or Hibernate Custom Type:
+Also, you can create it via JPA Structure. Just click on the "Plus" button and choose JPA Converter or Hibernate Custom Type:
 
 ![jpa-structure-jpa-converter](img/jpa-structure-jpa-converter.png)
 
@@ -222,7 +222,7 @@ For Hibernate Custom Type you can set whether it will be possible to alter the b
 
 ![create-custom-type-hibernate](img/create-custom-type-hibernate.jpeg)
 
-Here is the example of generated Hibernate Custom Type:
+Here is an example of generated Hibernate Custom Type:
 
 ```java
 public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Boolean> {
@@ -247,7 +247,7 @@ public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Bool
 
 ## Hibernate Events
 
-Hibernate Event System is useful when you work with data and need to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
+Hibernate Event System is a powerful tool that allows you to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
