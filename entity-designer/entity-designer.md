@@ -86,7 +86,7 @@ For projects with Hibernate Validations, a section appears with validations that
 
 ### Editor Toolbar
 
-Editor Toolbar contains relevant action depending on the file content. You can find it on top of the editor window.
+Editor Toolbar contains relevant actions depending on the file content. You can find it on top of the editor window.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
