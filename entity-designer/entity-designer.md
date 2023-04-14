@@ -106,11 +106,11 @@ After that, the following window will appear:
 
 ### Languages Support
 
-JPA Buddy supports both <a href="https://www.java.com/" target="_blank">Java</a> and <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html" target="_blank">Kotlin dependency</a> in your project, an additional option appears in the "New Entity" window, letting you pick the language:
+JPA Buddy supports both <a href="https://www.java.com/" target="_blank">Java</a> and <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html" target="_blank">Kotlin dependency</a> in your project, an additional option will appear in the "New Entity" window, letting you pick the language:
 
 ![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
-Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for the "New Entity" window:
+Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language you want to select by default for the "New Entity" window:
 
 ![settings-scaffolding-language](img/settings-scaffolding-language.jpeg)
 
