@@ -26,7 +26,7 @@ Let’s look at the available DTO types:
 * New Class – a new class will be created in a separate file.
 * New Nested Class – a new public static nested class will be created.
 * Existing Class – you can select a DTO class that already exists in the project.
-* Flat – all inner class fields will be top-class fields. Their names will consist of the inner class name + fields names.
+* Flat – all inner class fields will be top-class fields. The names of the generated entities will be formed by combining the inner class name with the field names.
 
 ## Java Records Support
 
@@ -40,13 +40,13 @@ If you use SDK version 16 and higher in your project, then JPA Buddy will provid
 
 ## Generate Entities from POJOs
 
-JPA Buddy provides **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
+JPA Buddy provides an **Entity from POJO** action that helps to generate a JPA entity from any java/kotlin class. This feature may be helpful if you develop your application following the API-first approach: define DTOs for the API first and implement the data model later.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7tRD3u6u_bM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The most remarkable thing about JPA Buddy is that it even detects the relationship's cardinality and allows to generate related entities or select existing ones:
+JPA Buddy's notable feature is its ability to detect the relationship's cardinality and generate related entities or select existing ones:
 
 ![entity-from-pojo.png](img/entity-from-pojo.png)
 
@@ -111,7 +111,7 @@ public interface ProjectMapper extends EntityMapper<ProjectDTO, Project> {
 }
 ````
 
-JPA Buddy provides a support for generic mappers' inheritance:
+JPA Buddy supports generic mappers' inheritance:
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcY-dDWqihg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -119,7 +119,7 @@ JPA Buddy provides a support for generic mappers' inheritance:
 
 ### Mapper Declaration
 
-JPA Buddy provides flexible settings for mapper declaration. To configure naming patterns or mapping naming strategy for collection, open Tools -> JPA Buddy -> Mapper Declaration:
+JPA Buddy provides flexible settings for mapper declaration. To configure naming patterns or mapping naming strategy for collections, open Tools -> JPA Buddy -> Mapper Declaration:
  
 ![mapper-declaration](img/mapper-declaration.png)
 
@@ -127,7 +127,7 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
 
 ### Refactor attributes
 
-Often DTOs are used at the API controller level, aimed to declare only fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. Hence, changing the property name in an entity often leads to the corrupted mapping logic. That's why JPA Buddy helps developers to refactor entity properties along with the related fields in DTOs:
+DTOs are commonly used at the API controller level to define only the fields required by the client. That's why DTOs nearly copy the structure of their entities. There are popular frameworks to map entities to DTOs and vice versa: MapStruct and ModelMapper. They auto-map namesake properties. However, changing the property name in an entity often leads to a corrupted mapping logic. JPA Buddy helps developers refactor entity properties along with their related fields in DTOs:
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/AY-lB-uKDDE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -135,7 +135,7 @@ Often DTOs are used at the API controller level, aimed to declare only fields re
 
 ### Add attributes
 
-Happens, you have added a new attribute to the entity. Then, some already existing DTOs will also need this field. JPA Buddy allows you to add a new field to all the required DTOs at once.
+If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once.
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -150,18 +150,18 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 1. Serializable type.
 2. Class name postfix.
 3. Whether to use Lombok or not.
-4. Name pattern regexp. This option is useful if you use an obligatory naming convention for DTOs. It allows JPA Buddy to associate DTO with its JPA Entity using a DTO name only. To specify a placeholder for the simple class name of the target JPA entity, use the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. The feature is disabled when the field is empty. 
+4. Name pattern regexp. This option is useful if you follow an obligatory naming convention for DTOs. It allows JPA Buddy to associate a DTO with its JPA Entity using a DTO name only. You can specify a placeholder for the simple class name of the target JPA entity using the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. This feature is disabled when the field is empty. 
 5. Class comment. Defines the comment that will be generated over the DTO class.
-6. Comment link regexp (The feature is disabled when the field is empty). It allows JPA Buddy to associate DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
+6. Comment link regexp (The feature is disabled when the field is empty). It allows JPA Buddy to associate a DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
   ```java
   // A DTO for the {@link io.jpabuddy.demo.entities.Project} entity.
   ```
 
 ### Convenient Navigation between Entity and its DTOs
 
-As soon as JPA Buddy is able to associate DTO class with the entity:
+Once JPA Buddy associates a DTO class with its corresponding entity:
 
 * The DTO class will appear in the **Dto & Projections** section in the JPA Structure tab and in the Editor Toolbar (1)
-* The gutter icon will appear in the DTO to ease the navigation to its entity (2)
+* A gutter icon will appear in the DTO class, providing a convenient way to navigate to its associated entity (2)
 
 ![dto-navigation](img/dto-navigation.png)
