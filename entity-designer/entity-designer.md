@@ -124,7 +124,7 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 ![embeddable-entity-as-id](img/embeddable-entity-as-id.jpeg)
 
-Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using a quick-fix (Alt+Enter/⌥ ⏎) (3).
+Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or use a quick-fix (Alt+Enter/⌥ ⏎) (3).
 
 ![id-generation](img/id-generation.png)
 
