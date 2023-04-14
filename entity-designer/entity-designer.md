@@ -110,7 +110,7 @@ JPA Buddy supports both <a href="https://www.java.com/" target="_blank">Java</a>
 
 ![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
-Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language you want to select by default for the "New Entity" window:
+Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language you want to select by default in the "New Entity" window:
 
 ![settings-scaffolding-language](img/settings-scaffolding-language.jpeg)
 
