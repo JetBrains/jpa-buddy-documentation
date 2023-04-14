@@ -96,7 +96,7 @@ Editor Toolbar contains relevant actions depending on the file content. You can 
 
 ## Entity Generation
 
-To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Structure (2):
+To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from the JPA Structure (2) tab:
 
 ![jpa-structure-create-new-entity](img/jpa-structure-create-new-entity.png)
 
