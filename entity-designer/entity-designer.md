@@ -33,7 +33,7 @@ The JPA Structure tab offers a comprehensive, data-centric view of the project. 
 
 ![jpa-palette](img/jpa-palette.png)
 
-The JPA Palette aims to generate code appropriate in the current context. For an entity, it can be an attribute or index; for a repository - query method, etc.
+The JPA Palette aims to generate appropriate code for the current context. For an entity, it can be an attribute or index; for a repository - query method, etc.
 
 JPA Palette provides code-generation wizards for the following:
 
