@@ -202,7 +202,7 @@ JPA Buddy provides a possibility to generate new entities and attributes with Lo
 
 ## Hibernate Types & JPA Converters
 
-JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector:
+JPA Buddy helps you generate blanks for JPA Converter or a Hibernate Custom Type via JPA Inspector:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
