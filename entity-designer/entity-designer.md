@@ -1,6 +1,6 @@
 ## Introduction
 
-Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find editor toolbar (1) and additional tool windows (2,3).
+Once you [install JPA Buddy](https://www.jpa-buddy.com/documentation/), you will find an editor toolbar (1) and additional tool windows (2,3).
 
 ![first-sight](img/first-sight.png)
 
@@ -14,13 +14,13 @@ JPA Buddy provides the following tool windows:
 
 ![jpa-buddy-tool-windows](img/jpa-buddy-tool-window.png)
 
-The panel appearance can be set in the [designer settings](#designer-settings). They can be displayed together, as separate panels, integrated into the standard IntelliJ IDEA panels, or not shown at all.
+You can customize the appearance of the panel in the [designer settings](#designer-settings). You have the option to display it together with other panels, as separate panels, integrate it into the standard IntelliJ IDEA panels, or hide it altogether.
 
 ### JPA Structure
 
 The JPA Structure tab offers a comprehensive, data-centric view of the project. You can use it for various purposes:
 
-1. Traverse through the data model and observe the entity structure represented hierarchically. This feature allows for easy navigation to entities referencing the current one, as well as ones that the current entity refers to. This is an extremely useful feature, especially for those who are new to an existing project with a large entity graph or for code reviewers who have limited time to understand how the data model is designed.
+1. Traverse through the data model and observe the entity structure represented hierarchically. This feature allows for easy navigation to entities referencing the current one, as well as ones that the current entity refers to. This is an extremely useful feature, especially for those who are new to an existing project with a large entity graph or for code reviewers who have limited time to understand the data model design.
 2. Create data-related objects: entities, JPA converters / Hibernate types, Spring Data repositories and Liquibase changelog.
 3. Observe related Spring Data repositories, DTOs and projections for each entity.
 4. Edit additional project artifacts such as DB connections, persistence units, and others that the plugin could not detect automatically.
@@ -33,9 +33,9 @@ The JPA Structure tab offers a comprehensive, data-centric view of the project. 
 
 ![jpa-palette](img/jpa-palette.png)
 
-The JPA Palette aims to generate code appropriate in the current context. For an entity, it can be an attribute or index; for a repository - query method, etc.
+The JPA Palette aims to generate appropriate code for the current context. For an entity, it can be an attribute or index; for a repository - a query method, etc.
 
-JPA Palette provides code-generation wizards for the following:
+JPA Palette provides code-generation wizards for the following features:
 
 - <a href="https://www.youtube.com/embed/8A_ftrU_yYE" target="_blank">Attributes</a>
 - <a href="https://www.youtube.com/embed/d77p30UXBzc" target="_blank">Lifecycle Callbacks</a>
@@ -44,13 +44,13 @@ JPA Palette provides code-generation wizards for the following:
 - <a href="https://youtu.be/az9ghvGczys" target="_blank">Reverse Engineering</a>
 - <a href="https://youtu.be/jTdMIOfyx2Q" target="_blank">Utilities – Equals/HashCode/ToString</a>
 
-<div class="note">You can set up JPA Palette visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
+<div class="note">You can set up JPA Palette's visibility in <a href="https://www.jpa-buddy.com/documentation/entity-designer/#designer-settings">visual designer settings</a>.</div>
 
 #### Associations Performance Tips
 
 Hibernate has many relationship mapping types, but not all are equally efficient.
 
-During association creation, JPA Buddy briefly explains why the current configuration is inefficient and may cause performance. Use the "Learn more" button to see it.
+During association creation, JPA Buddy briefly explains why the current configuration is inefficient and may cause performance issues. Use the "Learn more" button to see it.
 
 ![learn-more](img/learn-more.jpeg)
 
@@ -86,7 +86,7 @@ For projects with Hibernate Validations, a section appears with validations that
 
 ### Editor Toolbar
 
-Editor Toolbar contains relevant action depending on the file content. You can find it on top of the editor window.
+Editor Toolbar contains relevant actions depending on the file content. You can find it on top of the editor window.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/psZWTxq73ws" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -96,7 +96,7 @@ Editor Toolbar contains relevant action depending on the file content. You can f
 
 ## Entity Generation
 
-To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from JPA Structure (2):
+To create a new JPA entity, right-click on the desired folder and select New -> JPA Entity (1). Also, you can create a new entity from the JPA Structure (2) tab:
 
 ![jpa-structure-create-new-entity](img/jpa-structure-create-new-entity.png)
 
@@ -106,11 +106,11 @@ After that, the following window will appear:
 
 ### Languages Support
 
-JPA Buddy supports both <a href="https://www.java.com/" target="_blank">Java</a> and <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html" target="_blank">Kotlin dependency</a> in your project, an additional option appears in the "New Entity" window, letting you pick the language:
+JPA Buddy supports both <a href="https://www.java.com/" target="_blank">Java</a> and <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>. When JPA Buddy detects the <a href="https://kotlinlang.org/docs/maven.html" target="_blank">Kotlin dependency</a> in your project, an additional option will appear in the "New Entity" window, letting you pick the language:
 
 ![new-entity-language-choose](img/new-entity-language-choose.jpeg)
 
-Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language will be selected by default for the "New Entity" window:
+Also, in the Settings -> Tools -> JPA Buddy -> Entity Declaration, you can choose which language you want to select by default in the "New Entity" window:
 
 ![settings-scaffolding-language](img/settings-scaffolding-language.jpeg)
 
@@ -124,11 +124,11 @@ If you want to use an Embedded entity as an ID, JPA Buddy will provide you the l
 
 ![embeddable-entity-as-id](img/embeddable-entity-as-id.jpeg)
 
-Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or using a quick-fix (Alt+Enter/⌥ ⏎) (3).
+Also, you can generate an ID attribute via JPA Palette (1), Editor Toolbar (2) or use a quick-fix (Alt+Enter/⌥ ⏎) (3).
 
 ![id-generation](img/id-generation.png)
 
-After that, the wizard with more comprehensive customization options will appear:
+After that, a wizard with more comprehensive customization options will appear:
 
 ![new-id-attribute](img/new-id-attribute.jpeg)
 
@@ -152,7 +152,7 @@ private Long id;
 
 ## Extract to MappedSuperclass
 
-The application is growing and the JPA model is evolving as well. Eventually, it became obvious that common attributes should be extracted to `@MappedSuperclass`. JPA Buddy allows you to extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
+As your application grows and the JPA model evolves, you may realize that certain attributes are common among multiple entities and should be extracted to a `@MappedSuperclass` for better code organization. JPA Buddy can easily extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -162,11 +162,11 @@ The application is growing and the JPA model is evolving as well. Eventually, it
 
 ### Inspections
 
-<a href="https://projectlombok.org/" target="_blank">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA, and to follow them easily, JPA Buddy provides corresponding inspections:
+<a href="https://projectlombok.org/" target="_blank">Lombok</a> is a great tool that makes your Java code concise and clean. But there are a few things to consider when using Lombok with JPA. JPA Buddy helps you follow best practices when using Lombok in your JPA entities with a set of inspections:
 
 **Avoid using `@`EqualsAndHashCode and `@`Data with JPA entities.** 
 
-Entities are immutable by their nature, so implementing equals() and hashCode() for them is not a trivial task. The implementations provided by Lombok are not well suited for JPA entities and may cause issues with collections and accidental loading of lazy attributes.
+Entities are mutable by their nature, so implementing equals() and hashCode() for them is not a trivial task. The implementations provided by Lombok are not well suited for JPA entities and may cause issues with collections and accidental loading of lazy attributes.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6qZXvz-Fs0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -190,25 +190,25 @@ Check out our <a href="https://www.jpa-buddy.com/blog/lombok-and-jpa-what-may-go
 
 ### Annotations
 
-For the projects with Lombok in JPA Inspector appears section with possible annotations that you can add to the entity.
+For projects with Lombok, the JPA Inspector displays a section with possible annotations that you can add to the entity.
 
 ![jpa-inspector-lombok-annotations](img/jpa-inspector-lombok-annotations.png)
 
 ### Settings
 
-JPA Buddy provides the possibility to generate new entities and attributes with Lombok annotations. To configure whether attributes you want to add at once with new entities and attributes, choose required at the bottom of the Entity Declaration window.
+JPA Buddy provides a possibility to generate new entities and attributes with Lombok annotations. To configure which attributes you want to add when creating new entities or attributes, you can select the desired options at the bottom of the Entity Declaration window.
 
 ![lombok-settings](img/lombok-settings.jpeg)
 
 ## Hibernate Types & JPA Converters
 
-JPA Buddy helps you to generate blank for JPA Converter or a Hibernate Custom Type via JPA Inspector:
+JPA Buddy helps you generate blanks for JPA Converter or a Hibernate Custom Type via JPA Inspector:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taBDP5x9nLc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Also, you can create via JPA Structure. Just click on the "Plus" button and choose JPA Converter or Hibernate Custom Type:
+Also, you can create it via JPA Structure. Just click on the "Plus" button and choose JPA Converter or Hibernate Custom Type:
 
 ![jpa-structure-jpa-converter](img/jpa-structure-jpa-converter.png)
 
@@ -222,7 +222,7 @@ For Hibernate Custom Type you can set whether it will be possible to alter the b
 
 ![create-custom-type-hibernate](img/create-custom-type-hibernate.jpeg)
 
-Here is the example of generated Hibernate Custom Type:
+Here is an example of generated Hibernate Custom Type:
 
 ```java
 public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Boolean> {
@@ -247,7 +247,7 @@ public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Bool
 
 ## Hibernate Events
 
-Hibernate Event System is useful when you work with data and need to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
+Hibernate Event System is a powerful tool that allows you to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -292,7 +292,7 @@ public class PetType {
 
 ### Constants Generation
 
-One of the most important characteristics of a project is maintainability. JPA projects contain a lot of Strings containing things like JPQL or native query statements and references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in <a href="https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/" target="_blank">Thorben Janssen</a> article.
+Maintainability is a crucial aspect of any project, and JPA projects often contain numerous Strings that involve JPQL or native query statements, references to attributes, queries, and bind parameter names. According to the best practices, one of the ways to rest your persistence layer well-structured is constants. You can learn about it in <a href="https://thorben-janssen.com/hibernate-best-practices-for-readable-and-maintainable-code/" target="_blank">Thorben Janssen</a> article.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xc-ayDDdjss" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -304,6 +304,6 @@ JPA Buddy provides constants generation for the entity, table, and column names.
 
 ### Designer Settings
 
-In its default mode, JPA Buddy provides functionally rich tool window. However, tool windows may steal too much horizontal space, especially for those who prefer 13-inch laptops. In this case, it was recommended to use the [minimalistic mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/). Besides it, JPA Buddy also provides settings to fine-tune the appearance of the main visual elements:
+JPA Buddy comes with a feature-rich tool window in its default mode. However, tool windows may occupy significant horizontal space for users with smaller screens. In such cases, JPA Buddy offers a [minimalistic mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/) as an option. Additionally, JPA Buddy provides settings to fine-tune the appearance of the main visual elements:
 
 ![designer-settings](img/designer-settings.png)
