@@ -1,6 +1,6 @@
 # Changelog
 
-## 2023.1.4 - 2023-03-30
+## 2023.1.4 - 2023-04-10
 
 * The DDL generator now considers final fields with the `@Builder.Default` annotation from Lombok <a href="https://issues.jpa-buddy.com/issue/JPAB-2451" target="_blank">JPAB-2451</a>
 * The `@IdClass` annotation is now considered while generating Spring Data JPA repositories <a href="https://issues.jpa-buddy.com/issue/JPAB-2435" target="_blank">JPAB-2435</a>
@@ -10,7 +10,7 @@
 
 For other improvements and fixes, see [all resolved issues (9)](https://issues.jpa-buddy.com/issues/JPAB?q=%23Resolved%20Milestone:%20231%20Bug%20fix:%204%20State:%20-%7BCan%27t%20Reproduce%7D).
 
-## 2023.1.3 - 2023-03-24
+## 2023.1.3 - 2023-03-27
 
 * The nullability algorithm for database versioning scripts now matches Hibernate's algorithm <a href="https://issues.jpa-buddy.com/issue/JPAB-2387" target="_blank">JPAB-2387</a>
 * The column type is now defined if `JoinTable` refers to the parent entity with `TABLE_PER_CLASS` strategy <a href="https://issues.jpa-buddy.com/issue/JPAB-2408" target="_blank">JPAB-2408</a>
