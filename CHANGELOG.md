@@ -1,5 +1,15 @@
 # Changelog
 
+## 2023.1.5 - 2023-04-24
+
+* The "Generate fluent setters" option now works properly with Lombok `@Setter` annotation <a href="https://issues.jpa-buddy.com/issue/JPAB-2466" target="_blank">JPAB-2466</a>
+* Fixed `StackOverflowError` caused by two Embeddable classes including each other <a href="https://issues.jpa-buddy.com/issue/JPAB-2463" target="_blank">JPAB-2463</a>
+* JPA Buddy no longer generates redundant `@Table` annotation for entities with specified parent <a href="https://issues.jpa-buddy.com/issue/JPAB-2461" target="_blank">JPAB-2461</a>
+* False positive "Can't find inverse attribute" error has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2444" target="_blank">JPAB-2444</a>
+* The "ID generation" preference is no longer constantly reset to `AUTO` <a href="https://issues.jpa-buddy.com/issue/JPAB-2484" target="_blank">JPAB-2484</a>
+
+For other improvements and fixes, see [all resolved issues (10)](https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20231%20Bug%20fix:%205).
+
 ## 2023.1.4 - 2023-04-10
 
 * The DDL generator now considers final fields with the `@Builder.Default` annotation from Lombok <a href="https://issues.jpa-buddy.com/issue/JPAB-2451" target="_blank">JPAB-2451</a>
