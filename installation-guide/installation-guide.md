@@ -117,9 +117,9 @@ We give away little gifts to our active community members.
 
 Still not following us on <a href="https://twitter.com/JPABuddy" target="_blank">Twitter</a>? Subscribe, send us a private message and we will grant you one month for free!
 
-Have more than 500 subscribers on Twitter and share our tweets 3-4 times per month? Let us know via the contact form on our <a href="https://www.jpa-buddy.com/contacts/" target="_blank">website</a>, because you definitely deserve the next month of free use!
+Have more than 500 subscribers on Twitter and shared our tweets 3-4 times this month? Let us know via the contact form on our <a href="https://www.jpa-buddy.com/contacts/" target="_blank">website</a>, because you definitely deserve the next month of free use!
 
-Reported a severe bug? Shared great ideas that become a part of our roadmap? We will not leave you without a present!
+Reported a severe bug? Shared great ideas that became a part of our roadmap? We will not leave you without a present!
 
 Published an article about JPA Buddy or recorded a YouTube video? Be sure, our big thank is going to find you!
 
