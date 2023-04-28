@@ -94,16 +94,16 @@ The following table should help with choosing the most appropriate licensing sch
     <td>Yes</td>
   </tr>
   <tr>
-    <td>What if a developer leaves a company?</td>
+    <td>What if a developer leaves the company?</td>
     <td>The license leaves with them</td>
-    <td>The license stays within company and can be assigned to another developer</td>
+    <td>The license remains with the company and can be reassigned to another developer</td>
   </tr>
 </tbody>
 </table>
 
 ### Educational And Discounted Licenses
 
-All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">Pricing page</a> and follow the "Learn more..." link.
+All JPA Buddy features remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps. To get it, you need to confirm the special status of your JetBrains account. To do so, scroll through the <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing" target="_blank">Pricing page</a> and follow the "Learn more..." link.
 
 ![discounted-licenses](img/discounted-licenses.jpeg)
 
@@ -113,11 +113,11 @@ Since the status of your account is confirmed, a new "Discount available" field 
 
 ### Promos
 
-We are going to give away little gifts to our active community members.
+We give away little gifts to our active community members.
 
-Still don't follow us on <a href="https://twitter.com/JPABuddy" target="_blank">Twitter</a>? Subscribe, send a private message to us and we will grant you one month free!
+Still not following us on <a href="https://twitter.com/JPABuddy" target="_blank">Twitter</a>? Subscribe, send us a private message and we will grant you one month for free!
 
-Has more than 500 subscribers on Twitter and share our tweets 3-4 times per month? Let us know via the contact form on our <a href="https://www.jpa-buddy.com/contacts/" target="_blank">website</a>, because you definitely deserve the next month of free use!
+Have more than 500 subscribers on Twitter and share our tweets 3-4 times per month? Let us know via the contact form on our <a href="https://www.jpa-buddy.com/contacts/" target="_blank">website</a>, because you definitely deserve the next month of free use!
 
 Reported a severe bug? Shared great ideas that become a part of our roadmap? We will not leave you without a present!
 
