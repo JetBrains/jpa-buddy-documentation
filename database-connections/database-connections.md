@@ -24,7 +24,7 @@ To use this feature, simply click on the "Detect Connections" button in the JPA 
 
 ![ij-ultimate-data-sources](img/ij-ultimate-data-sources.jpeg)
 
-Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA Ultimate's robust options for data source configurations, eliminating the need to create additional connections. For more information, refer to the relevant <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
+Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA Ultimate's robust options for data source configurations. For more information, refer to the relevant <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
 
 JPA Buddy provides a similar mechanism for the IntelliJ IDEA Community edition.
 
