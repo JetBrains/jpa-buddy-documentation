@@ -30,7 +30,7 @@ JPA Buddy provides a similar mechanism for the IntelliJ IDEA Community edition.
 
 ![ij-community-db-connection](img/ij-community-db-connection.jpeg)
 
-It’s worth noting that JPA Buddy is compatible with any property file that adheres to the standard naming convention for property files. This includes YAML files, environment-specific properties files, test-specific properties files, and more.
+It’s worth noting that JPA Buddy is compatible with any property file that adheres to the standard naming convention for property files. This includes YAML files, environment-specific properties files, test-specific properties files, and more.  E.g.: 'application.properties', 'application-test.properties', 'application.yaml', 'application-prod.yaml', etc.
 
 ## Automatic Generation of Property Files
 
