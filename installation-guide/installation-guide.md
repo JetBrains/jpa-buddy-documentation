@@ -121,7 +121,7 @@ Have more than 500 subscribers on Twitter and shared our tweets 3-4 times this m
 
 Reported a severe bug? Shared great ideas that became a part of our roadmap? We will not leave you without a present!
 
-Published an article about JPA Buddy or recorded a YouTube video? Be sure, our big thank is going to find you!
+Published an article about JPA Buddy or recorded a YouTube video? Rest assured that we'll express our gratitude!
 
 ### Older (Free) Versions Support
 
@@ -265,3 +265,5 @@ To make sure that the plugin is installed correctly, follow these steps:
 ## Something went wrong? Contact us!
 
 Bugs and errors are unavoidable in any software, development tools are no exception. JPA Buddy team is always ready to help you cope with any difficulties that arise. Check out [Reporting Issues](https://www.jpa-buddy.com/documentation/reporting-issues/) section where you can find [Contact Us](https://www.jpa-buddy.com/documentation/reporting-issues/#contact-us) information and tips for [Error Reporting](https://www.jpa-buddy.com/documentation/reporting-issues/#error-reporting).
+
+Tags: JPA, Setup, Configuration, Getting Started, Quick Start
