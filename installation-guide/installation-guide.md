@@ -54,8 +54,7 @@ In the following video, we will show you how to buy a subscription via a credit 
 
 ### The Difference Between an Individual and Company Licenses
 
-The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=personal" target="_blank">Personal license</a>** is an option for private individuals who purchase a license with their own funds and solely for their own use. This license can be used for both individual and commercial projects. Personal licenses are not to be purchased, refunded or in any way financed by companies.
-
+The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=personal" target="_blank">Personal license</a>** is available for individuals who purchase it with their own funds for their own use, it can be used for both personal and commercial projects. Personal licences are not intended to be purchased, refunded, or financed by companies.
 The **<a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/pricing#edition=commercial" target="_blank">Company license</a>** is the standard licensing option for organizations and businesses. Licenses are purchased by the company and can be used by any single person within this organization. So if anyone quits the job, the company can assign this license to another employee. More than one employee should not use the same license simultaneously.
 
 The following table should help with choosing the most appropriate licensing schema for you:
