@@ -108,7 +108,7 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 
 1. As DB views do not have a primary key, JPA Buddy allows you to select a field or a set of fields to use as the identifier for the target entity.
 2. Most DB views are immutable. So, JPA Buddy adds `@Immutable` annotation to the entity and generates getters only. This helps to improve application performance.
-3. If a JPA entity is mapped to a DB view, a developer should not be able to create a new instance of this entity in the business logic code. For such entities, JPA Buddy generates only a no-arg protected constructor to meet the JPA specifications.
+3. JPA Buddy generates only a no-arg protected constructor for entities that are mapped to a DB view, as per JPA specifications, which prevents developers from creating a new instance of such entities in the business logic code
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QUXgJSkBJO8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
