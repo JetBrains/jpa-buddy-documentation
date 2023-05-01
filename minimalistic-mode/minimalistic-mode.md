@@ -72,4 +72,4 @@ For JPA Inspector popup, it's possible to bind another shortcut. You can do it d
 
 Or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set your desired combination.
 
-Tags: Minimalistic mode, Distraction-free development, User interface customization, Developer productivity
+Tags: Distraction-free development, User interface customization, Developer productivity, GUI, Hidden panel, Minimalism
