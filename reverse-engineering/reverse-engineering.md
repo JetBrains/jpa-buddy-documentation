@@ -116,7 +116,7 @@ JPA Buddy follows all best practices providing the most efficient mapping for DB
 
 ## Reverse Engineering Columns
 
-Some developers prefer the DB-first application development approach. First, they add columns directly to the database and then update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Designer (1), Editor Toolbar (2) or from the IntelliJ IDEA "Generate" menu (3):
+Some developers prefer the DB-first application development approach. First, they add columns directly to the database and then update the JPA model. JPA Buddy can automate this process. To add attributes to the existing entity, choose From DB action in JPA Designer (1), Editor Toolbar (2) or from IntelliJ IDEA's "Generate" menu (3):
 
 ![reverse-engineering-columns-action](img/reverse-engineering-columns-action.png)
 
