@@ -268,7 +268,7 @@ public class User {
 
 ### @OneToMany & @ManyToOne
 
-If a table has the column that refers to the primary key of another table, it is highly likely `@`ManyToOne association. But you are also able to change cardinality to `@`OneToOne if required. So, depending on which table you call the reverse engineering action, JPA Buddy will detect mapping type as  `@`OneToMany or  `@`ManyToOne:
+If a table has the column that refers to the primary key of another table, it is most likely a `@`ManyToOne association. But you are also able to change cardinality to `@`OneToOne if required. So, depending on which table you call the reverse engineering action, JPA Buddy will detect mapping type as  `@`OneToMany or  `@`ManyToOne:
 
 ```sql
 CREATE TABLE users
@@ -332,7 +332,7 @@ public class Profile {
 
 ### @ManyToMany
 
-To establish a many-to-many relationship between two tables, you need to use a junction table. The junction table, in this case, contains only two columns - foreign keys. Since JPA Buddy found such a table, it can say that the relation cardinality between two tables whose ids are represented in the junction table as foreign keys is `@`ManyToMany.
+To establish a many-to-many relationship between two tables, you need to use a junction table. The junction table, in this case, contains only two columns - foreign keys. JPA Buddy can automatically detect such a table and identify the relation cardinality between the two tables whose ids are represented as foreign keys in the junction table as `@`ManyToMany.
 
 ```sql
 CREATE TABLE users
