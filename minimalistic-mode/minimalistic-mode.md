@@ -46,7 +46,7 @@ Since one of the primary purposes of [JPA Structure](https://www.jpa-buddy.com/d
 
 ### JPA Palette
 
-To utilize wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-palette ), you need to call Generate Menu (⌘+N/Alt+Insert). The subsequent interaction with them does not differ from what is described in the section about JPA Palette.
+To use wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-palette), you need to access the Generate menu (⌘+N/Alt+Insert). Subsequent interactions with them are the same as those explained in the section about JPA Palette.
 
 ![jpa-palette-generate-menu](img/jpa-palette-generate-menu.jpeg)
 
@@ -71,3 +71,5 @@ For JPA Inspector popup, it's possible to bind another shortcut. You can do it d
 ![enable-minimalistic-mode](img/enable-minimalistic-mode.png)
 
 or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set wanted combination.
+
+Tags: Minimalistic mode, Distraction-free development, User interface customization, Developer productivity
