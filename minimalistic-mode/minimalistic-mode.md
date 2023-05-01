@@ -1,6 +1,6 @@
 ## Introduction
 
-The minimalistic mode is designed to minimize distraction for developers. If you are the one who prefers to have everything at your fingertips – you will like it! JPA Buddy panel will be hidden and its content will be available in standard IntelliJ IDEA windows, such as Project panel, Generate Menu and so on...
+Minimalistic mode is designed to reduce distractions for developers who prefer a clutter-free workspace. In this mode, JPA Buddy's panels are hidden, and their content is accessible through standard IntelliJ IDEA windows such as Project panel, Generate menu and so on...
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fSUnqcZVWnM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -46,17 +46,17 @@ Since one of the primary purposes of [JPA Structure](https://www.jpa-buddy.com/d
 
 ### JPA Palette
 
-To utilize wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-palette ), you need to call Generate Menu (⌘+N/Alt+Insert). The subsequent interaction with them does not differ from what is described in the section about JPA Palette.
+To use wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-palette), you need to access the Generate menu (⌘+N/Alt+Insert). Subsequent interactions with them are the same as those explained in the section about JPA Palette.
 
 ![jpa-palette-generate-menu](img/jpa-palette-generate-menu.jpeg)
 
 ### JPA Inspector
 
-[JPA Inspector](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-inspector) allows you to configure classes and fields in it. Press (⌥+⏎/Alt+Enter) on any element that you need to configure, and select "how JPA Inspector popup".
+[JPA Inspector](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-inspector) allows you to configure classes and fields in it. Press (⌥+⏎/Alt+Enter) on any element that you need to configure, and select "Show JPA Inspector popup".
 
 ![show-jpa-inspector-popup](img/show-jpa-inspector-popup.jpeg)
 
-After that, the resizable and draggable JPA Inspector panel will appear. The cool thing is that you can navigate through it and change anything using the mouse or only the keyboard:
+After that, the resizable and draggable JPA Inspector panel will appear. The cool thing is that you can navigate through it and change anything using your mouse or keyboard:
 
 * To move through the lines, use the up (↑) and down (↓) buttons.
 * To change the value in the selected row, press the space bar (⎵) twice.
@@ -70,4 +70,6 @@ For JPA Inspector popup, it's possible to bind another shortcut. You can do it d
 
 ![enable-minimalistic-mode](img/enable-minimalistic-mode.png)
 
-or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set wanted combination.
+Or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set your desired combination.
+
+Tags: Distraction-free development, User interface customization, Developer productivity, GUI, Hidden panel, Minimalism
