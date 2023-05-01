@@ -65,9 +65,9 @@ For attributes matching the `String` or `Integer` type, you can change the mappi
 
 #### Dealing With Unknown Types
 
-For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type so as not to generate non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings).
+For some SQL types, there is no exact match to Java classes. In this case, JPA Buddy does not set the type to prevent generating non-working code. You will need to choose the attribute type yourself. You can also configure default type mappings for each DBMS in the [settings](#type-mappings).
 
-If you have the <a href="https://github.com/vladmihalcea/hibernate-types" target="_blank">HibernateTypes</a> library in your project dependencies list, JPA Buddy can find suitable types in this library and automatically suggests them for the unsupported SQL types during reverse engineering:
+If you have the <a href="https://github.com/vladmihalcea/hibernate-types" target="_blank">HibernateTypes</a> library in your project dependencies list, JPA Buddy can automatically suggest suitable types from the library for the unsupported SQL types during reverse engineering:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uBjxdAmVDuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
