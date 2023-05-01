@@ -52,11 +52,11 @@ To use wizards from [JPA Palette](https://www.jpa-buddy.com/documentation/entity
 
 ### JPA Inspector
 
-[JPA Inspector](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-inspector) allows you to configure classes and fields in it. Press (⌥+⏎/Alt+Enter) on any element that you need to configure, and select "how JPA Inspector popup".
+[JPA Inspector](https://www.jpa-buddy.com/documentation/entity-designer/#jpa-inspector) allows you to configure classes and fields in it. Press (⌥+⏎/Alt+Enter) on any element that you need to configure, and select "Show JPA Inspector popup".
 
 ![show-jpa-inspector-popup](img/show-jpa-inspector-popup.jpeg)
 
-After that, the resizable and draggable JPA Inspector panel will appear. The cool thing is that you can navigate through it and change anything using the mouse or only the keyboard:
+After that, the resizable and draggable JPA Inspector panel will appear. The cool thing is that you can navigate through it and change anything using your mouse or keyboard:
 
 * To move through the lines, use the up (↑) and down (↓) buttons.
 * To change the value in the selected row, press the space bar (⎵) twice.
@@ -70,6 +70,6 @@ For JPA Inspector popup, it's possible to bind another shortcut. You can do it d
 
 ![enable-minimalistic-mode](img/enable-minimalistic-mode.png)
 
-or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set wanted combination.
+Or via preferences. Open Preferences -> Keymap -> type JPA Inspector Popup and set your desired combination.
 
 Tags: Minimalistic mode, Distraction-free development, User interface customization, Developer productivity
