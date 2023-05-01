@@ -173,7 +173,7 @@ ALTER TABLE profiles
 
 ![one-to-one-uc-wizard](img/one-to-one-uc-wizard.jpeg)
 
-JPA Buddy will generate `@`OneToOne association with `@`JoinColumn annotation in the User entity, and  `@`OneToOne association with `mappedBy` parameter in the Profile entity:
+JPA Buddy will generate a `@`OneToOne association with a `@`JoinColumn annotation in the User entity, and a `@`OneToOne association with a `mappedBy` parameter in the Profile entity:
 
 ```java
 @Entity
