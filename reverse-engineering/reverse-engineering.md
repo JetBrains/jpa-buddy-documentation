@@ -411,7 +411,7 @@ public class Profile {
 
 ## Working With Remote DB
 
-The larger the database and the slower the connection of the database (for example, if it is remote DB), the longer it will take to load DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh saved schema cache (2).
+The larger the database and the slower the connection of the database (for example, if it is a remote DB), the longer it will take to load the DB schema. For better usability, JPA Buddy provides a DB schema cache. Once you enable it (1), a snapshot file will be created for the selected DB in the temporary directory. Otherwise, the DB schema will be loaded from the DB on each reverse engineering use. When you need it, you can refresh the saved schema cache (2).
 
 ![new-entity-db-schema-cache](img/new-entity-db-schema-cache.png)
 
