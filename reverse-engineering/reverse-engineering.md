@@ -447,3 +447,5 @@ See how you can configure type mappings for reverse engineering in JPA Buddy to 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7vGgBHwm_Ck?t=89" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+Tags: JPA, Entity generation, Database schema, Hibernate, ORM, Entity mapping, DBMS, Java development, Performance optimization, Best practices, Validation annotations, Fetch type
