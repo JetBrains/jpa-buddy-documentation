@@ -1,6 +1,6 @@
 ## Introduction
 
-The minimalistic mode is designed to minimize distraction for developers. If you are the one who prefers to have everything at your fingertips – you will like it! JPA Buddy panel will be hidden and its content will be available in standard IntelliJ IDEA windows, such as Project panel, Generate Menu and so on...
+Minimalistic mode is designed to reduce distractions for developers who prefer a clutter-free workspace. In this mode, JPA Buddy's panels are hidden, and their content is accessible through standard IntelliJ IDEA windows such as Project panel and Generate menu and so on...
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fSUnqcZVWnM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
