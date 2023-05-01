@@ -128,7 +128,7 @@ The attributes migration flow here is identical to what was described in the [En
 
 ## Smart References Detection
 
-JPA Buddy deeply understands your model. In certain cases, it's able to properly detect cardinality: `@`OneToOne, `@`OneToMany, `@`ManyToOne, `@`ManyToMany. The coolest thing is that JPA Buddy can show references for which there are no columns in the current table.
+JPA Buddy deeply understands your model. In certain cases, it's able to properly detect cardinality: `@`OneToOne, `@`OneToMany, `@`ManyToOne, `@`ManyToMany. The coolest thing is that JPA Buddy can show references even when there are no corresponding columns in the current table
 
 <iframe allowfullscreen="true" title="YouTube video player" src="https://www.youtube.com/embed/VYdpesbhND4" height="315" width="560" allow-top-navigation="false" allow-forms="false" allow-popups="false" sandbox="allow-scripts allow-same-origin allow-popups" style="box-sizing: border-box; margin: 0px auto; max-width: 100%; width: 964px; border: none;"></iframe>
 
