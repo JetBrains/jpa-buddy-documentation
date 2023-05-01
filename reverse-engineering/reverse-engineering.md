@@ -136,7 +136,7 @@ Let's look more closely at each of these cases.
 
 ### @OneToOne
 
-There are two situations when we know for 100% that the cardinality of the relation is exactly `@`OneToOne:
+There are two situations where we can confidently assume the cardinality of the relation as `@`OneToOne:
 
 1. Table has a column with the unique constraint that refers to the primary key of another table
 2. Primary key of the table is a foreign key
