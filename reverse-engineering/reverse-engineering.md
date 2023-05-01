@@ -33,7 +33,7 @@ The menu on the top of the window allows you to configure:
 
 * <a href="https://www.jpa-buddy.com/documentation/database-connections/" target="_blank">DB connection</a>
 * <a href="https://www.jpa-buddy.com/documentation/reverse-engineering/#working-with-remote-db" target="_blank">DB schema cache</a>
-* Source root and package to which the generated entities will be saved
+* Source root and package where the generated entities will be saved
 * Whether indexes and constraints need to be migrated
 * Whether schema name should be specified in the `@Table` annotation
 
@@ -55,9 +55,9 @@ The main part of the window allows you to configure everything related to attrib
 
 All attributes are divided into 3 categories:
 
-* Migrated Columns - the ones already presented in the entity (available only for mapped relations)
-* Columns - new, not mapped in the entity or parent @MappedSuperclass yet
-* References - optional associations that are not represented as a column in the observing table
+* Migrated Columns - columns that are already present in the entity (available only for mapped relations)
+* Columns - new columns that are not yet mapped in the entity or parent @MappedSuperclass
+* References - optional associations that are not represented as a column in the observed table
 
 #### Creating Enums
 
