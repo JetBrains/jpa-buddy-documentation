@@ -1,6 +1,6 @@
 ## Introduction
 
-JPA Buddy allows you to granularly pick tables/views and fields from your database and get them as JPA entities:
+JPA Buddy allows you to selectively pick tables/views and fields from your database and get them as JPA entities:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Lr_zg_uhWW4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
