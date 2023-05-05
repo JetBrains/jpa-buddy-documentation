@@ -41,7 +41,8 @@ While creating entities from the database, IntelliJ IDEA CE and Ultimate users e
 
 ### IntelliJ IDEA CE
 
-JPA Buddy can only retrieve data from a connection string that is explicitly specified. This is because it uses a JDBC driver to obtain meta information. So, if your tables are in a non-default schema, you need to create a new connection that targets the database and schema. You can find instructions on how to do this [here](/database-connections/database-connections.md#non-default-schema-connection).
+If your tables are in a non-default schema, you need to create a new connection that targets the database and schema. This is because JPA Buddy can only retrieve data from an explicitly specified connection string since it uses a JDBC driver to obtain meta information.
+You can find instructions on how to create a new connection [here](/database-connections/database-connections.md#non-default-schema-connection).
 
 If your tables are still not visible even after specifying the schema explicitly, please let us know on <a href="https://discord.com/invite/zUsVXYGsQr" target="blank">Discord</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
 
