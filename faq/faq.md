@@ -67,11 +67,14 @@ Certain features in JPA Buddy are only available when specific libraries are pre
 
 ## Is JPA Buddy available for free?
 
+_TL;DR: Yes, but some features are available only for subscribers._
+
 JPA Buddy is designed to help users:
 * get started with the Jakarta Persistence API and related libraries
 * follow best practices
 * speed up development
-We believe in providing features that support these goals for free.
+
+We believe in providing features that support these goals for free:
 * Make it easier to start with Jakarta Persistence API and surrounding frameworks and libraries. 
 * Ensure the right use of the mentioned frameworks and libraries. To achieve this JPA Buddy strongly follows best practices and documentation while code generation and provides smart inspections to examine the existing code. 
 * Accelerate the development process itself.
@@ -86,14 +89,10 @@ Features that available **only for subscribers** are:
 * DTO generation and MapStruct/ModelMapper support.
 
 In addition, we provide a few ways to get JPA Buddy license **for free**:
-1. Follow us on Twitter, send us a private message, and get one month for free!
-2. If you have 500+ Twitter subscribers, share our tweets 3-4 times this month and get the next month of free use!
+1. Follow us on <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a>, send us a private message, and get one month for free!
+2. If you have 500+ <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a> subscribers, share our tweets 3-4 times this month and get the next month of free use!
 3. Report a severe bug or share a great idea that makes it to our roadmap, and we'll reward you!
-4. Write about JPA Buddy or create a YouTube video, and receive our heartfelt thanks!
-1. Still don't follow us on <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a>? Subscribe, send a private message to us and we will grant you one month free!
-2. Has more than 500 subscribers on <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a> and share our tweets 3-4 times per month? Let us know via the contact form on our website, because you definitely deserve the next month of free use!
-3. Reported a severe bug? Shared great ideas that become a part of our roadmap? We will not leave you without a present!
-4. Published an article about JPA Buddy or recorded a <a href="https://www.youtube.com/c/JPABuddy" target="blank">YouTube</a> video? Be sure, our big thanks are going to find you!
+4. Write about JPA Buddy or create a <a href="https://www.youtube.com/c/JPABuddy" target="blank">YouTube</a> video, and receive our heartfelt thanks!
 
 ## Does JPA Buddy collect any personal information from users?
 
