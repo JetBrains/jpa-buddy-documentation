@@ -4,7 +4,9 @@ There are several reasons why you may not see the JPA Buddy panels.
 
 **1. You may not be in the correct file.** 
    
-One of the key features of JPA Buddy panels is that they are context-dependent, meaning that they can display only when you are in the files about which JPA Buddy knows a lot. For example, it may be JPA entities, Spring Data JPA repositories, Liquibase changelogs, etc. Therefore, you may not be able to find the JPA Designer panel if you are not in a file that can be adjusted using JPA Designer. To check if the JPA Designer panel is present, try opening a JPA entity. If you can’t find it, move to the next reason.
+JPA Buddy panels are only visible in certain files that JPA Buddy is familiar with, such as JPA entities, Spring Data JPA repositories, and Liquibase changelogs. 
+This is because JPA Buddy panels are context-dependent. If you are not in a file that can be adjusted using JPA Designer, the corresponding panel might not be visible. 
+To check if the JPA Designer panel is available, try opening a JPA entity. If it's not visible, move on to the next reason.
 
 **2. You may have Minimalistic Mode turned on.** 
    
