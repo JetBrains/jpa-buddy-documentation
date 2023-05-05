@@ -24,7 +24,7 @@ To check if the necessary dependency exists in your project for JPA Buddy to wor
 
 ![actions-jpa-structure.png](img/actions-jpa-structure.png)
 
-If you see the same, it means JPA Buddy is active, and the JPA Designer panel should be displayed if points 1 and 2 have been successful. If not, check out the last reason.
+If you see the same, it means JPA Buddy is active, and the JPA Designer panel should be displayed if points 1 and 2 have been successful. If you are still unable to locate the panel, please refer to the last reason.
 
 **4. Something may have gone wrong with the plugin or IntelliJ IDEA.**
 
