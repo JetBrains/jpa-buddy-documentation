@@ -67,7 +67,11 @@ Certain features in JPA Buddy are only available when specific libraries are pre
 
 ## Is JPA Buddy available for free?
 
-Since we started the plugin, we established a clear list of values that we should deliver to JPA Buddy users:
+JPA Buddy is designed to help users:
+* get started with the Jakarta Persistence API and related libraries
+* follow best practices
+* speed up development
+We believe in providing features that support these goals for free.
 * Make it easier to start with Jakarta Persistence API and surrounding frameworks and libraries. 
 * Ensure the right use of the mentioned frameworks and libraries. To achieve this JPA Buddy strongly follows best practices and documentation while code generation and provides smart inspections to examine the existing code. 
 * Accelerate the development process itself.
