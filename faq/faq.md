@@ -93,7 +93,7 @@ In addition, we provide a few ways to get JPA Buddy license **for free**:
 
 ## Does JPA Buddy collect any personal information from users?
 
-No, JPA Buddy does not collect any personal information, either about the features you use or your database model, or any other information. The only way the JPA Buddy team can obtain personal information about you is with your permission when you send an error report.
+No, JPA Buddy does not collect any personal information, such as details about the features you use or your database model. The only way the JPA Buddy team can obtain personal information about you is if you grant permission by sending an error report.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OkFBn4s-218" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
