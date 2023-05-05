@@ -57,7 +57,7 @@ Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA
 
 If you still can’t see any tables, please contact us on <a href="https://discord.com/invite/zUsVXYGsQr" target="blank">Discord</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
 
-## Does JPA Buddy supports the IntelliJ IDEA EAP?
+## Does JPA Buddy support the IntelliJ IDEA EAP?
 
 Yes, but unfortunately, we cannot support EAP at early stages. Normally, we provide support for EAP since its 3-4th release. Otherwise, it becomes too laborious, because JetBrains often makes significant API changes during earlier EAP releases.
 
