@@ -10,7 +10,8 @@ To check if the JPA Designer panel is available, try opening a JPA entity. If it
 
 **2. You may have Minimalistic Mode turned on.** 
    
-JPA Buddy allows you to hide some or all panels according to your preference. By default, all panels are enabled, but if you accidentally turn on [Minimalistic Mode](/minimalistic-mode/minimalistic-mode.md), you can turn it off in the settings. To do this, go to _Settings -> Tools -> JPA Buddy -> Designer Settings_ and select the extensive option.
+JPA Buddy has a [Minimalistic Mode](/minimalistic-mode/minimalistic-mode.md) that allows you to hide some or all panels according to your preference. If you accidentally turned on this mode, you can turn it off in the settings. 
+To do so, go to _Settings -> Tools -> JPA Buddy -> Designer Settings_ and select the extensive option.
 
 ![extensive-mode.png](img/extensive-mode.png)
 
