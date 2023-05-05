@@ -19,7 +19,8 @@ Then, check if the panels are present (as described in point 1). Move to the nex
 
 **3. Your project may be missing necessary dependencies.**
 
-As mentioned earlier, JPA Buddy does not display its panels in all possible cases, but only when necessary. Therefore, if your project does not have any of [the libraries described in our documentation](/installation-guide/installation-guide.md#dependencies), all JPA Buddy functionality will be disabled. To check if the necessary dependency exists in your project for JPA Buddy to work correctly, use the following method: _Shift+Shift -> Actions -> JPA Structure_.
+As mentioned earlier, JPA Buddy displays its panels only when necessary. Therefore, if your project does not have any of [the libraries described in our documentation](/installation-guide/installation-guide.md#dependencies), all JPA Buddy functionality will be disabled. 
+To check if the necessary dependency exists in your project for JPA Buddy to work correctly, use the following method: _Shift+Shift -> Actions -> JPA Structure_.
 
 ![actions-jpa-structure.png](img/actions-jpa-structure.png)
 
