@@ -48,7 +48,8 @@ If your tables are still not visible even after specifying the schema explicitly
 
 ### IntelliJ IDEA Ultimate
 
-Until JPA Buddy version 2023.2, the same mechanism was used for both IntelliJ IDEA Ultimate and IntelliJ IDEA CE. Therefore, if you are using an older version of JPA Buddy and IntelliJ IDEA Ultimate, you need to explicitly specify the schema in the connection string from which you want to create entities as described [here](/database-connections/database-connections.md#non-default-schema-connection).
+If you are using JPA Buddy version 2023.2 or older with IntelliJ IDEA Ultimate, you need to explicitly specify the schema in the connection string to create entities. This is because the same mechanism was used for both IntelliJ IDEA Ultimate and IntelliJ IDEA CE in older JPA Buddy versions. 
+You can find instructions on how to create a new connection string targeting the database and schema [here](/database-connections/database-connections.md#non-default-schema-connection).
 
 Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA capabilities to read metadata about the database. By default, this integration is enabled. If you see tables in the "Database" panel of IntelliJ IDEA, creating entities should work without any problems. You can check if the integration is enabled by going to _Settings -> Tools -> JPA Buddy -> Reverse Engineering -> Integration with IDEA Ultimate database metamodel_.
 
