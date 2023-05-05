@@ -58,7 +58,7 @@ If you still can’t see any tables, please contact us on <a href="https://disco
 
 ## Does JPA Buddy supports the IntelliJ IDEA EAP?
 
-Yes, but unfortunately, we cannot support EAP at early stages. Normally, we provide support for EAP since its 3-4th release. Otherwise, it becomes too laborious, because JetBrains heavily changes API for earlier EAP releases.
+Yes, but unfortunately, we cannot support EAP at early stages. Normally, we provide support for EAP since its 3-4th release. Otherwise, it becomes too laborious, because JetBrains often makes significant API changes during earlier EAP releases.
 
 ## Why am I unable to find certain features?
 
