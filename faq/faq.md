@@ -82,6 +82,10 @@ Features that available **only for subscribers** are:
 * DTO generation and MapStruct/ModelMapper support.
 
 In addition, we provide a few ways to get JPA Buddy license **for free**:
+1. Follow us on Twitter, send us a private message, and get one month for free!
+2. If you have 500+ Twitter subscribers, share our tweets 3-4 times this month and get the next month of free use!
+3. Report a severe bug or share a great idea that makes it to our roadmap, and we'll reward you!
+4. Write about JPA Buddy or create a YouTube video, and receive our heartfelt thanks!
 1. Still don't follow us on <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a>? Subscribe, send a private message to us and we will grant you one month free!
 2. Has more than 500 subscribers on <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a> and share our tweets 3-4 times per month? Let us know via the contact form on our website, because you definitely deserve the next month of free use!
 3. Reported a severe bug? Shared great ideas that become a part of our roadmap? We will not leave you without a present!
