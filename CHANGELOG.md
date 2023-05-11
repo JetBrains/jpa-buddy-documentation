@@ -1,5 +1,42 @@
 # Changelog
 
+## 2023.2.0 – 2023-05-15
+
+### Liquibase/Flyway/DDL Diff Generator
+
+* We added the support for custom naming strategies, allowing you to tailor naming conventions to fit the needs of your project <a href="https://issues.jpa-buddy.com/issue/JPAB-2230" target="_blank">JPAB-2230</a>
+* To streamline Liquibase changelog generation, we added the ability to specify changeset templates, saving you time by automating repetitive tasks <a href="https://issues.jpa-buddy.com/issue/JPAB-1418" target="_blank">JPAB-1418</a>
+* We supported Java Docs and `@Comment` annotation from Hibernate. Now the comments will be displayed in the migration scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-1268" target="_blank">JPAB-1268</a>
+* Since this release, JPA Buddy allows you to generate diff changes for selected entities only, providing you with more control over your migration process <a href="https://issues.jpa-buddy.com/issue/JPAB-2228" target="_blank">JPAB-2228</a>
+
+### DTO Generator & Coding Assistance
+
+* We supported ModelMapper for code scaffolding, on-the-fly injection, and mapping methods generation <a href="https://issues.jpa-buddy.com/issue/JPAB-2069" target="_blank">JPAB-2069</a>
+* Now, JPA Buddy knows how to use the `@Value` annotation from Lombok. Generate immutable DTOs and benefit from concise code <a href="https://issues.jpa-buddy.com/issue/JPAB-2352" target="_blank">JPAB-2352</a>
+* Simplify your JSON serialization process by adding the `JsonIgnoreProperties(ignoreUnknown = true)` annotation from Jackson for your DTOs, ensuring effortless compatibility and smoother data handling <a href="https://issues.jpa-buddy.com/issue/JPAB-1218" target="_blank">JPAB-1218</a>
+* Kotlin's lovers can now rejoice as we added full Kotlin support for DTO synchronization features <a href="https://issues.jpa-buddy.com/issue/JPAB-2099" target="_blank">JPAB-2099</a>
+
+### Reverse Engineering
+
+* Defining a parent entity during Reverse Engineering is now possible, enabling you to build your entity hierarchy and maintain a well-organized project structure <a href="https://issues.jpa-buddy.com/issue/JPAB-1950" target="_blank">JPAB-1950</a>
+* We added the ability to map reference columns to basic types instead of references, giving you full control over your mappings <a href="https://issues.jpa-buddy.com/issue/JPAB-2290" target="_blank">JPAB-2290</a>
+* IntelliJ IDEA Ultimate users will no longer experience differences in the display of database contents in the "Database" panel from IJ and the "JPA entities from Database" wizard from JPA Buddy <a href="https://issues.jpa-buddy.com/issue/JPAB-1296" target="_blank">JPAB-1296</a>
+
+### Entity Designer
+
+* The "Extract to MappedSuperclass" feature has become even better! Now, you can extract both attributes and methods into a MappedSuperclass <a href="https://issues.jpa-buddy.com/issue/JPAB-1692" target="_blank">JPAB-1692</a>
+* You can now apply `@SuperBuilder` annotation from Lombok by using JPA Inspector <a href="https://issues.jpa-buddy.com/issue/JPAB-2480" target="_blank">JPAB-2480</a>
+
+### Non-JPA Support
+
+* We expanded our support by adding the ability to include attributes from non-JPA domain entities into your DTOs <a href="https://issues.jpa-buddy.com/issue/JPAB-2338" target="_blank">JPAB-2338</a>
+* Also, we enhanced the navigation capabilities, you can now navigate from a DTO to a non-JPA domain entity with ease <a href="https://issues.jpa-buddy.com/issue/JPAB-2337" target="_blank">JPAB-2337</a>
+* Generating MapStruct interfaces for non-JPA domain entities is also possible now <a href="https://issues.jpa-buddy.com/issue/JPAB-2372" target="_blank">JPAB-2372</a>
+
+Last but not least, starting from this release, JPA Buddy analyzes not only the entire project for the presence of specific dependencies but also each individual module (in the case of a multi-module project). So, <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">certain features</a> will be activated depending on the required dependencies in a module.
+
+We're continuously working to improve your experience with JPA Buddy, and this release is no exception. For a comprehensive list of other improvements and fixes, be sure to check out <a href="https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20232%20State:%20Verified%20" target="_blank">all the resolved issues (65+)</a>.
+
 ## 2023.1.5 - 2023-04-24
 
 * The "Generate fluent setters" option now works properly with Lombok `@Setter` annotation <a href="https://issues.jpa-buddy.com/issue/JPAB-2466" target="_blank">JPAB-2466</a>
