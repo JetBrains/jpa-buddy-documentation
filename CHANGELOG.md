@@ -5,8 +5,8 @@
 ### Liquibase/Flyway/DDL Diff Generator
 
 * We added the support for custom naming strategies, allowing you to tailor naming conventions to fit the needs of your project <a href="https://issues.jpa-buddy.com/issue/JPAB-2230" target="_blank">JPAB-2230</a>
-* To streamline Liquibase changelog generation, we added the ability to specify changeset templates, saving you time by automating repetitive tasks <a href="https://issues.jpa-buddy.com/issue/JPAB-1418" target="_blank">JPAB-1418</a>
-* We supported Java Docs and `@Comment` annotation from Hibernate. Now the comments will be displayed in the migration scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-1268" target="_blank">JPAB-1268</a>
+* To streamline Liquibase changelog generation, we added the ability to specify changeset templates. This new feature automates repetitive tasks, such as generating correct preconditions and empty rollbacks when using the rollback feature in Liquibase <a href="https://issues.jpa-buddy.com/issue/JPAB-1418" target="_blank">JPAB-1418</a>
+* The `@Comment` annotation from Hibernate has been supported for the migration script generators <a href="https://issues.jpa-buddy.com/issue/JPAB-1954" target="_blank">JPAB-1954</a>
 * Since this release, JPA Buddy allows you to generate diff changes for selected entities only, providing you with more control over your migration process <a href="https://issues.jpa-buddy.com/issue/JPAB-2228" target="_blank">JPAB-2228</a>
 
 ### DTO Generator & Coding Assistance
@@ -19,8 +19,8 @@
 ### Reverse Engineering
 
 * Defining a parent entity during Reverse Engineering is now possible, enabling you to build your entity hierarchy and maintain a well-organized project structure <a href="https://issues.jpa-buddy.com/issue/JPAB-1950" target="_blank">JPAB-1950</a>
-* We added the ability to map reference columns to basic types instead of references, giving you full control over your mappings <a href="https://issues.jpa-buddy.com/issue/JPAB-2290" target="_blank">JPAB-2290</a>
-* IntelliJ IDEA Ultimate users will no longer experience differences in the display of database contents in the "Database" panel from IJ and the "JPA entities from Database" wizard from JPA Buddy <a href="https://issues.jpa-buddy.com/issue/JPAB-1296" target="_blank">JPAB-1296</a>
+* Now, JPA Buddy can migrate database comments using the @Comment annotation from Hibernate or Java Doc <a href="https://issues.jpa-buddy.com/issue/JPAB-1268" target="_blank">JPAB-1268</a>
+* JPA Buddy now seamlessly integrates with IntelliJ IDEA Ultimate to read information from the database. This improvement has significantly enhanced the performance of the "JPA Entities from Database" action. Additionally, this allows JPA Buddy to use all the connection settings specified within the IntelliJ IDEA Ultimate interface <a href="https://issues.jpa-buddy.com/issue/JPAB-1296" target="_blank">JPAB-1296</a>
 
 ### Entity Designer
 
