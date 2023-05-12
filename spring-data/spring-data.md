@@ -37,7 +37,7 @@ JPA Buddy groups all repositories for each entity in one place to enable the mos
 
 ![jpa-structure-repository](img/jpa-structure-repository.png)
 
-## Queries/Methods Generation
+## Query/Method Generation
 
 Spring Data provides the ability to define a query with the `@Query` annotation. You can use JPA Palette (1) or Editor Toolbar (2) to write them quickly and without any typos. Choose one of the following types of queries and configure them with the convenient UI.
 
