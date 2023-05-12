@@ -14,18 +14,18 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 
 In the New JPA Repository window, you can set:
 
-* Entity, which the repository will be created for
-* Class name
-* Parent class for the repository. It can be:
-  * Repository from <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories" target="_blank">org.springframework.data.repository</a> package
-  * Repository from your project
+* The entity for which the repository will be created
+* The name of the repository class 
+* The parent class for the repository. It can be:
+  * A repository from the <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories" target="_blank">org.springframework.data.repository</a> package
+  * Any repository from your project
 * Whether the repository will extend <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#specifications" target="_blank">JpaSpecificationExecutor</a> or not
-* Source root
-* Package
+* The source root 
+* The package where the repository will be created
 
 ![new-jpa-repository](img/new-jpa-repository-single.png)
 
-When we have a lot of entities, creating Spring Data repositories one by one becomes a tedious job. With JPA Buddy, you can speed up this process. To create repositories for JPA entities, you need to take three steps. Select entities in the project tree, invoke the JPA Buddy wizard, then adjust your selection. That's it! Look how this feature can speed up the development process:
+Creating Spring Data repositories one by one for each entity can become a tedious job. With JPA Buddy, you can speed up this process. To create repositories for multiple JPA entities at once, you need to take three steps. Select the entities in the project tree, invoke the JPA Buddy wizard, then adjust your selection. That's it! Look how this feature can accelerate the development process:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nSusI0dq7nQ " title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -33,28 +33,28 @@ When we have a lot of entities, creating Spring Data repositories one by one bec
 
 ## JPA Structure Repositories
 
-For the most efficient navigation in the project, JPA Buddy groups all repositories for each entity. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.
+JPA Buddy groups all repositories for each entity in one place to enable the most efficient navigation within the project. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.
 
 ![jpa-structure-repository](img/jpa-structure-repository.png)
 
-## Queries/Methods Generation
+## Query/Method Generation
 
-Spring Data provides the ability to define a query with the `@Query` annotation. You can use JPA Palette (1) or Editor Toolbar (2) to write them quickly and without any typos. Choose one of the following types of queries and configure them with the convenient UI.
+Spring Data provides the ability to define a query with the `@Query` annotation. You can use JPA Palette (1) or Editor Toolbar (2) to write them quickly and avoid typos. Choose one of the following types of queries and configure them with the convenient UI.
 
 ![jpa-palette-query](img/jpa-palette-query.png)
 
 ### Example
 
-<div class="note">All that we will consider in the example below can be generated as @Query and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
+<div class="note">All that we will present in the example below can be generated both as a @Query and a derived query method. The only difference is that you can't specify the derived query method's name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Queries</a>.
 </div>
 
 Let's look at an example of creating a Find Collection Query.
 
 ![create-query-find-collection](img/create-query-find-collection.png)
 
-At the top of the window, you can define wrap type for collection and query return type. Moreover, JPA Buddy allows you to generate new [Projection interface](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO class](https://www.jpa-buddy.com/documentation/dto-generator/) right from this window (just click on the `+` button).
+At the top of the window, you can define the wrap type for collections' and queries' return type. Moreover, JPA Buddy allows you to generate new [Projection interfaces](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO classes](https://www.jpa-buddy.com/documentation/dto-generator/) by clicking on the `+` button.
 
-You can also specify the method name. Still, if you rest it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
+You can also specify the method name. Still, if you leave it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Queries</a>.
 
 The middle of the window contains the table for the query conditions.
 
@@ -64,7 +64,7 @@ At the bottom of the window, you can specify:
 * whether to use `Pageable` parameter or not;
 * and so on.
 
-Finally, you can specify fields by which the query result will be ordered.
+Finally, you can specify fields you want to order the query result by.
 
 For the above configuration, the following query will be generated:
 
@@ -91,7 +91,7 @@ JPA Buddy also provides intention on the entity attributes leading directly to t
 
 ### Unresolved Reference
 
-Some developers prefer to declare a call to the method that doesn't exist yet first and only then implement it. JPA Buddy will help those developers who adhere to this programming style. Just write the desired signature and move to the query or method creation wizard via special actions:
+JPA Buddy can help those developers who prefer to call a method that doesn't exist yet first and only then implement it. Just write the desired signature and move to the query or method creation wizard via special actions:
 
 ![unresolved-reference](img/unresolved-reference.png)
 
@@ -109,7 +109,7 @@ To configure the method or query, place a cursor on it and use JPA Inspector:
 
 ### EntityGraph Support
 
-The EntityGraph feature has been introduced in JPA 2.1, it has been one of the most awaited features for quite a long time. Entity graphs give us another layer of control over data that needs to be fetched. JPA Buddy supports them, so you can build graphs using a handy GUI wizard:
+The EntityGraph has been one of the most awaited features introduced in JPA 2.1. Entity graphs give us another layer of control over data that needs to be fetched. JPA Buddy supports them, so you can build graphs using a handy GUI wizard:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Duco-QWBXy0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -119,7 +119,7 @@ The EntityGraph feature has been introduced in JPA 2.1, it has been one of the m
 
 ### Async
 
-Spring Data JPA provides the ability to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@Async` annotation, but also to change the return type to one of the following:
+Spring Data JPA provides the ability to run repository queries asynchronously. To make a query asynchronous, it's not enough to add the '@Async' annotation, it's also necessary to change the return type to one of the following:
 
 * Future<ClassName>
 * CompletableFuture<ClassName>
@@ -133,15 +133,15 @@ To make query async, place the cursor on the query you want to change and choose
 
 ### Dynamic Projection
 
-In Spring Data JPA, projections can also be specified during runtime by using generic repository methods. Add a type class parameter to your repository method to use the same query with different projections. This enables you to define the preferred returned type in your business code.
+In Spring Data JPA, you can specify projections at runtime using generic repository methods. Add a type class parameter to your repository method to use the same query with different projections. This enables you to define the preferred return type in your business code.
 
-To make query generic, place the cursor on the query you want to change and check the box “Dynamic projection”.
+To make a query generic, place the cursor on the query you want to change and check the “Dynamic projection” box.
 
 ![dynamic-projection](img/dynamic-projection.png)
 
 ### Query Extracting
 
-Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures you would prefer to transform into neat `@`Query-annotated methods. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector.
+Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures that you can transform into neat `@`Query-annotated methods instead. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lYZielYtVXI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -243,8 +243,10 @@ As soon as JPA Buddy is able to associate Projection interface with the entity:
 
 ## Auditing Support
 
-Having auditing in a large application is a crucial aspect. With JPA Buddy, you can now effortlessly include commonly used audit fields by utilizing annotations such as `@CreatedBy`, `@CreatedDate`, `@LastModifiedBy` and `@LastModifiedDate`. What's more, JPA Buddy will notify you if you forget to add the `@EnableJpaAuditing` annotation to your configuration or if the AuditingEntityListener is not added to the current entity. This leaves even less room for the mistake!
+In a large application, having auditing is crucial. JPA Buddy makes it effortless by providing annotations such as `@CreatedBy`, `@CreatedDate`, `@LastModifiedBy` and `@LastModifiedDate`for commonly used audit fields. What's more, JPA Buddy will notify you if you forget to add the `@EnableJpaAuditing` annotation to your configuration or if the AuditingEntityListener is not added to the current entity. This leaves even less room for mistakes!
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5zEzLX1iY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+Tags: Spring Data, JPA, Projections, Auditing, DTO, Query, Repository, Entity, JPQL, Native Query, Dynamic Projections
