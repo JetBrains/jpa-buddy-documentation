@@ -64,7 +64,7 @@ At the bottom of the window, you can specify:
 * whether to use `Pageable` parameter or not;
 * and so on.
 
-Finally, you can specify the field you want to order the query result by.
+Finally, you can specify fields you want to order the query result by.
 
 For the above configuration, the following query will be generated:
 
@@ -91,7 +91,7 @@ JPA Buddy also provides intention on the entity attributes leading directly to t
 
 ### Unresolved Reference
 
-Some developers prefer to declare a call to the method that doesn't exist yet first and only then implement it. JPA Buddy will help those developers who adhere to this programming style. Just write the desired signature and move to the query or method creation wizard via special actions:
+JPA Buddy can help those developers who prefer to call a method that doesn't exist yet first and only then implement it. Just write the desired signature and move to the query or method creation wizard via special actions:
 
 ![unresolved-reference](img/unresolved-reference.png)
 
