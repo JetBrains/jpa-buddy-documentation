@@ -119,7 +119,7 @@ The EntityGraph has been one of the most awaited features introduced in JPA 2.1.
 
 ### Async
 
-Spring Data JPA provides the ability to run repository queries asynchronously.  It's not enough to add the '@Async' annotation to make a query asynchronous, it's also necessary to change the return type to one of the following:
+Spring Data JPA provides the ability to run repository queries asynchronously. To make a query asynchronous, it's not enough to add the '@Async' annotation, it's also necessary to change the return type to one of the following:
 
 * Future<ClassName>
 * CompletableFuture<ClassName>
@@ -133,7 +133,7 @@ To make query async, place the cursor on the query you want to change and choose
 
 ### Dynamic Projection
 
-In Spring Data JPA, projections can also be specified during runtime by using generic repository methods. Add a type class parameter to your repository method to use the same query with different projections. This enables you to define the preferred returned type in your business code.
+In Spring Data JPA, you can specify projections at runtime using generic repository methods. Add a type class parameter to your repository method to use the same query with different projections. This enables you to define the preferred return type in your business code.
 
 To make query generic, place the cursor on the query you want to change and check the box “Dynamic projection”.
 
