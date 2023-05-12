@@ -119,7 +119,7 @@ The EntityGraph has been one of the most awaited features introduced in JPA 2.1.
 
 ### Async
 
-Spring Data JPA provides the ability to run repository queries asynchronously. The correct way to make asynchronous query is not only to add `@Async` annotation, but also to change the return type to one of the following:
+Spring Data JPA provides the ability to run repository queries asynchronously.  It's not enough to add the '@Async' annotation to make a query asynchronous, it's also necessary to change the return type to one of the following:
 
 * Future<ClassName>
 * CompletableFuture<ClassName>
