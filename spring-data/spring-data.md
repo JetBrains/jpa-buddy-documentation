@@ -25,7 +25,7 @@ In the New JPA Repository window, you can set:
 
 ![new-jpa-repository](img/new-jpa-repository-single.png)
 
-When we have a lot of entities, creating Spring Data repositories one by one becomes a tedious job. With JPA Buddy, you can speed up this process. To create repositories for JPA entities, you need to take three steps. Select entities in the project tree, invoke the JPA Buddy wizard, then adjust your selection. That's it! Look how this feature can speed up the development process:
+Creating Spring Data repositories one by one for each entity can become a tedious job. With JPA Buddy, you can speed up this process. To create repositories for multiple JPA entities at once, you need to take three steps. Select the entities in the project tree, invoke the JPA Buddy wizard, then adjust your selection. That's it! Look how this feature can speed up the development process:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nSusI0dq7nQ " title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
