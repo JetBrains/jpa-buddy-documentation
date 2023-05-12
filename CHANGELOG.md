@@ -4,7 +4,6 @@
 
 ### Liquibase/Flyway/DDL Diff Generator
 
-* We added the support for custom naming strategies, allowing you to tailor naming conventions to fit the needs of your project <a href="https://issues.jpa-buddy.com/issue/JPAB-2230" target="_blank">JPAB-2230</a>
 * To streamline Liquibase changelog generation, we added the ability to specify changeset templates. This new feature automates repetitive tasks, such as generating correct preconditions and empty rollbacks when using the rollback feature in Liquibase <a href="https://issues.jpa-buddy.com/issue/JPAB-1418" target="_blank">JPAB-1418</a>
 * The `@Comment` annotation from Hibernate has been supported for the migration script generators <a href="https://issues.jpa-buddy.com/issue/JPAB-1954" target="_blank">JPAB-1954</a>
 * Since this release, JPA Buddy allows you to generate diff changes for selected entities only, providing you with more control over your migration process <a href="https://issues.jpa-buddy.com/issue/JPAB-2228" target="_blank">JPAB-2228</a>
