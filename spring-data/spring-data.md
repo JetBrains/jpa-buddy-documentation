@@ -64,7 +64,7 @@ At the bottom of the window, you can specify:
 * whether to use `Pageable` parameter or not;
 * and so on.
 
-Finally, you can specify fields by which the query result will be ordered.
+Finally, you can specify the field you want to order the query result by.
 
 For the above configuration, the following query will be generated:
 
