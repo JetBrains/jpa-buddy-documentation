@@ -14,14 +14,14 @@ JPA Buddy provides various ways to create repositories to make working with JPA-
 
 In the New JPA Repository window, you can set:
 
-* Entity, which the repository will be created for
-* Class name
-* Parent class for the repository. It can be:
-  * Repository from <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories" target="_blank">org.springframework.data.repository</a> package
-  * Repository from your project
+* The entity for which the repository will be created
+* The name of the repository class 
+* The parent class for the repository. It can be:
+  * A repository from the <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories" target="_blank">org.springframework.data.repository</a> package
+  * Any repository from your project
 * Whether the repository will extend <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#specifications" target="_blank">JpaSpecificationExecutor</a> or not
-* Source root
-* Package
+* The source root 
+* The package where the repository will be created
 
 ![new-jpa-repository](img/new-jpa-repository-single.png)
 
