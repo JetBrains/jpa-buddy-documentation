@@ -54,7 +54,7 @@ Let's look at an example of creating a Find Collection Query.
 
 At the top of the window, you can define the wrap type for collections' and queries' return type. Moreover, JPA Buddy allows you to generate new [Projection interfaces](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO classes](https://www.jpa-buddy.com/documentation/dto-generator/) by clicking on the `+` button.
 
-You can also specify the method name. Still, if you rest it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
+You can also specify the method name. Still, if you leave it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Queries</a>.
 
 The middle of the window contains the table for the query conditions.
 
