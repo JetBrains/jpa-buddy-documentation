@@ -45,7 +45,7 @@ Spring Data provides the ability to define a query with the `@Query` annotation.
 
 ### Example
 
-<div class="note">All that we will consider in the example below can be generated as @Query and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
+<div class="note">All that we will present in the example below can be generated both as a @Query and a derived query method. The only difference is that you can't specify the derived query method's name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Queries</a>.
 </div>
 
 Let's look at an example of creating a Find Collection Query.
