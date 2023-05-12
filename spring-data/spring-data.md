@@ -248,3 +248,5 @@ In a large application, having auditing is crucial. JPA Buddy makes it effortles
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5zEzLX1iY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+Tags: Spring Data, JPA, Projections, Auditing, DTO, Query, Repository, Entity, JPQL, Native Query, Dynamic Projections
