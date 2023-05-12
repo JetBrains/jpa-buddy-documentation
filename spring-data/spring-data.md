@@ -33,7 +33,7 @@ Creating Spring Data repositories one by one for each entity can become a tediou
 
 ## JPA Structure Repositories
 
-For the most efficient navigation in the project, JPA Buddy groups all repositories for each entity. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.
+JPA Buddy groups all repositories for each entity in one place to enable the most efficient navigation within the project. It doesn't matter if the repositories for the entity are located in different or in the same project package. All repositories related to the entity will be displayed in the "Repositories" section. From here, you can quickly move to the repository implementation or create a new one.
 
 ![jpa-structure-repository](img/jpa-structure-repository.png)
 
