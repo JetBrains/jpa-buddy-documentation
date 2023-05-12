@@ -135,13 +135,13 @@ To make query async, place the cursor on the query you want to change and choose
 
 In Spring Data JPA, you can specify projections at runtime using generic repository methods. Add a type class parameter to your repository method to use the same query with different projections. This enables you to define the preferred return type in your business code.
 
-To make query generic, place the cursor on the query you want to change and check the box “Dynamic projection”.
+To make a query generic, place the cursor on the query you want to change and check the “Dynamic projection” box.
 
 ![dynamic-projection](img/dynamic-projection.png)
 
 ### Query Extracting
 
-Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures you would prefer to transform into neat `@`Query-annotated methods. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector.
+Derived query methods are a handy way to define queries. But over time, they may evolve into bulky and unreadable structures that you can transform into neat `@`Query-annotated methods instead. This can be easily achieved with JPA Buddy. Place the cursor on the query and click on the “Query extract...” in the JPA Inspector.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lYZielYtVXI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -243,7 +243,7 @@ As soon as JPA Buddy is able to associate Projection interface with the entity:
 
 ## Auditing Support
 
-Having auditing in a large application is a crucial aspect. With JPA Buddy, you can now effortlessly include commonly used audit fields by utilizing annotations such as `@CreatedBy`, `@CreatedDate`, `@LastModifiedBy` and `@LastModifiedDate`. What's more, JPA Buddy will notify you if you forget to add the `@EnableJpaAuditing` annotation to your configuration or if the AuditingEntityListener is not added to the current entity. This leaves even less room for the mistake!
+In a large application, having auditing is crucial. JPA Buddy makes it effortless by providing annotations such as `@CreatedBy`, `@CreatedDate`, `@LastModifiedBy` and `@LastModifiedDate`for commonly used audit fields. What's more, JPA Buddy will notify you if you forget to add the `@EnableJpaAuditing` annotation to your configuration or if the AuditingEntityListener is not added to the current entity. This leaves even less room for mistakes!
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5zEzLX1iY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
