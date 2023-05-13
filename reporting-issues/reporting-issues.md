@@ -20,7 +20,7 @@ Unfortunately, Errors and bugs are inevitable, and they may occur due to various
 
 ## Helpful Information
 
-To speed up the process of solving the problem that has arisen, we need to know:
+To speed up the process of solving the occurring problem, we need to know:
 
 1. Plugin version. File -> Settings -> Plugins. For example, in the picture below, the installed JPA Buddy version is 5.4-212
 
