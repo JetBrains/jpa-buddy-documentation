@@ -30,7 +30,7 @@ To speed up the process of solving the occurring problem, we need to know:
 
     ![about-intellij-idea](img/about-intellij-idea.png)
 
-3. If something goes entirely in an unpredictable way and the error reporting mechanism with stake trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS).
+3. If something goes entirely in an unpredictable way and the error reporting mechanism with a stack trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS).
 
     ![help-show-log](img/help-show-log.jpeg)
 
