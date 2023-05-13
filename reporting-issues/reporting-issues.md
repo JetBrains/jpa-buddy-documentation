@@ -1,6 +1,6 @@
 ## Contact Us
 
-JPA Buddy keeps evolving, and we need to hear the users. If you have any suggestions or feedback, don't hesitate to share them with us. You can contact us through the following communication channels:
+JPA Buddy is continually evolving, and user feedback plays a crucial role in shaping its development. So don't hesitate to share your suggestions or feedback with us. You can contact us through the following communication channels:
 
 * <a href="https://www.jpa-buddy.com/contacts/" target="_blank">Website form</a>
 * <a href="https://discord.com/invite/DxRDQPk9rh" target="_blank">Discord channel</a>
