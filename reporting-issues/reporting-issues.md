@@ -39,3 +39,5 @@ To speed up the process of solving the occurring problem, we need to know:
 ## Issue Tracker
 
 After discovering a new bug, suggestions to implement a new feature, or improvements, we create tickets on <a href="https://issues.jpa-buddy.com/issues/JPAB" target="_blank">YouTrack</a>. You can always view the priority of the issue and the execution status.
+
+Tags: Issue Reporting, Error Reporting, Bug Reporting, Exception Handling, Debugging, Logging
