@@ -10,7 +10,7 @@ JPA Buddy is continually evolving, and user feedback plays a crucial role in sha
 
 ## Error Reporting
 
-Unfortunately, there is no escape from bugs and errors. Sometimes they can happen through our fault, and sometimes not. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us, now it's as simple as clicking a button:
+Unfortunately, Errors and bugs are inevitable, and they may occur due to various reasons. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us with just one click of a button:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OkFBn4s-218" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
