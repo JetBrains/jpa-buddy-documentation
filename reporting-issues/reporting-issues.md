@@ -34,7 +34,7 @@ To speed up the process of solving the occurring problem, we need to know:
 
     ![help-show-log](img/help-show-log.jpeg)
 
-4. The order of actions that must be done to reproduce the problem.
+4. The necessary steps to reproduce the problem.
 
 ## Issue Tracker
 
