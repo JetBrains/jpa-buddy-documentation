@@ -1,6 +1,6 @@
 ## Contact Us
 
-JPA Buddy keeps evolving, and we need to hear the users. If you have any suggestions or feedback, don't hesitate to share them with us. You can contact us through the following communication channels:
+JPA Buddy is continually evolving, and user feedback plays a crucial role in shaping its development. So don't hesitate to share your suggestions or feedback with us. You can contact us through the following communication channels:
 
 * <a href="https://www.jpa-buddy.com/contacts/" target="_blank">Website form</a>
 * <a href="https://discord.com/invite/DxRDQPk9rh" target="_blank">Discord channel</a>
@@ -10,7 +10,7 @@ JPA Buddy keeps evolving, and we need to hear the users. If you have any suggest
 
 ## Error Reporting
 
-Unfortunately, there is no escape from bugs and errors. Sometimes they can happen through our fault, and sometimes not. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us, now it's as simple as clicking a button:
+Unfortunately, Errors and bugs are inevitable, and they may occur due to various reasons. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us with just one click of a button:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OkFBn4s-218" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -20,7 +20,7 @@ Unfortunately, there is no escape from bugs and errors. Sometimes they can happe
 
 ## Helpful Information
 
-To speed up the process of solving the problem that has arisen, we need to know:
+To speed up the process of solving the occurring problem, we need to know:
 
 1. Plugin version. File -> Settings -> Plugins. For example, in the picture below, the installed JPA Buddy version is 5.4-212
 
@@ -30,12 +30,14 @@ To speed up the process of solving the problem that has arisen, we need to know:
 
     ![about-intellij-idea](img/about-intellij-idea.png)
 
-3. If something goes entirely in an unpredictable way and the error reporting mechanism with stake trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS).
+3. If something goes entirely in an unpredictable way and the error reporting mechanism with a stack trace did not appear, a log file would be very useful. You can find it in Help -> Show Log in Explorer (or Finder if you use macOS).
 
     ![help-show-log](img/help-show-log.jpeg)
 
-4. The order of actions that must be done to reproduce the problem.
+4. The necessary steps to reproduce the problem.
 
 ## Issue Tracker
 
 After discovering a new bug, suggestions to implement a new feature, or improvements, we create tickets on <a href="https://issues.jpa-buddy.com/issues/JPAB" target="_blank">YouTrack</a>. You can always view the priority of the issue and the execution status.
+
+Tags: Issue Reporting, Error Reporting, Bug Reporting, Exception Handling, Debugging, Logging
