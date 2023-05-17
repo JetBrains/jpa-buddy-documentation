@@ -136,9 +136,11 @@ For both Liquibase and Flyway, JPA Buddy provides an action to generate an initi
 
 To generate the DDL script based on the data model you will need to specify the corresponding [persistence unit](https://jpa-buddy.com/documentation/database-versioning/#using-a-data-model), scope and one of the [supported DB types](https://www.jpa-buddy.com/documentation/database-connections/#introduction). 
 
-Additionally, JPA Buddy provides an option to create a Liquibase changelog specifically for selected entity changes. This can be done by clicking on the Scope drop-down menu, selecting "Selected Entities", and choosing the relevant entities.
+Additionally, JPA Buddy provides an option to create a Liquibase changelog specifically for **selected entity changes** as a custom scope. This can be done by clicking on the Scope drop-down menu, selecting "Selected Entities", and choosing the relevant entities in the "Select Entities for Custom Scope" window.
 
-In case you compare two databases, you will need to choose one of the existing connections for both of them.
+![diff-custom-scope.png](img/diff-custom-scope.png)
+
+In case you want to compare two databases, you will need to choose one of the existing connections for both of them.
 
 ![init-schema-based-on-the-db](img/init-schema-based-on-the-db.jpeg)
 
