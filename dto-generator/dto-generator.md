@@ -156,6 +156,15 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
   ```java
   // A DTO for the {@link io.jpabuddy.demo.entities.Project} entity.
   ```
+### Validation Rules
+
+JPA Buddy offers seamless configuration of bean validation constraints for DTO fields within its dedicated DTO generation wizard. In addition to defining validations from scratch, you can automatically transfer the validations from the corresponding entities and manage them in the same wizard.
+
+![dto-validation-rules](img/dto-validation-rules.png)
+
+With the flexibility to enable or disable each constraint and customize validation messages, this comprehensive feature allows you to conveniently manage a full range of bean validation constraints for your DTO fields, ensuring consistency and reusability across your application.
+
+> To enable the validations list, it is necessary to include either the <a href="https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator" target="_blank" rel="noopener noreferrer">Hibernate Validator</a> or <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">Spring Boot Starter Validation</a> dependency.
 
 ### Convenient Navigation between Entity and its DTOs
 
