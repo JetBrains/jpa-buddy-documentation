@@ -163,6 +163,9 @@ JPA Buddy offers seamless configuration of bean validation constraints for DTO f
 ![dto-validation-rules](img/dto-validation-rules.png)
 
 With the flexibility to enable or disable each constraint and customize validation messages, this comprehensive feature allows you to conveniently manage a full range of bean validation constraints for your DTO fields, ensuring consistency and reusability across your application.
+
+> To enable the validations list, it is necessary to include either the <a href="https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator" target="_blank" rel="noopener noreferrer">Hibernate Validator</a> or <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">Spring Boot Starter Validation</a> dependency.
+
 ### Convenient Navigation between Entity and its DTOs
 
 Once JPA Buddy associates a DTO class with its corresponding entity:
