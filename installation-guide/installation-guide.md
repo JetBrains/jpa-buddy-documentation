@@ -201,7 +201,7 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
     <td class="tg-0lax" rowspan="2">Add Hibernate Validator annotations to Entity and DTO attributes via JPA Designer and DTO generator wizard respectively.</td>
   </tr>
   <tr>
-    <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">SpringBoot</a> <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">Starter Validation</a></td>
+    <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">Spring Boot Starter Validation</a></td>
   </tr>
   <tr>
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/com.vladmihalcea/hibernate-types-52" target="_blank" rel="noopener noreferrer">Hibernate Types</a></td>
