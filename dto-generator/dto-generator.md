@@ -19,7 +19,7 @@ Also, for mutable DTOs, you can define whether to use fluent setters or not. Suc
 
 JPA Buddy simplifies the generation of DTOs by providing Lombok support. When generating DTOs, you can enable the **`@Value`** annotation by selecting the `All args constructor`, `equals() and hashCode()` and `toString()`options in the DTO generator wizard. In other cases, the  **`@Data`**  annotation will be used.
 
-This way, JPA Buddy optimizes your code by offering a more concise and immutable representation of DTOs when it is required.
+This way JPA Buddy optimizes your code by offering a more concise and immutable representation of DTOs when it is required.
 
 > To use this feature, make sure to add <a href="https://mvnrepository.com/artifact/org.projectlombok/lombok" target="_blank" rel="noopener noreferrer">Lombok dependencies</a> to your project and enable it in the [DTO Declaration Settings](https://jpa-buddy.com/documentation/dto-generator/#dto-declaration-settings).
 
