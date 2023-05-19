@@ -56,8 +56,22 @@ The main part of the window allows you to configure everything related to attrib
 All attributes are divided into 3 categories:
 
 * Migrated Columns - the ones already presented in the entity (available only for mapped relations)
-* Columns - new, not mapped in the entity or parent @MappedSuperclass yet
+* Columns - new, not mapped in the entity or parent **`@MappedSuperclass`** yet
 * References - optional associations that are not represented as a column in the observing table
+
+#### Parent Entities
+
+JPA Buddy offers the ability to define a parent entity by selecting a class annotated with **`@MappedSuperclass`** from the "Parent" drop-down box. This allows the generated entities to extend from the parent class and automatically inherit all attributes that have the same name and type.
+
+In cases where the column name in the **`@MappedSuperclass`** doesn't match the child entity's table, we can still inherit the attribute using the **`@AttributeOverride`** annotation. By simply selecting the attribute name and choosing the one to override, JPA Buddy assists in managing the inheritance.
+
+![attribute-override.png](img/attribute-override.png)
+
+During entity generation, JPA Buddy alerts us if any inherited attributes from the **`@MappedSuperclass`** are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=a-K-53_8Pcg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 #### Creating Enums
 
