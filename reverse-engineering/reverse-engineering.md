@@ -65,7 +65,7 @@ JPA Buddy offers the ability to define a parent entity by selecting a class anno
 
 In cases where the column name in the **`@MappedSuperclass`** doesn't match the child entity's table, we can still inherit the attribute using the **`@AttributeOverride`** annotation. By simply selecting the attribute name and choosing the one to override, JPA Buddy assists in managing the inheritance.
 
-<
+![attribute-override.png](img/attribute-override.png)
 
 During entity generation, JPA Buddy alerts us if any inherited attributes from the **`@MappedSuperclass`** are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
 
