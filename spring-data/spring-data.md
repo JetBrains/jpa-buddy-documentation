@@ -45,16 +45,16 @@ Spring Data provides the ability to define a query with the `@Query` annotation.
 
 ### Example
 
-<div class="note">All that we will consider in the example below can be generated as @Query and as a derived query method. The only difference is that for the derived query method, you can't specify its name because it will be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
+<div class="note">As opposed to @Query the derived query method's name can only be generated automatically according to <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Queries</a> or by specifying its <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#appendix.query.method.subject" target="_blank">Subject Keyword</a>.
 </div>
 
-Let's look at an example of creating a Find Collection Query.
+Let's look at an example of creating a Find **Collection Query**.
 
 ![create-query-find-collection](img/create-query-find-collection.png)
 
 At the top of the window, you can define wrap type for collection and query return type. Moreover, JPA Buddy allows you to generate new [Projection interface](https://www.jpa-buddy.com/documentation/spring-data/#projection-creation) or [DTO class](https://www.jpa-buddy.com/documentation/dto-generator/) right from this window (just click on the `+` button).
 
-You can also specify the method name. Still, if you rest it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
+You can also specify the method name. Still, if you leave it empty, the name will be generated automatically following <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation" target="_blank">Naming Conventions for Query</a>.
 
 The middle of the window contains the table for the query conditions.
 
@@ -80,6 +80,12 @@ For the above configuration, the following query will be generated:
                                               @Param("lastName") @NonNull String lastName,
                                               Pageable pageable);
 ```
+
+The same approach applies to derived query methods. Instead of using the Method name field, you can utilize the Method prefix drop-down menu to define the desired subject keyword and add an alias.
+
+![derived-query-method-prefix](img/derived-query-method-prefix.png)
+
+This allows you to customize the naming convention for the generated query method, providing flexibility and consistency in your code.
 
 ### Entity Intention
 
