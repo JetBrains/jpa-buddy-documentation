@@ -1,5 +1,19 @@
 # Changelog
 
+## 2023.2.2 – 2023-05-22
+
+* Resolved an issue when opening the "Extract to MappedSuperclass" dialog would cause a `java.lang.IndexOutOfBoundsException` <a href="https://issues.jpa-buddy.com/issue/JPAB-2526" target="_blank">JPAB-2526</a>
+* The "id" suffix no longer cropped when the relation field mapped type is Basic <a href="https://issues.jpa-buddy.com/issue/JPAB-2527" target="_blank">JPAB-2527</a>
+* Corrected the behavior of the "mapTo" postfix, which was working incorrectly when called within another method call <a href="https://issues.jpa-buddy.com/issue/JPAB-2522" target="_blank">JPAB-2522</a>
+* The generation of inverse attributes for `@OneToOne` & `@ManyToMany` associations no longer generates redundant code <a href="https://issues.jpa-buddy.com/issue/JPAB-2498" target="_blank">JPAB-2498</a>
+* All attributes in the resulting MappedSuperclass are now separated by a new line <a href="https://issues.jpa-buddy.com/issue/JPAB-2486" target="_blank">JPAB-2486</a>
+
+For other improvements and fixes, see [all resolved issues (10+)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20%23Resolved%20Milestone:%20232%20Bug%20fix:%202).
+
+## 2023.2.1 – 2023-05-16
+
+* Fixed a problem with broken autocompletions <a href="https://issues.jpa-buddy.com/issue/JPAB-2529" target="_blank">JPAB-2529</a>
+
 ## 2023.2.0 – 2023-05-15
 
 ### Liquibase/Flyway/DDL Diff Generator
