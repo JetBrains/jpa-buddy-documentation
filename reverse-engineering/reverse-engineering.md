@@ -436,8 +436,8 @@ The larger the database and the slower the connection of the database (for examp
 1. Fetch Type – to follow best practices and avoid potential performance issues, JPA Buddy sets `FetchType.LAZY` for  `@OneToOne` and `@ManyToOne` associations by default.
 2. Validation Annotations – validation annotations give you another layer of protection in addition to the DB constraints. By default, JPA Buddy will apply such annotations over entity attributes while reverse engineering.
 3. Pluralization - by default, JPA Buddy uses the singular form for entity names. For example, if you have a table called `users`, JPA Buddy will generate a `User` entity. If you disable this option, JPA Buddy will keep the original name of the table and only capitalize the first letter – `Users`.
-4. Basic type attribute - 
-5. IDEA Ultimate Integration - 
+4. Basic type attribute - when this option is enabled, JPA Buddy will analyze the ORM references in the database schema and generate basic type attributes instead of creating associations or relationships between entities. This can be useful in certain scenarios where you prefer to have simple attribute types instead of complex associations.
+5. IDEA Ultimate integration - enable this option to use the database metamodel provided by IntelliJ IDEA Ultimate to generate data related objects instead of using a JDBC driver to obtain meta information. This ensures that the generated objects align perfectly with the database structure.
 
 ![preferences-general](img/preferences-general.png)
 
