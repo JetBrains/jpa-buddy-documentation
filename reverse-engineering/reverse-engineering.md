@@ -56,18 +56,18 @@ The main part of the window allows you to configure everything related to attrib
 All attributes are divided into 3 categories:
 
 * Migrated Columns - the ones already presented in the entity (available only for mapped relations)
-* Columns - new, not mapped in the entity or parent **`@MappedSuperclass`** yet
+* Columns - new, not mapped in the entity or parent `@MappedSuperclass` yet
 * References - optional associations that are not represented as a column in the observing table
 
 #### Parent Entities
 
-JPA Buddy offers the ability to define a parent entity by selecting a class annotated with **`@MappedSuperclass`** from the "Parent" drop-down box. This allows the generated entities to extend from the parent class and automatically inherit all attributes that have the same name and type.
+JPA Buddy offers the ability to define a parent entity by selecting a class annotated with `@MappedSuperclass` from the "Parent" drop-down box. This allows the generated entities to extend from the parent class and automatically inherit all attributes that have the same name and type.
 
-In cases where the column name in the **`@MappedSuperclass`** doesn't match the child entity's table, we can still inherit the attribute using the **`@AttributeOverride`** annotation. By simply selecting the attribute name and choosing the one to override, JPA Buddy assists in managing the inheritance.
+In cases where the column name in the `@MappedSuperclass` doesn't match the child entity's table, we can still inherit the attribute using the `@AttributeOverride` annotation. By simply selecting the attribute name and choosing the one to override, JPA Buddy assists in managing the inheritance.
 
 ![attribute-override.png](img/attribute-override.png)
 
-During entity generation, JPA Buddy alerts us if any inherited attributes from the **`@MappedSuperclass`** are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
+During entity generation, JPA Buddy alerts us if any inherited attributes from the `@MappedSuperclass` are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=a-K-53_8Pcg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -435,15 +435,19 @@ The larger the database and the slower the connection of the database (for examp
 
 1. Fetch Type – to follow best practices and avoid potential performance issues, JPA Buddy sets `FetchType.LAZY` for  `@OneToOne` and `@ManyToOne` associations by default.
 2. Validation Annotations – validation annotations give you another layer of protection in addition to the DB constraints. By default, JPA Buddy will apply such annotations over entity attributes while reverse engineering.
-3. Pluralization - by default, JPA Buddy uses the singular form for entity names. For example, if you have a table called `users`, JPA Buddy will generate a `User` entity. If you disable this option, JPA Buddy will keep the original name of the table and only capitalize the first letter – `Users`. 
+3. Pluralization - by default, JPA Buddy uses the singular form for entity names. For example, if you have a table called `users`, JPA Buddy will generate a `User` entity. If you disable this option, JPA Buddy will keep the original name of the table and only capitalize the first letter – `Users`.
+4. Basic type attribute - 
+5. IDEA Ultimate Integration - 
 
 ![preferences-general](img/preferences-general.png)
 
 ### Tables & Column Comments
 
-If you have a comment on a DB object and don't want to lose it, JPA Buddy transfers your comments to the entity using the hibernate `@Comment ` annotation or Java Docs depending on your Reverse Engineering Settings
+To preserve comments added to the database objects, JPA Buddy transfers them to the corresponding entity via the Hibernate `@Comment` annotation or JavaDocs, depending on your Reverse Engineering Settings.
 
+![preferences-comments](img/preferences-comments.png)
 
+> Please note that only `@Comment` annotations on entities can be included in the [generated DDL scripts](https://jpa-buddy.com/documentation/database-versioning/#general-differential-scripts-generation-flow).
 
 ### Naming Rules
 
