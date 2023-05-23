@@ -19,9 +19,34 @@ Also, for mutable DTOs, you can define whether to use fluent setters or not. Suc
 
 JPA Buddy simplifies the generation of DTOs by providing Lombok support in the most optimal way.
 
-For example when generating DTOs, you can enable the **`@Value`** annotation by selecting the `All args constructor`, `equals() and hashCode()` and `toString()`options in the DTO generator wizard. In other cases, the  **`@Data`**  annotation will be used.
+For example, when you choose the `All args constructor`, `equals() and hashCode()` and `toString()` options in the DTO generator wizard, JPA Buddy understands that the most suitable Lombok annotation in this case will be **`@Value`**.
 
-This way JPA Buddy optimizes your code by offering a more concise and immutable representation of DTOs when it is required.
+![new-dto-lombok-value](img/new-dto-lombok-value.png)
+
+```java
+  @Value
+  public class OwnerDto implements Serializable {
+      String firstName;
+      String lastName;
+      String telephone;
+  }
+```
+![new-dto-lombok-value](img/new-dto-lombok-value.png)
+
+if you need a mutable DTO with the same parameters as in the example above, in this case, JPA Buddy will apply a more suitable combination of **`@Data`**,**`@AllArgsConstructor`** and **`@NoArgsConstructor`** annotations.
+
+![new-dto-lombok-data](img/new-dto-lombok-data.png)
+
+```java
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class OwnerDto implements Serializable {
+    private String firstName;
+    private String lastName;
+    private String telephone;
+}
+```
 
 > To use this feature, make sure to add <a href="https://mvnrepository.com/artifact/org.projectlombok/lombok" target="_blank" rel="noopener noreferrer">Lombok dependencies</a> to your project and enable it in the [DTO Declaration Settings](https://jpa-buddy.com/documentation/dto-generator/#dto-declaration-settings).
 
