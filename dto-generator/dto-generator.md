@@ -19,7 +19,7 @@ Also, for mutable DTOs, you can define whether to use fluent setters or not. Suc
 
 JPA Buddy simplifies the generation of DTOs by providing Lombok support in the most optimal way.
 
-For example, when you choose the `All args constructor`, `equals() and hashCode()` and `toString()` options in the DTO generator wizard, JPA Buddy applies **`@Value`** to the generated DTO, discarding the redundant access modifiers to keep your code clean.
+For example, when you choose the `All args constructor`, `equals() and hashCode()` and `toString()` options in the DTO generator wizard, JPA Buddy applies `@Value` to the generated DTO, discarding the redundant access modifiers to keep your code clean.
 
 ![new-dto-lombok-value](img/new-dto-lombok-value.png)
 
@@ -32,7 +32,7 @@ For example, when you choose the `All args constructor`, `equals() and hashCode(
   }
 ```
 
-In case you need a [mutable DTO](https://jpa-buddy.com/documentation/dto-generator/#mutability) with the same parameters as in the example above, JPA Buddy will add **`@Data`**,**`@AllArgsConstructor`** and **`@NoArgsConstructor`** annotations instead.
+In case you need a [mutable DTO](https://jpa-buddy.com/documentation/dto-generator/#mutability) with the same parameters as in the example above, JPA Buddy will add `@Data`,`@AllArgsConstructor` and `@NoArgsConstructor` annotations instead.
 
 ![new-dto-lombok-data](img/new-dto-lombok-data.png)
 
