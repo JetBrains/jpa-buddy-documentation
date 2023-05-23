@@ -439,12 +439,18 @@ The larger the database and the slower the connection of the database (for examp
 
 ![preferences-general](img/preferences-general.png)
 
+### Tables & Column Comments
+
+If you have a comment on a DB object and don't want to lose it, JPA Buddy transfers your comments to the entity using the hibernate `@Comment ` annotation or Java Docs depending on your Reverse Engineering Settings
+
+
+
 ### Naming Rules
 
 Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
 Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
-![preferences_reverse_engineering](img/preferences-naming-rules.png)
+![preferences-naming-rules](img/preferences-naming-rules.png)
 
 ### Type Mappings
 
@@ -454,7 +460,7 @@ Let's say the application needs to support both PostgreSQL and MS SQL and you ne
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
-![preferences_mapping_types](img/preferences-mapping-types.png)
+![preferences-mapping-types](img/preferences-mapping-types.png)
 
 See how you can configure type mappings for reverse engineering in JPA Buddy to make use of the `@JavaType` annotation from Hibernate 6:
 
