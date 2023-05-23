@@ -443,11 +443,11 @@ The larger the database and the slower the connection of the database (for examp
 
 ### Tables & Column Comments
 
-To preserve comments added to the database objects, JPA Buddy transfers them to the corresponding entity via the Hibernate `@Comment` annotation or JavaDocs, depending on your Reverse Engineering Settings.
+To preserve comments added to the database objects, JPA Buddy transfers them to the corresponding entity using the Hibernate `@Comment` annotation or JavaDocs, depending on your settings.
 
 ![preferences-comments](img/preferences-comments.png)
 
-> Please note that only `@Comment` annotations on entities can be included in the [generated DDL scripts](https://jpa-buddy.com/documentation/database-versioning/#general-differential-scripts-generation-flow), JavaDocs will be ignored.
+> Please note that only `@Comment` annotations on entities will be included in the [generated DDL scripts](https://jpa-buddy.com/documentation/database-versioning/#general-differential-scripts-generation-flow), JavaDocs will be ignored.
 
 ### Naming Rules
 
