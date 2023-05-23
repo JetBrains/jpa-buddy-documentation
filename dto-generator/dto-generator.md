@@ -15,6 +15,40 @@ Also, for mutable DTOs, you can define whether to use fluent setters or not. Suc
 
 ![new-dto-mutable](img/new-dto-mutable.png)
 
+## Lombok Support
+
+JPA Buddy simplifies the generation of DTOs by providing Lombok support in the most optimal way.
+
+For example, when you choose the `All args constructor`, `equals() and hashCode()` and `toString()` options in the DTO generator wizard, JPA Buddy applies `@Value` to the generated DTO, discarding the redundant access modifiers to keep your code clean.
+
+![new-dto-lombok-value](img/new-dto-lombok-value.png)
+
+```java
+  @Value
+  public class OwnerDto implements Serializable {
+      String firstName;
+      String lastName;
+      String telephone;
+  }
+```
+
+In case you need a [mutable DTO](https://jpa-buddy.com/documentation/dto-generator/#mutability) with the same parameters as in the example above, JPA Buddy will add `@Data`,`@AllArgsConstructor` and `@NoArgsConstructor` annotations instead.
+
+![new-dto-lombok-data](img/new-dto-lombok-data.png)
+
+```java
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class OwnerDto implements Serializable {
+    private String firstName;
+    private String lastName;
+    private String telephone;
+}
+```
+
+> To use this feature, make sure to add <a href="https://mvnrepository.com/artifact/org.projectlombok/lombok" target="_blank" rel="noopener noreferrer">Lombok dependencies</a> to your project and enable it in the [DTO Declaration Settings](https://jpa-buddy.com/documentation/dto-generator/#dto-declaration-settings).
+
 ## Inner DTOs for associations
 
 Entities can reference other entities via associations, and JPA Buddy allows you to generate DTOs for the referenced entities from the same window. Just check the referenced entity in the tree, choose the DTO type and pick the required fields.
