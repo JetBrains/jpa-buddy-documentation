@@ -447,7 +447,7 @@ To preserve comments added to the database objects, JPA Buddy transfers them to 
 
 ![preferences-comments](img/preferences-comments.png)
 
-> Please note that only `@Comment` annotations on entities will be included in the [generated DDL scripts](https://jpa-buddy.com/documentation/database-versioning/#general-differential-scripts-generation-flow), JavaDocs will be ignored.
+> Please note that only `@Comment` annotations on entities can be included in the generated DDL scripts, depending on the [settings](https://www.jpa-buddy.com/documentation/database-versioning/#preview-window), JavaDocs will be ignored anyway.
 
 ### Naming Rules
 
