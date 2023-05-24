@@ -158,11 +158,11 @@ To achieve this, click on the entity's attribute then navigate to the Entity Des
 
 ![ed-extract-to-mappedsuperclass.png](img/ed-extract-to-mappedsuperclass.png)
 
-Next choose the desired attributes and methods to include in the MappedSuperclass. JPA Buddy will automatically apply the existing annotations to the extracted attributes.
+Next choose the desired attributes and methods to include in the MappedSuperclass. JPA Buddy will automatically apply the existing annotations to the extracted attributes. Note that any attribute used in the methods will be included as well.
 
 ![extract-to-mappedsuperclass.png](img/extract-to-mappedsuperclass.png)
 
-After applying the parameters above, our Pet entity will extend from the following generated class:
+After applying the parameters above, our Pet entity will extend from the following generated class removing the extracted attributes:
 
 ```java
 //Getters and setters are omitted for brevity
