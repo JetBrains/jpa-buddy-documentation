@@ -172,10 +172,13 @@ public class GenericPet {
     @Id
     @Column(name = "id", nullable = false)
     private Integer id;
+    
     @Column(name = "name", length = Integer.MAX_VALUE)
     private String name;
+    
     @Column(name = "birth_date")
     private LocalDate birthDate;
+    
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "type_id", nullable = false)
     private Type type;
