@@ -330,6 +330,30 @@ Sometimes software must provide support for a few DBMS types. In this case, Liqu
 
 Therefore, there is no need to create separate changelogs for different DBMSes.
 
+#### Changeset Templates
+
+Changeset templates are pre-defined structures that provide a standardized format for specifying database schema changes using Liquibase. These templates serve as a foundation for creating consistent and reusable changesets, ensuring uniformity and ease of maintenance across database deployments.
+
+JPA Buddy provides an ability to apply templates while generating changesets from the JPA Palette. This feature provides the ability to include various customizable elements in it:
+
+1. Add empty rollback to changesets which don't support implicit one – when enabled, any new changeset <a href="https://docs.liquibase.com/workflows/liquibase-community/automatic-custom-rollbacks.html" target="_blank">lacking an implicit rollback</a> will automatically have an empty rollback tag with a TODO comment added.
+2. failOnError and runOnChange: JPA Buddy supports the commonly used attributes within the changeSet tag, allowing users to set default values for `failOnError` and `runOnChange`.
+3. Create preconditions – each changeset can have specific preconditions. It is important to note that certain Liquibase changesets may not offer this option. For example, the tag `procedureExists` is not available for the `createProcedure`.
+
+![changeset-templates.png](img/changeset-templates.png)
+
+Here is an example showcasing all four features enabled for a drop table changeset:
+
+```xml
+<changeSet id="1680594632747-1" author="jpa-buddy" runOnChange="true" failOnError="true">
+    <preConditions>
+        <tableExists tableName="customer"/>
+    </preConditions>
+    <dropTable tableName="customer"/>
+    <rollback><!--TODO--></rollback>
+</changeSet>
+```
+
 ## Flyway Support
 
 <div class="youtube">
