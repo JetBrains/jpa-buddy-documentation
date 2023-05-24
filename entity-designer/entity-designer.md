@@ -154,7 +154,7 @@ private Long id;
 
 As your application grows and the JPA model evolves, you may realize that certain attributes are common among multiple entities and should be extracted to a `@MappedSuperclass` for better code organization. JPA Buddy can easily extract methods and attributes along with their JPA annotations to the MappedSuperclass and build a well-designed entity hierarchy.
 
-To achieve this, navigate to the Entity Designer tab and access the Actions menu. From there, select "Extract to MappedSuperclass" as shown below:
+To achieve this, click on the entity's attribute then navigate to the Entity Designer tab and access the Actions menu or press Alt+Enter/⌥ ⏎ to open the Context Actions menu. From there, select "Extract to MappedSuperclass" as shown below:
 
 ![ed-extract-to-mappedsuperclass.png](img/ed-extract-to-mappedsuperclass.png)
 
