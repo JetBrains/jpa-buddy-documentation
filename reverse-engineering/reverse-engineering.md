@@ -56,18 +56,18 @@ The main part of the window allows you to configure everything related to attrib
 All attributes are divided into 3 categories:
 
 * Migrated Columns - the ones already presented in the entity (available only for mapped relations)
-* Columns - new, not mapped in the entity or parent **`@MappedSuperclass`** yet
+* Columns - new, not mapped in the entity or parent `@MappedSuperclass` yet
 * References - optional associations that are not represented as a column in the observing table
 
 #### Parent Entities
 
-JPA Buddy offers the ability to define a parent entity by selecting a class annotated with **`@MappedSuperclass`** from the "Parent" drop-down box. This allows the generated entities to extend from the parent class and automatically inherit all attributes that have the same name and type.
+JPA Buddy offers the ability to define a parent entity by selecting a class annotated with `@MappedSuperclass` from the "Parent" drop-down box. This allows the generated entities to extend from the parent class and automatically inherit all attributes that have the same name and type.
 
-In cases where the column name in the **`@MappedSuperclass`** doesn't match the child entity's table, we can still inherit the attribute using the **`@AttributeOverride`** annotation. By simply selecting the attribute name and choosing the one to override, JPA Buddy assists in managing the inheritance.
+In cases where the column name in the `@MappedSuperclass` doesn't match the child entity's table, we can still inherit the attribute using the `@AttributeOverride` annotation. By simply selecting the attribute name and choosing the one to override, JPA Buddy assists in managing the inheritance.
 
 ![attribute-override.png](img/attribute-override.png)
 
-During entity generation, JPA Buddy alerts us if any inherited attributes from the **`@MappedSuperclass`** are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
+During entity generation, JPA Buddy alerts us if any inherited attributes from the `@MappedSuperclass` are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=a-K-53_8Pcg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -435,16 +435,26 @@ The larger the database and the slower the connection of the database (for examp
 
 1. Fetch Type – to follow best practices and avoid potential performance issues, JPA Buddy sets `FetchType.LAZY` for  `@OneToOne` and `@ManyToOne` associations by default.
 2. Validation Annotations – validation annotations give you another layer of protection in addition to the DB constraints. By default, JPA Buddy will apply such annotations over entity attributes while reverse engineering.
-3. Pluralization - by default, JPA Buddy uses the singular form for entity names. For example, if you have a table called `users`, JPA Buddy will generate a `User` entity. If you disable this option, JPA Buddy will keep the original name of the table and only capitalize the first letter – `Users`. 
+3. Pluralization - by default, JPA Buddy uses the singular form for entity names. For example, if you have a table called `users`, JPA Buddy will generate a `User` entity. If you disable this option, JPA Buddy will keep the original name of the table and only capitalize the first letter – `Users`.
+4. Basic type attribute - when this option is enabled, JPA Buddy will analyze the ORM references in the database schema and generate basic type attributes instead of creating associations or relationships between entities. This can be useful in certain scenarios where you prefer to have simple attribute types instead of complex associations.
+5. IDEA Ultimate integration - enable this option to use the database metamodel provided by IntelliJ IDEA Ultimate to generate data related objects instead of using a JDBC driver to obtain meta information. This ensures that the generated objects align perfectly with the database structure.
 
 ![preferences-general](img/preferences-general.png)
+
+### Tables & Column Comments
+
+To preserve comments added to the database objects, JPA Buddy transfers them to the corresponding entity using the Hibernate `@Comment` annotation or JavaDocs, depending on your settings.
+
+![preferences-comments](img/preferences-comments.png)
+
+> Please note that only `@Comment` annotations on entities can be included in the generated DDL scripts, depending on the [settings](https://www.jpa-buddy.com/documentation/database-versioning/#preview-window), JavaDocs will be ignored anyway.
 
 ### Naming Rules
 
 Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
 Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
-![preferences_reverse_engineering](img/preferences-naming-rules.png)
+![preferences-naming-rules](img/preferences-naming-rules.png)
 
 ### Type Mappings
 
@@ -454,7 +464,7 @@ Let's say the application needs to support both PostgreSQL and MS SQL and you ne
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
 
-![preferences_mapping_types](img/preferences-mapping-types.png)
+![preferences-mapping-types](img/preferences-mapping-types.png)
 
 See how you can configure type mappings for reverse engineering in JPA Buddy to make use of the `@JavaType` annotation from Hibernate 6:
 

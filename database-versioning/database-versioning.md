@@ -158,7 +158,7 @@ Each change type is color-coded according to its danger level: green for SAFE, y
 
 The danger levels can be customized in the plugin preferences in JPA Buddy -> Database Versioning -> Diff Changes:
 
-![diff-changes-preferences](img/diff-changes-preferences.jpeg)
+![diff-changes-preferences](img/diff-changes-preferences.png)
 
 You can configure the location of each change type, either in the primary or secondary location, or ignore it altogether. By default, newly generated migration scripts will exclude ignored changes but display them in the "Ignored" section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels to use for each change type.
 #### Merging statements
