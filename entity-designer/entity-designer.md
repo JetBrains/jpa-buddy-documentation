@@ -162,11 +162,10 @@ Next choose the desired attributes and methods to include in the MappedSuperclas
 
 ![extract-to-mappedsuperclass.png](img/extract-to-mappedsuperclass.png)
 
-The parameters above will result in the following code:
+After applying the parameters above, our Pet entity will extend from the following generated class:
 
 ```java
-@Getter
-@Setter
+//Getters and setters are omitted for brevity
 @MappedSuperclass
 public class GenericPet {
     @Id
