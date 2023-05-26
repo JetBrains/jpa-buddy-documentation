@@ -96,6 +96,10 @@ Nowadays, the DTO pattern is widely used in software development. It is not only
 
 <a href="https://mapstruct.org/" target="_blank">MapStruct</a> is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
 
+<div class="note">
+   This feature works with any domain entity (any Java/Kotlin classes), not only with JPA entities. 
+</div>
+
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
@@ -160,6 +164,7 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
 ## ModelMapper Support
 
 <a href="https://modelmapper.org/" target="_blank">ModelMapper</a> is one of the most popular libraries for converting entities to DTOs and vice versa. JPA Buddy provides many features that streamline the mapping process even further, including:
+
 1. Generating custom mapping methods.
 2. Providing code scaffolding for mapping a single entity or a collection of entities to DTOs and vice versa, with the help of postfix autocompletion.
 3. Enabling on-the-fly injection of the ModelMapper bean into the relevant class.
@@ -186,6 +191,10 @@ DTOs are commonly used at the API controller level to define only the fields req
 
 If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once. 
 Moreover, if you prefer typing the code manually instead of using wizards, JPA Buddy can help you with that too! Just start typing the name of the field that is not in your DTO, and it will be correctly added to the class. The best part is that it even works with associations!
+
+<div class="note">
+   This feature works with any domain entity (any Java/Kotlin classes), not only with JPA entities. 
+</div>
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/L2TgkXj2Dqs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
