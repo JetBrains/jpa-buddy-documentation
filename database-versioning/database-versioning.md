@@ -336,7 +336,7 @@ Changeset templates are pre-defined structures that provide a standardized forma
 
 JPA Buddy provides an ability to apply templates while generating changesets from the JPA Palette. This feature provides the ability to include various customizable elements in it:
 
-1. Add empty rollback to changesets which don't support implicit one – when enabled, any new changeset <a href="https://docs.liquibase.com/workflows/liquibase-community/automatic-custom-rollbacks.html" target="_blank">lacking an implicit rollback</a> will automatically have an empty rollback tag with a TODO comment added.
+1. Add empty rollback to changesets which don't support implicit one – this option automatically adds an empty rollback tag with a TODO comment to any new changeset  <a href="https://docs.liquibase.com/workflows/liquibase-community/automatic-custom-rollbacks.html" target="_blank">lacking an implicit rollback</a>.
 2. failOnError and runOnChange: JPA Buddy supports the commonly used attributes within the changeSet tag, allowing users to set default values for `failOnError` and `runOnChange`.
 3. Create preconditions – each changeset can have specific preconditions. It is important to note that certain Liquibase changesets may not offer this option. For example, the tag `procedureExists` is not available for the `createProcedure`.
 
