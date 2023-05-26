@@ -92,7 +92,7 @@ Nowadays, the DTO pattern is widely used in software development. It is not only
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OrvtVvQ0eJE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## MapStruct Mappers
+## MapStruct Support
 
 <a href="https://mapstruct.org/" target="_blank">MapStruct</a> is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
 
@@ -156,6 +156,17 @@ JPA Buddy supports generic mappers' inheritance:
 JPA Buddy provides flexible settings for mapper declaration. To configure naming patterns or mapping naming strategy for collections, open Tools -> JPA Buddy -> Mapper Declaration:
  
 ![mapper-declaration](img/mapper-declaration.png)
+
+## ModelMapper Support
+
+<a href="https://modelmapper.org/" target="_blank">ModelMapper</a> is one of the most popular libraries for converting entities to DTOs and vice versa. JPA Buddy provides many features that streamline the mapping process even further, including:
+1. Generating custom mapping methods.
+2. Providing code scaffolding for mapping a single entity or a collection of entities to DTOs and vice versa, with the help of postfix autocompletion.
+3. Enabling on-the-fly injection of the ModelMapper bean into the relevant class.
+
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/oKQEhXwbms4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
 
 ## Keep DTOs in sync with its JPA entity
 
