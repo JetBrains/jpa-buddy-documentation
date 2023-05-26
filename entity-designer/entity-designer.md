@@ -152,10 +152,53 @@ private Long id;
 
 ## Extract to MappedSuperclass
 
-As your application grows and the JPA model evolves, you may realize that certain attributes are common among multiple entities and should be extracted to a `@MappedSuperclass` for better code organization. JPA Buddy can easily extract attributes along with JPA annotations to MappedSuperclass and build a well-designed entities' hierarchy.
+As your application grows and the JPA model evolves, you may realize that certain attributes are common among multiple entities and should be extracted to a `@MappedSuperclass` for better code organization. JPA Buddy can easily extract methods and attributes along with their JPA annotations to the MappedSuperclass and build a well-designed entity hierarchy.
+
+To achieve this, click on the entity's attribute then navigate to the Entity Designer tab and access the Actions menu or press Alt+Enter/⌥ ⏎ to open the Context Actions menu. From there, select "Extract to MappedSuperclass" as shown below:
+
+![ed-extract-to-mappedsuperclass.png](img/ed-extract-to-mappedsuperclass.png)
+
+Next choose the desired attributes and methods to include in the MappedSuperclass. JPA Buddy will automatically apply the existing annotations to the extracted attributes. Note that any attribute used in the methods will be included as well.
+
+![extract-to-mappedsuperclass.png](img/extract-to-mappedsuperclass.png)
+
+After applying the parameters above, our Pet entity will extend from the following generated class removing the extracted attributes:
+
+```java
+//Getters and setters are omitted for brevity
+@MappedSuperclass
+public class GenericPet {
+    @Id
+    @Column(name = "id", nullable = false)
+    private Integer id;
+    
+    @Column(name = "name", length = Integer.MAX_VALUE)
+    private String name;
+    
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+    
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "type_id", nullable = false)
+    private Type type;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Pet pet = (Pet) o;
+        return getId() != null && Objects.equals(getId(), pet.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
+}
+```
 
 <div class="youtube">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BAmwdEbj8LQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=M4ramT0LgzU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Lombok
