@@ -451,7 +451,8 @@ To preserve comments added to the database objects, JPA Buddy transfers them to 
 
 ### Naming Rules
 
-Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix. Yet, Java developers usually prefer to drop these prefixes for the JPA model. JPA Buddy allows you to specify prefixes to skip. Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
+Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix/suffix. Yet, Java developers usually prefer to drop these prefixes/suffixes for the JPA model. JPA Buddy allows you to specify prefixes and suffixes to skip. 
+Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
 Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
 ![preferences-naming-rules](img/preferences-naming-rules.png)
