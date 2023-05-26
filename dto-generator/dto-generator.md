@@ -184,10 +184,11 @@ DTOs are commonly used at the API controller level to define only the fields req
 
 ### Add attributes
 
-If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once.
+If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once. 
+Moreover, if you prefer typing the code manually instead of using wizards, JPA Buddy can help you with that too! Just start typing the name of the field that is not in your DTO, and it will be correctly added to the class. The best part is that it even works with associations!
 
 <div class="youtube">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/L2TgkXj2Dqs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ## DTO Declaration Settings
