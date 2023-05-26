@@ -168,6 +168,10 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
    <iframe width="560" height="315" src="https://www.youtube.com/embed/oKQEhXwbms4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
+<div class="note">
+JPA Buddy assumes that you have declared the ModelMapper bean in your project.
+</div>
+
 ## Keep DTOs in sync with its JPA entity
 
 ### Refactor attributes
