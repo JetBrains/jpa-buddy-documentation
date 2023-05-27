@@ -8,12 +8,18 @@ JPA Buddy offers DTO generation from JPA entities via visual designer:
    <iframe width="560" height="315" src="https://www.youtube.com/embed/qpnM_k-TGFk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
-## Mutability
+## DTO generation options
 
-By default, JPA Buddy generates immutable DTOs – all the fields are final, and there are no setters for them. To generate DTOs with simple private fields, setters for them, and no-args constructor, check the **Mutable** box.
-Also, for mutable DTOs, you can define whether to use fluent setters or not. Such setters will return `this` instead of `void`. It can be helpful if you want to chain multiple method calls.
+When creating DTOs, JPA Buddy provides the flexibility to choose from the following options:
+* Java record – Generates a DTO as a Java record, providing a concise and immutable representation of the DTO with automatic implementations of `equals()`, `hashCode()`, and `toString()`.
+* All args constructor – Generates a constructor that accepts arguments for all fields of the DTO.
+* equals() and hashCode() – Generates the `equals()` and `hashCode()` methods for the DTO based on its fields.
+* toString() – Generates the `toString()` method for the DTO, providing a string representation of its fields.
+* Mutable – By default, the generated DTOs are immutable with final fields and no setters. If you need mutable DTOs with private fields and setters, you can check this option.
+* Fluent setters – This option is available when selecting the Mutable option. It allows the generated setters to return `this` instead of `void`, enabling method chaining for multiple setter calls.
+* Ignore unknown properties for json – Applies the `@JsonIgnoreProperties(ignoreUnknown = true)` annotation to the DTO, allowing it to ignore any unknown properties during JSON deserialization. Only available when the <a href="https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations/2.15.1" target="_blank">Jackson Annotations</a> dependency is included in the project. 
 
-![new-dto-mutable](img/new-dto-mutable.png)
+![new-dto-options.png](img/new-dto-options.png)
 
 ## Lombok Support
 
