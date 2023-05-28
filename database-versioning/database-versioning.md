@@ -330,6 +330,48 @@ Sometimes software must provide support for a few DBMS types. In this case, Liqu
 
 Therefore, there is no need to create separate changelogs for different DBMSes.
 
+#### Changeset Templates
+
+Changeset templates are pre-defined structures that provide a standardized format for specifying database schema changes using Liquibase. These templates serve as a foundation for creating consistent and reusable changesets, ensuring uniformity and ease of maintenance across database deployments.
+
+JPA Buddy provides an ability to apply templates while generating changesets from the JPA Palette. This feature provides the ability to include various customizable elements in it:
+
+1. Add empty rollback to changesets which don't support implicit one – this option automatically adds an empty rollback tag with a TODO comment to any new changeset  <a href="https://docs.liquibase.com/workflows/liquibase-community/automatic-custom-rollbacks.html" target="_blank">lacking an implicit rollback</a>.
+2. failOnError and runOnChange: JPA Buddy supports the commonly used attributes within the changeSet tag, allowing users to set default values for `failOnError` and `runOnChange`.
+3. Create preconditions – each changeset can have specific preconditions. For example, `tableExists` and `columnExists` precondition tags will be added for the `addColumn` statement:
+
+```xml
+<changeSet id="1685085536452-1" author="jpa-buddy">
+  <preConditions>
+    <tableExists tableName="customer"/>
+    <not>
+      <columnExists tableName="customer" columnName="id"/>
+    </not>
+  </preConditions>
+  <addColumn tableName="customer">
+    <column name="id" type="BIGINT">
+      <constraints nullable="false" primaryKey="true" primaryKeyName="pk_customer"/>
+    </column>
+  </addColumn>
+</changeSet>
+```
+
+It is important to note that certain Liquibase changesets may not offer this option. For example, the tag `procedureExists` is not available for the `createProcedure` statement.
+
+![changeset-templates.png](img/changeset-templates.png)
+
+Here is an example showcasing all four features enabled for a drop table changeset:
+
+```xml
+<changeSet id="1680594632747-1" author="jpa-buddy" runOnChange="true" failOnError="true">
+    <preConditions>
+        <tableExists tableName="customer"/>
+    </preConditions>
+    <dropTable tableName="customer"/>
+    <rollback><!--TODO--></rollback>
+</changeSet>
+```
+
 ## Flyway Support
 
 <div class="youtube">
