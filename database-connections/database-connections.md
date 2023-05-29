@@ -36,9 +36,9 @@ It’s worth noting that JPA Buddy is compatible with any property file that adh
 
 Additionally, JPA Buddy can help you generate *\*.properties* files based on your data source configuration. This feature will save you time and effort in configuring your application.
 
-To do so, open the relevant property file, then access the Context Actions menu by pressing Alt+Enter/⌥ ⏎. Select the Data Source option from the menu.
+To do so, open the relevant property file, then access the "Generate" menu by pressing Alt+Insert/⌘+N. Select the "Data source" option from the menu.
 
-![context-menu-db-connection](img/context-menu-db-connection.png)
+![generate-menu-db-connection](img/generate-menu-db-connection.png)
 
 This will open the Data Source window, as shown in the screenshot below.
 
