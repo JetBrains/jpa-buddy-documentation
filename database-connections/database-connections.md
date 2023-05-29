@@ -44,9 +44,8 @@ This will open the Data Source window, as shown in the screenshot below.
 
 ![data-source-db-connection](img/data-source-db-connection.png)
 
-From the Data Source window, select the appropriate data source for your application. You can choose the DDL auto mode you need in the drop-down menu below. Additionally, there are two other options available in the Data Source window: 'Show SQL' and 'Format SQL'.
-These options allow you to choose whether to show SQL statements that are executed by Hibernate on your standard output for debugging purposes and whether to format those statements for readability, respectively.
-
+From the Data Source window, select the appropriate data source for your application. You can choose the DDL auto mode you need in the drop-down menu below.
+Additionally, there are two other options available in the Data Source window: 'Show SQL' and 'Format SQL'. These options allow you to choose whether to show SQL statements that are executed by Hibernate on your standard output for debugging purposes and whether to format those statements for readability, respectively.
 Once you have selected the data source and any other options you need, JPA Buddy will fill in the selected property file with the necessary configuration for you.
 
 ## Non-Default Schema Connection
