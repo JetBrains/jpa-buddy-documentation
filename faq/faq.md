@@ -10,7 +10,7 @@ To check if the JPA Designer panel is available, try opening a JPA entity. If it
 
 **2. You may have Minimalistic Mode turned on.** 
    
-JPA Buddy has a [Minimalistic Mode](/minimalistic-mode/minimalistic-mode.md) that allows you to hide some or all panels according to your preference. If you accidentally turned on this mode, you can turn it off in the settings. 
+JPA Buddy has a [Minimalistic Mode](https://www.jpa-buddy.com/documentation/minimalistic-mode/) that allows you to hide some or all panels according to your preference. If you accidentally turned on this mode, you can turn it off in the settings. 
 To do so, go to _Settings -> Tools -> JPA Buddy -> Designer Settings_ and select the extensive option.
 
 ![extensive-mode.png](img/extensive-mode.png)
@@ -19,7 +19,7 @@ Then, check if the panels are present (as described in point 1). Move to the nex
 
 **3. Your project may be missing necessary dependencies.**
 
-As mentioned earlier, JPA Buddy displays its panels only when necessary. Therefore, if your project does not have any of [the libraries described in our documentation](/installation-guide/installation-guide.md#dependencies), all JPA Buddy functionality will be disabled. 
+As mentioned earlier, JPA Buddy displays its panels only when necessary. Therefore, if your project does not have any of [the libraries described in our documentation](https://www.jpa-buddy.com/documentation/#dependencies), all JPA Buddy functionality will be disabled. 
 To check if the necessary dependency exists in your project for JPA Buddy to work correctly, use the following method: _Shift+Shift -> Actions -> JPA Structure_.
 
 ![actions-jpa-structure.png](img/actions-jpa-structure.png)
@@ -42,14 +42,14 @@ While creating entities from the database, IntelliJ IDEA CE and Ultimate users e
 ### IntelliJ IDEA CE
 
 If your tables are in a non-default schema, you need to create a new connection that targets the database and schema. This is because JPA Buddy can only retrieve data from an explicitly specified connection string since it uses a JDBC driver to obtain meta information.
-You can find instructions on how to create a new connection [here](/database-connections/database-connections.md#non-default-schema-connection).
+You can find instructions on how to create a new connection [here](https://jpa-buddy.com/documentation/database-connections/#non-default-schema-connection).
 
 If your tables are still not visible even after specifying the schema explicitly, please let us know on <a href="https://discord.com/invite/zUsVXYGsQr" target="blank">Discord</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
 
 ### IntelliJ IDEA Ultimate
 
-If you are using JPA Buddy version 2023.2 or older with IntelliJ IDEA Ultimate, you need to explicitly specify the schema in the connection string to create entities. This is because the same mechanism was used for both IntelliJ IDEA Ultimate and IntelliJ IDEA CE in older JPA Buddy versions. 
-You can find instructions on how to create a new connection string targeting the database and schema [here](/database-connections/database-connections.md#non-default-schema-connection).
+If you are using JPA Buddy version 2023.1.X or older with IntelliJ IDEA Ultimate, you need to explicitly specify the schema in the connection string to create entities. This is because the same mechanism was used for both IntelliJ IDEA Ultimate and IntelliJ IDEA CE in older JPA Buddy versions. 
+You can find instructions on how to create a new connection string targeting the database and schema [here](https://jpa-buddy.com/documentation/database-connections/#non-default-schema-connection).
 
 Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA capabilities to read metadata about the database. By default, this integration is enabled. If you see tables in the "Database" panel of IntelliJ IDEA, creating entities should work without any problems. You can check if the integration is enabled by going to _Settings -> Tools -> JPA Buddy -> Reverse Engineering -> Integration with IDEA Ultimate database metamodel_.
 
@@ -63,7 +63,7 @@ Yes, but unfortunately, we cannot support EAP at early stages. Normally, we prov
 
 ## Why am I unable to find certain features?
 
-Certain features in JPA Buddy are only available when specific libraries are present. For instance, you can create Liquibase changelogs or MapStruct mappers only if you have the [corresponding library in the libraries list](/installation-guide/installation-guide.md#dependencies). So, please make sure you have [the required library](/installation-guide/installation-guide.md#dependencies) in your project.
+Certain features in JPA Buddy are only available when specific libraries are present. For instance, you can create Liquibase changelogs or MapStruct mappers only if you have the [corresponding library in the libraries list](https://www.jpa-buddy.com/documentation/#dependencies). So, please make sure you have [the required library](https://www.jpa-buddy.com/documentation/#dependencies) in your project.
 
 ## Is JPA Buddy available for free?
 

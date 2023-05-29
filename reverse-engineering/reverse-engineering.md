@@ -70,7 +70,7 @@ In cases where the column name in the `@MappedSuperclass` doesn't match the chil
 During entity generation, JPA Buddy alerts us if any inherited attributes from the `@MappedSuperclass` are missing in the database, to align the model with the database access the "Generate DDL by Entities" action in the JPA Structure menu and select the "Existing DB update" option.
 
 <div class="youtube">
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=a-K-53_8Pcg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a-K-53_8Pcg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 #### Creating Enums
