@@ -28,7 +28,8 @@ The source code is licensed under Apache 2.0. Hence, all materials located in th
 ## Link Formatting
 
 * If the link leads to an external resource or to another page on our site, it should be formatted as an HTML link using `<a href="..."></a>`
-* If the link leads to another section of the documentation, use `[...](link)` 
+* If the link leads to another section of the documentation, use `[...](link)`  
+* If you are adding a Youtube link, make sure to change `/watch?v=` to `/embed/`
 
 ## Screenshots
 
