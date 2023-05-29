@@ -8,12 +8,52 @@ JPA Buddy offers DTO generation from JPA entities via visual designer:
    <iframe width="560" height="315" src="https://www.youtube.com/embed/qpnM_k-TGFk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
-## Mutability
+## DTO generation options
 
-By default, JPA Buddy generates immutable DTOs – all the fields are final, and there are no setters for them. To generate DTOs with simple private fields, setters for them, and no-args constructor, check the **Mutable** box.
-Also, for mutable DTOs, you can define whether to use fluent setters or not. Such setters will return `this` instead of `void`. It can be helpful if you want to chain multiple method calls.
+When creating DTOs, JPA Buddy provides the flexibility to choose from the following options:
+* Java record – Generates a DTO as a Java record, providing a concise and immutable representation of the DTO with automatic implementations of `equals()`, `hashCode()`, and `toString()`.
+* All args constructor – Generates a constructor that accepts arguments for all fields of the DTO.
+* equals() and hashCode() – Generates the `equals()` and `hashCode()` methods for the DTO based on its fields.
+* toString() – Generates the `toString()` method for the DTO, providing a string representation of its fields.
+* Mutable – By default, the generated DTOs are immutable with final fields and no setters. If you need mutable DTOs with private fields and setters, you can check this option.
+* Fluent setters – This option is available when selecting the Mutable option. It allows the generated setters to return `this` instead of `void`, enabling method chaining for multiple setter calls.
+* Ignore unknown properties for json – Applies the `@JsonIgnoreProperties(ignoreUnknown = true)` annotation to the DTO, allowing it to ignore any unknown properties during JSON deserialization. Only available when the <a href="https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations/2.15.1" target="_blank">Jackson Annotations</a> dependency is included in the project. 
 
-![new-dto-mutable](img/new-dto-mutable.png)
+![new-dto-options.png](img/new-dto-options.png)
+
+## Lombok Support
+
+JPA Buddy simplifies the generation of DTOs by providing Lombok support in the most optimal way.
+
+For example, when you choose the `All args constructor`, `equals() and hashCode()` and `toString()` options in the DTO generator wizard, JPA Buddy applies `@Value` to the generated DTO, discarding the redundant access modifiers to keep your code clean.
+
+![new-dto-lombok-value](img/new-dto-lombok-value.png)
+
+```java
+  @Value
+  public class OwnerDto implements Serializable {
+      String firstName;
+      String lastName;
+      String telephone;
+  }
+```
+
+In case you need a [mutable DTO](https://jpa-buddy.com/documentation/dto-generator/#mutability) with the same parameters as in the example above, JPA Buddy will add `@Data`,`@AllArgsConstructor` and `@NoArgsConstructor` annotations instead.
+
+![new-dto-lombok-data](img/new-dto-lombok-data.png)
+
+```java
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class OwnerDto implements Serializable {
+    private String firstName;
+    private String lastName;
+    private String telephone;
+}
+```
+
+> To use this feature, make sure to add <a href="https://mvnrepository.com/artifact/org.projectlombok/lombok" target="_blank" rel="noopener noreferrer">Lombok dependencies</a> to your project and enable it in the [DTO Declaration Settings](https://jpa-buddy.com/documentation/dto-generator/#dto-declaration-settings).
 
 ## Inner DTOs for associations
 
@@ -58,9 +98,13 @@ Nowadays, the DTO pattern is widely used in software development. It is not only
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OrvtVvQ0eJE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## MapStruct Mappers
+## MapStruct Support
 
 <a href="https://mapstruct.org/" target="_blank">MapStruct</a> is a code generator that greatly simplifies the implementation of mappings. The "Mapper class" field appears in the "New DTO" window if your project contains the corresponding dependency. You can select an existing Mapper or create a new one.
+
+<div class="note">
+   This feature works with any domain entity (any Java/Kotlin classes), not only with JPA entities. 
+</div>
 
 <div class="youtube">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKQRRWqNLNk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -123,6 +167,22 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
  
 ![mapper-declaration](img/mapper-declaration.png)
 
+## ModelMapper Support
+
+<a href="https://modelmapper.org/" target="_blank">ModelMapper</a> is one of the most popular libraries for converting entities to DTOs and vice versa. JPA Buddy provides many features that streamline the mapping process even further, including:
+
+1. Generating custom mapping methods.
+2. Providing code scaffolding for mapping a single entity or a collection of entities to DTOs and vice versa, with the help of postfix autocompletion.
+3. Enabling on-the-fly injection of the ModelMapper bean into the relevant class.
+
+<div class="youtube">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/oKQEhXwbms4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+
+<div class="note">
+JPA Buddy assumes that you have declared the ModelMapper bean in your project.
+</div>
+
 ## Keep DTOs in sync with its JPA entity
 
 ### Refactor attributes
@@ -135,10 +195,15 @@ DTOs are commonly used at the API controller level to define only the fields req
 
 ### Add attributes
 
-If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once.
+If you happen to add a new attribute to an entity, the corresponding DTOs may also need to be updated with this new field. JPA Buddy enables you to add a new field to all the required DTOs at once. 
+Moreover, if you prefer typing the code manually instead of using wizards, JPA Buddy can help you with that too! Just start typing the name of the field that is not in your DTO, and it will be correctly added to the class. The best part is that it even works with associations!
+
+<div class="note">
+   This feature works with any domain entity (any Java/Kotlin classes), not only with JPA entities. 
+</div>
 
 <div class="youtube">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/ELnfAZVIBZA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/L2TgkXj2Dqs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
 
 ## DTO Declaration Settings
@@ -150,12 +215,22 @@ Each project may follow its own conventions for code writing. In the Tools -> JP
 1. Serializable type.
 2. Class name postfix.
 3. Whether to use Lombok or not.
-4. Name pattern regexp. This option is useful if you follow an obligatory naming convention for DTOs. It allows JPA Buddy to associate a DTO with its JPA Entity using a DTO name only. You can specify a placeholder for the simple class name of the target JPA entity using the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. This feature is disabled when the field is empty. 
-5. Class comment. Defines the comment that will be generated over the DTO class.
-6. Comment link regexp (The feature is disabled when the field is empty). It allows JPA Buddy to associate a DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `A DTO for the{@link (?.*)} entity.` it will be resolved in the following comment:
-  ```java
-  // A DTO for the {@link io.jpabuddy.demo.entities.Project} entity.
-  ```
+4. Comment link regexp (The feature is disabled when the field is empty). It allows JPA Buddy to associate a DTO with its JPA Entity. To specify a placeholder for the target entity FQN (Fully Qualified Name) in a comment use the `(?<entity>.*)` pattern. So, if the regexp is defined as `DTO for (?:the )?\{@link (?<entity>.*)\}` it will be resolved in the following comment:
+    ```java
+    //DTO for the {@link io.jpabuddy.demo.entities.Project} entity
+    ```
+5. Class name regexp. This option is useful if you follow an obligatory naming convention for DTOs. It allows JPA Buddy to associate a DTO with its JPA Entity using a DTO name only. You can specify a placeholder for the simple class name of the target JPA entity using the `(?<entity>.)` pattern. E.g., `(?.)Dto` means that the `MyEntityDto` class will be considered as a DTO for `MyEntity`. This feature is disabled when the field is empty. 
+6. Class comment. Defines the comment that will be generated over the DTO class.
+
+### Validation Rules
+
+JPA Buddy offers seamless configuration of bean validation constraints for DTO fields within its dedicated DTO generation wizard. In addition to defining validations from scratch, you can automatically transfer the validations from the corresponding entities and manage them in the same wizard.
+
+![dto-validation-rules](img/dto-validation-rules.png)
+
+With the flexibility to enable or disable each constraint and customize validation messages, this comprehensive feature allows you to conveniently manage a full range of bean validation constraints for your DTO fields, ensuring consistency and reusability across your application.
+
+> To enable the validations list, it is necessary to include either the <a href="https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator" target="_blank" rel="noopener noreferrer">Hibernate Validator</a> or <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation" target="_blank" rel="noopener noreferrer">Spring Boot Starter Validation</a> dependency.
 
 ### Convenient Navigation between Entity and its DTOs
 

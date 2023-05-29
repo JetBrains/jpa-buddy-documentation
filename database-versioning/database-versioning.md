@@ -134,7 +134,13 @@ For both Liquibase and Flyway, JPA Buddy provides an action to generate an initi
 
 ![init-schema-changelog](img/init-schema-changelog.jpeg)
 
-To generate the DDL script based on the data model you will need to specify the corresponding persistence unit, scope and one of the [supported DB types](https://www.jpa-buddy.com/documentation/database-connections/#introduction). In case you compare two databases, you will need to choose one of the existing connections for both of them.
+To generate the DDL script based on the data model you will need to specify the corresponding [persistence unit](https://jpa-buddy.com/documentation/database-versioning/#using-a-data-model), scope and one of the [supported DB types](https://www.jpa-buddy.com/documentation/database-connections/#introduction). 
+
+Additionally, JPA Buddy provides an option to create migration scripts specifically for **selected entity changes** as a custom scope. This can be done by clicking on the Scope drop-down menu, selecting "Selected Entities", and choosing the relevant entities in the "Select Entities for Custom Scope" window.
+
+![diff-custom-scope.png](img/diff-custom-scope.png)
+
+In case you want to compare two databases, you will need to choose one of the existing connections for both of them.
 
 ![init-schema-based-on-the-db](img/init-schema-based-on-the-db.jpeg)
 
@@ -152,7 +158,7 @@ Each change type is color-coded according to its danger level: green for SAFE, y
 
 The danger levels can be customized in the plugin preferences in JPA Buddy -> Database Versioning -> Diff Changes:
 
-![diff-changes-preferences](img/diff-changes-preferences.jpeg)
+![diff-changes-preferences](img/diff-changes-preferences.png)
 
 You can configure the location of each change type, either in the primary or secondary location, or ignore it altogether. By default, newly generated migration scripts will exclude ignored changes but display them in the "Ignored" section during preview so that they can be added back manually. For Liquibase, you can also set the context and labels to use for each change type.
 #### Merging statements
@@ -323,6 +329,48 @@ Sometimes software must provide support for a few DBMS types. In this case, Liqu
 ```
 
 Therefore, there is no need to create separate changelogs for different DBMSes.
+
+#### Changeset Templates
+
+Changeset templates are pre-defined structures that provide a standardized format for specifying database schema changes using Liquibase. These templates serve as a foundation for creating consistent and reusable changesets, ensuring uniformity and ease of maintenance across database deployments.
+
+JPA Buddy provides an ability to apply templates while generating changesets from the JPA Palette. This feature provides the ability to include various customizable elements in it:
+
+1. Add empty rollback to changesets which don't support implicit one – this option automatically adds an empty rollback tag with a TODO comment to any new changeset  <a href="https://docs.liquibase.com/workflows/liquibase-community/automatic-custom-rollbacks.html" target="_blank">lacking an implicit rollback</a>.
+2. failOnError and runOnChange: JPA Buddy supports the commonly used attributes within the changeSet tag, allowing users to set default values for `failOnError` and `runOnChange`.
+3. Create preconditions – each changeset can have specific preconditions. For example, `tableExists` and `columnExists` precondition tags will be added for the `addColumn` statement:
+
+```xml
+<changeSet id="1685085536452-1" author="jpa-buddy">
+  <preConditions>
+    <tableExists tableName="customer"/>
+    <not>
+      <columnExists tableName="customer" columnName="id"/>
+    </not>
+  </preConditions>
+  <addColumn tableName="customer">
+    <column name="id" type="BIGINT">
+      <constraints nullable="false" primaryKey="true" primaryKeyName="pk_customer"/>
+    </column>
+  </addColumn>
+</changeSet>
+```
+
+It is important to note that certain Liquibase changesets may not offer this option. For example, the tag `procedureExists` is not available for the `createProcedure` statement.
+
+![changeset-templates.png](img/changeset-templates.png)
+
+Here is an example showcasing all four features enabled for a drop table changeset:
+
+```xml
+<changeSet id="1680594632747-1" author="jpa-buddy" runOnChange="true" failOnError="true">
+    <preConditions>
+        <tableExists tableName="customer"/>
+    </preConditions>
+    <dropTable tableName="customer"/>
+    <rollback><!--TODO--></rollback>
+</changeSet>
+```
 
 ## Flyway Support
 

@@ -13,17 +13,41 @@ For now, JPA Buddy supports the following databases:
 * <a href="https://www.h2database.com/html/main.html" target="_blank">H2</a>
 * <a href="https://www.ibm.com/analytics/db2" target="_blank">IBM Db2</a>
 
+## Automatic Detection of Data Source Configurations
+
+JPA Buddy offers a convenient way to automatically detect data source configurations from the *\*.properties* file and fills in the required connection settings for you.
+
 ![jpa-structure-db-connection](img/jpa-structure-db-connection.png)
 
-You can fill the required settings for the connection manually, but if your project contains data source settings in the *application.properties* or *application.yaml* file, JPA Buddy can get them and paste into corresponding fields automatically. Click on the "Detect Connections" button in the JPA Structure tab and the window will appear with filled fields.
+To use this feature, simply click on the "Detect Connections" button in the JPA Structure tab, and JPA Buddy will automatically populate the corresponding fields.
 
-As the IntelliJ IDEA Ultimate provides numerous options for data sources configurations, there is no need to create other connections to make JPA Buddy work. You can learn more about it on the corresponding <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
 
 ![ij-ultimate-data-sources](img/ij-ultimate-data-sources.jpeg)
+
+Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA Ultimate's robust options for data source configurations. For more information, refer to the relevant <a href="https://www.jetbrains.com/help/idea/data-sources-and-drivers-dialog.html" target="_blank">JetBrains documentation page</a>.
 
 JPA Buddy provides a similar mechanism for the IntelliJ IDEA Community edition.
 
 ![ij-community-db-connection](img/ij-community-db-connection.jpeg)
+
+It’s worth noting that JPA Buddy is compatible with any property file that adheres to the standard naming convention for property files. This includes YAML files, environment-specific properties files, test-specific properties files, and more.  E.g.: 'application.properties', 'application-test.properties', 'application.yaml', 'application-prod.yaml', etc.
+
+## Automatic Generation of Property Files
+
+Additionally, JPA Buddy can help you generate *\*.properties* files based on your data source configuration. This feature will save you time and effort in configuring your application.
+
+To do so, open the relevant property file, then access the Context Actions menu by pressing Alt+Enter/⌥ ⏎. Select the Data Source option from the menu.
+
+![context-menu-db-connection](img/context-menu-db-connection.png)
+
+This will open the Data Source window, as shown in the screenshot below.
+
+![data-source-db-connection](img/data-source-db-connection.png)
+
+From the Data Source window, select the appropriate data source for your application. You can choose the DDL auto mode you need in the drop-down menu below. Additionally, there are two other options available in the Data Source window: 'Show SQL' and 'Format SQL'.
+These options allow you to choose whether to show SQL statements that are executed by Hibernate on your standard output for debugging purposes and whether to format those statements for readability, respectively.
+
+Once you have selected the data source and any other options you need, JPA Buddy will fill in the selected property file with the necessary configuration for you.
 
 ## Non-Default Schema Connection
 
