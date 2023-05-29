@@ -173,7 +173,7 @@ Older versions will be available for free as it is shown in the table below:
 
 ## Dependencies
 
-Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibase and Flyway, it scans the project dependencies and enables the corresponding features.
+Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibase and Flyway, it scans the project dependencies and enables the corresponding features. If you have a multi-module project, JPA Buddy features will be enabled depending on the presence of the dependency within the module, rather than the entire project.
 
 <div class="table">
 <table class="tg">
