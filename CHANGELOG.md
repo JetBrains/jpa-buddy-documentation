@@ -1,5 +1,14 @@
 # Changelog
 
+## 2023.2.3 - 2023-06-02
+
+* The "mappedBy" section now supports attributes from Embeddables <a href="https://issues.jpa-buddy.com/issue/JPAB-2445" target="_blank">JPAB-2445</a>
+* Added the ability to update a database snapshot for IDEA Ultimate from the reverse engineering dialog <a href="https://issues.jpa-buddy.com/issue/JPAB-2423" target="_blank">JPAB-2423</a>
+* JPA Buddy now supports PostgreSQL array types for reverse engineering <a href="https://issues.jpa-buddy.com/issue/JPAB-2547" target="_blank">JPAB-2547</a>
+* Fixed an issue where the "Create Entity" quick fix was unavailable <a href="https://issues.jpa-buddy.com/issue/JPAB-2535" target="_blank">JPAB-2535</a>
+
+For other improvements and fixes, see [all resolved issues (8)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20%23Resolved%20Milestone:%20232%20Bug%20fix:%203).
+
 ## 2023.2.2 – 2023-05-22
 
 * Resolved an issue when opening the "Extract to MappedSuperclass" dialog would cause a `java.lang.IndexOutOfBoundsException` <a href="https://issues.jpa-buddy.com/issue/JPAB-2526" target="_blank">JPAB-2526</a>
