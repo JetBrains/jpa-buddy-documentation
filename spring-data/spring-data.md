@@ -256,3 +256,18 @@ In a large application, having auditing is crucial. JPA Buddy makes it effortles
 </div>
 
 Tags: Spring Data, JPA, Projections, Auditing, DTO, Query, Repository, Entity, JPQL, Native Query, Dynamic Projections
+
+## Blaze Persistence Support
+
+<a href="https://persistence.blazebit.com/" target="_blank">Blaze-Persistence</a> seamlessly integrates with Spring Data JPA, allowing you to leverage the advanced querying and optimization capabilities while benefiting from the convenience and productivity of Spring Data. JPA Buddy provides support for this framework to create Spring Data JPA repositories for Entity Views, but only when [the relevant library](https://jpa-buddy.com/documentation/#dependencies) is included in the project.
+
+Creating Spring Data JPA repositories for Entity Views is available from the standard repository creation window. Once you have selected an Entity View, the only options for the parent interface are `com.blazebit.persistence.spring.data.repository.EntityViewRepository` or one of its successors.
+
+![blaze-persistence-spring-data-repository.png](img/blaze-persistence-spring-data-repository.png)
+
+```java
+import com.blazebit.persistence.spring.data.repository.EntityViewRepository;
+import com.example.blazepersistence.view.BaseView;
+
+public interface BaseViewRepository extends EntityViewRepository<BaseView, Long> { }
+```
