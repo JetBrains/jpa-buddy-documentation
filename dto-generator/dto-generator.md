@@ -185,8 +185,8 @@ JPA Buddy assumes that you have declared the ModelMapper bean in your project.
 
 ## Blaze Persistence Entity Views Support
 
-<a href="https://persistence.blazebit.com/" target="_blank">Blaze-Persistence</a> is a powerful persistence framework that provides advanced query capabilities and optimization techniques for Java-based applications. It aims to simplify and enhance the development of data access layers by offering a high-level API and a range of features that can significantly improve performance and developer productivity.
-JPA Buddy provides support for this framework to create Entity Views for JPA entities, but only when [the relevant library](https://jpa-buddy.com/documentation/#dependencies) is included in the project.
+<a href="https://persistence.blazebit.com/" target="_blank">Blaze-Persistence</a> is a strong persistence framework for Java applications. It offers advanced querying and optimization techniques to simplify data access development and improve developer productivity.
+JPA Buddy supports this framework to create Entity Views for JPA entities, whenever [the relevant library](https://jpa-buddy.com/documentation/#dependencies) is included in the project.
 
 You can create an Entity View through the following steps:
 
@@ -200,13 +200,13 @@ After that, a dialog for creating an Entity View will open. Besides the standard
 2. JPA Entity for which the Entity View will be created
 3. Entity View class name
 
-Also, you can set whether the Entity View should be creatable or updatable through the respective checkboxes.
+Also, you can set the Entity View to creatable or updatable through the respective checkboxes.
 
 ![blaze-persistence-entity-view.png](img/blaze-persistence-entity-view.png)
 
-Similar to other types of DTOs, JPA Buddy provides ability to configure [inner Entity Views for associations](https://jpa-buddy.com/documentation/dto-generator/#inner-dtos-for-associations).
+Similar to other types of DTOs, JPA Buddy provides the ability to configure an [inner Entity Views for associations](https://jpa-buddy.com/documentation/dto-generator/#inner-dtos-for-associations).
 
-Therefore, for the configuration presented in the screenshot above, the following Entity View will be generated:
+Therefore, the configuration above will generate the following Entity View:
 
 ```java
 @EntityView(Person.class)
@@ -233,7 +233,7 @@ public interface PersonView extends BaseView {
 }
 ```
 
-The selection of the corresponding checkboxes generated the `@UpdatableEntityView` and `@CreatableEntityView` annotations. It's important to note that updatable or creatable entity views require an attribute marked with the @IdMapping annotation. Therefore, once you tick one of the checkboxes, JPA Buddy will automatically select the attribute marked in the entity with `@Id` annotation. Also, updatable or creatable entity views will have setters for all attributes.
+The selected checkboxes generated the `@UpdatableEntityView` and `@CreatableEntityView` annotations. It's important to note that updatable or creatable entity views require an attribute marked with the @IdMapping annotation. Therefore, once you tick one of the checkboxes, JPA Buddy will automatically select the attribute marked in the entity with an `@Id` annotation. Also, updatable or creatable entity views will have setters for all attributes.
 
 ## Keep DTOs in sync with its JPA entity
 
