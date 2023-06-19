@@ -1,5 +1,12 @@
 # Changelog
 
+## 2023.2.4 – 2023-06-19
+
+* Fixed an issue where the selection for the migration scripts location was not remembered <a href="https://issues.jpa-buddy.com/issue/JPAB-2546" target="_blank">JPAB-2546</a>
+* The implementation of equals() and hashCode methods has been adjusted to ensure accurate and consistent results <a href="https://issues.jpa-buddy.com/issue/JPAB-2574" target="_blank">JPAB-2574</a>
+* Fixed an `ExecutionException` while generating database versioning scripts <a href="https://issues.jpa-buddy.com/issue/JPAB-2567" target="_blank">JPAB-2567</a>
+* The search scope for coding assistance features has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2533" target="_blank">JPAB-2533</a>
+
 ## 2023.2.3 - 2023-06-02
 
 * The "mappedBy" section now supports attributes from Embeddables <a href="https://issues.jpa-buddy.com/issue/JPAB-2445" target="_blank">JPAB-2445</a>
