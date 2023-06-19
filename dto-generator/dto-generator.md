@@ -183,6 +183,58 @@ JPA Buddy provides flexible settings for mapper declaration. To configure naming
 JPA Buddy assumes that you have declared the ModelMapper bean in your project.
 </div>
 
+## Blaze Persistence Entity Views Support
+
+<a href="https://persistence.blazebit.com/" target="_blank">Blaze-Persistence</a> is a strong persistence framework for Java applications. It offers advanced querying and optimization techniques to simplify data access development and improve developer productivity.
+JPA Buddy supports this framework to create Entity Views for JPA entities, whenever [the relevant library](https://jpa-buddy.com/documentation/#dependencies) is included in the project.
+
+You can create an Entity View through the following steps:
+
+1. JPA Structure -> Plus button -> Blaze Persistence Entity View.
+2. JPA Designer -> Plus button -> Blaze Persistence Entity View.
+3. Editor Toolbar -> DTOs and Spring Data Projections -> Create Blaze Persistence Entity View.
+4. Project -> New -> Other -> Blaze Persistence Entity View.
+
+After that, a dialog for creating an Entity View will open. Besides the standard options for configuration, such as package name or source root, you can configure:
+1. Parent Entity View
+2. JPA Entity for which the Entity View will be created
+3. Entity View class name
+
+Also, you can set the Entity View to creatable or updatable through the respective checkboxes.
+
+![blaze-persistence-entity-view.png](img/blaze-persistence-entity-view.png)
+
+Similar to other types of DTOs, JPA Buddy provides the ability to configure an [inner Entity Views for associations](https://jpa-buddy.com/documentation/dto-generator/#inner-dtos-for-associations).
+
+Therefore, the configuration above will generate the following Entity View:
+
+```java
+@EntityView(Person.class)
+@UpdatableEntityView
+@CreatableEntityView
+public interface PersonView extends BaseView {
+    @IdMapping
+    Long getId();
+
+    void setId(Long id);
+
+    String getName();
+
+    void setName(String name);
+
+    int getAge();
+
+    void setAge(int age);
+
+    @Mapping("posts.id")
+    Set<Long> getPostIds();
+
+    void setPostIds(Set<Long> postIds);
+}
+```
+
+The selected checkboxes generated the `@UpdatableEntityView` and `@CreatableEntityView` annotations. It's important to note that updatable or creatable entity views require an attribute marked with the @IdMapping annotation. Therefore, once you tick one of the checkboxes, JPA Buddy will automatically select the attribute marked in the entity with an `@Id` annotation. Also, updatable or creatable entity views will have setters for all attributes.
+
 ## Keep DTOs in sync with its JPA entity
 
 ### Refactor attributes

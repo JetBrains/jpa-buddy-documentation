@@ -218,6 +218,14 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.mapstruct/mapstruct" target="_blank" rel="noopener noreferrer">MapStruct</a></td>
     <td class="tg-0lax">- Create MapStruct mappers to convert entities to DTOs and back.</td>
   </tr>
+  <tr>
+    <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/com.blazebit/blaze-persistence-entity-view-api" target="_blank" rel="noopener noreferrer">Blazebit Persistence Entity View API</a></td>
+    <td class="tg-0lax">- Create Blaze Persistence Entity View for JPA Entity.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/com.blazebit/blaze-persistence-integration-spring-data-base" target="_blank" rel="noopener noreferrer">Blazebit Persistence Integration Spring Data Base</a></td>
+    <td class="tg-0lax">- Create Spring Data JPA repository for Blaze Persistence Entity View.</td>
+  </tr>
 </tbody>
 </table>
 </div>
