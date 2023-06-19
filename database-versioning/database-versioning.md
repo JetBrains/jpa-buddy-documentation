@@ -796,11 +796,11 @@ To learn more about naming strategies, you can check out our <a href="https://ww
 
 #### Custom Naming Strategy
 
-Sometimes, the default behavior is overridden for naming strategy in a project. JPA Buddy can help you with that too! Once it detects a class in the project that implements `org.hibernate.boot.model.naming.PhysicalNamingStrategy` (or one of its successors), an additional "custom" section with the corresponding class will appear in the naming strategy dropdown menu.
+Sometimes, the default behavior for naming strategy in a project changes. JPA Buddy can help you with that too! Once it detects a class in the project that implements `org.hibernate.boot.model.naming.PhysicalNamingStrategy` (or one of its successors), an additional "custom" section with the corresponding class will appear in the naming strategy dropdown menu.
 
 ![custom-naming-strategy.png](img/custom-naming-strategy.png)
 
-After selecting this class from the dropdown menu, JPA Buddy will consider this strategy when generating all migration scripts. It's important to note that JPA Buddy doesn't track changes in your class in real time, so if you've modified your strategy code, you need to either click the refresh button or restart IntelliJ IDEA.
+Once you select this class from the dropdown menu, JPA Buddy will use this strategy when generating migration scripts. It's important to note that JPA Buddy doesn't update the class changes automatically, so if you modify your strategy code, you need to either click the refresh button or restart IntelliJ IDEA.
 
 ![reload-custom-naming-strategy.png](img/reload-custom-naming-strategy.png)
 
