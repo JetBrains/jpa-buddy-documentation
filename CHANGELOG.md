@@ -1,5 +1,14 @@
 # Changelog
 
+## 2023.2.5 – 2023-0630
+
+* Added support for IntelliJ IDEA 2023.2 <a href="https://issues.jpa-buddy.com/issue/JPAB-2566" target="_blank">JPAB-2565</a>
+* The preview of the database versioning script for Liquibase now displays correctly even when a file type other than XML is selected <a href="https://issues.jpa-buddy.com/issue/JPAB-2580" target="_blank">JPAB-2580</a>
+* Fixed an exception that occurred when generating the differential Liquibase changelog for the H2 database <a href="https://issues.jpa-buddy.com/issue/JPAB-2462" target="_blank">JPAB-2462</a>
+* Invoking the "Show DDL" action no longer produces an exception when the type mapping is set in IntelliJ IDEA 2023.2 <a href="https://issues.jpa-buddy.com/issue/JPAB-2586" target="_blank">JPAB-2586</a>
+* Fixed an issue when an exception occurred after opening an existing project in IntelliJ IDEA 2023.2 <a href="https://issues.jpa-buddy.com/issue/JPAB-2587" target="_blank">JPAB-2587</a>
+* JPA Buddy does not generate redundant foreign keys anymore when `InheritanceType.TABLE_PER_CLASS` is used <a href="https://issues.jpa-buddy.com/issue/JPAB-2584" target="_blank">JPAB-2584</a>
+
 ## 2023.2.4 – 2023-06-19
 
 * Fixed an issue where the selection for the migration scripts location was not remembered <a href="https://issues.jpa-buddy.com/issue/JPAB-2546" target="_blank">JPAB-2546</a>
