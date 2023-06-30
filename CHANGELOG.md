@@ -1,6 +1,6 @@
 # Changelog
 
-## 2023.2.5 – 2023-0630
+## 2023.2.5 – 2023-06-30
 
 * Added support for IntelliJ IDEA 2023.2 <a href="https://issues.jpa-buddy.com/issue/JPAB-2566" target="_blank">JPAB-2565</a>
 * The preview of the database versioning script for Liquibase now displays correctly even when a file type other than XML is selected <a href="https://issues.jpa-buddy.com/issue/JPAB-2580" target="_blank">JPAB-2580</a>
