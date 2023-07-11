@@ -1,5 +1,32 @@
 # Changelog
 
+## 2023.3.0 – 2023-07-17
+
+### Liquibase/Flyway/DDL Diff Generator
+
+The script generator has become even more powerful with several significant features:
+
+* It now supports Hibernate Envers, which includes the generation of audit tables, a table for `@RevisionEntity`, and flexible settings <a href="https://issues.jpa-buddy.com/issue/JPAB-1879" target="_blank">JPAB-1879</a>
+* There is now support for custom naming strategies, providing you with more options beyond the default strategies <a href="https://issues.jpa-buddy.com/issue/JPAB-2230" target="_blank">JPAB-2230</a>
+* The generator now also supports array types <a href="https://issues.jpa-buddy.com/issue/JPAB-1864" target="_blank">JPAB-1864</a>
+
+### Entity Designer
+
+Entity Designer now has new features:
+
+* It allows you to easily mark entities and fields that require auditing using JPA Designer <a href="https://issues.jpa-buddy.com/issue/JPAB-519" target="_blank">JPAB-519</a>
+* You can now effortlessly create `@RevisionEntity` using a convenient wizard <a href="https://issues.jpa-buddy.com/issue/JPAB-2215" target="_blank">JPAB-2215</a>
+
+### Blaze Persistence Support
+
+JPA Buddy now supports Blaze Persistence and can help you with the following:
+
+* Create an Entity View for any entity <a href="https://issues.jpa-buddy.com/issue/JPAB-2543" target="_blank">JPAB-2543</a>
+* Generate a Spring Data JPA repository for the Entity View <a href="https://issues.jpa-buddy.com/issue/JPAB-2544" target="_blank">JPAB-2544</a>
+* Modify both the field names of entities and the corresponding field names in the Entity View <a href="https://issues.jpa-buddy.com/issue/JPAB-2545" target="_blank">JPAB-2545</a>
+
+We're continuously working to improve your experience with JPA Buddy, and this release is no exception. Check out <a href="https://issues.jpa-buddy.com/issues/JPAB?q=Milestone:%20233%20State:%20Verified%20" target="_blank">all the resolved issues (20+)</a> for a comprehensive list of other improvements and fixes.
+
 ## 2023.2.5 – 2023-06-30
 
 * Added support for IntelliJ IDEA 2023.2 <a href="https://issues.jpa-buddy.com/issue/JPAB-2566" target="_blank">JPAB-2565</a>
