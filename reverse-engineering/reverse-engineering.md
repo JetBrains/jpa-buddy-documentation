@@ -451,21 +451,31 @@ To preserve comments added to the database objects, JPA Buddy transfers them to 
 
 ### Naming Rules
 
+#### Via Configs
+
+![preferences-naming-rules](img/preferences-naming-rules.png)
+
 Often, DBA specialists adhere to certain naming conventions for database objects. For example, all table or column names have a specific prefix/suffix. Yet, Java developers usually prefer to drop these prefixes/suffixes for the JPA model. JPA Buddy allows you to specify prefixes and suffixes to skip. 
 Assume we set `sys_` and `p_` as prefixes to skip. After that, we apply reverse engineering for `sys_user` and `p_product` tables. As a result, prefixes will not appear in the corresponding entity names. The final entity names will be `User` and `Product` instead of `SysUser` and `PProduct`.
 Also, the database column names sometimes match the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank">reserved Java keywords</a>. E.g., `public`, `interface`, and so on... In this case, you can configure the field suffix so that JPA Buddy will append it to the original column name. E.g. for the `Field` suffix, the resulting names will be `publicField` and `interfaceField`.
 
-![preferences-naming-rules](img/preferences-naming-rules.png)
+#### Via Algorithm
+
+![preferences-naming-rules](img/preferences-naming-rules-algorithm.png)
+
+Despite the flexible options for configuring prefixes, suffixes, reserved words, and so on, in some cases this may still be insufficient. JPA Buddy does not limit you only to these settings. You can write your own custom processing for the names of tables/columns in the database in code format. Moreover, you can not only write code in the current editor but also import an existing class and use its methods.
+
+It is important to note that JPA Buddy does not track changes in classes used in the naming algorithm in real-time. Therefore, after making changes to a class that used in the algorithm, you need to either update the settings or restart IntelliJ IDEA.
 
 ### Type Mappings
+
+![preferences-mapping-types](img/preferences-mapping-types.png)
 
 When the application works with several DBMSs, your schema might have slightly different data types for each of them.
 
 Let's say the application needs to support both PostgreSQL and MS SQL and you need to store Unicode characters in string data. PostgreSQL supports Unicode chars in `VARCHAR`, but MS SQL has a separate `NVARCHAR` data type for it.
 
 JPA Buddy lets you specify type mappings for each DBMS. It is also possible to set mappings for JPA Converters and Hibernate Types:
-
-![preferences-mapping-types](img/preferences-mapping-types.png)
 
 See how you can configure type mappings for reverse engineering in JPA Buddy to make use of the `@JavaType` annotation from Hibernate 6:
 
