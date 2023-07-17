@@ -275,3 +275,36 @@ public interface BaseViewRepository extends EntityViewRepository<BaseView, Long>
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OWH4Y2onh_A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## Hibernate Envers Support
+
+<div class="note">
+This functionality becomes available only if the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> is added to the project.
+</div>
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+JPA Buddy allows specifying whether the repository should implement the `RevisionRepository` interface at the time of creating a JPA repository. JPA Buddy will automatically insert the entity type, entity ID type, and revision number type into repository declaration. For example:
+
+```java
+@Entity
+@Table(name = "book")
+public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+}
+```
+
+![revision-repository](img/revision-repository.png)
+
+The generated repository declaration:
+
+```java
+public interface BookRepository extends JpaRepository<Book, Long>,
+        RevisionRepository<Book, Long, Integer> {
+}
+```
