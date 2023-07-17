@@ -235,6 +235,10 @@ public interface PersonView extends BaseView {
 
 The selected checkboxes generated the `@UpdatableEntityView` and `@CreatableEntityView` annotations. It's important to note that updatable or creatable entity views require an attribute marked with the @IdMapping annotation. Therefore, once you tick one of the checkboxes, JPA Buddy will automatically select the attribute marked in the entity with an `@Id` annotation. Also, updatable or creatable entity views will have setters for all attributes.
 
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OWH4Y2onh_A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Keep DTOs in sync with its JPA entity
 
 ### Refactor attributes

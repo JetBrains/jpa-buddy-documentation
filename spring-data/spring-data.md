@@ -271,3 +271,7 @@ import com.example.blazepersistence.view.BaseView;
 
 public interface BaseViewRepository extends EntityViewRepository<BaseView, Long> { }
 ```
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OWH4Y2onh_A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
