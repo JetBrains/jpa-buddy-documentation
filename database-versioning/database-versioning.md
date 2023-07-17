@@ -804,6 +804,10 @@ Once you select this class from the dropdown menu, JPA Buddy will use this strat
 
 ![reload-custom-naming-strategy.png](img/reload-custom-naming-strategy.png)
 
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HdhDFd82E_0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### Max Identifier
 
 RDBMSs have their own limitations. For example, table names for <a href="https://twitter.com/OracleDatabase" target="_blank">OracleDatabase</a> earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
