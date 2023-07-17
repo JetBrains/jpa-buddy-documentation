@@ -243,7 +243,9 @@ JPA Buddy provides a possibility to generate new entities and attributes with Lo
 
 ![lombok-settings](img/lombok-settings.jpeg)
 
-## Hibernate Types & JPA Converters
+## Hibernate
+
+### Types & JPA Converters
 
 JPA Buddy helps you generate blanks for JPA Converter or a Hibernate Custom Type via JPA Inspector:
 
@@ -288,13 +290,71 @@ public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Bool
 }
 ```
 
-## Hibernate Events
+### Event System
 
 Hibernate Event System is a powerful tool that allows you to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+### Envers Support
+
+<div class="note">
+This functionality becomes available only if the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> is added to the project.
+</div>
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+JPA Buddy allows you to add the `@Audited` annotation via JPA Designer for both JPA entities and its fields:
+
+![envers-jpa-designer](img/envers-jpa-designer.png)
+
+#### Revision Entity
+
+Hibernate stores all versions of the audited entities in a separate table. By default, each new revision will be assigned a revision number and timestamp. If you want to create your own custom revision entity, JPA Buddy will assist you in doing so. A convenient dialog for creating the revision entity will be available if you don't have any entities in your project already marked with the `@RevisionEntity` annotation.
+
+![revision-entity-action](img/revision-entity-action.png)
+
+In the **Create Revision Entity** wizard, JPA Buddy allows you to specify:
+
+1. The parent entity (for example, `DefaultRevisionEntity` or `DefaultTrackingModifyingEntitiesRevisionEntity`).
+2. The name of the table.
+3. Whether to create a revision listener or choose an existing one.
+4. The required fields for the revision number and timestamp (in case the parent is not specified).
+5. The source root and package where the entity will be saved.
+
+![create-revision-entity-wizard](img/create-revision-entity-wizard.png)
+
+The code that will be generated for the given configuration is as follows:
+
+```java
+public class CustomRevisionEntityListener implements RevisionListener {
+    @Override
+    public void newRevision(Object revisionEntity) {
+        CustomRevisionEntity customRevisionEntity = (CustomRevisionEntity) revisionEntity;
+        // TODO ("Not yet implemented")
+    }
+}
+
+@Entity
+@Table(name = "revinfo")
+@RevisionEntity(CustomRevisionEntityListener.class)
+public class CustomRevisionEntity {
+    @Id
+    @RevisionNumber
+    @Column(name = "id", nullable = false)
+    private int id;
+
+    @RevisionTimestamp
+    @Column(name = "timestamp", nullable = false)
+    private long timestamp;
+
+    //getters and setter are omitted
+}
+```
 
 ## Inspections
 
