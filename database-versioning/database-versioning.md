@@ -573,7 +573,7 @@ Before Hibernate 6, the Hibernate Types library or `@Type`/`@Converter` annotati
 ## Hibernate Envers Support
 
 <div class="note">
-This functionality becomes available only if the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> is added to the project.
+To enable this functionality, add the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> to the project.
 </div>
 
 <a href="https://hibernate.org/orm/envers/" target="_blank">Hibernate Envers</a> is a module that enables easy auditing of entities in a database. JPA Buddy can generate all the required tables for Hibernate Envers to function correctly. This includes audit tables for entities marked with the `@Audited` annotation and revision table for the entity annotated with `@RevisionEntity` annotation. Check out how it works in action:
