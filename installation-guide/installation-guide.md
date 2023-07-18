@@ -231,7 +231,7 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
     <td class="tg-0lax">
     - Generate database migration scripts for audit tables.<br>
     - Create Spring Data JPA revision repositories.<br>
-    - Mark entities and its fields that need to be audited via JPA Designer. <br>
+    - Annotate entities and their fields for auditing via JPA Designer. <br>
     - Generate @RevisionEntity via convenient wizard.
     </td>
   </tr>
