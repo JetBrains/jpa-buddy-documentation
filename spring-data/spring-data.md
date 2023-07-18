@@ -256,3 +256,55 @@ In a large application, having auditing is crucial. JPA Buddy makes it effortles
 </div>
 
 Tags: Spring Data, JPA, Projections, Auditing, DTO, Query, Repository, Entity, JPQL, Native Query, Dynamic Projections
+
+## Blaze Persistence Support
+
+<a href="https://persistence.blazebit.com/" target="_blank">Blaze-Persistence</a> seamlessly integrates with Spring Data JPA, allowing you to leverage the advanced querying and optimization capabilities while benefiting from the convenience and productivity of Spring Data. JPA Buddy provides support for this framework to create Spring Data JPA repositories for Entity Views, but only when [the relevant library](https://jpa-buddy.com/documentation/#dependencies) is included in the project.
+
+Creating Spring Data JPA repositories for Entity Views is available from the standard repository creation window. Once you select an Entity View, the only options for the parent interface are `com.blazebit.persistence.spring.data.repository.EntityViewRepository` or one of its successors.
+
+![blaze-persistence-spring-data-repository.png](img/blaze-persistence-spring-data-repository.png)
+
+```java
+import com.blazebit.persistence.spring.data.repository.EntityViewRepository;
+import com.example.blazepersistence.view.BaseView;
+
+public interface BaseViewRepository extends EntityViewRepository<BaseView, Long> { }
+```
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OWH4Y2onh_A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Hibernate Envers Support
+
+<div class="note">
+To enable this functionality, add the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> to the project.
+</div>
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+JPA Buddy lets you decide if the repository should implement the `RevisionRepository` interface during JPA repository creation. It will automatically insert the entity type, entity ID type, and revision number type in the repository declaration. For example:
+
+```java
+@Entity
+@Table(name = "book")
+public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+}
+```
+
+![revision-repository](img/revision-repository.png)
+
+The generated repository declaration:
+
+```java
+public interface BookRepository extends JpaRepository<Book, Long>,
+        RevisionRepository<Book, Long, Integer> {
+}
+```

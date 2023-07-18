@@ -570,7 +570,23 @@ Before Hibernate 6, the Hibernate Types library or `@Type`/`@Converter` annotati
 
 * `@TimeZoneStorage` & `@TimeZoneColumn`
 
-## Custom Type Mappings
+## Hibernate Envers Support
+
+<div class="note">
+To enable this functionality, add the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> to the project.
+</div>
+
+<a href="https://hibernate.org/orm/envers/" target="_blank">Hibernate Envers</a> is a module that facilitates entity auditing in a database. JPA Buddy can generate all the required tables for Hibernate Envers to function correctly. This includes audit tables for entities marked with the `@Audited` annotation and a revision table for the entity annotated with the `@RevisionEntity` annotation. Check out how it works in action:
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+JPA Buddy offers flexible settings for Hibernate Envers. For more details, refer to the [corresponding section](#hibernate-envers).
+
+## Settings
+
+### Custom Type Mappings
 
 There is no generic way to automatically map custom Java types to the SQL/Liquibase types. That's why you will need to define the target type manually for those attributes. If such attributes exist in your project, after Liquibase or Flyway script generation actions call, JPA Buddy will show you the following window:
 
@@ -586,7 +602,7 @@ JPA Buddy lets you specify type mappings for each DBMS. It is also possible to s
 
 ![type-mappings](img/type-mappings.png)
 
-### Convertors
+#### Converters
 
 In order to simplify type mapping, JPA Buddy introduces DB-agnostic SQL types, that are transformed into the DB-specific type. For example, "varchar" is transformed into "varchar2" for Oracle DB and left as "varchar" for PostgreSQL.
 
@@ -726,65 +742,15 @@ Each DB-agnostic type has a set of aliases (for example, "java.sql.Types.VARCHAR
 </table>
 </div>
 
-## Hibernate Envers Support
-
-<a href="https://hibernate.org/orm/envers/" target="_blank">Hibernate Envers</a> provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
+### Hibernate Envers
 
 ![hibernate-envers-settings](img/hibernate-envers-settings.png)
 
-For example, if you have the following entity:
+Hibernate Envers offers various customization options. You can specify the desired configuration in the JPA Buddy settings (2), or let JPA Buddy read the existing settings from `.properties` files automatically (1).
 
-```java
-@Audited
-@Entity(name = "Customer")
-public static class Customer {
+### Naming Strategy
 
-	@Id
-	private Long id;
-
-	private String firstName;
-
-	private String lastName;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "created_on")
-	@CreationTimestamp
-	private Date createdOn;
-
-	//Getters and setters are omitted for brevity
-
-}
-```
-
-In the database, it will be mapped to the two, and not one table:
-
-```sql
-create table Customer (
-    id bigint not null,
-    created_on timestamp,
-    firstName varchar(255),
-    lastName varchar(255),
-    primary key (id)
-)
-
-create table Customer_AUD (
-    id bigint not null,
-    REV integer not null,
-    REVTYPE tinyint,
-    created_on timestamp,
-    firstName varchar(255),
-    lastName varchar(255),
-    primary key (id, REV)
-)
-```
-
-When generating migration scripts, JPA Buddy will understand that the `Customer_AUD` table doesn't have to have a corresponding JPA entity, and will not generate a drop statement for it.
-
-## Naming Strategy and Max Identifier Settings
-
-Since JPA Buddy supports six databases at once, this is important to have the ability to configure naming strategies and max identifier length.
-
-By default, Spring Boot configures the physical naming strategy with SpringPhysicalNamingStrategy. This implementation generates all table names in lower case separated by underscores. For example, a `TelephoneNumber` entity is mapped to the `telephone_number` table. Even if you annotate the entity with `@Table(name = "TelephoneNumber")`. The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation.
+By default, Spring Boot configures the physical naming strategy with `SpringPhysicalNamingStrategy`. This implementation generates all table names in lower case separated by underscores. For example, a `TelephoneNumber` entity is mapped to the `telephone_number` table. Even if you annotate the entity with `@Table(name = "TelephoneNumber")`. The same names must be used in the migration scripts, so JPA Buddy also applies a physical naming strategy to all names during script generation.
 
 The following strategies are supported:
 
@@ -793,6 +759,22 @@ The following strategies are supported:
 * `CamelCaseToUnderscoresNamingStrategy` (only for projects with Hibernate 6 and later versions)
 
 To learn more about naming strategies, you can check out our <a href="https://www.jpa-buddy.com/blog/hibernate-naming-strategies-jpa-specification-vs-springboot-opinionation/" target="_blank">article</a>.
+
+#### Custom Naming Strategy
+
+Sometimes, the default behavior for naming strategy in a project changes. JPA Buddy can help you with that too! Once it detects a class in the project that implements `org.hibernate.boot.model.naming.PhysicalNamingStrategy` (or one of its successors), an additional "custom" section with the corresponding class will appear in the naming strategy dropdown menu.
+
+![custom-naming-strategy.png](img/custom-naming-strategy.png)
+
+Once you select this class from the dropdown menu, JPA Buddy will use this strategy when generating migration scripts. It's important to note that JPA Buddy doesn't update the class changes automatically, so if you modify your strategy code, you need to either click the refresh button or restart IntelliJ IDEA.
+
+![reload-custom-naming-strategy.png](img/reload-custom-naming-strategy.png)
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HdhDFd82E_0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### Max Identifier
 
 RDBMSs have their own limitations. For example, table names for <a href="https://twitter.com/OracleDatabase" target="_blank">OracleDatabase</a> earlier than 12.1 version are limited to 30 bytes. To avoid problems with versioning scripts, you can limit table names:
 
