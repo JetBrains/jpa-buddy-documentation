@@ -463,9 +463,9 @@ Also, the database column names sometimes match the <a href="https://docs.oracle
 
 ![preferences-naming-rules](img/preferences-naming-rules-algorithm.png)
 
-Despite the flexible options for configuring prefixes, suffixes, reserved words, and so on, in some cases this may still be insufficient. JPA Buddy does not limit you only to these settings. You can write your own custom processing for the names of tables/columns in the database in code format. Moreover, you can not only write code in the current editor but also import an existing class and use its methods.
+Despite the flexible options for configuring prefixes, suffixes, reserved words, and so on, in some cases this may still be insufficient. JPA Buddy does not limit you only to these settings. You can write custom code for processing the names of database tables/columns. Moreover, you can not only write code in the current editor but also import an existing class and use its methods.
 
-It is important to note that JPA Buddy does not track changes in classes used in the naming algorithm in real-time. Therefore, after making changes to a class that used in the algorithm, you need to either update the settings or restart IntelliJ IDEA.
+It is important to note that JPA Buddy does not track changes in classes used in the naming algorithm in real-time. Therefore, after changing the class used in the algorithm, either update your settings or restart IntelliJ IDEA.
 
 ### Type Mappings
 
