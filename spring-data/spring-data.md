@@ -279,14 +279,14 @@ public interface BaseViewRepository extends EntityViewRepository<BaseView, Long>
 ## Hibernate Envers Support
 
 <div class="note">
-This functionality becomes available only if the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> is added to the project.
+To enable this functionality, add the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> to the project.
 </div>
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-JPA Buddy allows specifying whether the repository should implement the `RevisionRepository` interface at the time of creating a JPA repository. JPA Buddy will automatically insert the entity type, entity ID type, and revision number type into repository declaration. For example:
+JPA Buddy lets you decide if the repository should implement the `RevisionRepository` interface during JPA repository creation. It will automatically insert the entity type, entity ID type, and revision number type in the repository declaration. For example:
 
 ```java
 @Entity
