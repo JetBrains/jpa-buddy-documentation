@@ -582,7 +582,7 @@ To enable this functionality, add the <a href="https://jpa-buddy.com/documentati
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-JPA Buddy offers flexible settings for Hibernate Envers. You can find more information about these settings in the [relevant section](#hibernate-envers).
+JPA Buddy offers flexible settings for Hibernate Envers. For more details, refer to the [corresponding section](#hibernate-envers).
 
 ## Settings
 
