@@ -570,6 +570,20 @@ Before Hibernate 6, the Hibernate Types library or `@Type`/`@Converter` annotati
 
 * `@TimeZoneStorage` & `@TimeZoneColumn`
 
+## Hibernate Envers Support
+
+<div class="note">
+To enable this functionality, add the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> to the project.
+</div>
+
+<a href="https://hibernate.org/orm/envers/" target="_blank">Hibernate Envers</a> is a module that facilitates entity auditing in a database. JPA Buddy can generate all the required tables for Hibernate Envers to function correctly. This includes audit tables for entities marked with the `@Audited` annotation and a revision table for the entity annotated with the `@RevisionEntity` annotation. Check out how it works in action:
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+JPA Buddy offers flexible settings for Hibernate Envers. For more details, refer to the [corresponding section](#hibernate-envers).
+
 ## Settings
 
 ### Custom Type Mappings
@@ -728,59 +742,11 @@ Each DB-agnostic type has a set of aliases (for example, "java.sql.Types.VARCHAR
 </table>
 </div>
 
-### Hibernate Envers Support
-
-<a href="https://hibernate.org/orm/envers/" target="_blank">Hibernate Envers</a> provides an easy auditing solution for entity classes. JPA Buddy, in its turn, allows you to define the prefix and postfix for audit tables. If these values are configured in the `.properties` file via `org.hibernate.envers.audit_table_prefix` and `org.hibernate.envers.audit_table_suffix`, Buddy will automatically apply them. These values will be considered while the script generation.
+### Hibernate Envers
 
 ![hibernate-envers-settings](img/hibernate-envers-settings.png)
 
-For example, if you have the following entity:
-
-```java
-@Audited
-@Entity(name = "Customer")
-public static class Customer {
-
-	@Id
-	private Long id;
-
-	private String firstName;
-
-	private String lastName;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "created_on")
-	@CreationTimestamp
-	private Date createdOn;
-
-	//Getters and setters are omitted for brevity
-
-}
-```
-
-In the database, it will be mapped to the two, and not one table:
-
-```sql
-create table Customer (
-    id bigint not null,
-    created_on timestamp,
-    firstName varchar(255),
-    lastName varchar(255),
-    primary key (id)
-)
-
-create table Customer_AUD (
-    id bigint not null,
-    REV integer not null,
-    REVTYPE tinyint,
-    created_on timestamp,
-    firstName varchar(255),
-    lastName varchar(255),
-    primary key (id, REV)
-)
-```
-
-When generating migration scripts, JPA Buddy will understand that the `Customer_AUD` table doesn't have to have a corresponding JPA entity, and will not generate a drop statement for it.
+Hibernate Envers offers various customization options. You can specify the desired configuration in the JPA Buddy settings (2), or let JPA Buddy read the existing settings from `.properties` files automatically (1).
 
 ### Naming Strategy
 

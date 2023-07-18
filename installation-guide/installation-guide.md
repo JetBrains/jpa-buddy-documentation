@@ -226,6 +226,15 @@ Since JPA Buddy supports Hibernate, EclipseLink, SpringData, MapStruct, Liquibas
     <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/com.blazebit/blaze-persistence-integration-spring-data-base" target="_blank" rel="noopener noreferrer">Blazebit Persistence Integration Spring Data Base</a></td>
     <td class="tg-0lax">- Create Spring Data JPA repository for Blaze Persistence Entity View.</td>
   </tr>
+  <tr>
+    <td class="tg-0lax"><a href="https://mvnrepository.com/artifact/org.hibernate/hibernate-envers" target="_blank" rel="noopener noreferrer">Hibernate Envers</a></td>
+    <td class="tg-0lax">
+    - Generate database migration scripts for audit tables.<br>
+    - Create Spring Data JPA revision repositories.<br>
+    - Annotate entities and their fields for auditing via JPA Designer. <br>
+    - Generate @RevisionEntity via convenient wizard.
+    </td>
+  </tr>
 </tbody>
 </table>
 </div>
