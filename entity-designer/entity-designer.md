@@ -243,7 +243,9 @@ JPA Buddy provides a possibility to generate new entities and attributes with Lo
 
 ![lombok-settings](img/lombok-settings.jpeg)
 
-## Hibernate Types & JPA Converters
+## Hibernate
+
+### Types & JPA Converters
 
 JPA Buddy helps you generate blanks for JPA Converter or a Hibernate Custom Type via JPA Inspector:
 
@@ -288,17 +290,75 @@ public class BooleanConverter extends AbstractSingleColumnStandardBasicType<Bool
 }
 ```
 
-## Hibernate Events
+### Event System
 
-Hibernate Event System is a powerful tool that allows you to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data state gets changed, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
+Hibernate Event System is a powerful tool that allows you to log or broadcast changes, perform additional checks before irreversible operations, hook business logic when data states change, etc. For all these occasions, Hibernate provides Event Listeners and JPA Buddy helps to scaffold them in a few clicks:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVa-T8aLgbA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+### Envers Support
+
+<div class="note">
+To enable this functionality, add the <a href="https://jpa-buddy.com/documentation/#dependencies" target="_blank">corresponding dependency</a> to the project.
+</div>
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5OTgQBmSrg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+Use JPA Designer to add the `@Audited` annotation for both JPA entities and its fields:
+
+![envers-jpa-designer](img/envers-jpa-designer.png)
+
+#### Revision Entity
+
+Hibernate stores all versions of the audited entities in a separate table. By default, each new revision will be assigned a revision number and timestamp. If you want to create a custom revision entity and don't have any entities annotated with `@RevisionEntity`, JPA Buddy provides a convenient dialogue for that.
+
+![revision-entity-action](img/revision-entity-action.png)
+
+In the **Create Revision Entity** wizard, JPA Buddy allows you to specify:
+
+1. The parent entity (for example, `DefaultRevisionEntity` or `DefaultTrackingModifyingEntitiesRevisionEntity`).
+2. The name of the table.
+3. Whether to create a revision listener or choose an existing one.
+4. The required fields for the revision number and timestamp (in case the parent is not specified).
+5. The source root and package where the entity will be saved.
+
+![create-revision-entity-wizard](img/create-revision-entity-wizard.png)
+
+The given configuration will generate the following code:
+
+```java
+public class CustomRevisionEntityListener implements RevisionListener {
+    @Override
+    public void newRevision(Object revisionEntity) {
+        CustomRevisionEntity customRevisionEntity = (CustomRevisionEntity) revisionEntity;
+        // TODO ("Not yet implemented")
+    }
+}
+
+@Entity
+@Table(name = "revinfo")
+@RevisionEntity(CustomRevisionEntityListener.class)
+public class CustomRevisionEntity {
+    @Id
+    @RevisionNumber
+    @Column(name = "id", nullable = false)
+    private int id;
+
+    @RevisionTimestamp
+    @Column(name = "timestamp", nullable = false)
+    private long timestamp;
+
+    //getters and setter are omitted
+}
+```
+
 ## Inspections
 
-JPA Buddy provides a lot of inspections that help during coding. By default, all inspections are enabled in all scopes and have warning severity. You can see full list of provided inspections and configure them in Settings -> Editor -> Inspections -> JPA Buddy.
+JPA Buddy provides a lot of inspections that help during coding. By default, all inspections are enabled in all scopes and have warning severity. You can view and configure the complete list of provided inspections in Settings -> Editor -> Inspections -> JPA Buddy.
 
 ![inspections](img/inspections.png)
 
