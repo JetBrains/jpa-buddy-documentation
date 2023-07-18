@@ -746,7 +746,7 @@ Each DB-agnostic type has a set of aliases (for example, "java.sql.Types.VARCHAR
 
 ![hibernate-envers-settings](img/hibernate-envers-settings.png)
 
-Hibernate Envers offers a lot of customization options. You can specify the desired configuration in the JPA Buddy settings (2), or let JPA Buddy read the existing settings from `.properties` files automatically (1).
+Hibernate Envers offers various customization options. You can specify the desired configuration in the JPA Buddy settings (2), or let JPA Buddy read the existing settings from `.properties` files automatically (1).
 
 ### Naming Strategy
 
