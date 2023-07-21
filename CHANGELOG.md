@@ -1,5 +1,14 @@
 # Changelog
 
+## 2023.3.1 – 2023-07-21
+
+* `IllegalArgumentException` has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2621" target="blank">JPAB-2621</a>.
+* The hashCode() implementation has been adjusted <a href="https://issues.jpa-buddy.com/issue/JPAB-2618" target="blank">JPAB-2618</a>
+* The "Create Constraint" wizard incorrect display has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2473" target="blank">JPAB-2473</a>
+* When creating a new connection, values are now properly pasted into `.properties` files <a href="https://issues.jpa-buddy.com/issue/JPAB-2613" target="blank">JPAB-2613</a>
+* Performance tips are now displayed for the `Collection` type as well <a href="https://issues.jpa-buddy.com/issue/JPAB-2604" target="blank">JPAB-2604</a>
+* The text for the performance tip has been modified <a href="https://issues.jpa-buddy.com/issue/JPAB-2606" target="blank">JPAB-2606</a>
+
 ## 2023.3.0 – 2023-07-17
 
 ### Liquibase/Flyway/DDL Diff Generator
