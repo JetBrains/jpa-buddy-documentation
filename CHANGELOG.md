@@ -1,5 +1,15 @@
 # Changelog
 
+## 2023.3.2 – 2023-08-11
+
+* The content of the DTO wizard now dynamically increases to provide a more user-friendly experience <a href="https://issues.jpa-buddy.com/issue/JPAB-2633" target="blank">JPAB-2633</a>
+* Resolved an issue where the `@JoinColumn` `name` and `referencedColumn` attributes were being ignored during script generation <a href="https://issues.jpa-buddy.com/issue/JPAB-2616" target="blank">JPAB-2616</a>
+* Fixed an error in the audit table where an incorrect column type was assigned to an enum attribute <a href="https://issues.jpa-buddy.com/issue/JPAB-2632" target="blank">JPAB-2632</a>
+* Upgraded support for the latest version of the Hypersistence Utils library <a href="https://issues.jpa-buddy.com/issue/JPAB-2626" target="blank">JPAB-2626</a> 
+* Fixed an issue where changing the `FetchType` for an association field would clear its `JoinColumn` annotation <a href="https://issues.jpa-buddy.com/issue/JPAB-2625" target="blank">JPAB-2625</a>
+
+For other improvements and fixes, see [all resolved issues (10+)](https://issues.jpa-buddy.com/issues?q=project:%20JPAB%20%23Resolved%20Milestone:%20233%20Bug%20fix:%202%20State:%20-%7BCan%27t%20Reproduce%7D%20).
+
 ## 2023.3.1 – 2023-07-21
 
 * `IllegalArgumentException` has been fixed <a href="https://issues.jpa-buddy.com/issue/JPAB-2621" target="blank">JPAB-2621</a>.
