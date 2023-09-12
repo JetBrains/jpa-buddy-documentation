@@ -33,7 +33,7 @@ If none of the above points solve your problem, you can try the following steps:
 * Clear the cache: go to _File -> Invalidate caches... -> Tick all the boxes -> Invalidate and Restart_ 
 * Reinstall the plugin: go to _Settings -> Plugins -> Marketplace tab -> Type JPA Buddy -> Click Install_
 
-If this still does not help, and you have the latest stable versions of <a href="https://www.jetbrains.com/idea/download/other.html" target="blank">IntelliJ IDEA</a>  and <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/versions" target="blank">JPA Buddy</a>, please write to us on <a href="https://discord.com/invite/zUsVXYGsQr" target="blank">Discord</a>. When making the request, we would appreciate it if you could mention the version of IntelliJ IDEA, its type (CE or Ultimate), and the version of JPA Buddy.
+If this still does not help, and you have the latest stable versions of <a href="https://www.jetbrains.com/idea/download/other.html" target="blank">IntelliJ IDEA</a>  and <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/versions" target="blank">JPA Buddy</a>, please create a ticket on <a href="https://youtrack.jetbrains.com/issues/JPAB" target="_blank">YouTrack</a>. When making the request, we would appreciate it if you could mention the version of IntelliJ IDEA, its type (CE or Ultimate), and the version of JPA Buddy.
 
 ## Why aren't my entities showing up during reverse engineering?
 
@@ -44,7 +44,7 @@ While creating entities from the database, IntelliJ IDEA CE and Ultimate users e
 If your tables are in a non-default schema, you need to create a new connection that targets the database and schema. This is because JPA Buddy can only retrieve data from an explicitly specified connection string since it uses a JDBC driver to obtain meta information.
 You can find instructions on how to create a new connection [here](https://jpa-buddy.com/documentation/database-connections/#non-default-schema-connection).
 
-If your tables are still not visible even after specifying the schema explicitly, please let us know on <a href="https://discord.com/invite/zUsVXYGsQr" target="blank">Discord</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
+If your tables are still not visible even after specifying the schema explicitly, please let us know on <a href="https://youtrack.jetbrains.com/issues/JPAB" target="_blank">YouTrack</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
 
 ### IntelliJ IDEA Ultimate
 
@@ -55,7 +55,7 @@ Starting from version 2023.2, JPA Buddy seamlessly integrates with IntelliJ IDEA
 
 ![seamless-integration.png](img/seamless-integration.png)
 
-If you still can’t see any tables, please contact us on <a href="https://discord.com/invite/zUsVXYGsQr" target="blank">Discord</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
+If you still can’t see any tables, please contact us on <a href="https://youtrack.jetbrains.com/issues/JPAB" target="_blank">YouTrack</a>. When making your request, please provide the version and type of your IntelliJ IDEA (CE or Ultimate), database provider (PostgreSQL, Oracle, MySQL, etc.) and the version of JPA Buddy.
 
 ## Does JPA Buddy support the IntelliJ IDEA EAP?
 
@@ -64,35 +64,6 @@ Yes, but unfortunately, we cannot support EAP at early stages. Normally, we prov
 ## Why am I unable to find certain features?
 
 Certain features in JPA Buddy are only available when specific libraries are present. For instance, you can create Liquibase changelogs or MapStruct mappers only if you have the [corresponding library in the libraries list](https://www.jpa-buddy.com/documentation/#dependencies). So, please make sure you have [the required library](https://www.jpa-buddy.com/documentation/#dependencies) in your project.
-
-## Is JPA Buddy available for free?
-
-_TL;DR: Yes, but some features are available only for subscribers._
-
-JPA Buddy is designed to help users:
-* get started with the Jakarta Persistence API and related libraries
-* follow best practices
-* speed up development
-
-We believe in providing features that support these goals for free:
-* Make it easier to start with Jakarta Persistence API and surrounding frameworks and libraries. 
-* Ensure the right use of the mentioned frameworks and libraries. To achieve this JPA Buddy strongly follows best practices and documentation while code generation and provides smart inspections to examine the existing code. 
-* Accelerate the development process itself.
-
-We decided that the features supporting the first two goals **should stay free**. Here we speak about the visual designers for entities, Spring Data JPA repositories, Liquibase changelogs, SQL statements, etc. We also keep coding assistance on the free side. All features of JPA Buddy remain free for academic use (teachers, students, classroom assistance) as well as training courses, coding schools and bootcamps.
-
-The third target is about making developers more efficient. This brings direct business value, and we can measure this value in money.
-
-Features that available **only for subscribers** are:
-* Liquibase diff changelog, Flyway versioned migrations and DDL generation. 
-* JPA entities generation from the existing database. 
-* DTO generation and MapStruct/ModelMapper support.
-
-In addition, we provide a few ways to get JPA Buddy license **for free**:
-1. Follow us on <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a>, send us a private message, and get one month for free!
-2. If you have 500+ <a href="https://twitter.com/JPABuddy" target="blank">Twitter</a> subscribers, share our tweets 3-4 times this month and get the next month of free use!
-3. Report a severe bug or share a great idea that makes it to our roadmap, and we'll reward you!
-4. Write about JPA Buddy or create a <a href="https://www.youtube.com/c/JPABuddy" target="blank">YouTube</a> video, and receive our heartfelt thanks!
 
 ## Does JPA Buddy collect any personal information from users?
 

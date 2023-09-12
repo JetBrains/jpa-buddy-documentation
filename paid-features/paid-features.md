@@ -1,4 +1,4 @@
-Most of the JPA Buddy features are available for free, including all visual designers for entities, Spring Data repositories, SQL and Liquibase changelogs. However, some features are available only under a commercial license. In this section, we will tell you how paid features help developers accelerate the development process and save a lot of time from routine work. Find out more info about license activation **<a href="https://www.jpa-buddy.com/documentation/#license-activation" target="_blank">here</a>**.
+JPA Buddy is a free IntelliJ plugin. There are a few features available only for IntelliJ IDEA Ultimate Edition subscribers. In this section, we will tell you how features available in IntelliJ IDEA Ultimate Edition help developers accelerate the development process and save a lot of time from routine work.
 
 ## Liquibase
 

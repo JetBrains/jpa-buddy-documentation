@@ -1,16 +1,10 @@
-## Contact Us
+## Issue Tracker
 
-JPA Buddy is continually evolving, and user feedback plays a crucial role in shaping its development. So don't hesitate to share your suggestions or feedback with us. You can contact us through the following communication channels:
-
-* <a href="https://www.jpa-buddy.com/contacts/" target="_blank">Website form</a>
-* <a href="https://discord.com/invite/DxRDQPk9rh" target="_blank">Discord channel</a>
-* <a href="https://stackoverflow.com/questions/tagged/jpa-buddy" target="_blank">Stack Overflow</a>
-* <a href="https://twitter.com/JPABuddy" target="_blank">Twitter page</a>
-* <a href="https://plugins.jetbrains.com/plugin/15075-jpa-buddy/reviews" target="_blank">JetBrains Marketplace</a>
+After discovering a new bug, suggestions to implement a new feature, or improvements, feel free to create tickets on <a href="https://youtrack.jetbrains.com/issues/JPAB" target="_blank">YouTrack</a>.
 
 ## Error Reporting
 
-Unfortunately, Errors and bugs are inevitable, and they may occur due to various reasons. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us with just one click of a button:
+Unfortunately, errors and bugs are inevitable, and they may occur due to various reasons. We do our best to catch and fix as many as we can, but some do slip through. To simplify the reporting process, we have added a mechanism for reporting exceptions directly to us with just one click of a button:
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OkFBn4s-218" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -36,8 +30,10 @@ To speed up the process of solving the occurring problem, we need to know:
 
 4. The necessary steps to reproduce the problem.
 
-## Issue Tracker
+## Communicate With Other Users
 
-After discovering a new bug, suggestions to implement a new feature, or improvements, we create tickets on <a href="https://issues.jpa-buddy.com/issues/JPAB" target="_blank">YouTrack</a>. You can always view the priority of the issue and the execution status.
+You can chat with other JPA Buddy users on the following social networks:
 
-Tags: Issue Reporting, Error Reporting, Bug Reporting, Exception Handling, Debugging, Logging
+* <a href="https://discord.com/invite/DxRDQPk9rh" target="_blank">Discord</a>
+* <a href="https://twitter.com/JPABuddy" target="_blank">Twitter</a>
+* <a href="https://stackoverflow.com/questions/tagged/jpa-buddy" target="_blank">Stack Overflow</a>
