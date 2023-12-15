@@ -1,3 +1,5 @@
+[![official JetBrains project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
 # JPA Buddy Documentation
 
 This repository contains the JPA Buddy Documentation. The documentation is published at https://www.jpa-buddy.com/documentation/.
